@@ -100,7 +100,7 @@ export function CardsList({ homecity }) {
 					key={uniqid()}
 				>
 					<div className='card'>
-						<img loading='lazy' className='card__img' src={`/${card?.info?.icon}`} alt={card?.name} />
+						<img loading='lazy' className='card__img' src={`/${card?.info?.icon?.toLowerCase()}`} alt={card?.name} />
 
 						{card?.maxcount === '-1' && <div className='card__maxcount'>∞</div>}
 						{+card?.maxcount > 1 && <div className='card__maxcount'>x{card?.maxcount}</div>}
