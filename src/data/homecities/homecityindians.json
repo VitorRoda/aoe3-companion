@@ -1,0 +1,3538 @@
+{
+   "civ": "Indians",
+   "name": "$$60014$$",
+   "heroname": "$$60015$$",
+   "gatherpointunit": "HomeCityGatherFlag",
+   "visual": "india\\india_homecity.xml",
+   "watervisual": "india\\india_homecity_water.xml",
+   "backgroundvisual": "india\\india_background.xml",
+   "pathdata": [
+      "india\\pathable_area_object.gr2",
+      "india\\pathable_area_object_withoutmarket.gr2",
+      "india\\pathable_area_object_market.gr2"
+   ],
+   "camera": "india\\india_homecity_camera.cam",
+   "widescreencamera": "india\\india_homecity_widescreencamera.cam",
+   "transportroundtriptime": "1",
+   "transportactivationtime": "0",
+   "level": "1",
+   "skillpoints": "9",
+   "lightset": "India",
+   "watertype": "India_HC",
+   "numpropunlocksearned": "0",
+   "ambientsounds": "homecity\\indiansambientsounds.xml",
+   "xsai": "generic_city",
+   "coffers": {
+      "current": {
+         "food": "0",
+         "wood": "0",
+         "gold": "0",
+         "fame": "0",
+         "ships": "0",
+         "skillpoints": "0",
+         "xp": "0"
+      },
+      "maximum": {
+         "food": "0",
+         "wood": "0",
+         "gold": "0",
+         "fame": "0",
+         "ships": "0",
+         "skillpoints": "-1",
+         "xp": "-1"
+      }
+   },
+   "cards": {
+      "card": [
+         {
+            "name": "YPHCShipFoodCrates1Indians",
+            "maxcount": "-1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "0",
+            "displayunitcount": "300",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipFoodCrates2Indians",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "YPHCShipFoodCrates1Indians",
+            "age": "1",
+            "displayunitcount": "600",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipFoodCrates3Indians",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "YPHCShipFoodCrates2Indians",
+            "age": "1",
+            "displayunitcount": "700",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipFoodCrates4Indians",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "YPHCShipFoodCrates3Indians",
+            "age": "2",
+            "displayunitcount": "1000",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipWoodCrates1Indians",
+            "maxcount": "-1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "0",
+            "displayunitcount": "300",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipWoodCrates2Indians",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "YPHCShipWoodCrates1Indians",
+            "age": "1",
+            "displayunitcount": "700",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipWoodCrates3Indians",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "YPHCShipWoodCrates2Indians",
+            "age": "2",
+            "displayunitcount": "900",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipWoodCrates4Indians",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "YPHCShipWoodCrates3Indians",
+            "age": "2",
+            "displayunitcount": "1000",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipWoodCrates5Indians",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "YPHCShipWoodCrates4Indians",
+            "age": "3",
+            "displayunitcount": "1600",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipWoodCratesInf1Indians",
+            "maxcount": "-1",
+            "level": "0",
+            "prereqtech": "YPHCShipWoodCrates1Indians",
+            "age": "1",
+            "displayunitcount": "500",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipWoodCratesInf2Indians",
+            "maxcount": "-1",
+            "level": "10",
+            "prereqtech": "YPHCShipWoodCratesInf3Indians",
+            "age": "2",
+            "displayunitcount": "900",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipWoodCratesInf4Indians",
+            "maxcount": "-1",
+            "level": "25",
+            "prereqtech": "YPHCShipWoodCratesInf2Indians",
+            "age": "3",
+            "displayunitcount": "1300",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipCoinCrates1Indians",
+            "maxcount": "-1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "0",
+            "displayunitcount": "300",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipCoinCrates2Indians",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "YPHCShipCoinCrates1Indians",
+            "age": "1",
+            "displayunitcount": "700",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipCoinCrates3Indians",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "YPHCShipCoinCrates2Indians",
+            "age": "2",
+            "displayunitcount": "900",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipCoinCrates4Indians",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "YPHCShipCoinCrates3Indians",
+            "age": "2",
+            "displayunitcount": "1000",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCSacredFieldHealing",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "-1",
+            "age": "0",
+            "displayunitcount": "1"
+         },
+         {
+            "name": "YPHCShipCoveredWagonsIndians",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "2",
+            "displayunitcount": "1",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipCoveredWagons2Indians",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "YPHCShipCoveredWagonsIndians",
+            "age": "3",
+            "displayunitcount": "2",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipTigers1",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "0",
+            "displayunitcount": "2",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipLions1",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "YPHCShipTigers1",
+            "age": "0",
+            "displayunitcount": "2",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipRhino1",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "YPHCShipLions1",
+            "age": "1",
+            "displayunitcount": "2",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCIndianMonkCombat",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "0"
+         },
+         {
+            "name": "YPHCIndianMonkFrighten",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "YPHCIndianMonkCombat",
+            "age": "2"
+         },
+         {
+            "name": "YPHCShipRajput1",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "1",
+            "displayunitcount": "5",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipRajput2",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "YPHCShipRajput1",
+            "age": "3",
+            "displayunitcount": "11",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipRajput3",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "YPHCShipRajput2",
+            "age": "2",
+            "displayunitcount": "7",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipRajput4",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "YPHCShipRajput3",
+            "age": "3",
+            "displayunitcount": "13",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCMeleeDamageIndians",
+            "maxcount": "1",
+            "level": "40",
+            "prereqtech": "YPHCShipRajput4",
+            "age": "1"
+         },
+         {
+            "name": "YPHCShipUrumi1",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "2",
+            "displayunitcount": "7",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipUrumiRegiment",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "YPHCShipUrumi1",
+            "age": "3",
+            "displayunitcount": "10",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipUrumiTeam",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "YPHCShipUrumiRegiment",
+            "age": "2",
+            "displayunitcount": "4",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipUrumi2",
+            "maxcount": "-1",
+            "level": "25",
+            "prereqtech": "YPHCShipUrumiTeam",
+            "age": "3",
+            "displayunitcount": "9",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipSepoy1",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "1",
+            "displayunitcount": "5",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipSepoy2",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "YPHCShipSepoy1",
+            "age": "3",
+            "displayunitcount": "12",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipSepoy3",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "YPHCShipSepoy2",
+            "age": "2",
+            "displayunitcount": "9",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipSepoy4",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "YPHCShipSepoy3",
+            "age": "3",
+            "displayunitcount": "14",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCInfantrySpeedHitpointsTeam",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "YPHCShipSepoy4",
+            "age": "3"
+         },
+         {
+            "name": "YPHCShipIndianHandCavalry1",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "1",
+            "displayunitcount": "4",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipIndianHandCavalry3",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "YPHCShipIndianHandCavalry1",
+            "age": "2",
+            "displayunitcount": "6",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipSowarRegiment",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "YPHCShipIndianHandCavalry3",
+            "age": "3",
+            "displayunitcount": "9",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCCamelDamageIndians",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "YPHCShipIndianHandCavalry3",
+            "age": "1"
+         },
+         {
+            "name": "YPHCShipIndianRangedCavalry1",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "2",
+            "displayunitcount": "8",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipIndianRangedCavalry2",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "YPHCShipIndianRangedCavalry1",
+            "age": "3",
+            "displayunitcount": "12",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipIndianRangedCavalry3",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "YPHCShipIndianRangedCavalry1",
+            "age": "2",
+            "displayunitcount": "9",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipIndianRangedCavalry4",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "YPHCShipIndianRangedCavalry3",
+            "age": "3",
+            "displayunitcount": "14",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipHowdah1",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "2",
+            "displayunitcount": "2",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipHowdahRegiment",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "YPHCShipHowdah1",
+            "age": "3",
+            "displayunitcount": "2",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipHowdah2",
+            "maxcount": "-1",
+            "level": "10",
+            "prereqtech": "YPHCShipHowdahRegiment",
+            "age": "3",
+            "displayunitcount": "3",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCCamelFrightening",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "YPHCShipIndianRangedCavalry3",
+            "age": "1"
+         },
+         {
+            "name": "YPHCShipSiegeElephant1",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "2",
+            "displayunitcount": "2",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipSiegeElephant2",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "YPHCShipSiegeElephant1",
+            "age": "3",
+            "displayunitcount": "3",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipMahout1",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "2",
+            "displayunitcount": "2",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipMahout2",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "YPHCShipMahout1",
+            "age": "3",
+            "displayunitcount": "4",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipMahout3",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "YPHCShipMahout2",
+            "age": "2",
+            "displayunitcount": "3",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCElephantCombatIndians",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "YPHCElephantLimit",
+            "age": "2"
+         },
+         {
+            "name": "YPHCShipFlailiphant1",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "3",
+            "displayunitcount": "5",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipFlailiphant2",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "YPHCShipFlailiphant1",
+            "age": "2",
+            "displayunitcount": "3",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipFlailiphant3",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "YPHCShipFlailiphant2",
+            "age": "1",
+            "displayunitcount": "2",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCElephantLimit",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "YPHCShipMahout2",
+            "age": "3"
+         },
+         {
+            "name": "YPHCElephantTrampling",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "YPHCShipHowdah1",
+            "age": "2"
+         },
+         {
+            "name": "YPHCGrazing",
+            "maxcount": "1",
+            "level": "40",
+            "prereqtech": "YPHCCamelFrightening",
+            "age": "1"
+         },
+         {
+            "name": "YPHCShipGurkha1",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "2",
+            "displayunitcount": "7",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipGurkha2",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "YPHCShipGurkha1",
+            "age": "3",
+            "displayunitcount": "12",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipGurkha3",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "YPHCShipGurkha2",
+            "age": "2",
+            "displayunitcount": "8",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipGurkha4",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "YPHCShipGurkha3",
+            "age": "3",
+            "displayunitcount": "14",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCNativeLearningIndians",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "1"
+         },
+         {
+            "name": "YPHCNativeIncorporationIndians",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "YPHCNativeLearningIndians",
+            "age": "1"
+         },
+         {
+            "name": "YPHCNativeHitpointsIndians",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "YPHCNativeIncorporationIndians",
+            "age": "2"
+         },
+         {
+            "name": "YPHCNativeTradeTaxIndians",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "YPHCNativeIncorporationIndians",
+            "age": "2"
+         },
+         {
+            "name": "YPHCExpandedTradingPostIndians",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "YPHCNativeTradeTaxIndians",
+            "age": "0",
+            "displayunitcount": "1"
+         },
+         {
+            "name": "YPHCFencingSchoolIndians",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "-1",
+            "age": "1"
+         },
+         {
+            "name": "YPHCRidingSchoolIndians",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "-1",
+            "age": "1"
+         },
+         {
+            "name": "YPHCPioneersIndians",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "YPHCEnlistIrregularsIndians",
+            "age": "0"
+         },
+         {
+            "name": "YPHCTheRaj",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "YPHCPioneersIndians",
+            "age": "1"
+         },
+         {
+            "name": "YPHCImprovedBuildingsTeam",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "YPHCTheRaj",
+            "age": "0"
+         },
+         {
+            "name": "YPHCMughalArchitecture",
+            "maxcount": "1",
+            "level": "40",
+            "prereqtech": "YPHCImprovedBuildingsTeam",
+            "age": "1"
+         },
+         {
+            "name": "YPHCShipCastleWagons1Indians",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "1",
+            "displayunitcount": "1"
+         },
+         {
+            "name": "YPHCExtensiveFortificationsIndians",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "YPHCShipCastleWagons1Indians",
+            "age": "1"
+         },
+         {
+            "name": "YPHCShipCastleWagons2Indians",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "YPHCShipCastleWagons1Indians",
+            "age": "2",
+            "displayunitcount": "1"
+         },
+         {
+            "name": "YPHCEnlistIrregularsIndians",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "0"
+         },
+         {
+            "name": "YPHCCallToArms1",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "YPHCEnlistIrregularsIndians",
+            "age": "1"
+         },
+         {
+            "name": "YPHCConscriptSepoys",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "1",
+            "displayunitcount": "2"
+         },
+         {
+            "name": "YPHCEastIndiaCompany",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "YPHCConscriptSepoys",
+            "age": "2"
+         },
+         {
+            "name": "YPHCBattlefieldConstruction",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "YPHCEastIndiaCompany",
+            "age": "1"
+         },
+         {
+            "name": "YPHCSepoyRebellion",
+            "maxcount": "1",
+            "level": "40",
+            "prereqtech": "YPHCBattlefieldConstruction",
+            "age": "3"
+         },
+         {
+            "name": "YPHCBazaar",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "0",
+            "displayunitcount": "1"
+         },
+         {
+            "name": "YPHCAdvancedMonasteryIndians",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "0",
+            "displayunitcount": "1"
+         },
+         {
+            "name": "YPHCAdvancedRicePaddyIndians",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "-1",
+            "age": "0"
+         },
+         {
+            "name": "YPHCAdvancedDockIndians",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "-1",
+            "age": "0"
+         },
+         {
+            "name": "YPHCAdvancedConsulateIndians",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "0"
+         },
+         {
+            "name": "YPHCGurkhaAid",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "YPHCAdvancedConsulateIndians",
+            "age": "2"
+         },
+         {
+            "name": "YPHCConsulateRelationsIndians",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "YPHCAdvancedConsulateIndians",
+            "age": "2"
+         },
+         {
+            "name": "YPHCSmoothRelationsIndians",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "YPHCConsulateRelationsIndians",
+            "age": "1",
+            "displayunitcount": "300"
+         },
+         {
+            "name": "YPHCAdvancedWondersIndians",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "-1",
+            "age": "0"
+         },
+         {
+            "name": "YPHCGoraksha",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "-1",
+            "age": "0"
+         },
+         {
+            "name": "YPHCVillagemasonsIndians",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "-1",
+            "age": "1"
+         },
+         {
+            "name": "YPHCShipGroveWagonIndians1",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "0",
+            "displayunitcount": "1"
+         },
+         {
+            "name": "YPHCShipGroveWagonIndians2",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "YPHCShipGroveWagonIndians1",
+            "age": "1",
+            "displayunitcount": "2"
+         },
+         {
+            "name": "YPHCFishMarketIndians",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "0"
+         },
+         {
+            "name": "YPHCRenderingPlantIndians",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "YPHCFishMarketIndians",
+            "age": "1"
+         },
+         {
+            "name": "YPHCSchoonersIndians",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "YPHCRenderingPlantIndians",
+            "age": "0",
+            "displayunitcount": "1"
+         },
+         {
+            "name": "YPHCArmedFishermenIndians",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "YPHCSchoonersIndians",
+            "age": "1"
+         },
+         {
+            "name": "YPHCSawmillsIndians",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "-1",
+            "age": "0"
+         },
+         {
+            "name": "YPHCExoticHardwoodsIndians",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "YPHCSawmillsIndians",
+            "age": "0"
+         },
+         {
+            "name": "YPHCWoodcraftingIndians",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "YPHCExoticHardwoodsIndians",
+            "age": "0"
+         },
+         {
+            "name": "YPHCAgrarianism",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "YPHCSawmillsIndians",
+            "age": "0"
+         },
+         {
+            "name": "YPHCForeignLogging",
+            "maxcount": "1",
+            "level": "40",
+            "prereqtech": "YPHCAgrarianism",
+            "age": "1"
+         },
+         {
+            "name": "YPHCIronmongerIndians",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "0"
+         },
+         {
+            "name": "YPHCRoyalMintIndians",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "YPHCIronmongerIndians",
+            "age": "2"
+         },
+         {
+            "name": "YPHCSilversmithIndians",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "YPHCRoyalMintIndians",
+            "age": "1"
+         },
+         {
+            "name": "YPHCFoodSilosIndians",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "0"
+         },
+         {
+            "name": "YPHCSustainableAgricultureIndians",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "YPHCFoodSilosIndians",
+            "age": "1"
+         },
+         {
+            "name": "YPHCFurTradeIndians",
+            "maxcount": "1",
+            "level": "40",
+            "prereqtech": "-1",
+            "age": "0"
+         },
+         {
+            "name": "YPHCFurrierIndian",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "0"
+         },
+         {
+            "name": "YPHCSpiceTradeIndian",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "YPHCFurrierIndian",
+            "age": "1"
+         },
+         {
+            "name": "YPHCRumDistilleryIndians",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "0"
+         },
+         {
+            "name": "YPHCFarmlandConservation",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "YPHCRumDistilleryIndians",
+            "age": "0"
+         },
+         {
+            "name": "HCXPMedicineTeam",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "-1",
+            "age": "1"
+         },
+         {
+            "name": "YPHCRainbowTrickleTeam",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "-1",
+            "age": "0"
+         },
+         {
+            "name": "YPHCShipCaravel1",
+            "maxcount": "-1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "1",
+            "displayunitcount": "1",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCBombayMarine",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "YPHCShipCaravel1",
+            "age": "0"
+         },
+         {
+            "name": "YPHCShipCaravel2",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "YPHCBombayMarine",
+            "age": "1",
+            "displayunitcount": "2",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipCaravel3Double",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "YPHCShipCaravel2",
+            "age": "2",
+            "displayunitcount": "3",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipFrigateIndians",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "YPHCBombayMarine",
+            "age": "2",
+            "displayunitcount": "1",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipFrigateDoubleIndians",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "YPHCShipFrigateIndians",
+            "age": "3",
+            "displayunitcount": "2",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCNavalCombatIndians",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "YPHCBombayMarine",
+            "age": "1"
+         },
+         {
+            "name": "YPHCShipMonitorIndians",
+            "maxcount": "-1",
+            "level": "25",
+            "prereqtech": "YPHCShipFrigateDoubleIndians",
+            "age": "3",
+            "displayunitcount": "1",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCEuropeanCannonsIndians",
+            "maxcount": "1",
+            "level": "40",
+            "prereqtech": "YPHCNavalCombatIndians",
+            "age": "1"
+         },
+         {
+            "name": "YPHCAdmiralityIndians",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "1"
+         },
+         {
+            "name": "YPHCMercsChakram1",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "-1",
+            "age": "1",
+            "displayunitcount": "7",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCMercsChakram2",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "YPHCMercsChakram1",
+            "age": "3",
+            "displayunitcount": "17",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCMercsChakram3",
+            "maxcount": "-1",
+            "level": "40",
+            "prereqtech": "YPHCMercsChakram2",
+            "age": "3",
+            "displayunitcount": "11",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCMercsTigerClaw1",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "-1",
+            "age": "1",
+            "displayunitcount": "10",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCMercsTigerClaw2",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "YPHCMercsTigerClaw1",
+            "age": "3",
+            "displayunitcount": "25",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCMercsTigerClaw3",
+            "maxcount": "1",
+            "level": "40",
+            "prereqtech": "YPHCMercsTigerClaw2",
+            "age": "3",
+            "displayunitcount": "16",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCMercsWarElephant1",
+            "maxcount": "-1",
+            "level": "40",
+            "prereqtech": "-1",
+            "age": "3",
+            "displayunitcount": "6",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCAtonementIndians",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "1"
+         },
+         {
+            "name": "YPHCMercsJatLancer1",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "-1",
+            "age": "3",
+            "displayunitcount": "8",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCMercsArsonist1",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "-1",
+            "age": "2",
+            "displayunitcount": "6",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCMercsIndianArmy",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "YPHCMercsArsonist1",
+            "age": "3",
+            "displayunitcount": "12",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCMercenaryLoyaltyIndians",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "YPHCAtonementIndians",
+            "age": "2"
+         },
+         {
+            "name": "YPHCWokouIndians1",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "1",
+            "displayunitcount": "13",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCWokouIndians2",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "YPHCWokouIndians1",
+            "age": "1",
+            "displayunitcount": "9",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCWokouIndians3Double",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "YPHCWokouIndians2",
+            "age": "2",
+            "displayunitcount": "14",
+            "infiniteinlastage": "1"
+         }
+      ]
+   },
+   "decks": {
+      "deck": [
+         {
+            "name": "$$71332$$Beginner",
+            "cards": {
+               "card": [
+                  "YPHCShipCoinCrates1Indians",
+                  "YPHCShipWoodCrates1Indians",
+                  "YPHCShipFoodCrates1Indians",
+                  "YPHCShipLions1",
+                  "YPHCShipRajput1",
+                  "YPHCShipIndianHandCavalry1",
+                  "YPHCShipSepoy3",
+                  "YPHCShipUrumi2",
+                  "YPHCShipHowdah1",
+                  "YPHCShipSiegeElephant2",
+                  "YPHCShipCoveredWagons2Indians",
+                  "YPHCShipCoveredWagonsIndians",
+                  "YPHCShipGroveWagonIndians2"
+               ]
+            }
+         },
+         {
+            "name": "$$71332$$Beginner",
+            "default": "",
+            "cards": {
+               "card": [
+                  {
+                     "_dbid": "4782",
+                     "__text": "YPHCMercsWarElephant1"
+                  },
+                  {
+                     "_dbid": "5193",
+                     "__text": "YPHCShipGurkha3"
+                  },
+                  {
+                     "_dbid": "4803",
+                     "__text": "YPHCAgrarianism"
+                  },
+                  {
+                     "_dbid": "4315",
+                     "__text": "YPHCShipCoinCrates1Indians"
+                  },
+                  {
+                     "_dbid": "4329",
+                     "__text": "YPHCShipSepoy1"
+                  },
+                  {
+                     "_dbid": "4316",
+                     "__text": "YPHCShipCoinCrates2Indians"
+                  },
+                  {
+                     "_dbid": "3992",
+                     "__text": "YPHCCamelDamageIndians"
+                  },
+                  {
+                     "_dbid": "4710",
+                     "__text": "YPHCMeleeDamageIndians"
+                  },
+                  {
+                     "_dbid": "3890",
+                     "__text": "YPHCShipRajput1"
+                  },
+                  {
+                     "_dbid": "4891",
+                     "__text": "YPHCShipIndianRangedCavalry3"
+                  },
+                  {
+                     "_dbid": "4331",
+                     "__text": "YPHCShipSepoy3"
+                  },
+                  {
+                     "_dbid": "4679",
+                     "__text": "YPHCShipWoodCratesInf4Indians"
+                  },
+                  {
+                     "_dbid": "5199",
+                     "__text": "YPHCShipMahout3"
+                  },
+                  {
+                     "_dbid": "4307",
+                     "__text": "YPHCShipFoodCrates3Indians"
+                  },
+                  {
+                     "_dbid": "4887",
+                     "__text": "YPHCShipIndianHandCavalry3"
+                  },
+                  {
+                     "_dbid": "5112",
+                     "__text": "YPHCEastIndiaCompany"
+                  },
+                  {
+                     "_dbid": "5194",
+                     "__text": "YPHCShipGurkha4"
+                  },
+                  {
+                     "_dbid": "3994",
+                     "__text": "YPHCElephantTrampling"
+                  },
+                  {
+                     "_dbid": "3689",
+                     "__text": "YPHCForeignLogging"
+                  },
+                  {
+                     "_dbid": "3895",
+                     "__text": "YPHCShipUrumi1"
+                  },
+                  {
+                     "_dbid": "4428",
+                     "__text": "YPHCBattlefieldConstruction"
+                  },
+                  {
+                     "_dbid": "3914",
+                     "__text": "YPHCShipSiegeElephant2"
+                  },
+                  {
+                     "_dbid": "4761",
+                     "__text": "YPHCShipGroveWagonIndians1"
+                  }
+               ]
+            }
+         },
+         {
+            "name": "$$20310$$Land",
+            "cards": {
+               "card": [
+                  {
+                     "_dbid": "3895",
+                     "__text": "YPHCShipUrumi1"
+                  },
+                  {
+                     "_dbid": "3896",
+                     "__text": "YPHCShipUrumi2"
+                  },
+                  {
+                     "_dbid": "4329",
+                     "__text": "YPHCShipSepoy1"
+                  },
+                  {
+                     "_dbid": "3992",
+                     "__text": "YPHCCamelDamageIndians"
+                  },
+                  {
+                     "_dbid": "4316",
+                     "__text": "YPHCShipCoinCrates2Indians"
+                  },
+                  {
+                     "_dbid": "4803",
+                     "__text": "YPHCAgrarianism"
+                  },
+                  {
+                     "_dbid": "3689",
+                     "__text": "YPHCForeignLogging"
+                  },
+                  {
+                     "_dbid": "5049",
+                     "__text": "YPHCGurkhaAid"
+                  },
+                  {
+                     "_dbid": "5030",
+                     "__text": "YPHCSmoothRelationsIndians"
+                  },
+                  {
+                     "_dbid": "4710",
+                     "__text": "YPHCMeleeDamageIndians"
+                  },
+                  {
+                     "_dbid": "3993",
+                     "__text": "YPHCCamelFrightening"
+                  },
+                  {
+                     "_dbid": "3913",
+                     "__text": "YPHCShipSiegeElephant1"
+                  },
+                  {
+                     "_dbid": "4371",
+                     "__text": "YPHCRoyalMintIndians"
+                  },
+                  {
+                     "_dbid": "5112",
+                     "__text": "YPHCEastIndiaCompany"
+                  },
+                  {
+                     "_dbid": "3990",
+                     "__text": "YPHCInfantrySpeedHitpointsTeam"
+                  },
+                  {
+                     "_dbid": "3658",
+                     "__text": "YPHCShipRhino1"
+                  },
+                  {
+                     "_dbid": "5193",
+                     "__text": "YPHCShipGurkha3"
+                  },
+                  {
+                     "_dbid": "5028",
+                     "__text": "YPHCConscriptSepoys"
+                  },
+                  {
+                     "_dbid": "5053",
+                     "__text": "YPHCRainbowTrickleTeam"
+                  },
+                  {
+                     "_dbid": "4328",
+                     "__text": "YPHCIndianMonkFrighten"
+                  },
+                  {
+                     "_dbid": "5070",
+                     "__text": "ypHCConsulateRelationsIndians"
+                  },
+                  {
+                     "_dbid": "4312",
+                     "__text": "YPHCShipWoodCratesInf2Indians"
+                  },
+                  {
+                     "_dbid": "4344",
+                     "__text": "YPHCFencingSchoolIndians"
+                  },
+                  {
+                     "_dbid": "5134",
+                     "__text": "YPHCShipSowarRegiment"
+                  },
+                  {
+                     "_dbid": "4356",
+                     "__text": "YPHCAdvancedConsulateIndians"
+                  }
+               ]
+            }
+         },
+         {
+            "name": "$$71333$$Naval",
+            "cards": {
+               "card": [
+                  {
+                     "_dbid": "5199",
+                     "__text": "YPHCShipMahout3"
+                  },
+                  {
+                     "_dbid": "4329",
+                     "__text": "YPHCShipSepoy1"
+                  },
+                  {
+                     "_dbid": "5153",
+                     "__text": "YPHCElephantCombatIndians"
+                  },
+                  {
+                     "_dbid": "4803",
+                     "__text": "YPHCAgrarianism"
+                  },
+                  {
+                     "_dbid": "3689",
+                     "__text": "YPHCForeignLogging"
+                  },
+                  {
+                     "_dbid": "5030",
+                     "__text": "YPHCSmoothRelationsIndians"
+                  },
+                  {
+                     "_dbid": "4710",
+                     "__text": "YPHCMeleeDamageIndians"
+                  },
+                  {
+                     "_dbid": "3913",
+                     "__text": "YPHCShipSiegeElephant1"
+                  },
+                  {
+                     "_dbid": "3997",
+                     "__text": "YPHCElephantLimit"
+                  },
+                  {
+                     "_dbid": "3994",
+                     "__text": "YPHCElephantTrampling"
+                  },
+                  {
+                     "_dbid": "4006",
+                     "__text": "YPHCShipFrigateIndians"
+                  },
+                  {
+                     "_dbid": "4170",
+                     "__text": "YPHCShipCaravel2"
+                  },
+                  {
+                     "_dbid": "4380",
+                     "__text": "YPHCShipFrigateDoubleIndians"
+                  },
+                  {
+                     "_dbid": "4365",
+                     "__text": "YPHCRenderingPlantIndians"
+                  },
+                  {
+                     "_dbid": "4841",
+                     "__text": "YPHCShipWoodCratesInf1Indians"
+                  },
+                  {
+                     "_dbid": "3990",
+                     "__text": "YPHCInfantrySpeedHitpointsTeam"
+                  },
+                  {
+                     "_dbid": "5196",
+                     "__text": "YPHCShipHowdah2"
+                  },
+                  {
+                     "_dbid": "4364",
+                     "__text": "YPHCFishMarketIndians"
+                  },
+                  {
+                     "_dbid": "4993",
+                     "__text": "YPHCShipGroveWagonIndians2"
+                  },
+                  {
+                     "_dbid": "3898",
+                     "__text": "YPHCShipUrumiTeam"
+                  },
+                  {
+                     "_dbid": "4371",
+                     "__text": "YPHCRoyalMintIndians"
+                  },
+                  {
+                     "_dbid": "4318",
+                     "__text": "YPHCShipCoinCrates4Indians"
+                  },
+                  {
+                     "_dbid": "4345",
+                     "__text": "YPHCRidingSchoolIndians"
+                  },
+                  {
+                     "_dbid": "4548",
+                     "__text": "YPHCArmedFishermenIndians"
+                  },
+                  {
+                     "_dbid": "4009",
+                     "__text": "YPHCBombayMarine"
+                  }
+               ]
+            }
+         }
+      ]
+   },
+   "building": [
+      {
+         "name": "Estate",
+         "visual": {
+            "file": "spanish\\spanish estate.xml",
+            "bone": "bone_estate"
+         },
+         "uix": "150",
+         "uiy": "200",
+         "camera": "india\\india_homecity_estate_camera.cam",
+         "widescreencamera": "india\\india_homecity_estate_camera.cam",
+         "unlocklevel": "0",
+         "portrait": "homecity\\buildings_west\\estate_icon",
+         "displaynamestringid": "24968",
+         "rolloverstringid": "25537",
+         "validunits": "",
+         "units": "",
+         "trainbuilding": "1",
+         "mercbuilding": "1"
+      },
+      {
+         "name": "Emperor's Treasury",
+         "visual": {
+            "file": "india\\waterbuilding.xml",
+            "bone": "bone_waterbuilding"
+         },
+         "uix": "250",
+         "uiy": "375",
+         "camera": "india\\india_homecity_market_camera.cam",
+         "widescreencamera": "india\\india_homecity_market_widescreencamera.cam",
+         "unlocklevel": "0",
+         "portrait": "homecity\\buildings_west\\market_icon",
+         "displaynamestringid": "63356",
+         "rolloverstringid": "25536",
+         "obtainabletechs": {
+            "tech": [
+               {
+                  "_x": "0",
+                  "_y": "1.0",
+                  "__text": "YPHCShipFoodCrates1Indians"
+               },
+               {
+                  "_x": "0",
+                  "_y": "2.0",
+                  "__text": "YPHCShipFoodCrates2Indians"
+               },
+               {
+                  "_x": "0",
+                  "_y": "3.0",
+                  "__text": "YPHCShipFoodCrates3Indians"
+               },
+               {
+                  "_x": "0",
+                  "_y": "4.0",
+                  "__text": "YPHCShipFoodCrates4Indians"
+               },
+               {
+                  "_x": "1.5",
+                  "_y": "1",
+                  "__text": "YPHCShipWoodCrates1Indians"
+               },
+               {
+                  "_x": "1",
+                  "_y": "2",
+                  "__text": "YPHCShipWoodCrates2Indians"
+               },
+               {
+                  "_x": "1",
+                  "_y": "4",
+                  "__text": "YPHCShipWoodCrates3Indians"
+               },
+               {
+                  "_x": "1",
+                  "_y": "5",
+                  "__text": "YPHCShipWoodCrates4Indians"
+               },
+               {
+                  "_x": "1",
+                  "_y": "6",
+                  "__text": "YPHCShipWoodCrates5Indians"
+               },
+               {
+                  "_x": "2",
+                  "_y": "2",
+                  "__text": "YPHCShipWoodCratesInf1Indians"
+               },
+               {
+                  "_x": "2",
+                  "_y": "4",
+                  "__text": "YPHCShipWoodCratesInf2Indians"
+               },
+               {
+                  "_x": "2",
+                  "_y": "5",
+                  "__text": "YPHCShipWoodCratesInf4Indians"
+               },
+               {
+                  "_x": "3",
+                  "_y": "1.0",
+                  "__text": "YPHCShipCoinCrates1Indians"
+               },
+               {
+                  "_x": "3",
+                  "_y": "2.0",
+                  "__text": "YPHCShipCoinCrates2Indians"
+               },
+               {
+                  "_x": "3",
+                  "_y": "4",
+                  "__text": "YPHCShipCoinCrates3Indians"
+               },
+               {
+                  "_x": "3",
+                  "_y": "5",
+                  "__text": "YPHCShipCoinCrates4Indians"
+               },
+               {
+                  "_x": "4",
+                  "_y": "5",
+                  "__text": "YPHCSacredFieldHealing"
+               },
+               {
+                  "_x": "4",
+                  "_y": "1.0",
+                  "__text": "YPHCShipCoveredWagonsIndians"
+               },
+               {
+                  "_x": "4",
+                  "_y": "3",
+                  "__text": "YPHCShipCoveredWagons2Indians"
+               },
+               {
+                  "_x": "5",
+                  "_y": "1",
+                  "__text": "YPHCShipTigers1"
+               },
+               {
+                  "_x": "5",
+                  "_y": "2",
+                  "__text": "YPHCShipLions1"
+               },
+               {
+                  "_x": "5",
+                  "_y": "3",
+                  "__text": "YPHCShipRhino1"
+               },
+               {
+                  "_x": "6",
+                  "_y": "2",
+                  "__text": "YPHCIndianMonkCombat"
+               },
+               {
+                  "_x": "6",
+                  "_y": "3",
+                  "__text": "YPHCIndianMonkFrighten"
+               }
+            ]
+         },
+         "activetechs": {
+            "tech": [
+               {
+                  "_x": "0",
+                  "_y": "1.0",
+                  "__text": "YPHCShipFoodCrates1Indians"
+               },
+               {
+                  "_x": "0",
+                  "_y": "2.0",
+                  "__text": "YPHCShipFoodCrates2Indians"
+               },
+               {
+                  "_x": "0",
+                  "_y": "3.0",
+                  "__text": "YPHCShipFoodCrates3Indians"
+               },
+               {
+                  "_x": "0",
+                  "_y": "4.0",
+                  "__text": "YPHCShipFoodCrates4Indians"
+               },
+               {
+                  "_x": "1.5",
+                  "_y": "1",
+                  "__text": "YPHCShipWoodCrates1Indians"
+               },
+               {
+                  "_x": "1",
+                  "_y": "2",
+                  "__text": "YPHCShipWoodCrates2Indians"
+               },
+               {
+                  "_x": "1",
+                  "_y": "4",
+                  "__text": "YPHCShipWoodCrates3Indians"
+               },
+               {
+                  "_x": "1",
+                  "_y": "5",
+                  "__text": "YPHCShipWoodCrates4Indians"
+               },
+               {
+                  "_x": "1",
+                  "_y": "6",
+                  "__text": "YPHCShipWoodCrates5Indians"
+               },
+               {
+                  "_x": "2",
+                  "_y": "2",
+                  "__text": "YPHCShipWoodCratesInf1Indians"
+               },
+               {
+                  "_x": "2",
+                  "_y": "4",
+                  "__text": "YPHCShipWoodCratesInf2Indians"
+               },
+               {
+                  "_x": "2",
+                  "_y": "5",
+                  "__text": "YPHCShipWoodCratesInf4Indians"
+               },
+               {
+                  "_x": "3",
+                  "_y": "1.0",
+                  "__text": "YPHCShipCoinCrates1Indians"
+               },
+               {
+                  "_x": "3",
+                  "_y": "2.0",
+                  "__text": "YPHCShipCoinCrates2Indians"
+               },
+               {
+                  "_x": "3",
+                  "_y": "4",
+                  "__text": "YPHCShipCoinCrates3Indians"
+               },
+               {
+                  "_x": "3",
+                  "_y": "5",
+                  "__text": "YPHCShipCoinCrates4Indians"
+               },
+               {
+                  "_x": "4",
+                  "_y": "5",
+                  "__text": "YPHCSacredFieldHealing"
+               },
+               {
+                  "_x": "4",
+                  "_y": "1.0",
+                  "__text": "YPHCShipCoveredWagonsIndians"
+               },
+               {
+                  "_x": "4",
+                  "_y": "3",
+                  "__text": "YPHCShipCoveredWagons2Indians"
+               },
+               {
+                  "_x": "5",
+                  "_y": "1",
+                  "__text": "YPHCShipTigers1"
+               },
+               {
+                  "_x": "5",
+                  "_y": "2",
+                  "__text": "YPHCShipLions1"
+               },
+               {
+                  "_x": "5",
+                  "_y": "3",
+                  "__text": "YPHCShipRhino1"
+               },
+               {
+                  "_x": "6",
+                  "_y": "2",
+                  "__text": "YPHCIndianMonkCombat"
+               },
+               {
+                  "_x": "6",
+                  "_y": "3",
+                  "__text": "YPHCIndianMonkFrighten"
+               }
+            ]
+         },
+         "validunits": "",
+         "units": "",
+         "trainbuilding": "1"
+      },
+      {
+         "name": "Fortress",
+         "visual": {
+            "file": "india\\towerbuilding.xml",
+            "bone": "bone_towerbuilding"
+         },
+         "uix": "460",
+         "uiy": "125",
+         "camera": "india\\india_homecity_academy_camera.cam",
+         "widescreencamera": "india\\india_homecity_academy_widescreencamera.cam",
+         "unlocklevel": "0",
+         "portrait": "homecity\\buildings_west\\academy_icon",
+         "displaynamestringid": "63357",
+         "rolloverstringid": "29002",
+         "obtainabletechs": {
+            "tech": [
+               {
+                  "_x": "0.0",
+                  "_y": "1",
+                  "__text": "YPHCShipRajput1"
+               },
+               {
+                  "_x": "0.0",
+                  "_y": "2",
+                  "__text": "YPHCShipRajput2"
+               },
+               {
+                  "_x": "0.0",
+                  "_y": "3",
+                  "__text": "YPHCShipRajput3"
+               },
+               {
+                  "_x": "0.0",
+                  "_y": "4",
+                  "__text": "YPHCShipRajput4"
+               },
+               {
+                  "_x": "0.0",
+                  "_y": "7",
+                  "__text": "YPHCMeleeDamageIndians"
+               },
+               {
+                  "_x": "0.7",
+                  "_y": "1",
+                  "__text": "YPHCShipGurkha1"
+               },
+               {
+                  "_x": "0.7",
+                  "_y": "2",
+                  "__text": "YPHCShipGurkha2"
+               },
+               {
+                  "_x": "0.7",
+                  "_y": "3",
+                  "__text": "YPHCShipGurkha3"
+               },
+               {
+                  "_x": "0.7",
+                  "_y": "5",
+                  "__text": "YPHCShipGurkha4"
+               },
+               {
+                  "_x": "1.4",
+                  "_y": "1",
+                  "__text": "YPHCShipSepoy1"
+               },
+               {
+                  "_x": "1.4",
+                  "_y": "2",
+                  "__text": "YPHCShipSepoy2"
+               },
+               {
+                  "_x": "1.4",
+                  "_y": "3",
+                  "__text": "YPHCShipSepoy3"
+               },
+               {
+                  "_x": "1.4",
+                  "_y": "4",
+                  "__text": "YPHCShipSepoy4"
+               },
+               {
+                  "_x": "1.4",
+                  "_y": "5",
+                  "__text": "YPHCInfantrySpeedHitpointsTeam"
+               },
+               {
+                  "_x": "2.2",
+                  "_y": "1",
+                  "__text": "YPHCShipIndianHandCavalry1"
+               },
+               {
+                  "_x": "2.2",
+                  "_y": "3",
+                  "__text": "YPHCShipIndianHandCavalry3"
+               },
+               {
+                  "_x": "2.7",
+                  "_y": "4",
+                  "__text": "YPHCCamelDamageIndians"
+               },
+               {
+                  "_x": "2.2",
+                  "_y": "5",
+                  "__text": "YPHCShipSowarRegiment"
+               },
+               {
+                  "_x": "3.2",
+                  "_y": "1",
+                  "__text": "YPHCShipIndianRangedCavalry1"
+               },
+               {
+                  "_x": "3.2",
+                  "_y": "2",
+                  "__text": "YPHCShipIndianRangedCavalry3"
+               },
+               {
+                  "_x": "3.6",
+                  "_y": "3",
+                  "__text": "YPHCCamelFrightening"
+               },
+               {
+                  "_x": "3.2",
+                  "_y": "5",
+                  "__text": "YPHCShipIndianRangedCavalry4"
+               },
+               {
+                  "_x": "4.3",
+                  "_y": "1",
+                  "__text": "YPHCShipHowdah1"
+               },
+               {
+                  "_x": "4.3",
+                  "_y": "3",
+                  "__text": "YPHCShipHowdahRegiment"
+               },
+               {
+                  "_x": "4.3",
+                  "_y": "4",
+                  "__text": "YPHCShipHowdah2"
+               },
+               {
+                  "_x": "5.3",
+                  "_y": "1",
+                  "__text": "YPHCShipMahout1"
+               },
+               {
+                  "_x": "5.3",
+                  "_y": "2",
+                  "__text": "YPHCShipMahout2"
+               },
+               {
+                  "_x": "5.3",
+                  "_y": "3",
+                  "__text": "YPHCShipMahout3"
+               },
+               {
+                  "_x": "6.0",
+                  "_y": "5",
+                  "__text": "YPHCElephantCombatIndians"
+               },
+               {
+                  "_x": "6.0",
+                  "_y": "1",
+                  "__text": "YPHCShipSiegeElephant1"
+               },
+               {
+                  "_x": "6.0",
+                  "_y": "2",
+                  "__text": "YPHCShipSiegeElephant2"
+               },
+               {
+                  "_x": "6.0",
+                  "_y": "3",
+                  "__text": "YPHCElephantLimit"
+               },
+               {
+                  "_x": "5.0",
+                  "_y": "4",
+                  "__text": "YPHCElephantTrampling"
+               },
+               {
+                  "_x": "3.6",
+                  "_y": "7",
+                  "__text": "YPHCGrazing"
+               },
+               {
+                  "_x": "6.8",
+                  "_y": "1",
+                  "__text": "YPHCShipFlailiphant1"
+               },
+               {
+                  "_x": "6.8",
+                  "_y": "2",
+                  "__text": "YPHCShipFlailiphant2"
+               },
+               {
+                  "_x": "6.8",
+                  "_y": "3",
+                  "__text": "YPHCShipFlailiphant3"
+               },
+               {
+                  "_x": "7.6",
+                  "_y": "1",
+                  "__text": "YPHCShipUrumi1"
+               },
+               {
+                  "_x": "7.6",
+                  "_y": "3",
+                  "__text": "YPHCShipUrumiRegiment"
+               },
+               {
+                  "_x": "7.6",
+                  "_y": "4",
+                  "__text": "YPHCShipUrumiTeam"
+               },
+               {
+                  "_x": "7.6",
+                  "_y": "5",
+                  "__text": "YPHCShipUrumi2"
+               }
+            ]
+         },
+         "activetechs": {
+            "tech": [
+               {
+                  "_x": "0.0",
+                  "_y": "1",
+                  "__text": "YPHCShipRajput1"
+               },
+               {
+                  "_x": "0.0",
+                  "_y": "2",
+                  "__text": "YPHCShipRajput2"
+               },
+               {
+                  "_x": "0.0",
+                  "_y": "3",
+                  "__text": "YPHCShipRajput3"
+               },
+               {
+                  "_x": "0.0",
+                  "_y": "4",
+                  "__text": "YPHCShipRajput4"
+               },
+               {
+                  "_x": "0.0",
+                  "_y": "7",
+                  "__text": "YPHCMeleeDamageIndians"
+               },
+               {
+                  "_x": "0.7",
+                  "_y": "1",
+                  "__text": "YPHCShipGurkha1"
+               },
+               {
+                  "_x": "0.7",
+                  "_y": "2",
+                  "__text": "YPHCShipGurkha2"
+               },
+               {
+                  "_x": "0.7",
+                  "_y": "3",
+                  "__text": "YPHCShipGurkha3"
+               },
+               {
+                  "_x": "0.7",
+                  "_y": "5",
+                  "__text": "YPHCShipGurkha4"
+               },
+               {
+                  "_x": "1.4",
+                  "_y": "1",
+                  "__text": "YPHCShipSepoy1"
+               },
+               {
+                  "_x": "1.4",
+                  "_y": "2",
+                  "__text": "YPHCShipSepoy2"
+               },
+               {
+                  "_x": "1.4",
+                  "_y": "3",
+                  "__text": "YPHCShipSepoy3"
+               },
+               {
+                  "_x": "1.4",
+                  "_y": "4",
+                  "__text": "YPHCShipSepoy4"
+               },
+               {
+                  "_x": "1.4",
+                  "_y": "5",
+                  "__text": "YPHCInfantrySpeedHitpointsTeam"
+               },
+               {
+                  "_x": "2.2",
+                  "_y": "1",
+                  "__text": "YPHCShipIndianHandCavalry1"
+               },
+               {
+                  "_x": "2.2",
+                  "_y": "3",
+                  "__text": "YPHCShipIndianHandCavalry3"
+               },
+               {
+                  "_x": "2.7",
+                  "_y": "4",
+                  "__text": "YPHCCamelDamageIndians"
+               },
+               {
+                  "_x": "2.2",
+                  "_y": "5",
+                  "__text": "YPHCShipSowarRegiment"
+               },
+               {
+                  "_x": "3.2",
+                  "_y": "1",
+                  "__text": "YPHCShipIndianRangedCavalry1"
+               },
+               {
+                  "_x": "3.2",
+                  "_y": "2",
+                  "__text": "YPHCShipIndianRangedCavalry3"
+               },
+               {
+                  "_x": "3.6",
+                  "_y": "3",
+                  "__text": "YPHCCamelFrightening"
+               },
+               {
+                  "_x": "3.2",
+                  "_y": "5",
+                  "__text": "YPHCShipIndianRangedCavalry4"
+               },
+               {
+                  "_x": "4.3",
+                  "_y": "1",
+                  "__text": "YPHCShipHowdah1"
+               },
+               {
+                  "_x": "4.3",
+                  "_y": "3",
+                  "__text": "YPHCShipHowdahRegiment"
+               },
+               {
+                  "_x": "4.3",
+                  "_y": "4",
+                  "__text": "YPHCShipHowdah2"
+               },
+               {
+                  "_x": "5.3",
+                  "_y": "1",
+                  "__text": "YPHCShipMahout1"
+               },
+               {
+                  "_x": "5.3",
+                  "_y": "2",
+                  "__text": "YPHCShipMahout2"
+               },
+               {
+                  "_x": "5.3",
+                  "_y": "3",
+                  "__text": "YPHCShipMahout3"
+               },
+               {
+                  "_x": "6.0",
+                  "_y": "5",
+                  "__text": "YPHCElephantCombatIndians"
+               },
+               {
+                  "_x": "6.0",
+                  "_y": "1",
+                  "__text": "YPHCShipSiegeElephant1"
+               },
+               {
+                  "_x": "6.0",
+                  "_y": "2",
+                  "__text": "YPHCShipSiegeElephant2"
+               },
+               {
+                  "_x": "6.0",
+                  "_y": "3",
+                  "__text": "YPHCElephantLimit"
+               },
+               {
+                  "_x": "5.0",
+                  "_y": "4",
+                  "__text": "YPHCElephantTrampling"
+               },
+               {
+                  "_x": "3.6",
+                  "_y": "7",
+                  "__text": "YPHCGrazing"
+               },
+               {
+                  "_x": "6.8",
+                  "_y": "1",
+                  "__text": "YPHCShipFlailiphant1"
+               },
+               {
+                  "_x": "6.8",
+                  "_y": "2",
+                  "__text": "YPHCShipFlailiphant2"
+               },
+               {
+                  "_x": "6.8",
+                  "_y": "3",
+                  "__text": "YPHCShipFlailiphant3"
+               },
+               {
+                  "_x": "7.6",
+                  "_y": "1",
+                  "__text": "YPHCShipUrumi1"
+               },
+               {
+                  "_x": "7.6",
+                  "_y": "3",
+                  "__text": "YPHCShipUrumiRegiment"
+               },
+               {
+                  "_x": "7.6",
+                  "_y": "4",
+                  "__text": "YPHCShipUrumiTeam"
+               },
+               {
+                  "_x": "7.6",
+                  "_y": "5",
+                  "__text": "YPHCShipUrumi2"
+               }
+            ]
+         },
+         "validunits": "",
+         "units": "",
+         "trainbuilding": "1"
+      },
+      {
+         "name": "Imperial Court",
+         "visual": {
+            "file": "india\\tajbuilding.xml",
+            "bone": "bone_tajbuilding"
+         },
+         "uix": "80",
+         "uiy": "475",
+         "camera": "india\\india_homecity_cathedral_camera.cam",
+         "widescreencamera": "india\\india_homecity_cathedral_widescreencamera.cam",
+         "unlocklevel": "0",
+         "portrait": "homecity\\buildings_west\\cathedral_icon",
+         "displaynamestringid": "63358",
+         "rolloverstringid": "25538",
+         "obtainabletechs": {
+            "tech": [
+               {
+                  "_x": "0.4",
+                  "_y": "1",
+                  "__text": "YPHCNativeLearningIndians"
+               },
+               {
+                  "_x": "0.4",
+                  "_y": "2",
+                  "__text": "YPHCNativeIncorporationIndians"
+               },
+               {
+                  "_x": "0",
+                  "_y": "3",
+                  "__text": "YPHCNativeHitpointsIndians"
+               },
+               {
+                  "_x": "0.8",
+                  "_y": "3",
+                  "__text": "YPHCNativeTradeTaxIndians"
+               },
+               {
+                  "_x": "0.8",
+                  "_y": "5",
+                  "__text": "YPHCExpandedTradingPostIndians"
+               },
+               {
+                  "_x": "2.5",
+                  "_y": "3",
+                  "__text": "YPHCFencingSchoolIndians"
+               },
+               {
+                  "_x": "2.5",
+                  "_y": "4",
+                  "__text": "YPHCRidingSchoolIndians"
+               },
+               {
+                  "_x": "1.7",
+                  "_y": "2",
+                  "__text": "YPHCPioneersIndians"
+               },
+               {
+                  "_x": "1.7",
+                  "_y": "3",
+                  "__text": "YPHCTheRaj"
+               },
+               {
+                  "_x": "1.7",
+                  "_y": "4",
+                  "__text": "YPHCImprovedBuildingsTeam"
+               },
+               {
+                  "_x": "1.7",
+                  "_y": "7",
+                  "__text": "YPHCMughalArchitecture"
+               },
+               {
+                  "_x": "3.8",
+                  "_y": "2",
+                  "__text": "YPHCShipCastleWagons1Indians"
+               },
+               {
+                  "_x": "3.4",
+                  "_y": "3",
+                  "__text": "YPHCExtensiveFortificationsIndians"
+               },
+               {
+                  "_x": "4.2",
+                  "_y": "3",
+                  "__text": "YPHCShipCastleWagons2Indians"
+               },
+               {
+                  "_x": "1.7",
+                  "_y": "1",
+                  "__text": "YPHCEnlistIrregularsIndians"
+               },
+               {
+                  "_x": "2.5",
+                  "_y": "2",
+                  "__text": "YPHCCallToArms1"
+               },
+               {
+                  "_x": "5",
+                  "_y": "2",
+                  "__text": "YPHCConscriptSepoys"
+               },
+               {
+                  "_x": "5",
+                  "_y": "5",
+                  "__text": "YPHCEastIndiaCompany"
+               },
+               {
+                  "_x": "5",
+                  "_y": "6",
+                  "__text": "YPHCBattlefieldConstruction"
+               },
+               {
+                  "_x": "5",
+                  "_y": "7",
+                  "__text": "YPHCSepoyRebellion"
+               },
+               {
+                  "_x": "5.8",
+                  "_y": "1",
+                  "__text": "YPHCBazaar"
+               },
+               {
+                  "_x": "5.8",
+                  "_y": "2",
+                  "__text": "YPHCAdvancedMonasteryIndians"
+               },
+               {
+                  "_x": "5.8",
+                  "_y": "3",
+                  "__text": "YPHCAdvancedRicePaddyIndians"
+               },
+               {
+                  "_x": "5.8",
+                  "_y": "4",
+                  "__text": "YPHCAdvancedDockIndians"
+               },
+               {
+                  "_x": "6.6",
+                  "_y": "2",
+                  "__text": "YPHCAdvancedConsulateIndians"
+               },
+               {
+                  "_x": "5.8",
+                  "_y": "6",
+                  "__text": "YPHCAdvancedWondersIndians"
+               },
+               {
+                  "_x": "7.4",
+                  "_y": "3",
+                  "__text": "YPHCGurkhaAid"
+               },
+               {
+                  "_x": "6.6",
+                  "_y": "3",
+                  "__text": "YPHCConsulateRelationsIndians"
+               },
+               {
+                  "_x": "6.6",
+                  "_y": "4",
+                  "__text": "YPHCSmoothRelationsIndians"
+               }
+            ]
+         },
+         "activetechs": {
+            "tech": [
+               {
+                  "_x": "0.4",
+                  "_y": "1",
+                  "__text": "YPHCNativeLearningIndians"
+               },
+               {
+                  "_x": "0.4",
+                  "_y": "2",
+                  "__text": "YPHCNativeIncorporationIndians"
+               },
+               {
+                  "_x": "0",
+                  "_y": "3",
+                  "__text": "YPHCNativeHitpointsIndians"
+               },
+               {
+                  "_x": "0.8",
+                  "_y": "3",
+                  "__text": "YPHCNativeTradeTaxIndians"
+               },
+               {
+                  "_x": "0.8",
+                  "_y": "5",
+                  "__text": "YPHCExpandedTradingPostIndians"
+               },
+               {
+                  "_x": "2.5",
+                  "_y": "3",
+                  "__text": "YPHCFencingSchoolIndians"
+               },
+               {
+                  "_x": "2.5",
+                  "_y": "4",
+                  "__text": "YPHCRidingSchoolIndians"
+               },
+               {
+                  "_x": "1.7",
+                  "_y": "2",
+                  "__text": "YPHCPioneersIndians"
+               },
+               {
+                  "_x": "1.7",
+                  "_y": "3",
+                  "__text": "YPHCTheRaj"
+               },
+               {
+                  "_x": "1.7",
+                  "_y": "4",
+                  "__text": "YPHCImprovedBuildingsTeam"
+               },
+               {
+                  "_x": "1.7",
+                  "_y": "7",
+                  "__text": "YPHCMughalArchitecture"
+               },
+               {
+                  "_x": "3.8",
+                  "_y": "2",
+                  "__text": "YPHCShipCastleWagons1Indians"
+               },
+               {
+                  "_x": "3.4",
+                  "_y": "3",
+                  "__text": "YPHCExtensiveFortificationsIndians"
+               },
+               {
+                  "_x": "4.2",
+                  "_y": "3",
+                  "__text": "YPHCShipCastleWagons2Indians"
+               },
+               {
+                  "_x": "1.7",
+                  "_y": "1",
+                  "__text": "YPHCEnlistIrregularsIndians"
+               },
+               {
+                  "_x": "2.5",
+                  "_y": "2",
+                  "__text": "YPHCCallToArms1"
+               },
+               {
+                  "_x": "5",
+                  "_y": "2",
+                  "__text": "YPHCConscriptSepoys"
+               },
+               {
+                  "_x": "5",
+                  "_y": "5",
+                  "__text": "YPHCEastIndiaCompany"
+               },
+               {
+                  "_x": "5",
+                  "_y": "6",
+                  "__text": "YPHCBattlefieldConstruction"
+               },
+               {
+                  "_x": "5",
+                  "_y": "7",
+                  "__text": "YPHCSepoyRebellion"
+               },
+               {
+                  "_x": "5.8",
+                  "_y": "1",
+                  "__text": "YPHCBazaar"
+               },
+               {
+                  "_x": "5.8",
+                  "_y": "2",
+                  "__text": "YPHCAdvancedMonasteryIndians"
+               },
+               {
+                  "_x": "5.8",
+                  "_y": "3",
+                  "__text": "YPHCAdvancedRicePaddyIndians"
+               },
+               {
+                  "_x": "5.8",
+                  "_y": "4",
+                  "__text": "YPHCAdvancedDockIndians"
+               },
+               {
+                  "_x": "6.6",
+                  "_y": "2",
+                  "__text": "YPHCAdvancedConsulateIndians"
+               },
+               {
+                  "_x": "5.8",
+                  "_y": "6",
+                  "__text": "YPHCAdvancedWondersIndians"
+               },
+               {
+                  "_x": "7.4",
+                  "_y": "3",
+                  "__text": "YPHCGurkhaAid"
+               },
+               {
+                  "_x": "6.6",
+                  "_y": "3",
+                  "__text": "YPHCConsulateRelationsIndians"
+               },
+               {
+                  "_x": "6.6",
+                  "_y": "4",
+                  "__text": "YPHCSmoothRelationsIndians"
+               }
+            ]
+         },
+         "validunits": "",
+         "units": "",
+         "trainbuilding": "1"
+      },
+      {
+         "name": "Merchant's Guild",
+         "visual": {
+            "file": "india\\marketbuilding.xml",
+            "bone": "bone_marketbuilding"
+         },
+         "uix": "450",
+         "uiy": "275",
+         "camera": "india\\india_homecity_manufacturing_plant_camera.cam",
+         "widescreencamera": "india\\india_homecity_plant_widescreencamera.cam",
+         "unlocklevel": "0",
+         "portrait": "homecity\\buildings_west\\manufacturing_plant_icon",
+         "displaynamestringid": "63359",
+         "rolloverstringid": "25535",
+         "obtainabletechs": {
+            "tech": [
+               {
+                  "_x": "6.8",
+                  "_y": "3",
+                  "__text": "YPHCGoraksha"
+               },
+               {
+                  "_x": "0.0",
+                  "_y": "3",
+                  "__text": "YPHCVillagemasonsIndians"
+               },
+               {
+                  "_x": "2.2",
+                  "_y": "1",
+                  "__text": "YPHCShipGroveWagonIndians1"
+               },
+               {
+                  "_x": "2.2",
+                  "_y": "2",
+                  "__text": "YPHCShipGroveWagonIndians2"
+               },
+               {
+                  "_x": "0.9",
+                  "_y": "2",
+                  "__text": "YPHCFishMarketIndians"
+               },
+               {
+                  "_x": "0.9",
+                  "_y": "3",
+                  "__text": "YPHCRenderingPlantIndians"
+               },
+               {
+                  "_x": "0.9",
+                  "_y": "4",
+                  "__text": "YPHCSchoonersIndians"
+               },
+               {
+                  "_x": "0.9",
+                  "_y": "5",
+                  "__text": "YPHCArmedFishermenIndians"
+               },
+               {
+                  "_x": "2.2",
+                  "_y": "4",
+                  "__text": "YPHCSawmillsIndians"
+               },
+               {
+                  "_x": "1.8",
+                  "_y": "5",
+                  "__text": "YPHCExoticHardwoodsIndians"
+               },
+               {
+                  "_x": "1.8",
+                  "_y": "6",
+                  "__text": "YPHCWoodcraftingIndians"
+               },
+               {
+                  "_x": "2.6",
+                  "_y": "5",
+                  "__text": "YPHCAgrarianism"
+               },
+               {
+                  "_x": "2.6",
+                  "_y": "7",
+                  "__text": "YPHCForeignLogging"
+               },
+               {
+                  "_x": "3.5",
+                  "_y": "2",
+                  "__text": "YPHCIronmongerIndians"
+               },
+               {
+                  "_x": "3.5",
+                  "_y": "4",
+                  "__text": "YPHCRoyalMintIndians"
+               },
+               {
+                  "_x": "3.5",
+                  "_y": "6",
+                  "__text": "YPHCSilversmithIndians"
+               },
+               {
+                  "_x": "5.1",
+                  "_y": "6",
+                  "__text": "YPHCRainbowTrickleTeam"
+               },
+               {
+                  "_x": "4.3",
+                  "_y": "1",
+                  "__text": "YPHCFoodSilosIndians"
+               },
+               {
+                  "_x": "4.3",
+                  "_y": "3",
+                  "__text": "YPHCSustainableAgricultureIndians"
+               },
+               {
+                  "_x": "4.3",
+                  "_y": "7",
+                  "__text": "YPHCFurTradeIndians"
+               },
+               {
+                  "_x": "5.1",
+                  "_y": "1",
+                  "__text": "YPHCRumDistilleryIndians"
+               },
+               {
+                  "_x": "5.1",
+                  "_y": "2",
+                  "__text": "YPHCFarmlandConservation"
+               },
+               {
+                  "_x": "6",
+                  "_y": "5",
+                  "__text": "HCXPMedicineTeam"
+               },
+               {
+                  "_x": "6",
+                  "_y": "2",
+                  "__text": "YPHCFurrierIndian"
+               },
+               {
+                  "_x": "6",
+                  "_y": "4",
+                  "__text": "YPHCSpiceTradeIndian"
+               }
+            ]
+         },
+         "activetechs": {
+            "tech": [
+               {
+                  "_x": "6.8",
+                  "_y": "3",
+                  "__text": "YPHCGoraksha"
+               },
+               {
+                  "_x": "0.0",
+                  "_y": "3",
+                  "__text": "YPHCVillagemasonsIndians"
+               },
+               {
+                  "_x": "2.2",
+                  "_y": "1",
+                  "__text": "YPHCShipGroveWagonIndians1"
+               },
+               {
+                  "_x": "2.2",
+                  "_y": "2",
+                  "__text": "YPHCShipGroveWagonIndians2"
+               },
+               {
+                  "_x": "0.9",
+                  "_y": "2",
+                  "__text": "YPHCFishMarketIndians"
+               },
+               {
+                  "_x": "0.9",
+                  "_y": "3",
+                  "__text": "YPHCRenderingPlantIndians"
+               },
+               {
+                  "_x": "0.9",
+                  "_y": "4",
+                  "__text": "YPHCSchoonersIndians"
+               },
+               {
+                  "_x": "0.9",
+                  "_y": "5",
+                  "__text": "YPHCArmedFishermenIndians"
+               },
+               {
+                  "_x": "2.2",
+                  "_y": "4",
+                  "__text": "YPHCSawmillsIndians"
+               },
+               {
+                  "_x": "1.8",
+                  "_y": "5",
+                  "__text": "YPHCExoticHardwoodsIndians"
+               },
+               {
+                  "_x": "1.8",
+                  "_y": "6",
+                  "__text": "YPHCWoodcraftingIndians"
+               },
+               {
+                  "_x": "2.6",
+                  "_y": "5",
+                  "__text": "YPHCAgrarianism"
+               },
+               {
+                  "_x": "2.6",
+                  "_y": "7",
+                  "__text": "YPHCForeignLogging"
+               },
+               {
+                  "_x": "3.5",
+                  "_y": "2",
+                  "__text": "YPHCIronmongerIndians"
+               },
+               {
+                  "_x": "3.5",
+                  "_y": "4",
+                  "__text": "YPHCRoyalMintIndians"
+               },
+               {
+                  "_x": "3.5",
+                  "_y": "6",
+                  "__text": "YPHCSilversmithIndians"
+               },
+               {
+                  "_x": "5.1",
+                  "_y": "6",
+                  "__text": "YPHCRainbowTrickleTeam"
+               },
+               {
+                  "_x": "4.3",
+                  "_y": "1",
+                  "__text": "YPHCFoodSilosIndians"
+               },
+               {
+                  "_x": "4.3",
+                  "_y": "3",
+                  "__text": "YPHCSustainableAgricultureIndians"
+               },
+               {
+                  "_x": "4.3",
+                  "_y": "7",
+                  "__text": "YPHCFurTradeIndians"
+               },
+               {
+                  "_x": "5.1",
+                  "_y": "1",
+                  "__text": "YPHCRumDistilleryIndians"
+               },
+               {
+                  "_x": "5.1",
+                  "_y": "2",
+                  "__text": "YPHCFarmlandConservation"
+               },
+               {
+                  "_x": "6",
+                  "_y": "5",
+                  "__text": "HCXPMedicineTeam"
+               },
+               {
+                  "_x": "6",
+                  "_y": "2",
+                  "__text": "YPHCFurrierIndian"
+               },
+               {
+                  "_x": "6",
+                  "_y": "4",
+                  "__text": "YPHCSpiceTradeIndian"
+               }
+            ]
+         },
+         "validunits": "",
+         "trainbuilding": "1"
+      },
+      {
+         "name": "Customs House",
+         "visual": {
+            "file": "india\\squarebuilding.xml",
+            "bone": "bone_squarebuilding"
+         },
+         "uix": "200",
+         "uiy": "250",
+         "camera": "india\\india_homecity_dock_camera.cam",
+         "widescreencamera": "india\\india_homecity_dock_widescreencamera.cam",
+         "unlocklevel": "0",
+         "portrait": "homecity\\buildings_west\\dock_icon",
+         "displaynamestringid": "63360",
+         "rolloverstringid": "35746",
+         "obtainabletechs": {
+            "tech": [
+               {
+                  "_x": "1",
+                  "_y": "1",
+                  "__text": "YPHCShipCaravel1"
+               },
+               {
+                  "_x": "1",
+                  "_y": "2",
+                  "__text": "YPHCBombayMarine"
+               },
+               {
+                  "_x": "0",
+                  "_y": "3",
+                  "__text": "YPHCShipCaravel2"
+               },
+               {
+                  "_x": "0",
+                  "_y": "5",
+                  "__text": "YPHCShipCaravel3Double"
+               },
+               {
+                  "_x": "1",
+                  "_y": "3",
+                  "__text": "YPHCShipFrigateIndians"
+               },
+               {
+                  "_x": "1",
+                  "_y": "5",
+                  "__text": "YPHCShipFrigateDoubleIndians"
+               },
+               {
+                  "_x": "2",
+                  "_y": "3",
+                  "__text": "YPHCNavalCombatIndians"
+               },
+               {
+                  "_x": "1",
+                  "_y": "6",
+                  "__text": "YPHCShipMonitorIndians"
+               },
+               {
+                  "_x": "2",
+                  "_y": "7",
+                  "__text": "YPHCEuropeanCannonsIndians"
+               },
+               {
+                  "_x": "2",
+                  "_y": "1",
+                  "__text": "YPHCAdmiralityIndians"
+               },
+               {
+                  "_x": "4.3",
+                  "_y": "4",
+                  "__text": "YPHCMercsChakram1"
+               },
+               {
+                  "_x": "4.3",
+                  "_y": "5",
+                  "__text": "YPHCMercsChakram2"
+               },
+               {
+                  "_x": "4.3",
+                  "_y": "7",
+                  "__text": "YPHCMercsChakram3"
+               },
+               {
+                  "_x": "5.1",
+                  "_y": "3",
+                  "__text": "YPHCMercsTigerClaw1"
+               },
+               {
+                  "_x": "5.1",
+                  "_y": "5",
+                  "__text": "YPHCMercsTigerClaw2"
+               },
+               {
+                  "_x": "5.1",
+                  "_y": "7",
+                  "__text": "YPHCMercsTigerClaw3"
+               },
+               {
+                  "_x": "3.5",
+                  "_y": "1",
+                  "__text": "YPHCAtonementIndians"
+               },
+               {
+                  "_x": "5.9",
+                  "_y": "3",
+                  "__text": "YPHCMercsJatLancer1"
+               },
+               {
+                  "_x": "5.9",
+                  "_y": "7",
+                  "__text": "YPHCMercsWarElephant1"
+               },
+               {
+                  "_x": "6.7",
+                  "_y": "4",
+                  "__text": "YPHCMercsArsonist1"
+               },
+               {
+                  "_x": "6.7",
+                  "_y": "5",
+                  "__text": "YPHCMercsIndianArmy"
+               },
+               {
+                  "_x": "3.5",
+                  "_y": "6",
+                  "__text": "YPHCMercenaryLoyaltyIndians"
+               },
+               {
+                  "_x": "7.5",
+                  "_y": "2",
+                  "__text": "YPHCWokouIndians1"
+               },
+               {
+                  "_x": "7.5",
+                  "_y": "4",
+                  "__text": "YPHCWokouIndians2"
+               },
+               {
+                  "_x": "7.5",
+                  "_y": "6",
+                  "__text": "YPHCWokouIndians3Double"
+               }
+            ]
+         },
+         "activetechs": {
+            "tech": [
+               {
+                  "_x": "1",
+                  "_y": "1",
+                  "__text": "YPHCShipCaravel1"
+               },
+               {
+                  "_x": "1",
+                  "_y": "2",
+                  "__text": "YPHCBombayMarine"
+               },
+               {
+                  "_x": "0",
+                  "_y": "3",
+                  "__text": "YPHCShipCaravel2"
+               },
+               {
+                  "_x": "0",
+                  "_y": "5",
+                  "__text": "YPHCShipCaravel3Double"
+               },
+               {
+                  "_x": "1",
+                  "_y": "3",
+                  "__text": "YPHCShipFrigateIndians"
+               },
+               {
+                  "_x": "1",
+                  "_y": "5",
+                  "__text": "YPHCShipFrigateDoubleIndians"
+               },
+               {
+                  "_x": "2",
+                  "_y": "3",
+                  "__text": "YPHCNavalCombatIndians"
+               },
+               {
+                  "_x": "1",
+                  "_y": "6",
+                  "__text": "YPHCShipMonitorIndians"
+               },
+               {
+                  "_x": "2",
+                  "_y": "7",
+                  "__text": "YPHCEuropeanCannonsIndians"
+               },
+               {
+                  "_x": "2",
+                  "_y": "1",
+                  "__text": "YPHCAdmiralityIndians"
+               },
+               {
+                  "_x": "4.3",
+                  "_y": "4",
+                  "__text": "YPHCMercsChakram1"
+               },
+               {
+                  "_x": "4.3",
+                  "_y": "5",
+                  "__text": "YPHCMercsChakram2"
+               },
+               {
+                  "_x": "4.3",
+                  "_y": "7",
+                  "__text": "YPHCMercsChakram3"
+               },
+               {
+                  "_x": "5.1",
+                  "_y": "3",
+                  "__text": "YPHCMercsTigerClaw1"
+               },
+               {
+                  "_x": "5.1",
+                  "_y": "5",
+                  "__text": "YPHCMercsTigerClaw2"
+               },
+               {
+                  "_x": "5.1",
+                  "_y": "7",
+                  "__text": "YPHCMercsTigerClaw3"
+               },
+               {
+                  "_x": "3.5",
+                  "_y": "1",
+                  "__text": "YPHCAtonementIndians"
+               },
+               {
+                  "_x": "5.9",
+                  "_y": "3",
+                  "__text": "YPHCMercsJatLancer1"
+               },
+               {
+                  "_x": "5.9",
+                  "_y": "7",
+                  "__text": "YPHCMercsWarElephant1"
+               },
+               {
+                  "_x": "6.7",
+                  "_y": "4",
+                  "__text": "YPHCMercsArsonist1"
+               },
+               {
+                  "_x": "6.7",
+                  "_y": "5",
+                  "__text": "YPHCMercsIndianArmy"
+               },
+               {
+                  "_x": "3.5",
+                  "_y": "6",
+                  "__text": "YPHCMercenaryLoyaltyIndians"
+               },
+               {
+                  "_x": "7.5",
+                  "_y": "2",
+                  "__text": "YPHCWokouIndians1"
+               },
+               {
+                  "_x": "7.5",
+                  "_y": "4",
+                  "__text": "YPHCWokouIndians2"
+               },
+               {
+                  "_x": "7.5",
+                  "_y": "6",
+                  "__text": "YPHCWokouIndians3Double"
+               }
+            ]
+         },
+         "validunits": "",
+         "units": "",
+         "trainbuilding": "1",
+         "mercbuilding": "1"
+      },
+      {
+         "name": "Customization",
+         "camera": "india\\india_homecity_camera.cam",
+         "widescreencamera": "india\\india_homecity_widescreencamera.cam",
+         "unlocklevel": "0",
+         "portrait": "homecity\\buildings_west\\dock_icon",
+         "displaynamestringid": "24966",
+         "rolloverstringid": "25540",
+         "customizationbuilding": "1"
+      }
+   ],
+   "waypoints": {
+      "waypoint": [
+         {
+            "bone": "bone_pathnode_01",
+            "performancearea": "1"
+         },
+         {
+            "bone": "bone_pathnode_02",
+            "exit": "1",
+            "vendorentry": "1"
+         },
+         {
+            "bone": "bone_pathnode_03",
+            "exit": "1",
+            "vendorentry": "1",
+            "shipmentstart": "1"
+         },
+         {
+            "bone": "bone_pathnode_04"
+         },
+         {
+            "bone": "bone_pathnode_05",
+            "exit": "1",
+            "vendorentry": "1"
+         },
+         {
+            "bone": "bone_pathnode_06"
+         },
+         {
+            "bone": "bone_pathnode_07",
+            "exit": "1",
+            "vendorentry": "1"
+         },
+         {
+            "bone": "bone_pathnode_08",
+            "exit": "1",
+            "vendorentry": "1"
+         },
+         {
+            "bone": "bone_pathnode_09"
+         },
+         {
+            "bone": "bone_pathnode_10",
+            "exit": "1",
+            "vendorentry": "1"
+         },
+         {
+            "bone": "bone_pathnode_11",
+            "performancearea": "1"
+         },
+         {
+            "bone": "bone_pathnode_12",
+            "exit": "1",
+            "vendorentry": "1",
+            "shipmentend": "1"
+         },
+         {
+            "bone": "bone_pathnode_13",
+            "exit": "1",
+            "vendorentry": "1"
+         },
+         {
+            "bone": "bone_pathnode_14",
+            "exit": "1",
+            "vendorentry": "1"
+         },
+         {
+            "bone": "bone_pathnode_15"
+         },
+         {
+            "bone": "bone_pathnode_16",
+            "exit": "1",
+            "vendorentry": "1"
+         },
+         {
+            "bone": "bone_pathnode_17",
+            "performancearea": "1"
+         },
+         {
+            "bone": "bone_pathnode_18",
+            "performancearea": "1"
+         },
+         {
+            "bone": "bone_pathnode_19",
+            "performancearea": "1"
+         },
+         {
+            "bone": "bone_pathnode_20",
+            "performancearea": "1"
+         },
+         {
+            "bone": "bone_pathnode_21"
+         },
+         {
+            "bone": "bone_pathnode_22",
+            "performancearea": "1"
+         },
+         {
+            "bone": "bone_pathnode_23",
+            "performancearea": "1"
+         },
+         {
+            "bone": "bone_pathnode_24"
+         },
+         {
+            "bone": "bone_pathnode_25",
+            "exit": "1",
+            "vendorentry": "1"
+         },
+         {
+            "bone": "bone_pathnode_26"
+         },
+         {
+            "bone": "bone_pathnode_27"
+         },
+         {
+            "bone": "bone_pathnode_28"
+         },
+         {
+            "bone": "bone_pathnode_29"
+         },
+         {
+            "bone": "bone_pathnode_30"
+         },
+         {
+            "bone": "bone_pathnode_31"
+         },
+         {
+            "bone": "bone_academy_doorway",
+            "door": "1"
+         },
+         {
+            "bone": "bone_plant_doorway",
+            "door": "1"
+         },
+         {
+            "bone": "bone_plant_side_doorway",
+            "door": "1"
+         },
+         {
+            "bone": "bone_small_church_doorway",
+            "door": "1"
+         },
+         {
+            "bone": "bone_cathedral_doorway",
+            "door": "1"
+         },
+         {
+            "bone": "bone_cathedral_side_doorway",
+            "door": "1"
+         },
+         {
+            "bone": "bone_fishing01",
+            "fishingarea": "1"
+         },
+         {
+            "bone": "bone_fishing02",
+            "fishingarea": "1"
+         },
+         {
+            "bone": "bone_fishing03",
+            "fishingarea": "1"
+         },
+         {
+            "bone": "bone_shipment_start"
+         },
+         {
+            "bone": "bone_shipment_end"
+         },
+         {
+            "bone": "bone_dregs01",
+            "illreputearea": "1"
+         },
+         {
+            "bone": "bone_dregs02",
+            "illreputearea": "1"
+         },
+         {
+            "bone": "bone_dregs03",
+            "illreputearea": "1"
+         },
+         {
+            "bone": "bone_dregs04",
+            "illreputearea": "1"
+         },
+         {
+            "bone": "bone_dregs05",
+            "illreputearea": "1"
+         },
+         {
+            "bone": "bone_dregs06",
+            "illreputearea": "1"
+         },
+         {
+            "bone": "bone_vendor01",
+            "vendorarea": "1"
+         },
+         {
+            "bone": "bone_vendor02",
+            "vendorarea": "1"
+         },
+         {
+            "bone": "bone_vendor03",
+            "vendorarea": "1"
+         },
+         {
+            "bone": "bone_vendor04",
+            "vendorarea": "1"
+         },
+         {
+            "bone": "bone_vendor05",
+            "vendorarea": "1"
+         },
+         {
+            "bone": "bone_vendor06",
+            "vendorarea": "1"
+         },
+         {
+            "bone": "bone_vendor07",
+            "vendorarea": "1"
+         },
+         {
+            "bone": "bone_vendor08",
+            "vendorarea": "1"
+         },
+         {
+            "bone": "bone_firework01",
+            "fireworks": "1"
+         },
+         {
+            "bone": "bone_firework02",
+            "fireworks": "1"
+         },
+         {
+            "bone": "bone_firework03",
+            "fireworks": "1"
+         },
+         {
+            "bone": "bone_firework04",
+            "fireworks": "1"
+         },
+         {
+            "bone": "bone_firework05",
+            "fireworks": "1"
+         },
+         {
+            "bone": "bone_firework06",
+            "fireworks": "1"
+         },
+         {
+            "bone": "bone_parade01",
+            "paradestart": "1"
+         },
+         {
+            "bone": "bone_parade02",
+            "paradenext": "1"
+         },
+         {
+            "bone": "bone_parade03",
+            "paradenext": "1"
+         },
+         {
+            "bone": "bone_parade04",
+            "paradenext": "1"
+         },
+         {
+            "bone": "bone_parade05",
+            "paradenext": "1"
+         },
+         {
+            "bone": "bone_parade06",
+            "paradenext": "1"
+         },
+         {
+            "bone": "bone_parade07",
+            "paradenext": "1"
+         },
+         {
+            "bone": "bone_parade08",
+            "paradenext": "1"
+         },
+         {
+            "bone": "bone_parade09",
+            "paradenext": "1"
+         },
+         {
+            "bone": "bone_parade10",
+            "paradenext": "1"
+         },
+         {
+            "bone": "bone_parade11",
+            "paradenext": "1"
+         },
+         {
+            "bone": "bone_parade12",
+            "paradenext": "1"
+         },
+         {
+            "bone": "bone_parade13",
+            "paradenext": "1"
+         },
+         {
+            "bone": "bone_parade14",
+            "paradenext": "1"
+         },
+         {
+            "bone": "bone_parade15",
+            "paradenext": "1"
+         },
+         {
+            "bone": "bone_parade16",
+            "paradenext": "1"
+         },
+         {
+            "bone": "bone_parade17",
+            "paradenext": "1"
+         },
+         {
+            "bone": "bone_parade18",
+            "paradenext": "1"
+         },
+         {
+            "bone": "bone_parade19",
+            "paradenext": "1"
+         },
+         {
+            "bone": "bone_parade20",
+            "paradenext": "1"
+         },
+         {
+            "bone": "bone_parade21",
+            "paradenext": "1"
+         }
+      ]
+   },
+   "obtainableprops": {
+      "prop": [
+         "Indian_MarketDay",
+         {
+            "_active": "1",
+            "__text": "Indian_LightSetDay"
+         },
+         "Indian_LightSetSunset",
+         "Indian_LightSetNight",
+         "Indian_LightSetMonsoon",
+         {
+            "_active": "1",
+            "__text": "Indian_TajMahal_Variation0"
+         },
+         "Indian_TajMahal_Variation1",
+         {
+            "_active": "1",
+            "__text": "Indian_Tower_Variation0"
+         },
+         "Indian_Tower_Variation1",
+         {
+            "_active": "1",
+            "__text": "Indian_Customs_Variation0"
+         },
+         "Indian_Customs_Variation1",
+         {
+            "_active": "1",
+            "__text": "Indian_Merchant_Variation0"
+         },
+         "Indian_Merchant_Variation1",
+         {
+            "_active": "1",
+            "__text": "Indian_Treasury_Variation0"
+         },
+         "Indian_Treasury_Variation1",
+         "Indian_Boats",
+         "Indian_Holi_Festival_1",
+         "Indian_Holi_Festival_2",
+         "Indian_Elephant_Parade"
+      ]
+   }
+}

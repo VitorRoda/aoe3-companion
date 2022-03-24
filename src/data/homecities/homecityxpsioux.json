@@ -1,0 +1,3338 @@
+{
+   "civ": "XPSioux",
+   "name": "$$43642$$",
+   "heroname": "$$48879$$",
+   "gatherpointunit": "HomeCityGatherFlag",
+   "visual": "sioux\\sioux_homecity.xml",
+   "watervisual": "sioux\\sioux_homecity_water.xml",
+   "backgroundvisual": "sioux\\sioux_background.xml",
+   "pathdata": "sioux\\sioux_pathable_area.gr2",
+   "camera": "sioux\\sioux_homecity_camera.cam",
+   "widescreencamera": "sioux\\sioux_homecity_widescreencamera.cam",
+   "transportroundtriptime": "1",
+   "transportactivationtime": "0",
+   "level": "1",
+   "skillpoints": "9",
+   "lightset": "sioux_hc",
+   "watertype": "Seville",
+   "numpropunlocksearned": "0",
+   "ambientsounds": "homecity\\siouxambientsounds.xml",
+   "xsai": "generic_city",
+   "coffers": {
+      "current": {
+         "food": "0",
+         "wood": "0",
+         "gold": "0",
+         "fame": "0",
+         "ships": "0",
+         "skillpoints": "0",
+         "xp": "0"
+      },
+      "maximum": {
+         "food": "0",
+         "wood": "0",
+         "gold": "0",
+         "fame": "0",
+         "ships": "0",
+         "skillpoints": "-1",
+         "xp": "-1"
+      }
+   },
+   "cards": {
+      "card": [
+         {
+            "name": "HCXPShipVillagers1",
+            "maxcount": "-1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "0",
+            "displayunitcount": "2",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCXPShipVillagers4",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "HCXPShipVillagers1",
+            "age": "1",
+            "displayunitcount": "5",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCXPShipVillagers3",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "HCXPShipVillagers4",
+            "age": "0",
+            "displayunitcount": "3",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCXPShipVillagers2",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "0",
+            "displayunitcount": "4",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCShipFoodCrates1",
+            "maxcount": "-1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "0",
+            "displayunitcount": "300",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCShipFoodCrates2",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "HCShipFoodCrates1",
+            "age": "1",
+            "infiniteinlastage": "1",
+            "displayunitcount": "600"
+         },
+         {
+            "name": "HCShipFoodCrates3",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "HCShipFoodCrates2",
+            "age": "1",
+            "infiniteinlastage": "1",
+            "displayunitcount": "700"
+         },
+         {
+            "name": "HCShipFoodCrates4",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "HCShipFoodCrates3",
+            "age": "2",
+            "infiniteinlastage": "1",
+            "displayunitcount": "1000"
+         },
+         {
+            "name": "HCShipFoodCrates5",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "HCShipFoodCrates4",
+            "age": "3",
+            "infiniteinlastage": "1",
+            "displayunitcount": "1600"
+         },
+         {
+            "name": "HCShipSurgeons",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "-1",
+            "age": "1",
+            "displayunitcount": "2"
+         },
+         {
+            "name": "HCXPTeamFoodCrates1",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "HCShipFoodCrates2",
+            "age": "2",
+            "infiniteinlastage": "1",
+            "displayunitcount": "600"
+         },
+         {
+            "name": "HCXPTeamFoodCrates2",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "HCXPTeamFoodCrates1",
+            "age": "3",
+            "infiniteinlastage": "1",
+            "displayunitcount": "1000"
+         },
+         {
+            "name": "HCShipWoodCrates1",
+            "maxcount": "-1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "0",
+            "displayunitcount": "300",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCShipWoodCrates2",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "HCShipWoodCrates1",
+            "age": "1",
+            "displayunitcount": "600",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCShipWoodCrates3",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "HCShipwoodCrates2",
+            "age": "1",
+            "displayunitcount": "700",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCShipWoodCrates4",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "HCShipwoodCrates3",
+            "age": "2",
+            "displayunitcount": "1000",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCShipCoinCrates1",
+            "maxcount": "-1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "0",
+            "displayunitcount": "300",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCShipCoinCrates2",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "HCShipCoinCrates1",
+            "age": "1",
+            "displayunitcount": "600",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCShipCoinCrates3",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "HCShipCoinCrates2",
+            "age": "1",
+            "displayunitcount": "700",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCXPWarChiefSioux1",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "0",
+            "displayunitcount": "-1"
+         },
+         {
+            "name": "HCXPWarChiefSioux2",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "HCXPWarChiefSioux1",
+            "age": "2",
+            "displayunitcount": "-1"
+         },
+         {
+            "name": "HCXPWarChiefSioux3",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "HCXPWarChiefSioux2",
+            "age": "3",
+            "displayunitcount": "-1"
+         },
+         {
+            "name": "HCXPCommandSkill",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "HCXPWarChiefSioux3",
+            "age": "3"
+         },
+         {
+            "name": "HCXPMorningStar",
+            "maxcount": "1",
+            "level": "40",
+            "prereqtech": "HCXPCommandSkill",
+            "age": "0"
+         },
+         {
+            "name": "DEHCShipNativeScoutTeam",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "0",
+            "displayunitcount": "2"
+         },
+         {
+            "name": "DEHCShipNativeScout",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "0",
+            "displayunitcount": "4"
+         },
+         {
+            "name": "DEHCShipCougarPelts",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "-1",
+            "age": "0"
+         },
+         {
+            "name": "HCShipCoveredWagons",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "2",
+            "displayunitcount": "1",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCConestogaWagonsTeam",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "HCShipCoveredWagons",
+            "age": "3",
+            "displayunitcount": "1",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCXPEveningStar",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "HCConestogaWagonsTeam",
+            "age": "1"
+         },
+         {
+            "name": "HCXPAdvancedScouts",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "-1",
+            "age": "1"
+         },
+         {
+            "name": "HCXPShipWarBows1",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "1",
+            "displayunitcount": "6",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCXPShipWarBows2",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "HCXPShipWarBows1",
+            "age": "2",
+            "displayunitcount": "8",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCXPUprising",
+            "maxcount": "1",
+            "level": "40",
+            "prereqtech": "HCXPShipWarBows2",
+            "age": "3",
+            "displayunitcount": "21",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCXPShipWarClubs1",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "1",
+            "displayunitcount": "6",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCXPShipWarClubs2",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "HCXPShipWarClubs1",
+            "age": "2",
+            "displayunitcount": "9",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCXPShipWarClubs3",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "HCXPShipWarClubs2",
+            "age": "1",
+            "displayunitcount": "7",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCXPShipWarRifles1",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "2",
+            "displayunitcount": "9",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCXPShipWarRifles2",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "HCXPShipWarRifles1",
+            "age": "3",
+            "displayunitcount": "16",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCXPShipWarRifles3",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "HCXPShipWarRifles2",
+            "age": "3",
+            "displayunitcount": "18",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCXPWindrunner",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "HCXPShipWarRifles2",
+            "age": "1"
+         },
+         {
+            "name": "HCXPShipAxeRiders1",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "1",
+            "displayunitcount": "3",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCXPShipAxeRiders2",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "HCXPShipAxeRiders1",
+            "age": "2",
+            "displayunitcount": "4",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCXPShipAxeRiders3",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "HCXPShipAxeRiders2",
+            "age": "1",
+            "displayunitcount": "4",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCXPShipAxeRiders4",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "HCXPShipAxeRiders3",
+            "age": "2",
+            "displayunitcount": "5",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCXPShipAxeRiders5",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "HCXPShipAxeRiders4",
+            "age": "3",
+            "displayunitcount": "8",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCXPShipAxeRidersRepeat",
+            "maxcount": "-1",
+            "level": "40",
+            "prereqtech": "HCXPShipAxeRiders5",
+            "age": "3",
+            "displayunitcount": "6"
+         },
+         {
+            "name": "HCXPCavalryDamageSioux",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "HCXPShipAxeRiders3",
+            "age": "1"
+         },
+         {
+            "name": "HCXPCavalryHitpointsSioux",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "HCXPCavalryDamageSioux",
+            "age": "1"
+         },
+         {
+            "name": "HCXPCavalryCombatSioux",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "HCXPCavalryHitpointsSioux",
+            "age": "2"
+         },
+         {
+            "name": "HCXPShipCoupRiders1",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "3",
+            "displayunitcount": "6",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCXPShipCoupRiders2",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "HCXPShipCoupRiders1",
+            "age": "2",
+            "displayunitcount": "4",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCXPShipCoupRiders3",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "HCXPShipCoupRiders2",
+            "age": "3",
+            "displayunitcount": "7",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCXPShipCoupRiders4",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "HCXPShipCoupRiders3",
+            "age": "3",
+            "displayunitcount": "8",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCXPMarauders",
+            "maxcount": "1",
+            "level": "40",
+            "prereqtech": "HCXPShipCoupRiders4",
+            "age": "2"
+         },
+         {
+            "name": "HCXPShipRifleRiders1",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "2",
+            "displayunitcount": "4",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCXPShipRifleRiders2",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "HCXPShipRifleRiders1",
+            "age": "3",
+            "displayunitcount": "6",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCXPShipRifleRiders3",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "HCXPShipRifleRiders2",
+            "age": "2",
+            "displayunitcount": "5",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCXPShipRifleRiders4",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "HCXPShipRifleRiders3",
+            "age": "3",
+            "displayunitcount": "7",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCXPMustangs",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "HCXPShipRifleRiders2",
+            "age": "2"
+         },
+         {
+            "name": "HCXPShipDogSoldiers1",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "2",
+            "displayunitcount": "2",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCXPShipDogSoldiers2",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "HCXPShipDogSoldiers1",
+            "age": "3",
+            "displayunitcount": "4",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCXPShipDogSoldiers3",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "HCXPShipDogSoldiers2",
+            "age": "2",
+            "displayunitcount": "3",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCXPShipDogSoldiers4",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "HCXPShipDogSoldiers3",
+            "age": "1",
+            "displayunitcount": "2",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCXPOnikare",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "HCXPShipDogSoldiers2",
+            "age": "1"
+         },
+         {
+            "name": "HCXPShipDogSoldiersTeam1",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "HCXPShipDogSoldiers3",
+            "age": "2",
+            "displayunitcount": "2",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCXPShipDogSoldiersTeam2",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "HCXPShipDogSoldiersTeam1",
+            "age": "3",
+            "displayunitcount": "3",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCNativeLore",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "0"
+         },
+         {
+            "name": "HCNativeTreaties",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "HCNativeLore",
+            "age": "1"
+         },
+         {
+            "name": "HCNativeWarriors",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "HCNativeTreaties",
+            "age": "2"
+         },
+         {
+            "name": "HCXPShipTradingPostTravois",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "HCNativeWarriors",
+            "age": "1",
+            "displayunitcount": "3",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCAdvancedTradingPost",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "HCXPShipTradingPostTravois",
+            "age": "0"
+         },
+         {
+            "name": "HCNativeChampionsDutchTeam",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "HCNativeTreaties",
+            "age": "1"
+         },
+         {
+            "name": "HCXPBlackArrow",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "HCNativeWarriors",
+            "age": "2"
+         },
+         {
+            "name": "HCXPBloodBrothers",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "HCXPBlackArrow",
+            "age": "3"
+         },
+         {
+            "name": "HCXPTownDance",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "0"
+         },
+         {
+            "name": "HCXPNewWaysSioux",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "HCXPTownDance",
+            "age": "1"
+         },
+         {
+            "name": "HCPioneers",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "0"
+         },
+         {
+            "name": "HCXPPioneers2",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "HCPioneers",
+            "age": "3"
+         },
+         {
+            "name": "HCImprovedBuildings",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "0"
+         },
+         {
+            "name": "DEHCExtensiveFortificationsWarchief",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "HCImprovedBuildings",
+            "age": "1"
+         },
+         {
+            "name": "HCXPShipWarHutTravois1",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "DEHCExtensiveFortificationsWarchief",
+            "age": "1",
+            "displayunitcount": "2"
+         },
+         {
+            "name": "HCHeavyFortifications",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "DEHCExtensiveFortificationsWarchief",
+            "age": "3"
+         },
+         {
+            "name": "HCXPNomadicExpansion",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "HCHeavyFortifications",
+            "age": "0"
+         },
+         {
+            "name": "HCXPFriendlyTerritory",
+            "maxcount": "1",
+            "level": "40",
+            "prereqtech": "HCXPNomadicExpansion",
+            "age": "1"
+         },
+         {
+            "name": "HCXPAdvancedFarms",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "0"
+         },
+         {
+            "name": "HCAdvancedMarket",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "0"
+         },
+         {
+            "name": "HCCheapDocksTeam",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "0"
+         },
+         {
+            "name": "HCAdvancedDock",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "HCCheapDocksTeam",
+            "age": "0"
+         },
+         {
+            "name": "HCXPRanching",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "0"
+         },
+         {
+            "name": "HCXPKinshipTies",
+            "maxcount": "1",
+            "level": "40",
+            "prereqtech": "-1",
+            "age": "3"
+         },
+         {
+            "name": "HCXPAggressivePolicy",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "-1",
+            "age": "1"
+         },
+         {
+            "name": "HCAdvancedPlantations",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "-1",
+            "age": "0"
+         },
+         {
+            "name": "HCRidingSchool",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "-1",
+            "age": "1"
+         },
+         {
+            "name": "HCXPShipFarmTravois1",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "0",
+            "displayunitcount": "1"
+         },
+         {
+            "name": "HCXPShipFarmTravois2",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "HCXPShipFarmTravois1",
+            "age": "1",
+            "displayunitcount": "2"
+         },
+         {
+            "name": "HCFishMarket",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "0"
+         },
+         {
+            "name": "HCSawmills",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "-1",
+            "age": "0"
+         },
+         {
+            "name": "HCExoticHardwoods",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "HCSawmills",
+            "age": "0"
+         },
+         {
+            "name": "HCXPWoodcrafting",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "HCExoticHardwoods",
+            "age": "0"
+         },
+         {
+            "name": "deHCSilversmithNative",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "1"
+         },
+         {
+            "name": "HCFoodSilos",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "0"
+         },
+         {
+            "name": "HCFurrier",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "0"
+         },
+         {
+            "name": "HCSpiceTrade",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "HCFurrier",
+            "age": "1"
+         },
+         {
+            "name": "HCXPGreatHunter",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "HCSpiceTrade",
+            "age": "1"
+         },
+         {
+            "name": "HCXPEarthBounty",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "HCXPGreatHunter",
+            "age": "0"
+         },
+         {
+            "name": "HCMedicine",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "-1",
+            "age": "1"
+         },
+         {
+            "name": "HCXPAdoption",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "HCMedicine",
+            "age": "2"
+         },
+         {
+            "name": "HCXPLandGrab",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "HCXPAdoption",
+            "age": "0"
+         },
+         {
+            "name": "HCXPBuffaloTeam",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "0",
+            "displayunitcount": "6"
+         },
+         {
+            "name": "HCXPBuffalo2",
+            "maxcount": "-1",
+            "level": "10",
+            "prereqtech": "HCXPBuffaloTeam",
+            "age": "3",
+            "displayunitcount": "15"
+         },
+         {
+            "name": "HCXPBuffalo3",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "HCXPBuffalo2",
+            "age": "0",
+            "displayunitcount": "9"
+         },
+         {
+            "name": "HCXPBuffalo4",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "HCXPBuffalo3",
+            "age": "1",
+            "displayunitcount": "15"
+         },
+         {
+            "name": "HCXPOldWaysSioux",
+            "maxcount": "1",
+            "level": "40",
+            "prereqtech": "-1",
+            "age": "3"
+         },
+         {
+            "name": "HCXPShipFishingBoats",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "0",
+            "displayunitcount": "3",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCXPShipCanoes1",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "HCXPShipFishingBoats",
+            "age": "1",
+            "displayunitcount": "4",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCXPShipWarCanoes1",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "HCXPShipCanoes1",
+            "age": "1",
+            "displayunitcount": "2",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCXPShipWarCanoes2",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "HCXPShipWarCanoes1",
+            "age": "2",
+            "displayunitcount": "4",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCXPShipWarCanoes3",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "3",
+            "displayunitcount": "4",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "DEBirchbark",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "HCXPShipCanoes1",
+            "age": "2",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCXPSiouxLakotaSupport",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "2",
+            "displayunitcount": "16",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCXPSiouxSansArcSupport",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "HCXPSiouxLakotaSupport",
+            "age": "2",
+            "displayunitcount": "16",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCXPSiouxHunkpapaSupport",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "HCXPSiouxSansArcSupport",
+            "age": "2",
+            "displayunitcount": "18",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCXPSiouxBurntThighSupport",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "HCXPSiouxLakotaSupport",
+            "age": "2",
+            "displayunitcount": "9",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCXPSiouxOglalaSupport",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "HCXPSiouxBurntThighSupport",
+            "age": "2",
+            "displayunitcount": "14",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCXPSiouxNakotaSupport",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "-1",
+            "age": "2",
+            "displayunitcount": "4"
+         },
+         {
+            "name": "HCXPComancheAllies1",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "HCXPSiouxNakotaSupport",
+            "age": "1",
+            "displayunitcount": "8",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCXPComancheAllies2",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "HCXPComancheAllies1",
+            "age": "3",
+            "displayunitcount": "18",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "DEHCComancheAlliesRepeat",
+            "maxcount": "-1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "3",
+            "displayunitcount": "13"
+         },
+         {
+            "name": "HCXPCheyenneAllies1",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "HCXPSiouxNakotaSupport",
+            "age": "1",
+            "displayunitcount": "7",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCXPCheyenneAllies2",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "HCXPCheyenneAllies1",
+            "age": "3",
+            "displayunitcount": "18",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCXPCheyenneAlliesTeam",
+            "maxcount": "1",
+            "level": "40",
+            "prereqtech": "HCXPCheyenneAllies2",
+            "age": "3",
+            "displayunitcount": "8"
+         },
+         {
+            "name": "HCXPCreeAllies1",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "-1",
+            "age": "1",
+            "displayunitcount": "9",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCXPCreeAllies2",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "HCXPCreeAllies1",
+            "age": "3",
+            "displayunitcount": "22",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCXPCreeAlliesTeam",
+            "maxcount": "1",
+            "level": "40",
+            "prereqtech": "HCXPCreeAllies2",
+            "age": "3",
+            "displayunitcount": "10"
+         },
+         {
+            "name": "DEHCCreeAlliesRepeat",
+            "maxcount": "-1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "3",
+            "displayunitcount": "13"
+         },
+         {
+            "name": "HCXPSiouxDakotaSupport",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "2",
+            "displayunitcount": "5"
+         },
+         {
+            "name": "HCXPSiouxSanteeSupport",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "HCXPSiouxDakotaSupport",
+            "age": "2",
+            "displayunitcount": "6"
+         },
+         {
+            "name": "HCXPSiouxYanktonSupport",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "HCXPSiouxSanteeSupport",
+            "age": "2",
+            "displayunitcount": "6"
+         },
+         {
+            "name": "HCXPSiouxTwoKettleSupport",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "HCXPSiouxYanktonSupport",
+            "age": "2",
+            "displayunitcount": "14"
+         },
+         {
+            "name": "HCXPRenegadoAllies",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "2",
+            "displayunitcount": "10",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCXPPistoleroAllies",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "HCXPRenegadoAllies",
+            "age": "1",
+            "displayunitcount": "10",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCXPComancheroAllies",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "HCXPPistoleroAllies",
+            "age": "1",
+            "displayunitcount": "7",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCXPBanditGang",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "HCXPComancheroAllies",
+            "age": "3",
+            "displayunitcount": "19",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCXPBanditGangRepeat",
+            "maxcount": "-1",
+            "level": "40",
+            "prereqtech": "HCXPBanditGang",
+            "age": "3",
+            "displayunitcount": "20"
+         },
+         {
+            "name": "HCXPBuccaneers",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "-1",
+            "age": "1",
+            "displayunitcount": "3",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCXPBuccaneers2",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "HCXPBuccaneers",
+            "age": "2",
+            "displayunitcount": "4",
+            "infiniteinlastage": "1"
+         }
+      ]
+   },
+   "decks": {
+      "deck": [
+         {
+            "name": "$$71332$$Beginner",
+            "cards": {
+               "card": [
+                  "HCXPShipVillagers3",
+                  "HCShipFoodCrates1",
+                  "HCShipWoodCrates1",
+                  "HCShipCoinCrates1",
+                  "HCXPShipWarBows1",
+                  "HCXPShipWarClubs1",
+                  "HCXPShipWarHutTravois1",
+                  "HCXPShipWarRifles1",
+                  "HCXPShipAxeRiders2",
+                  "HCXPShipAxeRidersRepeat",
+                  "HCXPShipCoupRiders3",
+                  "HCXPShipDogsoldiers2",
+                  "HCXPShipFarmTravois2"
+               ]
+            }
+         },
+         {
+            "name": "$$71332$$Beginner",
+            "default": "",
+            "cards": {
+               "card": [
+                  {
+                     "_dbid": "2798",
+                     "__text": "HCXPShipVillagers2"
+                  },
+                  {
+                     "_dbid": "2881",
+                     "__text": "HCXPWarChiefSioux1"
+                  },
+                  {
+                     "_dbid": "2996",
+                     "__text": "HCXPBuffalo2"
+                  },
+                  {
+                     "_dbid": "3493",
+                     "__text": "HCXPUprising"
+                  },
+                  {
+                     "_dbid": "3024",
+                     "__text": "HCXPShipDogsoldiers3"
+                  },
+                  {
+                     "_dbid": "3011",
+                     "__text": "HCXPShipAxeRiders3"
+                  },
+                  {
+                     "_dbid": "2799",
+                     "__text": "HCXPShipVillagers4"
+                  },
+                  {
+                     "_dbid": "3223",
+                     "__text": "HCXPMorningStar"
+                  },
+                  {
+                     "_dbid": "2212",
+                     "__text": "HCShipWoodCrates3"
+                  },
+                  {
+                     "_dbid": "2215",
+                     "__text": "HCShipCoinCrates3"
+                  },
+                  {
+                     "_dbid": "2209",
+                     "__text": "HCShipFoodCrates3"
+                  },
+                  {
+                     "_dbid": "2998",
+                     "__text": "HCXPBuffalo4"
+                  },
+                  {
+                     "_dbid": "3070",
+                     "__text": "HCXPSiouxNakotaSupport"
+                  },
+                  {
+                     "_dbid": "2213",
+                     "__text": "HCShipWoodCrates4"
+                  },
+                  {
+                     "_dbid": "2993",
+                     "__text": "HCXPWarChiefSioux2"
+                  },
+                  {
+                     "_dbid": "3477",
+                     "__text": "HCXPShipAxeRidersRepeat"
+                  },
+                  {
+                     "_dbid": "3499",
+                     "__text": "HCXPCommandSkill"
+                  },
+                  {
+                     "_dbid": "3012",
+                     "__text": "HCXPShipAxeRiders4"
+                  },
+                  {
+                     "_dbid": "3017",
+                     "__text": "HCXPCavalryCombatSioux"
+                  },
+                  {
+                     "_dbid": "3323",
+                     "__text": "HCXPShipWarHutTravois1"
+                  },
+                  {
+                     "_dbid": "3057",
+                     "__text": "HCXPShipRifleRiders3"
+                  }
+               ]
+            }
+         },
+         {
+            "name": "$$20310$$Land",
+            "cards": {
+               "card": [
+                  {
+                     "_dbid": "2798",
+                     "__text": "HCXPShipVillagers2"
+                  },
+                  {
+                     "_dbid": "2797",
+                     "__text": "HCXPShipVillagers4"
+                  },
+                  {
+                     "_dbid": "3016",
+                     "__text": "HCXPCavalryHitpointsSioux"
+                  },
+                  {
+                     "_dbid": "3411",
+                     "__text": "HCXPNomadicExpansion"
+                  },
+                  {
+                     "_dbid": "2999",
+                     "__text": "HCXPGreatHunter"
+                  },
+                  {
+                     "_dbid": "3017",
+                     "__text": "HCXPCavalryCombatSioux"
+                  },
+                  {
+                     "_dbid": "3496",
+                     "__text": "HCXPMustangs"
+                  },
+                  {
+                     "_dbid": "3024",
+                     "__text": "HCXPShipDogsoldiers3"
+                  },
+                  {
+                     "_dbid": "3075",
+                     "__text": "HCXPSiouxSanteeSupport"
+                  },
+                  {
+                     "_dbid": "3499",
+                     "__text": "HCXPCommandSkill"
+                  },
+                  {
+                     "_dbid": "3000",
+                     "__text": "HCXPAdoption"
+                  },
+                  {
+                     "_dbid": "2995",
+                     "__text": "HCXPBuffaloTeam"
+                  },
+                  {
+                     "_dbid": "3477",
+                     "__text": "HCXPShipAxeRidersRepeat"
+                  },
+                  {
+                     "_dbid": "3011",
+                     "__text": "HCXPShipAxeRiders3"
+                  },
+                  {
+                     "_dbid": "2094",
+                     "__text": "HCFoodSilos"
+                  },
+                  {
+                     "_dbid": "3471",
+                     "__text": "HCXPNewWaysSioux"
+                  },
+                  {
+                     "_dbid": "3077",
+                     "__text": "HCXPSiouxTwoKettleSupport"
+                  },
+                  {
+                     "_dbid": "3473",
+                     "__text": "HCXPShipTradingPostTravois"
+                  },
+                  {
+                     "_dbid": "2993",
+                     "__text": "HCXPWarChiefSioux2"
+                  },
+                  {
+                     "_dbid": "2881",
+                     "__text": "HCXPWarChiefSioux1"
+                  },
+                  {
+                     "_dbid": "2210",
+                     "__text": "HCShipFoodCrates4"
+                  },
+                  {
+                     "_dbid": "3065",
+                     "__text": "HCXPPistoleroAllies"
+                  },
+                  {
+                     "_dbid": "3015",
+                     "__text": "HCXPCavalryDamageSioux"
+                  },
+                  {
+                     "_dbid": "2038",
+                     "__text": "HCRidingSchool"
+                  },
+                  {
+                     "_dbid": "3027",
+                     "__text": "HCXPShipDogsoldiersTeam2"
+                  }
+               ]
+            }
+         },
+         {
+            "name": "$$71333$$Naval",
+            "cards": {
+               "card": [
+                  {
+                     "_dbid": "2797",
+                     "__text": "HCXPShipVillagers2"
+                  },
+                  {
+                     "_dbid": "2212",
+                     "__text": "HCShipWoodCrates3"
+                  },
+                  {
+                     "_dbid": "3016",
+                     "__text": "HCXPCavalryHitpointsSioux"
+                  },
+                  {
+                     "_dbid": "3411",
+                     "__text": "HCXPNomadicExpansion"
+                  },
+                  {
+                     "_dbid": "3017",
+                     "__text": "HCXPCavalryCombatSioux"
+                  },
+                  {
+                     "_dbid": "3496",
+                     "__text": "HCXPMustangs"
+                  },
+                  {
+                     "_dbid": "3499",
+                     "__text": "HCXPCommandSkill"
+                  },
+                  {
+                     "_dbid": "3477",
+                     "__text": "HCXPShipAxeRidersRepeat"
+                  },
+                  {
+                     "_dbid": "6629",
+                     "__text": "DEHCShipNativeScoutTeam"
+                  },
+                  {
+                     "_dbid": "2866",
+                     "__text": "DEBirchbark"
+                  },
+                  {
+                     "_dbid": "3049",
+                     "__text": "HCXPWoodcrafting"
+                  },
+                  {
+                     "_dbid": "3404",
+                     "__text": "HCXPBuccaneers"
+                  },
+                  {
+                     "_dbid": "2825",
+                     "__text": "HCXPShipWarCanoes2"
+                  },
+                  {
+                     "_dbid": "3471",
+                     "__text": "HCXPNewWaysSioux"
+                  },
+                  {
+                     "_dbid": "469",
+                     "__text": "HCFishMarket"
+                  },
+                  {
+                     "_dbid": "2038",
+                     "__text": "HCRidingSchool"
+                  },
+                  {
+                     "_dbid": "3015",
+                     "__text": "HCXPCavalryDamageSioux"
+                  },
+                  {
+                     "_dbid": "2213",
+                     "__text": "HCShipWoodCrates4"
+                  },
+                  {
+                     "_dbid": "3076",
+                     "__text": "HCXPSiouxYanktonSupport"
+                  },
+                  {
+                     "_dbid": "2864",
+                     "__text": "HCXPShipFishingBoats"
+                  },
+                  {
+                     "_dbid": "3011",
+                     "__text": "HCXPShipAxeRiders3"
+                  },
+                  {
+                     "_dbid": "3068",
+                     "__text": "HCXPSiouxDakotaSupport"
+                  },
+                  {
+                     "_dbid": "3476",
+                     "__text": "HCXPMarauders"
+                  },
+                  {
+                     "_dbid": "3495",
+                     "__text": "HCXPEveningStar"
+                  },
+                  {
+                     "_dbid": "3027",
+                     "__text": "HCXPShipDogsoldiersTeam2"
+                  }
+               ]
+            }
+         }
+      ]
+   },
+   "building": [
+      {
+         "name": "Estate",
+         "visual": {
+            "file": "spanish\\spanish estate.xml",
+            "bone": "bone_estate"
+         },
+         "uix": "150",
+         "uiy": "200",
+         "camera": "spanish\\spanish_homecity_estate_camera.cam",
+         "widescreencamera": "spanish\\spanish_homecity_estate_camera.cam",
+         "unlocklevel": "0",
+         "portrait": "homecity\\buildings_west\\estate_icon",
+         "displaynamestringid": "24968",
+         "rolloverstringid": "25537",
+         "validunits": "",
+         "units": "",
+         "trainbuilding": "1",
+         "mercbuilding": "1"
+      },
+      {
+         "name": "Market",
+         "visual": {
+            "file": "sioux\\sioux_tradecenter.xml",
+            "bone": "bone_market",
+            "animstatemachine": "SM_SIO_Chief"
+         },
+         "uix": "250",
+         "uiy": "375",
+         "camera": "sioux\\sioux_homecity_market_camera.cam",
+         "widescreencamera": "sioux\\sioux_homecity_market_widescreencamera.cam",
+         "unlocklevel": "0",
+         "portrait": "homecity\\buildings_west\\market_icon",
+         "displaynamestringid": "43798",
+         "rolloverstringid": "25536",
+         "obtainabletechs": {
+            "tech": [
+               {
+                  "_x": "0.4",
+                  "_y": "1.0",
+                  "__text": "HCXPShipVillagers1"
+               },
+               {
+                  "_x": "0.4",
+                  "_y": "2.0",
+                  "__text": "HCXPShipVillagers4"
+               },
+               {
+                  "_x": "0.4",
+                  "_y": "3.0",
+                  "__text": "HCXPShipVillagers3"
+               },
+               {
+                  "_x": "0.4",
+                  "_y": "3.0",
+                  "__text": "HCXPShipVillagers2"
+               },
+               {
+                  "_x": "1.1",
+                  "_y": "3.0",
+                  "__text": "HCXPTeamFoodCrates1"
+               },
+               {
+                  "_x": "1.1",
+                  "_y": "5.0",
+                  "__text": "HCXPTeamFoodCrates2"
+               },
+               {
+                  "_x": "2.0",
+                  "_y": "1.0",
+                  "__text": "HCShipFoodCrates1"
+               },
+               {
+                  "_x": "2.7",
+                  "_y": "1.0",
+                  "__text": "HCShipWoodCrates1"
+               },
+               {
+                  "_x": "3.4",
+                  "_y": "1.0",
+                  "__text": "HCShipCoinCrates1"
+               },
+               {
+                  "_x": "2.0",
+                  "_y": "2.0",
+                  "__text": "HCShipFoodCrates2"
+               },
+               {
+                  "_x": "2.7",
+                  "_y": "2.0",
+                  "__text": "HCShipWoodCrates2"
+               },
+               {
+                  "_x": "3.4",
+                  "_y": "2.0",
+                  "__text": "HCShipCoinCrates2"
+               },
+               {
+                  "_x": "2.0",
+                  "_y": "3.0",
+                  "__text": "HCShipFoodCrates3"
+               },
+               {
+                  "_x": "2.7",
+                  "_y": "3.0",
+                  "__text": "HCShipWoodCrates3"
+               },
+               {
+                  "_x": "3.4",
+                  "_y": "3.0",
+                  "__text": "HCShipCoinCrates3"
+               },
+               {
+                  "_x": "2.0",
+                  "_y": "4.0",
+                  "__text": "HCShipFoodCrates4"
+               },
+               {
+                  "_x": "2.7",
+                  "_y": "4.0",
+                  "__text": "HCShipWoodCrates4"
+               },
+               {
+                  "_x": "2.0",
+                  "_y": "5.0",
+                  "__text": "HCShipFoodCrates5"
+               },
+               {
+                  "_x": "3.4",
+                  "_y": "4.0",
+                  "__text": "HCShipSurgeons"
+               },
+               {
+                  "_x": "3.4",
+                  "_y": "5.0",
+                  "__text": "HCXPAdvancedScouts"
+               },
+               {
+                  "_x": "4.4",
+                  "_y": "1.0",
+                  "__text": "HCXPWarChiefSioux1"
+               },
+               {
+                  "_x": "4.4",
+                  "_y": "3.0",
+                  "__text": "HCXPWarChiefSioux2"
+               },
+               {
+                  "_x": "4.4",
+                  "_y": "4.0",
+                  "__text": "HCXPWarChiefSioux3"
+               },
+               {
+                  "_x": "4.4",
+                  "_y": "5.0",
+                  "__text": "HCXPCommandSkill"
+               },
+               {
+                  "_x": "4.4",
+                  "_y": "7.0",
+                  "__text": "HCXPMorningStar"
+               },
+               {
+                  "_x": "6.0",
+                  "_y": "1.0",
+                  "__text": "HCShipCoveredWagons"
+               },
+               {
+                  "_x": "6.0",
+                  "_y": "3.0",
+                  "__text": "HCConestogaWagonsTeam"
+               },
+               {
+                  "_x": "6.0",
+                  "_y": "5.0",
+                  "__text": "HCXPEveningStar"
+               },
+               {
+                  "_x": "7.0",
+                  "_y": "4.0",
+                  "__text": "DEHCShipCougarPelts"
+               },
+               {
+                  "_x": "7.1",
+                  "_y": "3.0",
+                  "__text": "DEHCShipNativeScoutTeam"
+               },
+               {
+                  "_x": "7.1",
+                  "_y": "3.0",
+                  "__text": "DEHCShipNativeScout"
+               }
+            ]
+         },
+         "activetechs": {
+            "tech": [
+               {
+                  "_x": "0.4",
+                  "_y": "1.0",
+                  "__text": "HCXPShipVillagers1"
+               },
+               {
+                  "_x": "0.4",
+                  "_y": "2.0",
+                  "__text": "HCXPShipVillagers4"
+               },
+               {
+                  "_x": "0.4",
+                  "_y": "3.0",
+                  "__text": "HCXPShipVillagers3"
+               },
+               {
+                  "_x": "0.4",
+                  "_y": "3.0",
+                  "__text": "HCXPShipVillagers2"
+               },
+               {
+                  "_x": "1.1",
+                  "_y": "3.0",
+                  "__text": "HCXPTeamFoodCrates1"
+               },
+               {
+                  "_x": "1.1",
+                  "_y": "5.0",
+                  "__text": "HCXPTeamFoodCrates2"
+               },
+               {
+                  "_x": "2.0",
+                  "_y": "1.0",
+                  "__text": "HCShipFoodCrates1"
+               },
+               {
+                  "_x": "2.7",
+                  "_y": "1.0",
+                  "__text": "HCShipWoodCrates1"
+               },
+               {
+                  "_x": "3.4",
+                  "_y": "1.0",
+                  "__text": "HCShipCoinCrates1"
+               },
+               {
+                  "_x": "2.0",
+                  "_y": "2.0",
+                  "__text": "HCShipFoodCrates2"
+               },
+               {
+                  "_x": "2.7",
+                  "_y": "2.0",
+                  "__text": "HCShipWoodCrates2"
+               },
+               {
+                  "_x": "3.4",
+                  "_y": "2.0",
+                  "__text": "HCShipCoinCrates2"
+               },
+               {
+                  "_x": "2.0",
+                  "_y": "3.0",
+                  "__text": "HCShipFoodCrates3"
+               },
+               {
+                  "_x": "2.7",
+                  "_y": "3.0",
+                  "__text": "HCShipWoodCrates3"
+               },
+               {
+                  "_x": "3.4",
+                  "_y": "3.0",
+                  "__text": "HCShipCoinCrates3"
+               },
+               {
+                  "_x": "2.0",
+                  "_y": "4.0",
+                  "__text": "HCShipFoodCrates4"
+               },
+               {
+                  "_x": "2.7",
+                  "_y": "4.0",
+                  "__text": "HCShipWoodCrates4"
+               },
+               {
+                  "_x": "2.0",
+                  "_y": "5.0",
+                  "__text": "HCShipFoodCrates5"
+               },
+               {
+                  "_x": "3.4",
+                  "_y": "4.0",
+                  "__text": "HCShipSurgeons"
+               },
+               {
+                  "_x": "3.4",
+                  "_y": "5.0",
+                  "__text": "HCXPAdvancedScouts"
+               },
+               {
+                  "_x": "4.4",
+                  "_y": "1.0",
+                  "__text": "HCXPWarChiefSioux1"
+               },
+               {
+                  "_x": "4.4",
+                  "_y": "3.0",
+                  "__text": "HCXPWarChiefSioux2"
+               },
+               {
+                  "_x": "4.4",
+                  "_y": "4.0",
+                  "__text": "HCXPWarChiefSioux3"
+               },
+               {
+                  "_x": "4.4",
+                  "_y": "5.0",
+                  "__text": "HCXPCommandSkill"
+               },
+               {
+                  "_x": "4.4",
+                  "_y": "7.0",
+                  "__text": "HCXPMorningStar"
+               },
+               {
+                  "_x": "6.0",
+                  "_y": "1.0",
+                  "__text": "HCShipCoveredWagons"
+               },
+               {
+                  "_x": "6.0",
+                  "_y": "3.0",
+                  "__text": "HCConestogaWagonsTeam"
+               },
+               {
+                  "_x": "6.0",
+                  "_y": "5.0",
+                  "__text": "HCXPEveningStar"
+               },
+               {
+                  "_x": "7.0",
+                  "_y": "4.0",
+                  "__text": "DEHCShipCougarPelts"
+               },
+               {
+                  "_x": "7.1",
+                  "_y": "3.0",
+                  "__text": "DEHCShipNativeScoutTeam"
+               },
+               {
+                  "_x": "7.1",
+                  "_y": "3.0",
+                  "__text": "DEHCShipNativeScout"
+               }
+            ]
+         },
+         "validunits": "",
+         "units": "",
+         "trainbuilding": "1"
+      },
+      {
+         "name": "Academy",
+         "visual": {
+            "file": "sioux\\sioux_academy.xml",
+            "bone": "bone_academy",
+            "animstatemachine": "SM_SIO_WarLeader"
+         },
+         "uix": "460",
+         "uiy": "125",
+         "camera": "sioux\\sioux_homecity_academy_camera.cam",
+         "widescreencamera": "sioux\\sioux_homecity_academy_widescreencamera.cam",
+         "unlocklevel": "0",
+         "portrait": "homecity\\buildings_west\\academy_icon",
+         "displaynamestringid": "43799",
+         "rolloverstringid": "29002",
+         "obtainabletechs": {
+            "tech": [
+               {
+                  "_x": "0.0",
+                  "_y": "1.0",
+                  "__text": "HCXPShipWarBows1"
+               },
+               {
+                  "_x": "0.0",
+                  "_y": "3.0",
+                  "__text": "HCXPShipWarBows2"
+               },
+               {
+                  "_x": "0.0",
+                  "_y": "7.0",
+                  "__text": "HCXPUprising"
+               },
+               {
+                  "_x": "0.8",
+                  "_y": "1.0",
+                  "__text": "HCXPShipWarClubs1"
+               },
+               {
+                  "_x": "0.8",
+                  "_y": "2.0",
+                  "__text": "HCXPShipWarClubs2"
+               },
+               {
+                  "_x": "0.8",
+                  "_y": "3.0",
+                  "__text": "HCXPShipWarClubs3"
+               },
+               {
+                  "_x": "0.8",
+                  "_y": "4.0",
+                  "__text": "HCXPWindrunner"
+               },
+               {
+                  "_x": "1.6",
+                  "_y": "1.0",
+                  "__text": "HCXPShipWarRifles1"
+               },
+               {
+                  "_x": "1.6",
+                  "_y": "3.0",
+                  "__text": "HCXPShipWarRifles2"
+               },
+               {
+                  "_x": "1.6",
+                  "_y": "5.0",
+                  "__text": "HCXPShipWarRifles3"
+               },
+               {
+                  "_x": "2.4",
+                  "_y": "3.0",
+                  "__text": "HCXPCavalryDamageSioux"
+               },
+               {
+                  "_x": "2.4",
+                  "_y": "4.0",
+                  "__text": "HCXPCavalryHitpointsSioux"
+               },
+               {
+                  "_x": "2.4",
+                  "_y": "5.0",
+                  "__text": "HCXPCavalryCombatSioux"
+               },
+               {
+                  "_x": "3.2",
+                  "_y": "1.0",
+                  "__text": "HCXPShipAxeRiders1"
+               },
+               {
+                  "_x": "3.2",
+                  "_y": "2.0",
+                  "__text": "HCXPShipAxeRiders2"
+               },
+               {
+                  "_x": "3.2",
+                  "_y": "3.0",
+                  "__text": "HCXPShipAxeRiders3"
+               },
+               {
+                  "_x": "3.2",
+                  "_y": "4.0",
+                  "__text": "HCXPShipAxeRiders4"
+               },
+               {
+                  "_x": "3.2",
+                  "_y": "5.0",
+                  "__text": "HCXPShipAxeRiders5"
+               },
+               {
+                  "_x": "3.2",
+                  "_y": "7.0",
+                  "__text": "HCXPShipAxeRidersRepeat"
+               },
+               {
+                  "_x": "4.0",
+                  "_y": "1.0",
+                  "__text": "HCXPShipCoupRiders1"
+               },
+               {
+                  "_x": "4.0",
+                  "_y": "3.0",
+                  "__text": "HCXPShipCoupRiders2"
+               },
+               {
+                  "_x": "4.0",
+                  "_y": "4.0",
+                  "__text": "HCXPShipCoupRiders3"
+               },
+               {
+                  "_x": "4.0",
+                  "_y": "5.0",
+                  "__text": "HCXPShipCoupRiders4"
+               },
+               {
+                  "_x": "4.0",
+                  "_y": "7.0",
+                  "__text": "HCXPMarauders"
+               },
+               {
+                  "_x": "4.8",
+                  "_y": "3.0",
+                  "__text": "HCXPMustangs"
+               },
+               {
+                  "_x": "5.6",
+                  "_y": "1.0",
+                  "__text": "HCXPShipRifleRiders1"
+               },
+               {
+                  "_x": "5.6",
+                  "_y": "3.0",
+                  "__text": "HCXPShipRifleRiders2"
+               },
+               {
+                  "_x": "5.6",
+                  "_y": "4.0",
+                  "__text": "HCXPShipRifleRiders3"
+               },
+               {
+                  "_x": "5.6",
+                  "_y": "5.0",
+                  "__text": "HCXPShipRifleRiders4"
+               },
+               {
+                  "_x": "6.4",
+                  "_y": "1.0",
+                  "__text": "HCXPShipDogSoldiers1"
+               },
+               {
+                  "_x": "6.4",
+                  "_y": "3.0",
+                  "__text": "HCXPShipDogSoldiers2"
+               },
+               {
+                  "_x": "6.4",
+                  "_y": "4.0",
+                  "__text": "HCXPShipDogSoldiers3"
+               },
+               {
+                  "_x": "6.4",
+                  "_y": "5.0",
+                  "__text": "HCXPShipDogSoldiers4"
+               },
+               {
+                  "_x": "7.2",
+                  "_y": "3.0",
+                  "__text": "HCXPOnikare"
+               },
+               {
+                  "_x": "7.2",
+                  "_y": "4.0",
+                  "__text": "HCXPShipDogSoldiersTeam1"
+               },
+               {
+                  "_x": "7.2",
+                  "_y": "5.0",
+                  "__text": "HCXPShipDogSoldiersTeam2"
+               }
+            ]
+         },
+         "activetechs": {
+            "tech": [
+               {
+                  "_x": "0.0",
+                  "_y": "1.0",
+                  "__text": "HCXPShipWarBows1"
+               },
+               {
+                  "_x": "0.0",
+                  "_y": "3.0",
+                  "__text": "HCXPShipWarBows2"
+               },
+               {
+                  "_x": "0.0",
+                  "_y": "7.0",
+                  "__text": "HCXPUprising"
+               },
+               {
+                  "_x": "0.8",
+                  "_y": "1.0",
+                  "__text": "HCXPShipWarClubs1"
+               },
+               {
+                  "_x": "0.8",
+                  "_y": "2.0",
+                  "__text": "HCXPShipWarClubs2"
+               },
+               {
+                  "_x": "0.8",
+                  "_y": "3.0",
+                  "__text": "HCXPShipWarClubs3"
+               },
+               {
+                  "_x": "0.8",
+                  "_y": "4.0",
+                  "__text": "HCXPWindrunner"
+               },
+               {
+                  "_x": "1.6",
+                  "_y": "1.0",
+                  "__text": "HCXPShipWarRifles1"
+               },
+               {
+                  "_x": "1.6",
+                  "_y": "3.0",
+                  "__text": "HCXPShipWarRifles2"
+               },
+               {
+                  "_x": "1.6",
+                  "_y": "5.0",
+                  "__text": "HCXPShipWarRifles3"
+               },
+               {
+                  "_x": "2.4",
+                  "_y": "3.0",
+                  "__text": "HCXPCavalryDamageSioux"
+               },
+               {
+                  "_x": "2.4",
+                  "_y": "4.0",
+                  "__text": "HCXPCavalryHitpointsSioux"
+               },
+               {
+                  "_x": "2.4",
+                  "_y": "5.0",
+                  "__text": "HCXPCavalryCombatSioux"
+               },
+               {
+                  "_x": "3.2",
+                  "_y": "1.0",
+                  "__text": "HCXPShipAxeRiders1"
+               },
+               {
+                  "_x": "3.2",
+                  "_y": "2.0",
+                  "__text": "HCXPShipAxeRiders2"
+               },
+               {
+                  "_x": "3.2",
+                  "_y": "3.0",
+                  "__text": "HCXPShipAxeRiders3"
+               },
+               {
+                  "_x": "3.2",
+                  "_y": "4.0",
+                  "__text": "HCXPShipAxeRiders4"
+               },
+               {
+                  "_x": "3.2",
+                  "_y": "5.0",
+                  "__text": "HCXPShipAxeRiders5"
+               },
+               {
+                  "_x": "3.2",
+                  "_y": "7.0",
+                  "__text": "HCXPShipAxeRidersRepeat"
+               },
+               {
+                  "_x": "4.0",
+                  "_y": "1.0",
+                  "__text": "HCXPShipCoupRiders1"
+               },
+               {
+                  "_x": "4.0",
+                  "_y": "3.0",
+                  "__text": "HCXPShipCoupRiders2"
+               },
+               {
+                  "_x": "4.0",
+                  "_y": "4.0",
+                  "__text": "HCXPShipCoupRiders3"
+               },
+               {
+                  "_x": "4.0",
+                  "_y": "5.0",
+                  "__text": "HCXPShipCoupRiders4"
+               },
+               {
+                  "_x": "4.0",
+                  "_y": "7.0",
+                  "__text": "HCXPMarauders"
+               },
+               {
+                  "_x": "4.8",
+                  "_y": "3.0",
+                  "__text": "HCXPMustangs"
+               },
+               {
+                  "_x": "5.6",
+                  "_y": "1.0",
+                  "__text": "HCXPShipRifleRiders1"
+               },
+               {
+                  "_x": "5.6",
+                  "_y": "3.0",
+                  "__text": "HCXPShipRifleRiders2"
+               },
+               {
+                  "_x": "5.6",
+                  "_y": "4.0",
+                  "__text": "HCXPShipRifleRiders3"
+               },
+               {
+                  "_x": "5.6",
+                  "_y": "5.0",
+                  "__text": "HCXPShipRifleRiders4"
+               },
+               {
+                  "_x": "6.4",
+                  "_y": "1.0",
+                  "__text": "HCXPShipDogSoldiers1"
+               },
+               {
+                  "_x": "6.4",
+                  "_y": "3.0",
+                  "__text": "HCXPShipDogSoldiers2"
+               },
+               {
+                  "_x": "6.4",
+                  "_y": "4.0",
+                  "__text": "HCXPShipDogSoldiers3"
+               },
+               {
+                  "_x": "6.4",
+                  "_y": "5.0",
+                  "__text": "HCXPShipDogSoldiers4"
+               },
+               {
+                  "_x": "7.2",
+                  "_y": "3.0",
+                  "__text": "HCXPOnikare"
+               },
+               {
+                  "_x": "7.2",
+                  "_y": "4.0",
+                  "__text": "HCXPShipDogSoldiersTeam1"
+               },
+               {
+                  "_x": "7.2",
+                  "_y": "5.0",
+                  "__text": "HCXPShipDogSoldiersTeam2"
+               }
+            ]
+         },
+         "validunits": "",
+         "units": "",
+         "trainbuilding": "1"
+      },
+      {
+         "name": "Cathedral",
+         "visual": {
+            "file": "sioux\\sioux_cathedral.xml",
+            "bone": "bone_teepee01"
+         },
+         "uix": "80",
+         "uiy": "475",
+         "camera": "sioux\\sioux_homecity_cathedral_camera.cam",
+         "widescreencamera": "sioux\\sioux_homecity_cathedral_widescreencamera.cam",
+         "unlocklevel": "0",
+         "portrait": "homecity\\buildings_west\\cathedral_icon",
+         "displaynamestringid": "43801",
+         "rolloverstringid": "25538",
+         "obtainabletechs": {
+            "tech": [
+               {
+                  "_x": "0.7",
+                  "_y": "1.0",
+                  "__text": "HCNativeLore"
+               },
+               {
+                  "_x": "0.7",
+                  "_y": "2.0",
+                  "__text": "HCNativeTreaties"
+               },
+               {
+                  "_x": "0.7",
+                  "_y": "3.0",
+                  "__text": "HCNativeWarriors"
+               },
+               {
+                  "_x": "0.7",
+                  "_y": "4.0",
+                  "__text": "HCXPShipTradingPostTravois"
+               },
+               {
+                  "_x": "0.7",
+                  "_y": "5.0",
+                  "__text": "HCAdvancedTradingPost"
+               },
+               {
+                  "_x": "1.6",
+                  "_y": "3.0",
+                  "__text": "HCNativeChampionsDutchTeam"
+               },
+               {
+                  "_x": "1.6",
+                  "_y": "4.0",
+                  "__text": "HCXPBlackArrow"
+               },
+               {
+                  "_x": "1.6",
+                  "_y": "5.0",
+                  "__text": "HCXPBloodBrothers"
+               },
+               {
+                  "_x": "1.6",
+                  "_y": "7.0",
+                  "__text": "HCXPKinshipTies"
+               },
+               {
+                  "_x": "2.5",
+                  "_y": "1.0",
+                  "__text": "HCXPTownDance"
+               },
+               {
+                  "_x": "2.5",
+                  "_y": "3.0",
+                  "__text": "HCXPNewWaysSioux"
+               },
+               {
+                  "_x": "2.5",
+                  "_y": "4.0",
+                  "__text": "HCRidingSchool"
+               },
+               {
+                  "_x": "3.4",
+                  "_y": "1.0",
+                  "__text": "HCPioneers"
+               },
+               {
+                  "_x": "3.4",
+                  "_y": "5.0",
+                  "__text": "HCXPPioneers2"
+               },
+               {
+                  "_x": "4.1",
+                  "_y": "1.0",
+                  "__text": "HCXPRanching"
+               },
+               {
+                  "_x": "4.1",
+                  "_y": "5.0",
+                  "__text": "HCAdvancedPlantations"
+               },
+               {
+                  "_x": "4.1",
+                  "_y": "6.0",
+                  "__text": "HCXPAggressivePolicy"
+               },
+               {
+                  "_x": "5.2",
+                  "_y": "1.0",
+                  "__text": "HCImprovedBuildings"
+               },
+               {
+                  "_x": "5.2",
+                  "_y": "3.0",
+                  "__text": "DEHCExtensiveFortificationsWarchief"
+               },
+               {
+                  "_x": "5.2",
+                  "_y": "4.0",
+                  "__text": "HCHeavyFortifications"
+               },
+               {
+                  "_x": "5.2",
+                  "_y": "5.0",
+                  "__text": "HCXPNomadicExpansion"
+               },
+               {
+                  "_x": "5.2",
+                  "_y": "7.0",
+                  "__text": "HCXPFriendlyTerritory"
+               },
+               {
+                  "_x": "6.1",
+                  "_y": "1.0",
+                  "__text": "HCXPAdvancedFarms"
+               },
+               {
+                  "_x": "6.1",
+                  "_y": "2.0",
+                  "__text": "HCAdvancedMarket"
+               },
+               {
+                  "_x": "6.1",
+                  "_y": "4.0",
+                  "__text": "HCXPShipWarHutTravois1"
+               },
+               {
+                  "_x": "7.0",
+                  "_y": "1.0",
+                  "__text": "HCCheapDocksTeam"
+               },
+               {
+                  "_x": "7.0",
+                  "_y": "2.0",
+                  "__text": "HCAdvancedDock"
+               }
+            ]
+         },
+         "activetechs": {
+            "tech": [
+               {
+                  "_x": "0.7",
+                  "_y": "1.0",
+                  "__text": "HCNativeLore"
+               },
+               {
+                  "_x": "0.7",
+                  "_y": "2.0",
+                  "__text": "HCNativeTreaties"
+               },
+               {
+                  "_x": "0.7",
+                  "_y": "3.0",
+                  "__text": "HCNativeWarriors"
+               },
+               {
+                  "_x": "0.7",
+                  "_y": "4.0",
+                  "__text": "HCXPShipTradingPostTravois"
+               },
+               {
+                  "_x": "0.7",
+                  "_y": "5.0",
+                  "__text": "HCAdvancedTradingPost"
+               },
+               {
+                  "_x": "1.6",
+                  "_y": "3.0",
+                  "__text": "HCNativeChampionsDutchTeam"
+               },
+               {
+                  "_x": "1.6",
+                  "_y": "4.0",
+                  "__text": "HCXPBlackArrow"
+               },
+               {
+                  "_x": "1.6",
+                  "_y": "5.0",
+                  "__text": "HCXPBloodBrothers"
+               },
+               {
+                  "_x": "1.6",
+                  "_y": "7.0",
+                  "__text": "HCXPKinshipTies"
+               },
+               {
+                  "_x": "2.5",
+                  "_y": "1.0",
+                  "__text": "HCXPTownDance"
+               },
+               {
+                  "_x": "2.5",
+                  "_y": "3.0",
+                  "__text": "HCXPNewWaysSioux"
+               },
+               {
+                  "_x": "2.5",
+                  "_y": "4.0",
+                  "__text": "HCRidingSchool"
+               },
+               {
+                  "_x": "3.4",
+                  "_y": "1.0",
+                  "__text": "HCPioneers"
+               },
+               {
+                  "_x": "3.4",
+                  "_y": "5.0",
+                  "__text": "HCXPPioneers2"
+               },
+               {
+                  "_x": "4.1",
+                  "_y": "1.0",
+                  "__text": "HCXPRanching"
+               },
+               {
+                  "_x": "4.1",
+                  "_y": "5.0",
+                  "__text": "HCAdvancedPlantations"
+               },
+               {
+                  "_x": "4.1",
+                  "_y": "6.0",
+                  "__text": "HCXPAggressivePolicy"
+               },
+               {
+                  "_x": "5.2",
+                  "_y": "1.0",
+                  "__text": "HCImprovedBuildings"
+               },
+               {
+                  "_x": "5.2",
+                  "_y": "3.0",
+                  "__text": "DEHCExtensiveFortificationsWarchief"
+               },
+               {
+                  "_x": "5.2",
+                  "_y": "4.0",
+                  "__text": "HCHeavyFortifications"
+               },
+               {
+                  "_x": "5.2",
+                  "_y": "5.0",
+                  "__text": "HCXPNomadicExpansion"
+               },
+               {
+                  "_x": "5.2",
+                  "_y": "7.0",
+                  "__text": "HCXPFriendlyTerritory"
+               },
+               {
+                  "_x": "6.1",
+                  "_y": "1.0",
+                  "__text": "HCXPAdvancedFarms"
+               },
+               {
+                  "_x": "6.1",
+                  "_y": "2.0",
+                  "__text": "HCAdvancedMarket"
+               },
+               {
+                  "_x": "6.1",
+                  "_y": "4.0",
+                  "__text": "HCXPShipWarHutTravois1"
+               },
+               {
+                  "_x": "7.0",
+                  "_y": "1.0",
+                  "__text": "HCCheapDocksTeam"
+               },
+               {
+                  "_x": "7.0",
+                  "_y": "2.0",
+                  "__text": "HCAdvancedDock"
+               }
+            ]
+         },
+         "validunits": "",
+         "units": "",
+         "trainbuilding": "1"
+      },
+      {
+         "name": "ManufacturingPlant",
+         "visual": {
+            "file": "sioux\\sioux_manufacturingplant.xml",
+            "bone": "bone_plant",
+            "animstatemachine": "SM_SIO_WiseWoman"
+         },
+         "uix": "450",
+         "uiy": "275",
+         "camera": "sioux\\sioux_homecity_manufacturing_plant_camera.cam",
+         "widescreencamera": "sioux\\sioux_homecity_plant_widescreencamera.cam",
+         "unlocklevel": "0",
+         "portrait": "homecity\\buildings_west\\manufacturing_plant_icon",
+         "displaynamestringid": "43802",
+         "rolloverstringid": "25535",
+         "obtainabletechs": {
+            "tech": [
+               {
+                  "_x": "1.0",
+                  "_y": "1.0",
+                  "__text": "HCXPShipFarmTravois1"
+               },
+               {
+                  "_x": "1.0",
+                  "_y": "3.0",
+                  "__text": "HCXPShipFarmTravois2"
+               },
+               {
+                  "_x": "2.0",
+                  "_y": "1.0",
+                  "__text": "HCFishMarket"
+               },
+               {
+                  "_x": "3.0",
+                  "_y": "3.0",
+                  "__text": "HCSawmills"
+               },
+               {
+                  "_x": "3.0",
+                  "_y": "5.0",
+                  "__text": "HCExoticHardwoods"
+               },
+               {
+                  "_x": "3.0",
+                  "_y": "6.0",
+                  "__text": "HCXPWoodcrafting"
+               },
+               {
+                  "_x": "4.0",
+                  "_y": "1.0",
+                  "__text": "HCFoodSilos"
+               },
+               {
+                  "_x": "4.0",
+                  "_y": "3.0",
+                  "__text": "HCMedicine"
+               },
+               {
+                  "_x": "4.0",
+                  "_y": "5.0",
+                  "__text": "HCXPAdoption"
+               },
+               {
+                  "_x": "4.0",
+                  "_y": "6.0",
+                  "__text": "HCXPLandGrab"
+               },
+               {
+                  "_x": "4.0",
+                  "_y": "7.0",
+                  "__text": "HCXPOldWaysSioux"
+               },
+               {
+                  "_x": "5.0",
+                  "_y": "1.0",
+                  "__text": "HCFurrier"
+               },
+               {
+                  "_x": "5.0",
+                  "_y": "3.0",
+                  "__text": "HCSpiceTrade"
+               },
+               {
+                  "_x": "5.0",
+                  "_y": "4.0",
+                  "__text": "HCXPGreatHunter"
+               },
+               {
+                  "_x": "5.0",
+                  "_y": "5.0",
+                  "__text": "HCXPEarthBounty"
+               },
+               {
+                  "_x": "6.0",
+                  "_y": "1.0",
+                  "__text": "HCXPBuffaloTeam"
+               },
+               {
+                  "_x": "6.0",
+                  "_y": "3.0",
+                  "__text": "HCXPBuffalo2"
+               },
+               {
+                  "_x": "6.0",
+                  "_y": "4.0",
+                  "__text": "HCXPBuffalo3"
+               },
+               {
+                  "_x": "6.0",
+                  "_y": "5.0",
+                  "__text": "HCXPBuffalo4"
+               },
+               {
+                  "_x": "7.0",
+                  "_y": "1.0",
+                  "__text": "deHCSilversmithNative"
+               }
+            ]
+         },
+         "activetechs": {
+            "tech": [
+               {
+                  "_x": "1.0",
+                  "_y": "1.0",
+                  "__text": "HCXPShipFarmTravois1"
+               },
+               {
+                  "_x": "1.0",
+                  "_y": "3.0",
+                  "__text": "HCXPShipFarmTravois2"
+               },
+               {
+                  "_x": "2.0",
+                  "_y": "1.0",
+                  "__text": "HCFishMarket"
+               },
+               {
+                  "_x": "3.0",
+                  "_y": "3.0",
+                  "__text": "HCSawmills"
+               },
+               {
+                  "_x": "3.0",
+                  "_y": "5.0",
+                  "__text": "HCExoticHardwoods"
+               },
+               {
+                  "_x": "3.0",
+                  "_y": "6.0",
+                  "__text": "HCXPWoodcrafting"
+               },
+               {
+                  "_x": "4.0",
+                  "_y": "1.0",
+                  "__text": "HCFoodSilos"
+               },
+               {
+                  "_x": "4.0",
+                  "_y": "3.0",
+                  "__text": "HCMedicine"
+               },
+               {
+                  "_x": "4.0",
+                  "_y": "5.0",
+                  "__text": "HCXPAdoption"
+               },
+               {
+                  "_x": "4.0",
+                  "_y": "6.0",
+                  "__text": "HCXPLandGrab"
+               },
+               {
+                  "_x": "4.0",
+                  "_y": "7.0",
+                  "__text": "HCXPOldWaysSioux"
+               },
+               {
+                  "_x": "5.0",
+                  "_y": "1.0",
+                  "__text": "HCFurrier"
+               },
+               {
+                  "_x": "5.0",
+                  "_y": "3.0",
+                  "__text": "HCSpiceTrade"
+               },
+               {
+                  "_x": "5.0",
+                  "_y": "4.0",
+                  "__text": "HCXPGreatHunter"
+               },
+               {
+                  "_x": "5.0",
+                  "_y": "5.0",
+                  "__text": "HCXPEarthBounty"
+               },
+               {
+                  "_x": "6.0",
+                  "_y": "1.0",
+                  "__text": "HCXPBuffaloTeam"
+               },
+               {
+                  "_x": "6.0",
+                  "_y": "3.0",
+                  "__text": "HCXPBuffalo2"
+               },
+               {
+                  "_x": "6.0",
+                  "_y": "4.0",
+                  "__text": "HCXPBuffalo3"
+               },
+               {
+                  "_x": "6.0",
+                  "_y": "5.0",
+                  "__text": "HCXPBuffalo4"
+               },
+               {
+                  "_x": "7.0",
+                  "_y": "1.0",
+                  "__text": "deHCSilversmithNative"
+               }
+            ]
+         },
+         "validunits": "",
+         "trainbuilding": "1"
+      },
+      {
+         "name": "Dock",
+         "visual": {
+            "file": "sioux\\sioux_dock.xml",
+            "bone": "bone_dock",
+            "animstatemachine": "SM_SIO_Messenger"
+         },
+         "uix": "200",
+         "uiy": "250",
+         "camera": "sioux\\sioux_homecity_dock_camera.cam",
+         "widescreencamera": "sioux\\sioux_homecity_dock_widescreencamera.cam",
+         "unlocklevel": "0",
+         "portrait": "homecity\\buildings_west\\dock_icon",
+         "displaynamestringid": "43800",
+         "rolloverstringid": "35746",
+         "obtainabletechs": {
+            "tech": [
+               {
+                  "_x": "0.0",
+                  "_y": "1.0",
+                  "__text": "HCXPShipFishingBoats"
+               },
+               {
+                  "_x": "0.0",
+                  "_y": "2.0",
+                  "__text": "HCXPShipCanoes1"
+               },
+               {
+                  "_x": "0.0",
+                  "_y": "3.0",
+                  "__text": "HCXPShipWarCanoes1"
+               },
+               {
+                  "_x": "0.0",
+                  "_y": "4.0",
+                  "__text": "HCXPShipWarCanoes2"
+               },
+               {
+                  "_x": "0.0",
+                  "_y": "4.0",
+                  "__text": "HCXPShipWarCanoes3"
+               },
+               {
+                  "_x": "0.7",
+                  "_y": "3.0",
+                  "__text": "DEBirchbark"
+               },
+               {
+                  "_x": "1.4",
+                  "_y": "4.0",
+                  "__text": "HCXPComancheAllies1"
+               },
+               {
+                  "_x": "1.4",
+                  "_y": "5.0",
+                  "__text": "HCXPComancheAllies2"
+               },
+               {
+                  "_x": "1.4",
+                  "_y": "5.0",
+                  "__text": "DEHCComancheAlliesRepeat"
+               },
+               {
+                  "_x": "2.1",
+                  "_y": "3.0",
+                  "__text": "HCXPSiouxNakotaSupport"
+               },
+               {
+                  "_x": "2.1",
+                  "_y": "4.0",
+                  "__text": "HCXPCheyenneAllies1"
+               },
+               {
+                  "_x": "2.1",
+                  "_y": "5.0",
+                  "__text": "HCXPCheyenneAllies2"
+               },
+               {
+                  "_x": "2.1",
+                  "_y": "7.0",
+                  "__text": "HCXPCheyenneAlliesTeam"
+               },
+               {
+                  "_x": "2.8",
+                  "_y": "4.0",
+                  "__text": "HCXPCreeAllies1"
+               },
+               {
+                  "_x": "2.8",
+                  "_y": "5.0",
+                  "__text": "HCXPCreeAllies2"
+               },
+               {
+                  "_x": "2.8",
+                  "_y": "7.0",
+                  "__text": "HCXPCreeAlliesTeam"
+               },
+               {
+                  "_x": "2.8",
+                  "_y": "7.0",
+                  "__text": "DEHCCreeAlliesRepeat"
+               },
+               {
+                  "_x": "3.5",
+                  "_y": "3.0",
+                  "__text": "HCXPSiouxSansArcSupport"
+               },
+               {
+                  "_x": "3.5",
+                  "_y": "4.0",
+                  "__text": "HCXPSiouxHunkpapaSupport"
+               },
+               {
+                  "_x": "4.2",
+                  "_y": "1.0",
+                  "__text": "HCXPSiouxLakotaSupport"
+               },
+               {
+                  "_x": "4.9",
+                  "_y": "3.0",
+                  "__text": "HCXPSiouxBurntThighSupport"
+               },
+               {
+                  "_x": "4.9",
+                  "_y": "4.0",
+                  "__text": "HCXPSiouxOglalaSupport"
+               },
+               {
+                  "_x": "5.6",
+                  "_y": "1.0",
+                  "__text": "HCXPSiouxDakotaSupport"
+               },
+               {
+                  "_x": "5.6",
+                  "_y": "3.0",
+                  "__text": "HCXPSiouxSanteeSupport"
+               },
+               {
+                  "_x": "5.6",
+                  "_y": "4.0",
+                  "__text": "HCXPSiouxYanktonSupport"
+               },
+               {
+                  "_x": "5.6",
+                  "_y": "5.0",
+                  "__text": "HCXPSiouxTwoKettleSupport"
+               },
+               {
+                  "_x": "6.3",
+                  "_y": "1.0",
+                  "__text": "HCXPRenegadoAllies"
+               },
+               {
+                  "_x": "6.3",
+                  "_y": "3.0",
+                  "__text": "HCXPPistoleroAllies"
+               },
+               {
+                  "_x": "6.3",
+                  "_y": "4.0",
+                  "__text": "HCXPComancheroAllies"
+               },
+               {
+                  "_x": "6.3",
+                  "_y": "5.0",
+                  "__text": "HCXPBanditGang"
+               },
+               {
+                  "_x": "6.3",
+                  "_y": "7.0",
+                  "__text": "HCXPBanditGangRepeat"
+               },
+               {
+                  "_x": "7.0",
+                  "_y": "3.0",
+                  "__text": "HCXPBuccaneers"
+               },
+               {
+                  "_x": "7.0",
+                  "_y": "5.0",
+                  "__text": "HCXPBuccaneers2"
+               }
+            ]
+         },
+         "activetechs": {
+            "tech": [
+               {
+                  "_x": "0.0",
+                  "_y": "1.0",
+                  "__text": "HCXPShipFishingBoats"
+               },
+               {
+                  "_x": "0.0",
+                  "_y": "2.0",
+                  "__text": "HCXPShipCanoes1"
+               },
+               {
+                  "_x": "0.0",
+                  "_y": "3.0",
+                  "__text": "HCXPShipWarCanoes1"
+               },
+               {
+                  "_x": "0.0",
+                  "_y": "4.0",
+                  "__text": "HCXPShipWarCanoes2"
+               },
+               {
+                  "_x": "0.0",
+                  "_y": "4.0",
+                  "__text": "HCXPShipWarCanoes3"
+               },
+               {
+                  "_x": "0.7",
+                  "_y": "3.0",
+                  "__text": "DEBirchbark"
+               },
+               {
+                  "_x": "1.4",
+                  "_y": "4.0",
+                  "__text": "HCXPComancheAllies1"
+               },
+               {
+                  "_x": "1.4",
+                  "_y": "5.0",
+                  "__text": "HCXPComancheAllies2"
+               },
+               {
+                  "_x": "1.4",
+                  "_y": "5.0",
+                  "__text": "DEHCComancheAlliesRepeat"
+               },
+               {
+                  "_x": "2.1",
+                  "_y": "3.0",
+                  "__text": "HCXPSiouxNakotaSupport"
+               },
+               {
+                  "_x": "2.1",
+                  "_y": "4.0",
+                  "__text": "HCXPCheyenneAllies1"
+               },
+               {
+                  "_x": "2.1",
+                  "_y": "5.0",
+                  "__text": "HCXPCheyenneAllies2"
+               },
+               {
+                  "_x": "2.1",
+                  "_y": "7.0",
+                  "__text": "HCXPCheyenneAlliesTeam"
+               },
+               {
+                  "_x": "2.8",
+                  "_y": "4.0",
+                  "__text": "HCXPCreeAllies1"
+               },
+               {
+                  "_x": "2.8",
+                  "_y": "5.0",
+                  "__text": "HCXPCreeAllies2"
+               },
+               {
+                  "_x": "2.8",
+                  "_y": "7.0",
+                  "__text": "HCXPCreeAlliesTeam"
+               },
+               {
+                  "_x": "2.8",
+                  "_y": "7.0",
+                  "__text": "DEHCCreeAlliesRepeat"
+               },
+               {
+                  "_x": "3.5",
+                  "_y": "3.0",
+                  "__text": "HCXPSiouxSansArcSupport"
+               },
+               {
+                  "_x": "3.5",
+                  "_y": "4.0",
+                  "__text": "HCXPSiouxHunkpapaSupport"
+               },
+               {
+                  "_x": "4.2",
+                  "_y": "1.0",
+                  "__text": "HCXPSiouxLakotaSupport"
+               },
+               {
+                  "_x": "4.9",
+                  "_y": "3.0",
+                  "__text": "HCXPSiouxBurntThighSupport"
+               },
+               {
+                  "_x": "4.9",
+                  "_y": "4.0",
+                  "__text": "HCXPSiouxOglalaSupport"
+               },
+               {
+                  "_x": "5.6",
+                  "_y": "1.0",
+                  "__text": "HCXPSiouxDakotaSupport"
+               },
+               {
+                  "_x": "5.6",
+                  "_y": "3.0",
+                  "__text": "HCXPSiouxSanteeSupport"
+               },
+               {
+                  "_x": "5.6",
+                  "_y": "4.0",
+                  "__text": "HCXPSiouxYanktonSupport"
+               },
+               {
+                  "_x": "5.6",
+                  "_y": "5.0",
+                  "__text": "HCXPSiouxTwoKettleSupport"
+               },
+               {
+                  "_x": "6.3",
+                  "_y": "1.0",
+                  "__text": "HCXPRenegadoAllies"
+               },
+               {
+                  "_x": "6.3",
+                  "_y": "3.0",
+                  "__text": "HCXPPistoleroAllies"
+               },
+               {
+                  "_x": "6.3",
+                  "_y": "4.0",
+                  "__text": "HCXPComancheroAllies"
+               },
+               {
+                  "_x": "6.3",
+                  "_y": "5.0",
+                  "__text": "HCXPBanditGang"
+               },
+               {
+                  "_x": "6.3",
+                  "_y": "7.0",
+                  "__text": "HCXPBanditGangRepeat"
+               },
+               {
+                  "_x": "7.0",
+                  "_y": "3.0",
+                  "__text": "HCXPBuccaneers"
+               },
+               {
+                  "_x": "7.0",
+                  "_y": "5.0",
+                  "__text": "HCXPBuccaneers2"
+               }
+            ]
+         },
+         "validunits": "",
+         "units": "",
+         "trainbuilding": "1",
+         "mercbuilding": "1"
+      },
+      {
+         "name": "Customization",
+         "camera": "spanish\\spanish_homecity_camera.cam",
+         "widescreencamera": "spanish\\spanish_homecity_widescreencamera.cam",
+         "unlocklevel": "0",
+         "portrait": "homecity\\buildings_west\\dock_icon",
+         "displaynamestringid": "24966",
+         "rolloverstringid": "25540",
+         "customizationbuilding": "1"
+      }
+   ],
+   "waypoints": {
+      "waypoint": [
+         {
+            "bone": "bone_pathnode01",
+            "exit": "1",
+            "dock": "1"
+         },
+         {
+            "bone": "bone_pathnode02",
+            "exit": "1"
+         },
+         {
+            "bone": "bone_pathnode03",
+            "performancearea": "1"
+         },
+         {
+            "bone": "bone_pathnode04",
+            "performancearea": "1"
+         },
+         {
+            "bone": "bone_pathnode05",
+            "exit": "1"
+         },
+         {
+            "bone": "bone_pathnode06",
+            "exit": "1"
+         },
+         {
+            "bone": "bone_pathnode07",
+            "performancearea": "1"
+         },
+         {
+            "bone": "bone_shipment_start01",
+            "shipmentstart": "1"
+         },
+         {
+            "bone": "bone_shipment_start02",
+            "shipmentstart": "1"
+         },
+         {
+            "bone": "bone_shipment_start03",
+            "shipmentstart": "1"
+         },
+         {
+            "bone": "bone_shipment_end",
+            "shipmentend": "1"
+         },
+         {
+            "bone": "bone_pathnode08",
+            "performancearea": "1"
+         },
+         {
+            "bone": "bone_pathnode09",
+            "performancearea": "1"
+         },
+         {
+            "bone": "bone_pathnode10",
+            "performancearea": "1"
+         },
+         {
+            "bone": "bone_pathnode11",
+            "performancearea": "1"
+         },
+         {
+            "bone": "bone_pathnode12",
+            "performancearea": "1"
+         },
+         {
+            "bone": "bone_pathnode13",
+            "performancearea": "1"
+         },
+         {
+            "bone": "bone_pathnode14",
+            "performancearea": "1"
+         },
+         {
+            "bone": "bone_pathnode15"
+         },
+         {
+            "bone": "bone_pathnode16"
+         },
+         {
+            "bone": "bone_pathnode17",
+            "performancearea": "1"
+         },
+         {
+            "bone": "bone_pathnode18",
+            "performancearea": "1"
+         },
+         {
+            "bone": "bone_pathnode19",
+            "performancearea": "1"
+         },
+         {
+            "bone": "bone_pathnode20",
+            "performancearea": "1"
+         },
+         {
+            "bone": "bone_pathnode21",
+            "performancearea": "1"
+         },
+         {
+            "bone": "bone_pathnode22",
+            "performancearea": "1"
+         },
+         {
+            "bone": "bone_pathnode23",
+            "performancearea": "1"
+         },
+         {
+            "bone": "bone_pathnode24",
+            "performancearea": "1"
+         },
+         {
+            "bone": "bone_pathnode25"
+         },
+         {
+            "bone": "bone_pathnode26",
+            "performancearea": "1"
+         },
+         {
+            "bone": "bone_buffalo1"
+         },
+         {
+            "bone": "bone_buffalo03"
+         },
+         {
+            "bone": "bone_buffalo04"
+         }
+      ]
+   },
+   "obtainableprops": ""
+}

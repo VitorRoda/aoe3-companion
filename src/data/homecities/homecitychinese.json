@@ -1,0 +1,3568 @@
+{
+   "civ": "Chinese",
+   "name": "$$60012$$",
+   "heroname": "$$60013$$",
+   "gatherpointunit": "HomeCityGatherFlag",
+   "visual": "china\\china_homecity.xml",
+   "watervisual": "china\\china_homecity_water.xml",
+   "backgroundvisual": "china\\china_background.xml",
+   "pathdata": "china\\pathable_area_object.gr2",
+   "camera": "china\\china_homecity_camera.cam",
+   "widescreencamera": "china\\china_homecity_widescreencamera.cam",
+   "transportroundtriptime": "1",
+   "transportactivationtime": "0",
+   "level": "1",
+   "skillpoints": "9",
+   "lightset": "China",
+   "watertype": "China_HC",
+   "numpropunlocksearned": "0",
+   "ambientsounds": "homecity\\chineseambientsounds.xml",
+   "xsai": "generic_city",
+   "coffers": {
+      "current": {
+         "food": "0",
+         "wood": "0",
+         "gold": "0",
+         "fame": "0",
+         "ships": "0",
+         "skillpoints": "0",
+         "xp": "0"
+      },
+      "maximum": {
+         "food": "0",
+         "wood": "0",
+         "gold": "0",
+         "fame": "0",
+         "ships": "0",
+         "skillpoints": "-1",
+         "xp": "-1"
+      }
+   },
+   "cards": {
+      "card": [
+         {
+            "name": "DEHCTeaExport",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "0",
+            "displayunitcount": "1"
+         },
+         {
+            "name": "YPHCSpawnRefugees1",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "0"
+         },
+         {
+            "name": "YPHCSpawnRefugees2",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "YPHCSpawnRefugees1",
+            "age": "2"
+         },
+         {
+            "name": "YPHCSpawnMigrants1",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "YPHCSpawnRefugees2",
+            "age": "3"
+         },
+         {
+            "name": "HCShipFoodCrates1",
+            "maxcount": "-1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "0",
+            "displayunitcount": "300",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCShipFoodCrates2",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "HCShipFoodCrates1",
+            "age": "1",
+            "displayunitcount": "600",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCShipFoodCrates3",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "HCShipFoodCrates2",
+            "age": "1",
+            "displayunitcount": "700",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCShipFoodCrates4",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "HCShipFoodCrates3",
+            "age": "2",
+            "displayunitcount": "1000",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCShipFoodCrates5",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "HCShipFoodCrates4",
+            "age": "3",
+            "displayunitcount": "1600",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCShipWoodCrates1",
+            "maxcount": "-1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "0",
+            "displayunitcount": "300",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCShipWoodCrates2",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "HCShipWoodCrates1",
+            "age": "1",
+            "displayunitcount": "600",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCShipWoodCrates3",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "HCShipWoodCrates2",
+            "age": "1",
+            "displayunitcount": "700",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCShipWoodCrates4",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "HCShipWoodCrates3",
+            "age": "2",
+            "displayunitcount": "1000",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCShipWoodCrates5",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "HCShipWoodCrates4",
+            "age": "3",
+            "displayunitcount": "1600",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCShipCoinCrates1",
+            "maxcount": "-1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "0",
+            "displayunitcount": "300",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCShipCoinCrates2",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "HCShipCoinCrates1",
+            "age": "1",
+            "displayunitcount": "600",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCShipCoinCrates3",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "HCShipCoinCrates2",
+            "age": "1",
+            "displayunitcount": "700",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCShipCoinCrates4",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "HCShipCoinCrates3",
+            "age": "2",
+            "displayunitcount": "1000",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCShipCoinCrates5",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "HCShipCoinCrates4",
+            "age": "3",
+            "displayunitcount": "1600",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCSpawnLivestock1",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "0"
+         },
+         {
+            "name": "YPHCSpawnLivestock2",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "YPHCSpawnLivestock1",
+            "age": "2"
+         },
+         {
+            "name": "YPHCShipVillageWagon1",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "0",
+            "displayunitcount": "1",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipVillageWagon2",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "YPHCShipVillageWagon1",
+            "age": "1",
+            "displayunitcount": "2",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipCoveredWagonsAsian",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "2",
+            "displayunitcount": "1",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipCoveredWagonsChina",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "YPHCShipCoveredWagonsAsian",
+            "age": "3",
+            "displayunitcount": "6",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCChineseMonkMakeDisciple",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "1"
+         },
+         {
+            "name": "YPHCShipShaolinMaster",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "YPHCShipDisciple1",
+            "age": "3",
+            "displayunitcount": "1"
+         },
+         {
+            "name": "YPHCShipDisciple1",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "YPHCChineseMonkMakeDisciple",
+            "age": "0",
+            "displayunitcount": "5",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "DEHCTigerYear",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "YPHCChineseMonkMakeDisciple",
+            "age": "0"
+         },
+         {
+            "name": "YPHCShipMongolScoutTeam",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "0",
+            "displayunitcount": "2",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipChuKoNu1",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "1",
+            "displayunitcount": "8",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipChuKoNu2",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "YPHCShipChuKoNu1",
+            "age": "2",
+            "displayunitcount": "13",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipChuKoNu3",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "YPHCShipChuKoNu2",
+            "age": "3",
+            "displayunitcount": "21",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCStandardArmyHitpoints",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "YPHCShipChuKoNu2",
+            "age": "1"
+         },
+         {
+            "name": "YPHCShipMandarinDuckSquad",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "YPHCShipChuKoNu3",
+            "age": "1",
+            "displayunitcount": "9",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCBannerReforms",
+            "maxcount": "1",
+            "level": "40",
+            "prereqtech": "YPHCStandardArmyHitpoints",
+            "age": "1"
+         },
+         {
+            "name": "YPHCShipQiangPikeman1",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "2",
+            "displayunitcount": "14",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipQiangPikeman2",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "YPHCShipQiangPikeman1",
+            "age": "1",
+            "displayunitcount": "9",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipQiangPikeman3",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "YPHCShipQiangPikeman2",
+            "age": "3",
+            "displayunitcount": "21",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCOldHanArmyReforms",
+            "maxcount": "1",
+            "level": "40",
+            "prereqtech": "YPHCShipQiangPikeman3",
+            "age": "3"
+         },
+         {
+            "name": "YPHCShipArquebusier1",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "2",
+            "displayunitcount": "10",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipArquebusier2",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "YPHCShipArquebusier1",
+            "age": "3",
+            "displayunitcount": "17",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipChangdao1",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "3",
+            "displayunitcount": "18",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipChangdao2",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "YPHCShipChangdao1",
+            "age": "2",
+            "displayunitcount": "11",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCTerritorialArmyCombat",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "YPHCShipChangdao2",
+            "age": "2"
+         },
+         {
+            "name": "YPHCHanAntiCavalryBonus",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "YPHCShipArquebusier2",
+            "age": "2"
+         },
+         {
+            "name": "YPHCShipKeshik2",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "3",
+            "displayunitcount": "15",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipKeshik3",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "YPHCShipKeshik2",
+            "age": "2",
+            "displayunitcount": "10",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipKeshik4",
+            "maxcount": "-1",
+            "level": "25",
+            "prereqtech": "YPHCShipKeshik3",
+            "age": "2",
+            "displayunitcount": "8",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipSteppeRider1",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "2",
+            "displayunitcount": "10",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipSteppeRider2",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "YPHCShipSteppeRider1",
+            "age": "1",
+            "displayunitcount": "7",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipSteppeRider3",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "YPHCShipSteppeRider2",
+            "age": "3",
+            "displayunitcount": "16",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCMongolianScourge",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "YPHCShipSteppeRider3",
+            "age": "1"
+         },
+         {
+            "name": "YPHCShipIronFlail1",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "2",
+            "displayunitcount": "4",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipIronFlail2",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "YPHCShipIronFlail1",
+            "age": "3",
+            "displayunitcount": "7",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCForbiddenArmyArmor",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "YPHCShipIronFlail2",
+            "age": "2"
+         },
+         {
+            "name": "YPHCShipBeiyangArmy",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "YPHCShipIronFlail2",
+            "age": "2",
+            "displayunitcount": "16",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipEverVictoriousArmy",
+            "maxcount": "1",
+            "level": "40",
+            "prereqtech": "YPHCShipBeiyangArmy",
+            "age": "3",
+            "displayunitcount": "11",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipMeteorHammer1",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "3",
+            "displayunitcount": "8",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipMeteorHammer2",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "YPHCShipMeteorHammer1",
+            "age": "2",
+            "displayunitcount": "5",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipMeteorHammer3",
+            "maxcount": "-1",
+            "level": "10",
+            "prereqtech": "YPHCShipMeteorHammer2",
+            "age": "3",
+            "displayunitcount": "6",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCManchuCombat",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "YPHCShipMeteorHammer3",
+            "age": "3"
+         },
+         {
+            "name": "YPHCShipFlameThrower1",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "1",
+            "displayunitcount": "2",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipFlameThrower2",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "2",
+            "displayunitcount": "3",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "DEHCDragonYear",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "2",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipFlameThrower3",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "YPHCShipFlameThrower2",
+            "age": "3",
+            "displayunitcount": "5",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipIronCapPrincesArmy",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "YPHCShipFlameThrower3",
+            "age": "2",
+            "displayunitcount": "14",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipHandMortar1",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "2",
+            "displayunitcount": "7",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipHandMortar2",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "YPHCShipHandMortar1",
+            "age": "3",
+            "displayunitcount": "11",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipHandMortarTeam",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "YPHCShipHandMortar2",
+            "age": "2",
+            "displayunitcount": "4",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipEmperorsArmy",
+            "maxcount": "1",
+            "level": "40",
+            "prereqtech": "YPHCShipArquebusier2",
+            "age": "3",
+            "displayunitcount": "30",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipFlyingCrow1",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "2",
+            "displayunitcount": "1",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCArtilleryHitpointsChinese",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "YPHCShipFlyingCrow1",
+            "age": "1"
+         },
+         {
+            "name": "YPHCArtilleryDamageChinese",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "YPHCArtilleryHitpointsChinese",
+            "age": "1"
+         },
+         {
+            "name": "YPHCArtilleryCombatChinese",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "YPHCArtilleryDamageChinese",
+            "age": "2"
+         },
+         {
+            "name": "YPHCShipFlyingCrow2",
+            "maxcount": "-1",
+            "level": "40",
+            "prereqtech": "YPHCArtilleryCombatsChinese",
+            "age": "3",
+            "displayunitcount": "2",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "DEHCFireDragonManual",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "3",
+            "displayunitcount": "3"
+         },
+         {
+            "name": "YPHCWesternReforms",
+            "maxcount": "1",
+            "level": "40",
+            "prereqtech": "-1",
+            "age": "3"
+         },
+         {
+            "name": "YPHCNativeLearning",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "1"
+         },
+         {
+            "name": "YPHCNativeHitpoints",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "YPHCNativeDamage",
+            "age": "2"
+         },
+         {
+            "name": "YPHCNativeTradeTax",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "YPHCNativeLearning",
+            "age": "2"
+         },
+         {
+            "name": "YPHCNativeDamage",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "YPHCNativeLearning",
+            "age": "2"
+         },
+         {
+            "name": "YPHCExpandedTradingPost",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "YPHCNativeTradeTax",
+            "age": "0",
+            "displayunitcount": "1"
+         },
+         {
+            "name": "YPHCRanchingWaterBuffalo",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "0"
+         },
+         {
+            "name": "YPHCCheapWarAcademyTeam",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "0"
+         },
+         {
+            "name": "YPHCAccupuncture",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "YPHCCheapWarAcademyTeam",
+            "age": "2"
+         },
+         {
+            "name": "YPHCBannerSchool",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "YPHCAccupuncture",
+            "age": "1"
+         },
+         {
+            "name": "YPHCEngineeringSchoolTeam",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "YPHCBannerSchool",
+            "age": "1"
+         },
+         {
+            "name": "YPHCConfusciousGift",
+            "maxcount": "1",
+            "level": "40",
+            "prereqtech": "YPHCEngineeringSchoolTeam",
+            "age": "2"
+         },
+         {
+            "name": "HCPioneers",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "0"
+         },
+         {
+            "name": "YPHCAdvancedIrregulars",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "HCPioneers",
+            "age": "0"
+         },
+         {
+            "name": "YPHCHouseHitpointsTeam",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "0"
+         },
+         {
+            "name": "YPHCVillageShooty",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "YPHCHouseHitpointsTeam",
+            "age": "1"
+         },
+         {
+            "name": "ypHCShipCastleWagons1",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "1",
+            "displayunitcount": "1"
+         },
+         {
+            "name": "YPHCExtensiveFortifications",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "ypHCShipCastleWagons1",
+            "age": "1"
+         },
+         {
+            "name": "ypHCShipCastleWagons2",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "ypHCShipCastleWagons1",
+            "age": "2",
+            "displayunitcount": "1"
+         },
+         {
+            "name": "HCImprovedBuildings",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "YPHCAdvancedIrregulars",
+            "age": "0"
+         },
+         {
+            "name": "YPHCGreatWall",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "ypHCShipCastleWagons2",
+            "age": "2"
+         },
+         {
+            "name": "YPHCCommoditiesMarket",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "0",
+            "displayunitcount": "1"
+         },
+         {
+            "name": "YPHCAdvancedMonastery",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "0",
+            "displayunitcount": "1"
+         },
+         {
+            "name": "YPHCAdvancedRicePaddy",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "-1",
+            "age": "0"
+         },
+         {
+            "name": "HCAdvancedDock",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "-1",
+            "age": "0"
+         },
+         {
+            "name": "YPHCAdvancedConsulate",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "0"
+         },
+         {
+            "name": "YPHCConsulateRelations",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "YPHCAdvancedConsulate",
+            "age": "2"
+         },
+         {
+            "name": "YPHCSmoothRelations",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "YPHCConsulateRelations",
+            "age": "1",
+            "displayunitcount": "300"
+         },
+         {
+            "name": "YPHCAdvancedWonders",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "-1",
+            "age": "0"
+         },
+         {
+            "name": "YPHCVillagemasons",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "-1",
+            "age": "1"
+         },
+         {
+            "name": "HCXPLandGrab",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "YPHCVillagemasons",
+            "age": "0"
+         },
+         {
+            "name": "HCFishMarket",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "0"
+         },
+         {
+            "name": "HCRenderingPlant",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "HCFishMarket",
+            "age": "1"
+         },
+         {
+            "name": "YPHCSchoonersJapanese",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "HCRenderingPlant",
+            "age": "0",
+            "displayunitcount": "1"
+         },
+         {
+            "name": "HCSawmills",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "-1",
+            "age": "0"
+         },
+         {
+            "name": "HCExoticHardwoods",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "HCSawmills",
+            "age": "0"
+         },
+         {
+            "name": "HCRoyalMint",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "-1",
+            "age": "2"
+         },
+         {
+            "name": "HCSilversmith",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "HCRoyalMint",
+            "age": "1"
+         },
+         {
+            "name": "HCFoodSilos",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "0"
+         },
+         {
+            "name": "HCSustainableAgriculture",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "HCFoodSilos",
+            "age": "1"
+         },
+         {
+            "name": "HCRefrigeration",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "HCSustainableAgriculture",
+            "age": "2"
+         },
+         {
+            "name": "HCStockyards",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "0"
+         },
+         {
+            "name": "HCFullingMills",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "HCStockyards",
+            "age": "0"
+         },
+         {
+            "name": "HCFurrier",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "0"
+         },
+         {
+            "name": "HCSpiceTrade",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "HCFurrier",
+            "age": "1"
+         },
+         {
+            "name": "YPHCSpawnSaigaHerd",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "HCSpiceTrade",
+            "age": "2"
+         },
+         {
+            "name": "HCCigarRoller",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "1"
+         },
+         {
+            "name": "HCTextileMills",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "HCCigarRoller",
+            "age": "2"
+         },
+         {
+            "name": "YPHCEmpressDowager",
+            "maxcount": "1",
+            "level": "40",
+            "prereqtech": "HCSilversmith",
+            "age": "0"
+         },
+         {
+            "name": "YPHCRainbowTrickle",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "-1",
+            "age": "0"
+         },
+         {
+            "name": "YPHCShipWarJunk1",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "1",
+            "displayunitcount": "1",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipFireship1",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "YPHCShipWarJunk1",
+            "age": "1",
+            "displayunitcount": "2",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipFuchuan1",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "YPHCShipWarJunk1",
+            "age": "2",
+            "displayunitcount": "1",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipWarJunk2",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "YPHCShipWarJunk1",
+            "age": "1",
+            "displayunitcount": "2",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipFireshipTeam",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "YPHCShipFireship1",
+            "age": "2",
+            "displayunitcount": "3",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCShipFuchuanTeam",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "YPHCShipFuchuan1",
+            "age": "3",
+            "displayunitcount": "1",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCChineseImperialNavy",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "YPHCShipFuchuanTeam",
+            "age": "3",
+            "displayunitcount": "2",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCFireshipDamage",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "YPHCShipFireshipTeam",
+            "age": "2"
+         },
+         {
+            "name": "YPHCNavalCombatTeam",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "YPHCShipWarJunk1",
+            "age": "1"
+         },
+         {
+            "name": "YPHCEuropeanCannons",
+            "maxcount": "1",
+            "level": "40",
+            "prereqtech": "YPHCNavalCombatTeam",
+            "age": "1"
+         },
+         {
+            "name": "HCAdmirality",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "1"
+         },
+         {
+            "name": "YPHCMercsRattanShield1",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "-1",
+            "age": "1",
+            "displayunitcount": "10",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCMercsRattanShield2",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "YPHCMercsRattanShield1",
+            "age": "3",
+            "displayunitcount": "26",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCMercsRattanShield3",
+            "maxcount": "-1",
+            "level": "40",
+            "prereqtech": "YPHCMercsRattanShield2",
+            "age": "3",
+            "displayunitcount": "10",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCMercsManchu",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "-1",
+            "age": "2",
+            "displayunitcount": "9",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCMercsMandarinArmy1",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "HCMercsManchu",
+            "age": "3",
+            "displayunitcount": "17",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "DEHCKoxinga",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "3",
+            "displayunitcount": "11"
+         },
+         {
+            "name": "YPHCShipManchuTeam",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "YPHCMercsMandarinArmy1",
+            "age": "2",
+            "displayunitcount": "5",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCAtonementChinese",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "1"
+         },
+         {
+            "name": "YPHCMercsIronTroop1",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "-1",
+            "age": "2",
+            "displayunitcount": "9",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "HCMercenaryLoyalty",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "YPHCAtonementChinese",
+            "age": "2"
+         },
+         {
+            "name": "YPHCWokouChinese1",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "1",
+            "displayunitcount": "4",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCWokouChinese2",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "YPHCWokouChinese1",
+            "age": "3",
+            "displayunitcount": "6",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "YPHCWokouChinese3",
+            "maxcount": "-1",
+            "level": "25",
+            "prereqtech": "YPHCWokouChinese2",
+            "age": "3",
+            "displayunitcount": "11",
+            "infiniteinlastage": "1"
+         }
+      ]
+   },
+   "decks": {
+      "deck": [
+         {
+            "name": "$$71332$$Beginner",
+            "cards": {
+               "card": [
+                  "HCShipFoodCrates1",
+                  "HCShipWoodCrates1",
+                  "HCShipCoinCrates1",
+                  "YPHCShipDisciple1",
+                  "YPHCShipChuKoNu1",
+                  "YPHCShipQiangPikeman2",
+                  "YPHCShipArquebusier1",
+                  "YPHCShipChangdao2",
+                  "YPHCShipMandarinDuckSquad",
+                  "YPHCShipEverVictoriousArmy",
+                  "YPHCShipMeteorHammer3",
+                  "YPHCShipSteppeRider3",
+                  "YPHCShipIronCapPrincesArmy"
+               ]
+            }
+         },
+         {
+            "name": "$$71332$$Beginner",
+            "default": "",
+            "cards": {
+               "card": [
+                  {
+                     "_dbid": "4824",
+                     "__text": "YPHCSpawnRefugees1"
+                  },
+                  {
+                     "_dbid": "2212",
+                     "__text": "HCShipWoodCrates3"
+                  },
+                  {
+                     "_dbid": "2215",
+                     "__text": "HCShipCoinCrates3"
+                  },
+                  {
+                     "_dbid": "4825",
+                     "__text": "YPHCSpawnRefugees2"
+                  },
+                  {
+                     "_dbid": "4823",
+                     "__text": "YPHCSpawnMigrants1"
+                  },
+                  {
+                     "_dbid": "3946",
+                     "__text": "YPHCShipFlyingCrow2"
+                  },
+                  {
+                     "_dbid": "4727",
+                     "__text": "YPHCShipSteppeRider2"
+                  },
+                  {
+                     "_dbid": "2041",
+                     "__text": "HCRefrigeration"
+                  },
+                  {
+                     "_dbid": "5239",
+                     "__text": "YPHCShipKeshik4"
+                  },
+                  {
+                     "_dbid": "4997",
+                     "__text": "YPHCShipShaolinMaster"
+                  },
+                  {
+                     "_dbid": "4801",
+                     "__text": "YPHCSpawnLivestock1"
+                  },
+                  {
+                     "_dbid": "5038",
+                     "__text": "YPHCRainbowTrickle"
+                  },
+                  {
+                     "_dbid": "2209",
+                     "__text": "HCShipFoodCrates3"
+                  },
+                  {
+                     "_dbid": "3552",
+                     "__text": "YPHCShipVillageWagon2"
+                  },
+                  {
+                     "_dbid": "4733",
+                     "__text": "YPHCShipQiangPikeman2"
+                  },
+                  {
+                     "_dbid": "3954",
+                     "__text": "YPHCOldHanArmyReforms"
+                  },
+                  {
+                     "_dbid": "4728",
+                     "__text": "YPHCShipSteppeRider3"
+                  },
+                  {
+                     "_dbid": "4732",
+                     "__text": "YPHCShipQiangPikeman1"
+                  },
+                  {
+                     "_dbid": "4726",
+                     "__text": "YPHCShipSteppeRider1"
+                  },
+                  {
+                     "_dbid": "2090",
+                     "__text": "HCSawmills"
+                  },
+                  {
+                     "_dbid": "2574",
+                     "__text": "HCShipCoinCrates1"
+                  },
+                  {
+                     "_dbid": "4059",
+                     "__text": "YPHCShipCastleWagons1"
+                  },
+                  {
+                     "_dbid": "4730",
+                     "__text": "YPHCShipChuKoNu2"
+                  }
+               ]
+            }
+         },
+         {
+            "name": "$$20310$$Land",
+            "cards": {
+               "card": [
+                  {
+                     "_dbid": "4824",
+                     "__text": "YPHCSpawnRefugees1"
+                  },
+                  {
+                     "_dbid": "2212",
+                     "__text": "HCShipWoodCrates3"
+                  },
+                  {
+                     "_dbid": "2215",
+                     "__text": "HCShipCoinCrates3"
+                  },
+                  {
+                     "_dbid": "2216",
+                     "__text": "HCShipCoinCrates4"
+                  },
+                  {
+                     "_dbid": "3950",
+                     "__text": "YPHCTerritorialArmyCombat"
+                  },
+                  {
+                     "_dbid": "3948",
+                     "__text": "YPHCForbiddenArmyArmor"
+                  },
+                  {
+                     "_dbid": "3946",
+                     "__text": "YPHCShipFlyingCrow2"
+                  },
+                  {
+                     "_dbid": "4729",
+                     "__text": "YPHCShipChuKoNu1"
+                  },
+                  {
+                     "_dbid": "5061",
+                     "__text": "ypHCConsulateRelations"
+                  },
+                  {
+                     "_dbid": "5029",
+                     "__text": "YPHCSmoothRelations"
+                  },
+                  {
+                     "_dbid": "4719",
+                     "__text": "YPHCShipArquebusier1"
+                  },
+                  {
+                     "_dbid": "4551",
+                     "__text": "YPHCSpawnSaigaHerd"
+                  },
+                  {
+                     "_dbid": "5130",
+                     "__text": "YPHCWesternReforms"
+                  },
+                  {
+                     "_dbid": "5178",
+                     "__text": "YPHCAtonementChinese"
+                  },
+                  {
+                     "_dbid": "3555",
+                     "__text": "YPHCChineseMonkMakeDisciple"
+                  },
+                  {
+                     "_dbid": "4997",
+                     "__text": "YPHCShipShaolinMaster"
+                  },
+                  {
+                     "_dbid": "3959",
+                     "__text": "YPHCBannerSchool"
+                  },
+                  {
+                     "_dbid": "2095",
+                     "__text": "HCSustainableAgriculture"
+                  },
+                  {
+                     "_dbid": "2041",
+                     "__text": "HCRefrigeration"
+                  },
+                  {
+                     "_dbid": "4823",
+                     "__text": "YPHCSpawnMigrants1"
+                  },
+                  {
+                     "_dbid": "5267",
+                     "__text": "YPHCShipManchuTeam"
+                  },
+                  {
+                     "_dbid": "3979",
+                     "__text": "YPHCMercsRattanShield1"
+                  },
+                  {
+                     "_dbid": "3936",
+                     "__text": "YPHCShipIronCapPrincesArmy"
+                  },
+                  {
+                     "_dbid": "3955",
+                     "__text": "YPHCBannerReforms"
+                  },
+                  {
+                     "_dbid": "3967",
+                     "__text": "YPHCAdvancedConsulate"
+                  }
+               ]
+            }
+         },
+         {
+            "name": "$$71333$$Naval",
+            "cards": {
+               "card": [
+                  {
+                     "_dbid": "4824",
+                     "__text": "YPHCSpawnRefugees1"
+                  },
+                  {
+                     "_dbid": "2212",
+                     "__text": "HCShipWoodCrates3"
+                  },
+                  {
+                     "_dbid": "2215",
+                     "__text": "HCShipCoinCrates3"
+                  },
+                  {
+                     "_dbid": "5057",
+                     "__text": "YPHCHanAntiCavalryBonus"
+                  },
+                  {
+                     "_dbid": "4718",
+                     "__text": "YPHCShipMeteorHammer2"
+                  },
+                  {
+                     "_dbid": "5061",
+                     "__text": "ypHCConsulateRelations"
+                  },
+                  {
+                     "_dbid": "5029",
+                     "__text": "YPHCSmoothRelations"
+                  },
+                  {
+                     "_dbid": "5130",
+                     "__text": "YPHCWesternReforms"
+                  },
+                  {
+                     "_dbid": "4251",
+                     "__text": "YPHCShipFuchuan1"
+                  },
+                  {
+                     "_dbid": "3975",
+                     "__text": "YPHCShipWarJunk2"
+                  },
+                  {
+                     "_dbid": "4258",
+                     "__text": "YPHCWokouChinese3"
+                  },
+                  {
+                     "_dbid": "4254",
+                     "__text": "YPHCNavalCombatTeam"
+                  },
+                  {
+                     "_dbid": "3973",
+                     "__text": "YPHCShipFireshipTeam"
+                  },
+                  {
+                     "_dbid": "4252",
+                     "__text": "YPHCShipFuchuanTeam"
+                  },
+                  {
+                     "_dbid": "3954",
+                     "__text": "YPHCOldHanArmyReforms"
+                  },
+                  {
+                     "_dbid": "3949",
+                     "__text": "YPHCStandardArmyHitpoints"
+                  },
+                  {
+                     "_dbid": "469",
+                     "__text": "HCFishMarket"
+                  },
+                  {
+                     "_dbid": "2099",
+                     "__text": "HCRenderingPlant"
+                  },
+                  {
+                     "_dbid": "4812",
+                     "__text": "YPHCSchoonersJapanese"
+                  },
+                  {
+                     "_dbid": "2211",
+                     "__text": "HCShipWoodCrates2"
+                  },
+                  {
+                     "_dbid": "3946",
+                     "__text": "YPHCShipFlyingCrow2"
+                  },
+                  {
+                     "_dbid": "3946",
+                     "__text": "DEHCFireDragonManual"
+                  },
+                  {
+                     "_dbid": "4057",
+                     "__text": "YPHCAccupuncture"
+                  },
+                  {
+                     "_dbid": "3935",
+                     "__text": "YPHCShipMandarinDuckSquad"
+                  },
+                  {
+                     "_dbid": "4727",
+                     "__text": "YPHCShipSteppeRider2"
+                  },
+                  {
+                     "_dbid": "2216",
+                     "__text": "HCShipCoinCrates4"
+                  }
+               ]
+            }
+         }
+      ]
+   },
+   "building": [
+      {
+         "name": "Estate",
+         "visual": {
+            "file": "japan\\tori.xml",
+            "bone": "bone_tori"
+         },
+         "uix": "150",
+         "uiy": "200",
+         "camera": "china\\china_homecity_estate_camera.cam",
+         "widescreencamera": "china\\china_homecity_estate_camera.cam",
+         "unlocklevel": "0",
+         "portrait": "homecity\\buildings_west\\estate_icon",
+         "displaynamestringid": "24968",
+         "rolloverstringid": "25537",
+         "validunits": "",
+         "units": "",
+         "trainbuilding": "1",
+         "mercbuilding": "1"
+      },
+      {
+         "name": "Emperor's Treasury",
+         "visual": {
+            "file": "china\\court.xml",
+            "bone": "bone_court"
+         },
+         "uix": "250",
+         "uiy": "375",
+         "camera": "china\\china_homecity_market_camera.cam",
+         "widescreencamera": "china\\china_homecity_market_widescreencamera.cam",
+         "unlocklevel": "0",
+         "portrait": "homecity\\buildings_west\\market_icon",
+         "displaynamestringid": "63356",
+         "rolloverstringid": "25536",
+         "obtainabletechs": {
+            "tech": [
+               {
+                  "_x": "0.5",
+                  "_y": "1",
+                  "__text": "DEHCTeaExport"
+               },
+               {
+                  "_x": "0.5",
+                  "_y": "1",
+                  "__text": "YPHCSpawnRefugees1"
+               },
+               {
+                  "_x": "0.5",
+                  "_y": "2",
+                  "__text": "YPHCSpawnRefugees2"
+               },
+               {
+                  "_x": "0.5",
+                  "_y": "5",
+                  "__text": "YPHCSpawnMigrants1"
+               },
+               {
+                  "_x": "1.4",
+                  "_y": "1",
+                  "__text": "HCShipFoodCrates1"
+               },
+               {
+                  "_x": "1.4",
+                  "_y": "2",
+                  "__text": "HCShipFoodCrates2"
+               },
+               {
+                  "_x": "1.4",
+                  "_y": "3",
+                  "__text": "HCShipFoodCrates3"
+               },
+               {
+                  "_x": "1.4",
+                  "_y": "4",
+                  "__text": "HCShipFoodCrates4"
+               },
+               {
+                  "_x": "1.4",
+                  "_y": "5",
+                  "__text": "HCShipFoodCrates5"
+               },
+               {
+                  "_x": "2.2",
+                  "_y": "1",
+                  "__text": "HCShipWoodCrates1"
+               },
+               {
+                  "_x": "2.2",
+                  "_y": "2",
+                  "__text": "HCShipWoodCrates2"
+               },
+               {
+                  "_x": "2.2",
+                  "_y": "3",
+                  "__text": "HCShipWoodCrates3"
+               },
+               {
+                  "_x": "2.2",
+                  "_y": "4",
+                  "__text": "HCShipWoodCrates4"
+               },
+               {
+                  "_x": "2.2",
+                  "_y": "5",
+                  "__text": "HCShipWoodCrates5"
+               },
+               {
+                  "_x": "3",
+                  "_y": "1",
+                  "__text": "HCShipCoinCrates1"
+               },
+               {
+                  "_x": "3",
+                  "_y": "2",
+                  "__text": "HCShipCoinCrates2"
+               },
+               {
+                  "_x": "3",
+                  "_y": "3",
+                  "__text": "HCShipCoinCrates3"
+               },
+               {
+                  "_x": "3",
+                  "_y": "4",
+                  "__text": "HCShipCoinCrates4"
+               },
+               {
+                  "_x": "3",
+                  "_y": "5",
+                  "__text": "HCShipCoinCrates5"
+               },
+               {
+                  "_x": "3.9",
+                  "_y": "1",
+                  "__text": "YPHCSpawnLivestock1"
+               },
+               {
+                  "_x": "3.9",
+                  "_y": "2",
+                  "__text": "YPHCSpawnLivestock2"
+               },
+               {
+                  "_x": "4.7",
+                  "_y": "1",
+                  "__text": "YPHCShipVillageWagon1"
+               },
+               {
+                  "_x": "4.7",
+                  "_y": "2",
+                  "__text": "YPHCShipVillageWagon2"
+               },
+               {
+                  "_x": "5.5",
+                  "_y": "1",
+                  "__text": "YPHCShipCoveredWagonsAsian"
+               },
+               {
+                  "_x": "5.5",
+                  "_y": "3",
+                  "__text": "YPHCShipCoveredWagonsChina"
+               },
+               {
+                  "_x": "6.3",
+                  "_y": "2",
+                  "__text": "YPHCChineseMonkMakeDisciple"
+               },
+               {
+                  "_x": "6.3",
+                  "_y": "5",
+                  "__text": "YPHCShipShaolinMaster"
+               },
+               {
+                  "_x": "7.1",
+                  "_y": "1",
+                  "__text": "YPHCShipMongolScoutTeam"
+               },
+               {
+                  "_x": "6.3",
+                  "_y": "3",
+                  "__text": "YPHCShipDisciple1"
+               },
+               {
+                  "_x": "6.3",
+                  "_y": "3",
+                  "__text": "DEHCTigerYear"
+               }
+            ]
+         },
+         "activetechs": {
+            "tech": [
+               {
+                  "_x": "0.5",
+                  "_y": "1",
+                  "__text": "DEHCTeaExport"
+               },
+               {
+                  "_x": "0.5",
+                  "_y": "1",
+                  "__text": "YPHCSpawnRefugees1"
+               },
+               {
+                  "_x": "0.5",
+                  "_y": "2",
+                  "__text": "YPHCSpawnRefugees2"
+               },
+               {
+                  "_x": "0.5",
+                  "_y": "5",
+                  "__text": "YPHCSpawnMigrants1"
+               },
+               {
+                  "_x": "1.4",
+                  "_y": "1",
+                  "__text": "HCShipFoodCrates1"
+               },
+               {
+                  "_x": "1.4",
+                  "_y": "2",
+                  "__text": "HCShipFoodCrates2"
+               },
+               {
+                  "_x": "1.4",
+                  "_y": "3",
+                  "__text": "HCShipFoodCrates3"
+               },
+               {
+                  "_x": "1.4",
+                  "_y": "4",
+                  "__text": "HCShipFoodCrates4"
+               },
+               {
+                  "_x": "1.4",
+                  "_y": "5",
+                  "__text": "HCShipFoodCrates5"
+               },
+               {
+                  "_x": "2.2",
+                  "_y": "1",
+                  "__text": "HCShipWoodCrates1"
+               },
+               {
+                  "_x": "2.2",
+                  "_y": "2",
+                  "__text": "HCShipWoodCrates2"
+               },
+               {
+                  "_x": "2.2",
+                  "_y": "3",
+                  "__text": "HCShipWoodCrates3"
+               },
+               {
+                  "_x": "2.2",
+                  "_y": "4",
+                  "__text": "HCShipWoodCrates4"
+               },
+               {
+                  "_x": "2.2",
+                  "_y": "5",
+                  "__text": "HCShipWoodCrates5"
+               },
+               {
+                  "_x": "3",
+                  "_y": "1",
+                  "__text": "HCShipCoinCrates1"
+               },
+               {
+                  "_x": "3",
+                  "_y": "2",
+                  "__text": "HCShipCoinCrates2"
+               },
+               {
+                  "_x": "3",
+                  "_y": "3",
+                  "__text": "HCShipCoinCrates3"
+               },
+               {
+                  "_x": "3",
+                  "_y": "4",
+                  "__text": "HCShipCoinCrates4"
+               },
+               {
+                  "_x": "3",
+                  "_y": "5",
+                  "__text": "HCShipCoinCrates5"
+               },
+               {
+                  "_x": "3.9",
+                  "_y": "1",
+                  "__text": "YPHCSpawnLivestock1"
+               },
+               {
+                  "_x": "3.9",
+                  "_y": "2",
+                  "__text": "YPHCSpawnLivestock2"
+               },
+               {
+                  "_x": "4.7",
+                  "_y": "1",
+                  "__text": "YPHCShipVillageWagon1"
+               },
+               {
+                  "_x": "4.7",
+                  "_y": "2",
+                  "__text": "YPHCShipVillageWagon2"
+               },
+               {
+                  "_x": "5.5",
+                  "_y": "1",
+                  "__text": "YPHCShipCoveredWagonsAsian"
+               },
+               {
+                  "_x": "5.5",
+                  "_y": "3",
+                  "__text": "YPHCShipCoveredWagonsChina"
+               },
+               {
+                  "_x": "6.3",
+                  "_y": "2",
+                  "__text": "YPHCChineseMonkMakeDisciple"
+               },
+               {
+                  "_x": "6.3",
+                  "_y": "5",
+                  "__text": "YPHCShipShaolinMaster"
+               },
+               {
+                  "_x": "7.1",
+                  "_y": "1",
+                  "__text": "YPHCShipMongolScoutTeam"
+               },
+               {
+                  "_x": "6.3",
+                  "_y": "3",
+                  "__text": "YPHCShipDisciple1"
+               },
+               {
+                  "_x": "6.3",
+                  "_y": "3",
+                  "__text": "DEHCTigerYear"
+               }
+            ]
+         },
+         "validunits": "",
+         "units": "",
+         "trainbuilding": "1"
+      },
+      {
+         "name": "Fortress",
+         "visual": {
+            "file": "china\\widebuilding.xml",
+            "bone": "bone_tallbuilding"
+         },
+         "uix": "460",
+         "uiy": "125",
+         "camera": "china\\china_homecity_academy_camera.cam",
+         "widescreencamera": "china\\china_homecity_academy_widescreencamera.cam",
+         "unlocklevel": "0",
+         "portrait": "homecity\\buildings_west\\academy_icon",
+         "displaynamestringid": "63357",
+         "rolloverstringid": "29002",
+         "obtainabletechs": {
+            "tech": [
+               {
+                  "_x": "0",
+                  "_y": "1",
+                  "__text": "YPHCShipChuKoNu1"
+               },
+               {
+                  "_x": "0",
+                  "_y": "2",
+                  "__text": "YPHCShipChuKoNu2"
+               },
+               {
+                  "_x": "0",
+                  "_y": "4",
+                  "__text": "YPHCShipChuKoNu3"
+               },
+               {
+                  "_x": "0.4",
+                  "_y": "3",
+                  "__text": "YPHCStandardArmyHitpoints"
+               },
+               {
+                  "_x": "0",
+                  "_y": "5",
+                  "__text": "YPHCShipMandarinDuckSquad"
+               },
+               {
+                  "_x": "0.4",
+                  "_y": "7",
+                  "__text": "YPHCBannerReforms"
+               },
+               {
+                  "_x": "1.1",
+                  "_y": "1",
+                  "__text": "YPHCShipQiangPikeman1"
+               },
+               {
+                  "_x": "1.1",
+                  "_y": "2",
+                  "__text": "YPHCShipQiangPikeman2"
+               },
+               {
+                  "_x": "1.1",
+                  "_y": "4",
+                  "__text": "YPHCShipQiangPikeman3"
+               },
+               {
+                  "_x": "1.1",
+                  "_y": "7",
+                  "__text": "YPHCOldHanArmyReforms"
+               },
+               {
+                  "_x": "1.8",
+                  "_y": "1",
+                  "__text": "YPHCShipArquebusier1"
+               },
+               {
+                  "_x": "1.8",
+                  "_y": "2",
+                  "__text": "YPHCShipArquebusier2"
+               },
+               {
+                  "_x": "2.9",
+                  "_y": "2",
+                  "__text": "YPHCShipChangdao1"
+               },
+               {
+                  "_x": "2.9",
+                  "_y": "3",
+                  "__text": "YPHCShipChangdao2"
+               },
+               {
+                  "_x": "2.9",
+                  "_y": "5",
+                  "__text": "YPHCTerritorialArmyCombat"
+               },
+               {
+                  "_x": "2.2",
+                  "_y": "3",
+                  "__text": "YPHCHanAntiCavalryBonus"
+               },
+               {
+                  "_x": "3.6",
+                  "_y": "2",
+                  "__text": "YPHCShipKeshik2"
+               },
+               {
+                  "_x": "3.6",
+                  "_y": "3",
+                  "__text": "YPHCShipKeshik3"
+               },
+               {
+                  "_x": "3.6",
+                  "_y": "5",
+                  "__text": "YPHCShipKeshik4"
+               },
+               {
+                  "_x": "3.6",
+                  "_y": "7",
+                  "__text": "YPHCWesternReforms"
+               },
+               {
+                  "_x": "4.3",
+                  "_y": "1",
+                  "__text": "YPHCShipSteppeRider1"
+               },
+               {
+                  "_x": "4.3",
+                  "_y": "2",
+                  "__text": "YPHCShipSteppeRider2"
+               },
+               {
+                  "_x": "4.3",
+                  "_y": "3",
+                  "__text": "YPHCShipSteppeRider3"
+               },
+               {
+                  "_x": "4.3",
+                  "_y": "5",
+                  "__text": "YPHCMongolianScourge"
+               },
+               {
+                  "_x": "5.0",
+                  "_y": "2",
+                  "__text": "YPHCShipIronFlail1"
+               },
+               {
+                  "_x": "5.0",
+                  "_y": "4",
+                  "__text": "YPHCShipIronFlail2"
+               },
+               {
+                  "_x": "5.4",
+                  "_y": "5",
+                  "__text": "YPHCForbiddenArmyArmor"
+               },
+               {
+                  "_x": "5.0",
+                  "_y": "6",
+                  "__text": "YPHCShipBeiyangArmy"
+               },
+               {
+                  "_x": "5.0",
+                  "_y": "7",
+                  "__text": "YPHCShipEverVictoriousArmy"
+               },
+               {
+                  "_x": "5.9",
+                  "_y": "2",
+                  "__text": "YPHCShipMeteorHammer1"
+               },
+               {
+                  "_x": "5.9",
+                  "_y": "3",
+                  "__text": "YPHCShipMeteorHammer2"
+               },
+               {
+                  "_x": "5.9",
+                  "_y": "4",
+                  "__text": "YPHCShipMeteorHammer3"
+               },
+               {
+                  "_x": "5.9",
+                  "_y": "6",
+                  "__text": "YPHCManchuCombat"
+               },
+               {
+                  "_x": "5.9",
+                  "_y": "6",
+                  "__text": "DEHCDragonYear"
+               },
+               {
+                  "_x": "6.6",
+                  "_y": "1",
+                  "__text": "YPHCShipFlameThrower1"
+               },
+               {
+                  "_x": "6.6",
+                  "_y": "1",
+                  "__text": "YPHCShipFlameThrower2"
+               },
+               {
+                  "_x": "6.6",
+                  "_y": "2",
+                  "__text": "YPHCShipFlameThrower3"
+               },
+               {
+                  "_x": "6.6",
+                  "_y": "4",
+                  "__text": "YPHCShipIronCapPrincesArmy"
+               },
+               {
+                  "_x": "7.3",
+                  "_y": "2",
+                  "__text": "YPHCShipHandMortar1"
+               },
+               {
+                  "_x": "7.3",
+                  "_y": "6",
+                  "__text": "YPHCShipHandMortar2"
+               },
+               {
+                  "_x": "6.6",
+                  "_y": "6",
+                  "__text": "YPHCShipHandMortarTeam"
+               },
+               {
+                  "_x": "1.8",
+                  "_y": "7",
+                  "__text": "YPHCShipEmperorsArmy"
+               },
+               {
+                  "_x": "7.8",
+                  "_y": "1",
+                  "__text": "YPHCShipFlyingCrow1"
+               },
+               {
+                  "_x": "7.8",
+                  "_y": "3",
+                  "__text": "YPHCArtilleryHitpointsChinese"
+               },
+               {
+                  "_x": "7.8",
+                  "_y": "4",
+                  "__text": "YPHCArtilleryDamageChinese"
+               },
+               {
+                  "_x": "7.8",
+                  "_y": "5",
+                  "__text": "YPHCArtilleryCombatChinese"
+               },
+               {
+                  "_x": "7.8",
+                  "_y": "7",
+                  "__text": "YPHCShipFlyingCrow2"
+               },
+               {
+                  "_x": "7.8",
+                  "_y": "7",
+                  "__text": "DEHCFireDragonManual"
+               }
+            ]
+         },
+         "activetechs": {
+            "tech": [
+               {
+                  "_x": "0",
+                  "_y": "1",
+                  "__text": "YPHCShipChuKoNu1"
+               },
+               {
+                  "_x": "0",
+                  "_y": "2",
+                  "__text": "YPHCShipChuKoNu2"
+               },
+               {
+                  "_x": "0",
+                  "_y": "4",
+                  "__text": "YPHCShipChuKoNu3"
+               },
+               {
+                  "_x": "0.4",
+                  "_y": "3",
+                  "__text": "YPHCStandardArmyHitpoints"
+               },
+               {
+                  "_x": "0",
+                  "_y": "5",
+                  "__text": "YPHCShipMandarinDuckSquad"
+               },
+               {
+                  "_x": "0.4",
+                  "_y": "7",
+                  "__text": "YPHCBannerReforms"
+               },
+               {
+                  "_x": "1.1",
+                  "_y": "1",
+                  "__text": "YPHCShipQiangPikeman1"
+               },
+               {
+                  "_x": "1.1",
+                  "_y": "2",
+                  "__text": "YPHCShipQiangPikeman2"
+               },
+               {
+                  "_x": "1.1",
+                  "_y": "4",
+                  "__text": "YPHCShipQiangPikeman3"
+               },
+               {
+                  "_x": "1.1",
+                  "_y": "7",
+                  "__text": "YPHCOldHanArmyReforms"
+               },
+               {
+                  "_x": "1.8",
+                  "_y": "1",
+                  "__text": "YPHCShipArquebusier1"
+               },
+               {
+                  "_x": "1.8",
+                  "_y": "2",
+                  "__text": "YPHCShipArquebusier2"
+               },
+               {
+                  "_x": "2.9",
+                  "_y": "2",
+                  "__text": "YPHCShipChangdao1"
+               },
+               {
+                  "_x": "2.9",
+                  "_y": "3",
+                  "__text": "YPHCShipChangdao2"
+               },
+               {
+                  "_x": "2.9",
+                  "_y": "5",
+                  "__text": "YPHCTerritorialArmyCombat"
+               },
+               {
+                  "_x": "2.2",
+                  "_y": "3",
+                  "__text": "YPHCHanAntiCavalryBonus"
+               },
+               {
+                  "_x": "3.6",
+                  "_y": "2",
+                  "__text": "YPHCShipKeshik2"
+               },
+               {
+                  "_x": "3.6",
+                  "_y": "3",
+                  "__text": "YPHCShipKeshik3"
+               },
+               {
+                  "_x": "3.6",
+                  "_y": "5",
+                  "__text": "YPHCShipKeshik4"
+               },
+               {
+                  "_x": "3.6",
+                  "_y": "7",
+                  "__text": "YPHCWesternReforms"
+               },
+               {
+                  "_x": "4.3",
+                  "_y": "1",
+                  "__text": "YPHCShipSteppeRider1"
+               },
+               {
+                  "_x": "4.3",
+                  "_y": "2",
+                  "__text": "YPHCShipSteppeRider2"
+               },
+               {
+                  "_x": "4.3",
+                  "_y": "3",
+                  "__text": "YPHCShipSteppeRider3"
+               },
+               {
+                  "_x": "4.3",
+                  "_y": "5",
+                  "__text": "YPHCMongolianScourge"
+               },
+               {
+                  "_x": "5.0",
+                  "_y": "2",
+                  "__text": "YPHCShipIronFlail1"
+               },
+               {
+                  "_x": "5.0",
+                  "_y": "4",
+                  "__text": "YPHCShipIronFlail2"
+               },
+               {
+                  "_x": "5.4",
+                  "_y": "5",
+                  "__text": "YPHCForbiddenArmyArmor"
+               },
+               {
+                  "_x": "5.0",
+                  "_y": "6",
+                  "__text": "YPHCShipBeiyangArmy"
+               },
+               {
+                  "_x": "5.0",
+                  "_y": "7",
+                  "__text": "YPHCShipEverVictoriousArmy"
+               },
+               {
+                  "_x": "5.9",
+                  "_y": "2",
+                  "__text": "YPHCShipMeteorHammer1"
+               },
+               {
+                  "_x": "5.9",
+                  "_y": "3",
+                  "__text": "YPHCShipMeteorHammer2"
+               },
+               {
+                  "_x": "5.9",
+                  "_y": "4",
+                  "__text": "YPHCShipMeteorHammer3"
+               },
+               {
+                  "_x": "5.9",
+                  "_y": "6",
+                  "__text": "YPHCManchuCombat"
+               },
+               {
+                  "_x": "5.9",
+                  "_y": "6",
+                  "__text": "DEHCDragonYear"
+               },
+               {
+                  "_x": "6.6",
+                  "_y": "1",
+                  "__text": "YPHCShipFlameThrower1"
+               },
+               {
+                  "_x": "6.6",
+                  "_y": "1",
+                  "__text": "YPHCShipFlameThrower2"
+               },
+               {
+                  "_x": "6.6",
+                  "_y": "2",
+                  "__text": "YPHCShipFlameThrower3"
+               },
+               {
+                  "_x": "6.6",
+                  "_y": "4",
+                  "__text": "YPHCShipIronCapPrincesArmy"
+               },
+               {
+                  "_x": "7.3",
+                  "_y": "2",
+                  "__text": "YPHCShipHandMortar1"
+               },
+               {
+                  "_x": "7.3",
+                  "_y": "6",
+                  "__text": "YPHCShipHandMortar2"
+               },
+               {
+                  "_x": "6.6",
+                  "_y": "6",
+                  "__text": "YPHCShipHandMortarTeam"
+               },
+               {
+                  "_x": "1.8",
+                  "_y": "7",
+                  "__text": "YPHCShipEmperorsArmy"
+               },
+               {
+                  "_x": "7.8",
+                  "_y": "1",
+                  "__text": "YPHCShipFlyingCrow1"
+               },
+               {
+                  "_x": "7.8",
+                  "_y": "3",
+                  "__text": "YPHCArtilleryHitpointsChinese"
+               },
+               {
+                  "_x": "7.8",
+                  "_y": "4",
+                  "__text": "YPHCArtilleryDamageChinese"
+               },
+               {
+                  "_x": "7.8",
+                  "_y": "5",
+                  "__text": "YPHCArtilleryCombatChinese"
+               },
+               {
+                  "_x": "7.8",
+                  "_y": "7",
+                  "__text": "YPHCShipFlyingCrow2"
+               },
+               {
+                  "_x": "7.8",
+                  "_y": "7",
+                  "__text": "DEHCFireDragonManual"
+               }
+            ]
+         },
+         "validunits": "",
+         "units": "",
+         "trainbuilding": "1"
+      },
+      {
+         "name": "Imperial Court",
+         "visual": {
+            "file": "china\\circlebuilding.xml",
+            "bone": "bone_circlebuilding"
+         },
+         "uix": "80",
+         "uiy": "475",
+         "camera": "china\\china_homecity_cathedral_camera.cam",
+         "widescreencamera": "china\\china_homecity_cathedral_widescreencamera.cam",
+         "unlocklevel": "0",
+         "portrait": "homecity\\buildings_west\\cathedral_icon",
+         "displaynamestringid": "63358",
+         "rolloverstringid": "25538",
+         "obtainabletechs": {
+            "tech": [
+               {
+                  "_x": "0.35",
+                  "_y": "1",
+                  "__text": "YPHCNativeLearning"
+               },
+               {
+                  "_x": "0",
+                  "_y": "4",
+                  "__text": "YPHCNativeHitpoints"
+               },
+               {
+                  "_x": "0.7",
+                  "_y": "3",
+                  "__text": "YPHCNativeTradeTax"
+               },
+               {
+                  "_x": "0",
+                  "_y": "3",
+                  "__text": "YPHCNativeDamage"
+               },
+               {
+                  "_x": "0.7",
+                  "_y": "5",
+                  "__text": "YPHCExpandedTradingPost"
+               },
+               {
+                  "_x": "3.5",
+                  "_y": "1",
+                  "__text": "YPHCRanchingWaterBuffalo"
+               },
+               {
+                  "_x": "3.5",
+                  "_y": "2",
+                  "__text": "YPHCCheapWarAcademyTeam"
+               },
+               {
+                  "_x": "3.5",
+                  "_y": "3",
+                  "__text": "YPHCAccupuncture"
+               },
+               {
+                  "_x": "3.5",
+                  "_y": "4",
+                  "__text": "YPHCBannerSchool"
+               },
+               {
+                  "_x": "3.5",
+                  "_y": "5",
+                  "__text": "YPHCEngineeringSchoolTeam"
+               },
+               {
+                  "_x": "3.5",
+                  "_y": "7",
+                  "__text": "YPHCConfusciousGift"
+               },
+               {
+                  "_x": "1.7",
+                  "_y": "1",
+                  "__text": "HCPioneers"
+               },
+               {
+                  "_x": "1.7",
+                  "_y": "2",
+                  "__text": "YPHCAdvancedIrregulars"
+               },
+               {
+                  "_x": "2.6",
+                  "_y": "1",
+                  "__text": "YPHCHouseHitpointsTeam"
+               },
+               {
+                  "_x": "2.6",
+                  "_y": "2",
+                  "__text": "YPHCVillageShooty"
+               },
+               {
+                  "_x": "4.95",
+                  "_y": "2",
+                  "__text": "ypHCShipCastleWagons1"
+               },
+               {
+                  "_x": "4.6",
+                  "_y": "3",
+                  "__text": "YPHCExtensiveFortifications"
+               },
+               {
+                  "_x": "5.3",
+                  "_y": "3",
+                  "__text": "ypHCShipCastleWagons2"
+               },
+               {
+                  "_x": "1.7",
+                  "_y": "4",
+                  "__text": "HCImprovedBuildings"
+               },
+               {
+                  "_x": "5.3",
+                  "_y": "4",
+                  "__text": "YPHCGreatWall"
+               },
+               {
+                  "_x": "6.3",
+                  "_y": "2",
+                  "__text": "YPHCCommoditiesMarket"
+               },
+               {
+                  "_x": "6.3",
+                  "_y": "1",
+                  "__text": "YPHCAdvancedMonastery"
+               },
+               {
+                  "_x": "6.3",
+                  "_y": "3",
+                  "__text": "YPHCAdvancedRicePaddy"
+               },
+               {
+                  "_x": "6.3",
+                  "_y": "4",
+                  "__text": "HCAdvancedDock"
+               },
+               {
+                  "_x": "6.3",
+                  "_y": "5",
+                  "__text": "YPHCAdvancedWonders"
+               },
+               {
+                  "_x": "7.2",
+                  "_y": "2",
+                  "__text": "YPHCAdvancedConsulate"
+               },
+               {
+                  "_x": "7.2",
+                  "_y": "3",
+                  "__text": "YPHCConsulateRelations"
+               },
+               {
+                  "_x": "7.2",
+                  "_y": "4",
+                  "__text": "YPHCSmoothRelations"
+               }
+            ]
+         },
+         "activetechs": {
+            "tech": [
+               {
+                  "_x": "0.35",
+                  "_y": "1",
+                  "__text": "YPHCNativeLearning"
+               },
+               {
+                  "_x": "0",
+                  "_y": "4",
+                  "__text": "YPHCNativeHitpoints"
+               },
+               {
+                  "_x": "0.7",
+                  "_y": "3",
+                  "__text": "YPHCNativeTradeTax"
+               },
+               {
+                  "_x": "0",
+                  "_y": "3",
+                  "__text": "YPHCNativeDamage"
+               },
+               {
+                  "_x": "0.7",
+                  "_y": "5",
+                  "__text": "YPHCExpandedTradingPost"
+               },
+               {
+                  "_x": "3.5",
+                  "_y": "1",
+                  "__text": "YPHCRanchingWaterBuffalo"
+               },
+               {
+                  "_x": "3.5",
+                  "_y": "2",
+                  "__text": "YPHCCheapWarAcademyTeam"
+               },
+               {
+                  "_x": "3.5",
+                  "_y": "3",
+                  "__text": "YPHCAccupuncture"
+               },
+               {
+                  "_x": "3.5",
+                  "_y": "4",
+                  "__text": "YPHCBannerSchool"
+               },
+               {
+                  "_x": "3.5",
+                  "_y": "5",
+                  "__text": "YPHCEngineeringSchoolTeam"
+               },
+               {
+                  "_x": "3.5",
+                  "_y": "7",
+                  "__text": "YPHCConfusciousGift"
+               },
+               {
+                  "_x": "1.7",
+                  "_y": "1",
+                  "__text": "HCPioneers"
+               },
+               {
+                  "_x": "1.7",
+                  "_y": "2",
+                  "__text": "YPHCAdvancedIrregulars"
+               },
+               {
+                  "_x": "2.6",
+                  "_y": "1",
+                  "__text": "YPHCHouseHitpointsTeam"
+               },
+               {
+                  "_x": "2.6",
+                  "_y": "2",
+                  "__text": "YPHCVillageShooty"
+               },
+               {
+                  "_x": "4.95",
+                  "_y": "2",
+                  "__text": "ypHCShipCastleWagons1"
+               },
+               {
+                  "_x": "4.6",
+                  "_y": "3",
+                  "__text": "YPHCExtensiveFortifications"
+               },
+               {
+                  "_x": "5.3",
+                  "_y": "3",
+                  "__text": "ypHCShipCastleWagons2"
+               },
+               {
+                  "_x": "1.7",
+                  "_y": "4",
+                  "__text": "HCImprovedBuildings"
+               },
+               {
+                  "_x": "5.3",
+                  "_y": "4",
+                  "__text": "YPHCGreatWall"
+               },
+               {
+                  "_x": "6.3",
+                  "_y": "2",
+                  "__text": "YPHCCommoditiesMarket"
+               },
+               {
+                  "_x": "6.3",
+                  "_y": "1",
+                  "__text": "YPHCAdvancedMonastery"
+               },
+               {
+                  "_x": "6.3",
+                  "_y": "3",
+                  "__text": "YPHCAdvancedRicePaddy"
+               },
+               {
+                  "_x": "6.3",
+                  "_y": "4",
+                  "__text": "HCAdvancedDock"
+               },
+               {
+                  "_x": "6.3",
+                  "_y": "5",
+                  "__text": "YPHCAdvancedWonders"
+               },
+               {
+                  "_x": "7.2",
+                  "_y": "2",
+                  "__text": "YPHCAdvancedConsulate"
+               },
+               {
+                  "_x": "7.2",
+                  "_y": "3",
+                  "__text": "YPHCConsulateRelations"
+               },
+               {
+                  "_x": "7.2",
+                  "_y": "4",
+                  "__text": "YPHCSmoothRelations"
+               }
+            ]
+         },
+         "validunits": "",
+         "units": "",
+         "trainbuilding": "1"
+      },
+      {
+         "name": "Merchant's Guild",
+         "visual": {
+            "file": "china\\waterbuilding.xml",
+            "bone": "bone_waterbuilding"
+         },
+         "uix": "450",
+         "uiy": "275",
+         "camera": "china\\china_homecity_manufacturing_plant_camera.cam",
+         "widescreencamera": "china\\china_homecity_plant_widescreencamera.cam",
+         "unlocklevel": "0",
+         "portrait": "homecity\\buildings_west\\manufacturing_plant_icon",
+         "displaynamestringid": "63359",
+         "rolloverstringid": "25535",
+         "obtainabletechs": {
+            "tech": [
+               {
+                  "_x": "0.0",
+                  "_y": "3.0",
+                  "__text": "YPHCVillagemasons"
+               },
+               {
+                  "_x": "0.0",
+                  "_y": "5.0",
+                  "__text": "HCXPLandGrab"
+               },
+               {
+                  "_x": "0.9",
+                  "_y": "2",
+                  "__text": "HCFishMarket"
+               },
+               {
+                  "_x": "0.9",
+                  "_y": "3.0",
+                  "__text": "HCRenderingPlant"
+               },
+               {
+                  "_x": "0.9",
+                  "_y": "4",
+                  "__text": "YPHCSchoonersJapanese"
+               },
+               {
+                  "_x": "1.8",
+                  "_y": "3.0",
+                  "__text": "HCSawmills"
+               },
+               {
+                  "_x": "1.8",
+                  "_y": "5.0",
+                  "__text": "HCExoticHardwoods"
+               },
+               {
+                  "_x": "2.7",
+                  "_y": "4",
+                  "__text": "HCRoyalMint"
+               },
+               {
+                  "_x": "2.7",
+                  "_y": "5",
+                  "__text": "HCSilversmith"
+               },
+               {
+                  "_x": "3.6",
+                  "_y": "2",
+                  "__text": "HCFoodSilos"
+               },
+               {
+                  "_x": "3.6",
+                  "_y": "4",
+                  "__text": "HCSustainableAgriculture"
+               },
+               {
+                  "_x": "3.6",
+                  "_y": "6",
+                  "__text": "HCRefrigeration"
+               },
+               {
+                  "_x": "4.5",
+                  "_y": "2",
+                  "__text": "HCCigarRoller"
+               },
+               {
+                  "_x": "4.5",
+                  "_y": "3",
+                  "__text": "HCTextileMills"
+               },
+               {
+                  "_x": "6.3",
+                  "_y": "6",
+                  "__text": "YPHCRainbowTrickle"
+               },
+               {
+                  "_x": "5.4",
+                  "_y": "1",
+                  "__text": "HCStockyards"
+               },
+               {
+                  "_x": "5.4",
+                  "_y": "3",
+                  "__text": "HCFullingMills"
+               },
+               {
+                  "_x": "6.3",
+                  "_y": "1",
+                  "__text": "HCFurrier"
+               },
+               {
+                  "_x": "6.3",
+                  "_y": "3",
+                  "__text": "HCSpiceTrade"
+               },
+               {
+                  "_x": "6.3",
+                  "_y": "4",
+                  "__text": "YPHCSpawnSaigaHerd"
+               },
+               {
+                  "_x": "2.7",
+                  "_y": "7",
+                  "__text": "YPHCEmpressDowager"
+               }
+            ]
+         },
+         "activetechs": {
+            "tech": [
+               {
+                  "_x": "0.0",
+                  "_y": "3.0",
+                  "__text": "YPHCVillagemasons"
+               },
+               {
+                  "_x": "0.0",
+                  "_y": "5.0",
+                  "__text": "HCXPLandGrab"
+               },
+               {
+                  "_x": "0.9",
+                  "_y": "2",
+                  "__text": "HCFishMarket"
+               },
+               {
+                  "_x": "0.9",
+                  "_y": "3.0",
+                  "__text": "HCRenderingPlant"
+               },
+               {
+                  "_x": "0.9",
+                  "_y": "4",
+                  "__text": "YPHCSchoonersJapanese"
+               },
+               {
+                  "_x": "1.8",
+                  "_y": "3.0",
+                  "__text": "HCSawmills"
+               },
+               {
+                  "_x": "1.8",
+                  "_y": "5.0",
+                  "__text": "HCExoticHardwoods"
+               },
+               {
+                  "_x": "2.7",
+                  "_y": "4",
+                  "__text": "HCRoyalMint"
+               },
+               {
+                  "_x": "2.7",
+                  "_y": "5",
+                  "__text": "HCSilversmith"
+               },
+               {
+                  "_x": "3.6",
+                  "_y": "2",
+                  "__text": "HCFoodSilos"
+               },
+               {
+                  "_x": "3.6",
+                  "_y": "4",
+                  "__text": "HCSustainableAgriculture"
+               },
+               {
+                  "_x": "3.6",
+                  "_y": "6",
+                  "__text": "HCRefrigeration"
+               },
+               {
+                  "_x": "4.5",
+                  "_y": "2",
+                  "__text": "HCCigarRoller"
+               },
+               {
+                  "_x": "4.5",
+                  "_y": "3",
+                  "__text": "HCTextileMills"
+               },
+               {
+                  "_x": "6.3",
+                  "_y": "6",
+                  "__text": "YPHCRainbowTrickle"
+               },
+               {
+                  "_x": "5.4",
+                  "_y": "1",
+                  "__text": "HCStockyards"
+               },
+               {
+                  "_x": "5.4",
+                  "_y": "3",
+                  "__text": "HCFullingMills"
+               },
+               {
+                  "_x": "6.3",
+                  "_y": "1",
+                  "__text": "HCFurrier"
+               },
+               {
+                  "_x": "6.3",
+                  "_y": "3",
+                  "__text": "HCSpiceTrade"
+               },
+               {
+                  "_x": "6.3",
+                  "_y": "4",
+                  "__text": "YPHCSpawnSaigaHerd"
+               },
+               {
+                  "_x": "2.7",
+                  "_y": "7",
+                  "__text": "YPHCEmpressDowager"
+               }
+            ]
+         },
+         "validunits": "",
+         "trainbuilding": "1"
+      },
+      {
+         "name": "Customs House",
+         "visual": {
+            "file": "china\\boatbuilding.xml",
+            "bone": "bone_boatbuilding"
+         },
+         "uix": "200",
+         "uiy": "250",
+         "camera": "china\\china_homecity_dock_camera.cam",
+         "widescreencamera": "china\\china_homecity_dock_widescreencamera.cam",
+         "unlocklevel": "0",
+         "portrait": "homecity\\buildings_west\\dock_icon",
+         "displaynamestringid": "63360",
+         "rolloverstringid": "35746",
+         "obtainabletechs": {
+            "tech": [
+               {
+                  "_x": "1.2",
+                  "_y": "1",
+                  "__text": "YPHCShipWarJunk1"
+               },
+               {
+                  "_x": "0",
+                  "_y": "3",
+                  "__text": "YPHCShipFireship1"
+               },
+               {
+                  "_x": "0",
+                  "_y": "4",
+                  "__text": "YPHCShipFireshipTeam"
+               },
+               {
+                  "_x": "0",
+                  "_y": "5",
+                  "__text": "YPHCFireshipDamage"
+               },
+               {
+                  "_x": "0.8",
+                  "_y": "3",
+                  "__text": "YPHCShipWarJunk2"
+               },
+               {
+                  "_x": "1.6",
+                  "_y": "5",
+                  "__text": "YPHCChineseImperialNavy"
+               },
+               {
+                  "_x": "1.6",
+                  "_y": "3",
+                  "__text": "YPHCShipFuchuan1"
+               },
+               {
+                  "_x": "1.6",
+                  "_y": "4",
+                  "__text": "YPHCShipFuchuanTeam"
+               },
+               {
+                  "_x": "2.4",
+                  "_y": "3",
+                  "__text": "YPHCNavalCombatTeam"
+               },
+               {
+                  "_x": "2.4",
+                  "_y": "7",
+                  "__text": "YPHCEuropeanCannons"
+               },
+               {
+                  "_x": "2.4",
+                  "_y": "1",
+                  "__text": "HCAdmirality"
+               },
+               {
+                  "_x": "4.2",
+                  "_y": "3",
+                  "__text": "HCMercsManchu"
+               },
+               {
+                  "_x": "4.2",
+                  "_y": "5",
+                  "__text": "YPHCMercsMandarinArmy1"
+               },
+               {
+                  "_x": "4.2",
+                  "_y": "5",
+                  "__text": "DEHCKoxinga"
+               },
+               {
+                  "_x": "4.2",
+                  "_y": "6",
+                  "__text": "YPHCShipManchuTeam"
+               },
+               {
+                  "_x": "3.4",
+                  "_y": "5",
+                  "__text": "HCMercenaryLoyalty"
+               },
+               {
+                  "_x": "3.4",
+                  "_y": "1",
+                  "__text": "YPHCAtonementChinese"
+               },
+               {
+                  "_x": "5.0",
+                  "_y": "3",
+                  "__text": "YPHCMercsIronTroop1"
+               },
+               {
+                  "_x": "5.8",
+                  "_y": "3",
+                  "__text": "YPHCMercsRattanShield1"
+               },
+               {
+                  "_x": "5.8",
+                  "_y": "5",
+                  "__text": "YPHCMercsRattanShield2"
+               },
+               {
+                  "_x": "5.8",
+                  "_y": "7",
+                  "__text": "YPHCMercsRattanShield3"
+               },
+               {
+                  "_x": "6.6",
+                  "_y": "2",
+                  "__text": "YPHCWokouChinese1"
+               },
+               {
+                  "_x": "6.6",
+                  "_y": "3",
+                  "__text": "YPHCWokouChinese2"
+               },
+               {
+                  "_x": "6.6",
+                  "_y": "5",
+                  "__text": "YPHCWokouChinese3"
+               }
+            ]
+         },
+         "activetechs": {
+            "tech": [
+               {
+                  "_x": "1.2",
+                  "_y": "1",
+                  "__text": "YPHCShipWarJunk1"
+               },
+               {
+                  "_x": "0",
+                  "_y": "3",
+                  "__text": "YPHCShipFireship1"
+               },
+               {
+                  "_x": "0",
+                  "_y": "4",
+                  "__text": "YPHCShipFireshipTeam"
+               },
+               {
+                  "_x": "0",
+                  "_y": "5",
+                  "__text": "YPHCFireshipDamage"
+               },
+               {
+                  "_x": "0.8",
+                  "_y": "3",
+                  "__text": "YPHCShipWarJunk2"
+               },
+               {
+                  "_x": "1.6",
+                  "_y": "5",
+                  "__text": "YPHCChineseImperialNavy"
+               },
+               {
+                  "_x": "1.6",
+                  "_y": "3",
+                  "__text": "YPHCShipFuchuan1"
+               },
+               {
+                  "_x": "1.6",
+                  "_y": "4",
+                  "__text": "YPHCShipFuchuanTeam"
+               },
+               {
+                  "_x": "2.4",
+                  "_y": "3",
+                  "__text": "YPHCNavalCombatTeam"
+               },
+               {
+                  "_x": "2.4",
+                  "_y": "7",
+                  "__text": "YPHCEuropeanCannons"
+               },
+               {
+                  "_x": "2.4",
+                  "_y": "1",
+                  "__text": "HCAdmirality"
+               },
+               {
+                  "_x": "4.2",
+                  "_y": "3",
+                  "__text": "HCMercsManchu"
+               },
+               {
+                  "_x": "4.2",
+                  "_y": "5",
+                  "__text": "YPHCMercsMandarinArmy1"
+               },
+               {
+                  "_x": "4.2",
+                  "_y": "5",
+                  "__text": "DEHCKoxinga"
+               },
+               {
+                  "_x": "4.2",
+                  "_y": "6",
+                  "__text": "YPHCShipManchuTeam"
+               },
+               {
+                  "_x": "3.4",
+                  "_y": "5",
+                  "__text": "HCMercenaryLoyalty"
+               },
+               {
+                  "_x": "3.4",
+                  "_y": "1",
+                  "__text": "YPHCAtonementChinese"
+               },
+               {
+                  "_x": "5.0",
+                  "_y": "3",
+                  "__text": "YPHCMercsIronTroop1"
+               },
+               {
+                  "_x": "5.8",
+                  "_y": "3",
+                  "__text": "YPHCMercsRattanShield1"
+               },
+               {
+                  "_x": "5.8",
+                  "_y": "5",
+                  "__text": "YPHCMercsRattanShield2"
+               },
+               {
+                  "_x": "5.8",
+                  "_y": "7",
+                  "__text": "YPHCMercsRattanShield3"
+               },
+               {
+                  "_x": "6.6",
+                  "_y": "2",
+                  "__text": "YPHCWokouChinese1"
+               },
+               {
+                  "_x": "6.6",
+                  "_y": "3",
+                  "__text": "YPHCWokouChinese2"
+               },
+               {
+                  "_x": "6.6",
+                  "_y": "5",
+                  "__text": "YPHCWokouChinese3"
+               }
+            ]
+         },
+         "validunits": "",
+         "units": "",
+         "trainbuilding": "1",
+         "mercbuilding": "1"
+      },
+      {
+         "name": "Customization",
+         "camera": "china\\china_homecity_camera.cam",
+         "widescreencamera": "china\\china_homecity_widescreencamera.cam",
+         "unlocklevel": "0",
+         "portrait": "homecity\\buildings_west\\dock_icon",
+         "displaynamestringid": "24966",
+         "rolloverstringid": "25540",
+         "customizationbuilding": "1"
+      }
+   ],
+   "waypoints": {
+      "waypoint": [
+         {
+            "bone": "bone_pathnode_01",
+            "performancearea": "1"
+         },
+         {
+            "bone": "bone_pathnode_02"
+         },
+         {
+            "bone": "bone_pathnode_03"
+         },
+         {
+            "bone": "bone_pathnode_04",
+            "performancearea": "1"
+         },
+         {
+            "bone": "bone_pathnode_05"
+         },
+         {
+            "bone": "bone_pathnode_06"
+         },
+         {
+            "bone": "bone_pathnode_07"
+         },
+         {
+            "bone": "bone_pathnode_08"
+         },
+         {
+            "bone": "bone_pathnode_09",
+            "exit": "1",
+            "vendorentry": "1"
+         },
+         {
+            "bone": "bone_pathnode_10",
+            "exit": "1",
+            "vendorentry": "1",
+            "shipmentend": "1"
+         },
+         {
+            "bone": "bone_pathnode_11"
+         },
+         {
+            "bone": "bone_pathnode_12",
+            "exit": "1",
+            "vendorentry": "1"
+         },
+         {
+            "bone": "bone_pathnode_13"
+         },
+         {
+            "bone": "bone_pathnode_14"
+         },
+         {
+            "bone": "bone_pathnode_15"
+         },
+         {
+            "bone": "bone_pathnode_16",
+            "exit": "1",
+            "vendorentry": "1",
+            "shipmentstart": "1"
+         },
+         {
+            "bone": "bone_pathnode_17"
+         },
+         {
+            "bone": "bone_pathnode_18",
+            "performancearea": "1"
+         },
+         {
+            "bone": "bone_pathnode_19",
+            "exit": "1",
+            "vendorentry": "1"
+         },
+         {
+            "bone": "bone_pathnode_20"
+         },
+         {
+            "bone": "bone_pathnode_21",
+            "performancearea": "1"
+         },
+         {
+            "bone": "bone_pathnode_22"
+         },
+         {
+            "bone": "bone_pathnode_23",
+            "performancearea": "1"
+         },
+         {
+            "bone": "bone_pathnode_24"
+         },
+         {
+            "bone": "bone_pathnode_25"
+         },
+         {
+            "bone": "bone_pathnode_26"
+         },
+         {
+            "bone": "bone_pathnode_27"
+         },
+         {
+            "bone": "bone_pathnode_28"
+         },
+         {
+            "bone": "bone_pathnode_29"
+         },
+         {
+            "bone": "bone_pathnode_30"
+         },
+         {
+            "bone": "bone_pathnode_31"
+         },
+         {
+            "bone": "bone_academy_doorway",
+            "door": "1"
+         },
+         {
+            "bone": "bone_plant_doorway",
+            "door": "1"
+         },
+         {
+            "bone": "bone_plant_side_doorway",
+            "door": "1"
+         },
+         {
+            "bone": "bone_small_church_doorway",
+            "door": "1"
+         },
+         {
+            "bone": "bone_cathedral_doorway",
+            "door": "1"
+         },
+         {
+            "bone": "bone_cathedral_side_doorway",
+            "door": "1"
+         },
+         {
+            "bone": "bone_fishing01",
+            "fishingarea": "1"
+         },
+         {
+            "bone": "bone_fishing02",
+            "fishingarea": "1"
+         },
+         {
+            "bone": "bone_fishing03",
+            "fishingarea": "1"
+         },
+         {
+            "bone": "bone_shipment_start"
+         },
+         {
+            "bone": "bone_shipment_end"
+         },
+         {
+            "bone": "bone_dregs01",
+            "illreputearea": "1"
+         },
+         {
+            "bone": "bone_dregs02",
+            "illreputearea": "1"
+         },
+         {
+            "bone": "bone_dregs03",
+            "illreputearea": "1"
+         },
+         {
+            "bone": "bone_dregs04",
+            "illreputearea": "1"
+         },
+         {
+            "bone": "bone_dregs05",
+            "illreputearea": "1"
+         },
+         {
+            "bone": "bone_dregs06",
+            "illreputearea": "1"
+         },
+         {
+            "bone": "bone_vendor01",
+            "vendorarea": "1"
+         },
+         {
+            "bone": "bone_vendor02",
+            "vendorarea": "1"
+         },
+         {
+            "bone": "bone_vendor03",
+            "vendorarea": "1"
+         },
+         {
+            "bone": "bone_vendor04",
+            "vendorarea": "1"
+         },
+         {
+            "bone": "bone_vendor05",
+            "vendorarea": "1"
+         },
+         {
+            "bone": "bone_vendor06",
+            "vendorarea": "1"
+         },
+         {
+            "bone": "bone_vendor07",
+            "vendorarea": "1"
+         },
+         {
+            "bone": "bone_vendor08",
+            "vendorarea": "1"
+         },
+         {
+            "bone": "bone_firework01",
+            "fireworks": "1"
+         },
+         {
+            "bone": "bone_firework02",
+            "fireworks": "1"
+         },
+         {
+            "bone": "bone_firework03",
+            "fireworks": "1"
+         },
+         {
+            "bone": "bone_firework04",
+            "fireworks": "1"
+         },
+         {
+            "bone": "bone_firework05",
+            "fireworks": "1"
+         },
+         {
+            "bone": "bone_firework06",
+            "fireworks": "1"
+         }
+      ]
+   },
+   "obtainableprops": {
+      "prop": [
+         "ChineseTorchy",
+         "ChineseJuggler",
+         "ChinesePeasantVendor",
+         "ChineseDrunk",
+         "ChinesePeasantFisherman",
+         "ChineseThug",
+         "ChineseOx",
+         {
+            "_active": "1",
+            "__text": "ChineseLightSetMorning"
+         },
+         "ChineseLightSetDay",
+         "ChineseLightSetNight",
+         "ChineseLightSetNightStormy",
+         {
+            "_active": "1",
+            "__text": "ChineseETTexture0"
+         },
+         "ChineseETTexture1",
+         "ChineseETTexture2",
+         "ChineseETTexture3",
+         "ChineseETTexture4",
+         {
+            "_active": "1",
+            "__text": "ChineseFortTexture0"
+         },
+         "ChineseFortTexture1",
+         "ChineseFortTexture2",
+         "ChineseFortTexture3",
+         "ChineseFortTexture4",
+         {
+            "_active": "1",
+            "__text": "ChineseICTexture0"
+         },
+         "ChineseICTexture1",
+         "ChineseICTexture2",
+         "ChineseICTexture3",
+         "ChineseICTexture4",
+         {
+            "_active": "1",
+            "__text": "ChineseMGTexture0"
+         },
+         "ChineseMGTexture1",
+         "ChineseMGTexture2",
+         "ChineseMGTexture3",
+         "ChineseMGTexture4",
+         {
+            "_active": "1",
+            "__text": "ChineseCHTexture0"
+         },
+         "ChineseCHTexture1",
+         "ChineseCHTexture2",
+         "ChineseCHTexture3",
+         "ChineseCHTexture4",
+         "ChineseLanterns",
+         "ChineseBanners",
+         "ypMonkChinese"
+      ]
+   }
+}

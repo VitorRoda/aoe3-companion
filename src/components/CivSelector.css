@@ -1,0 +1,11 @@
+.civ-selector {
+    padding: 16px 0;
+    max-width: 250px;
+}
+
+.civ-selector__item-flag {
+    max-width: 38px;
+    margin-right: 8px;
+    vertical-align: middle;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+}

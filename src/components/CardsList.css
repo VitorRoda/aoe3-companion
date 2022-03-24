@@ -1,0 +1,59 @@
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    position: relative;
+    width: 64px;
+    height: 64px;
+    margin: 4px;
+    cursor: pointer;
+    background: #36D1DC;
+    background: -webkit-linear-gradient(to right, #5B86E5, #36D1DC);
+    background: linear-gradient(to right, #5B86E5, #36D1DC);
+}
+
+.card__img {
+    width: 64px;
+}
+
+.card__unit-count,
+.card__infinite,
+.card__maxcount,
+.card__resources-cost {
+    position: absolute;
+    bottom: 4px;
+    left: 4px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 600;
+    padding: 1px 1px 2px 2px;
+    border-radius: 3px;
+}
+
+.card__maxcount {
+    bottom: auto;
+    top: 4px;
+    padding: 0px;
+}
+
+.card__resources-cost {
+    left: auto;
+    right: 4px;
+    bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.card__resources-cost img {
+    width: 20px;
+}
+
+.card_resource-cost-icon {
+    width: 18px;
+    vertical-align: bottom;
+}
