@@ -1,3 +1,8 @@
+.card-selector__container {
+    background-image: url('../../public/resources/wood.png');
+    background-size: cover;
+}
+
 .cards {
     display: flex;
     flex-wrap: wrap;
