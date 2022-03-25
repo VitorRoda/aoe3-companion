@@ -37,7 +37,7 @@ function App() {
       <AppBar position="static">
         <Toolbar variant="dense">
           <Box sx={{ mr: 2 }} edge="start">
-            <img className='aoe3de-logo' src='/aoe3_de_logo.png' alt="logo aoe3de"></img>
+            <img className='aoe3de-logo' src='/resources/aoe3_de_logo.png' alt="logo aoe3de"></img>
           </Box>
 
           <Typography variant="h6" color="inherit" component="div" sx={{ flexGrow: 1 }}>
