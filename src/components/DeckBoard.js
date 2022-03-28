@@ -16,7 +16,7 @@ export function DeckBoard({ age1Cards, age2Cards, age3Cards, age4Cards, onClickC
         minHeight: 72, 
         pl: 8,
         py: 0.5,
-        backgroundImage: `url(/resources/age${age}.png)` 
+        backgroundImage: `url(/resources/Age${age}.png)` 
       }}>
       <CardList key={uniqid()} cards={cards} showInfo={false} onClickCard={handleOnClickCard}>
       </CardList>
