@@ -7,7 +7,7 @@ import TabsMui from '@mui/material/Tabs';
 import { translate } from '../utils/translator';
 import { CardList } from './CardList';
 
-export const MainDeck = React.memo(({ cardsAge1, cardsAge2, cardsAge3, cardsAge4, onClickCard }) => {
+export const MainDeck = React.memo(({ cards, onClickCard }) => {
 	const [tabValue, setTabValue] = useState(0)
 
 	const handleTabChange = (event, newValue) => {
@@ -42,16 +42,16 @@ export const MainDeck = React.memo(({ cardsAge1, cardsAge2, cardsAge3, cardsAge4
 				<Tab label={translate('18969')} />
 			</Tabs>
 			<Box className='deck-panel__container' hidden={tabValue !== 0}>
-				{cardsAge1.length && <CardList cards={cardsAge1} onClickCard={handleOnClickCard}></CardList>}
+				{cards.age1.length && <CardList cards={cards.age1} onClickCard={handleOnClickCard}></CardList>}
 			</Box>
 			<Box className='deck-panel__container' hidden={tabValue !== 1}>
-				{cardsAge2.length && <CardList cards={cardsAge2} onClickCard={handleOnClickCard}></CardList>}
+				{cards.age2.length && <CardList cards={cards.age2} onClickCard={handleOnClickCard}></CardList>}
 			</Box>
 			<Box className='deck-panel__container' hidden={tabValue !== 2}>
-				{cardsAge3.length && <CardList cards={cardsAge3} onClickCard={handleOnClickCard}></CardList>}
+				{cards.age3.length && <CardList cards={cards.age3} onClickCard={handleOnClickCard}></CardList>}
 			</Box>
 			<Box className='deck-panel__container' hidden={tabValue !== 3}>
-				{cardsAge4.length && <CardList cards={cardsAge4} onClickCard={handleOnClickCard}></CardList>}
+				{cards.age4.length && <CardList cards={cards.age4} onClickCard={handleOnClickCard}></CardList>}
 			</Box>
 		</Box>
 	)

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useCallback, useState } from 'react'
 import uniqid from 'uniqid'
 import PropTypes from "prop-types";
 import './CivSelector.css'
@@ -10,13 +10,14 @@ import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 import { whitelistCivs } from "../constants";
 
-export function CivSelector({ onSelectCiv }) {
+export const CivSelector = React.memo(({ onSelectCiv }) => {
   const [civ, setCiv] = useState('')
-  const handleOnChange = (event) => {
+
+  const handleOnChange = useCallback((event) => {
     const value = event.target.value.replace('.xml', '')
     setCiv(value)
     onSelectCiv(value)
-  }
+  }, [])
 
   const civItems = civsData.civ
     .filter((item, index) => whitelistCivs.includes(index))
@@ -42,7 +43,7 @@ export function CivSelector({ onSelectCiv }) {
       </FormControl>
     </div>
   )
-}
+})
 
 CivSelector.propTypes = {
   onSelectCiv: PropTypes.func

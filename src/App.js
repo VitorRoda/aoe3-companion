@@ -2,7 +2,6 @@ import './App.css'
 import { useCallback, useEffect, useRef, useState } from 'react';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
-import Typography from '@mui/material/Typography';
 import { Header } from "./components/Header";
 import { DeckBoard } from "./components/DeckBoard";
 import { MainDeck } from "./components/MainDeck";
@@ -38,7 +37,7 @@ function App() {
     }
   }, [])
 
-  const handleOnClickCard = (card) => {
+  const handleOnClickCard = useCallback((card) => {
     const { id, ageKey } = card
     const ageCount = selectedCardsRef.current[`${ageKey}Count`]
     const total = selectedCardsRef.current.total
@@ -52,7 +51,7 @@ function App() {
     if ((!card.isSelected && ageCount < 10 && total < maxCardsRef.current) || card.isSelected) {
       dispatchCards({ type: 'toggleSelected', id, ageKey })
     }
-  }
+  }, [])
 
   const handleOnClickDeckCard = (card) => {
     const { id, ageKey } = card
@@ -73,14 +72,10 @@ function App() {
             age3Cards={selectedCards.age3}
             age4Cards={selectedCards.age4}
             onClickCard={handleOnClickDeckCard}
-          ></DeckBoard>}
+          ></DeckBoard>
+        }
         {civ ?
-          <MainDeck
-            cardsAge1={cards.age1}
-            cardsAge2={cards.age2}
-            cardsAge3={cards.age3}
-            cardsAge4={cards.age4}
-            onClickCard={handleOnClickCard} /> :
+          <MainDeck cards={cards} onClickCard={handleOnClickCard} /> :
           <Box sx={{ py: 4, textAlign: 'center' }}>
             <img className='flag-random' src='/resources/images/icons/flags/Flag_Random.png' alt="flag random" />
           </Box>

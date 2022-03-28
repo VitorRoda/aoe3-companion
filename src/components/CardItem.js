@@ -5,6 +5,16 @@ import { CardTooltip } from "../components/CardTooltip";
 import { CardInfo } from "../components/CardInfo";
 
 export const CardItem = React.memo(({ card, showInfo = true, onClickCard }) => {
+    const [openTooltip, setOpenTooltip] = React.useState(null);
+
+    const handlePopoverOpen = (event) => {
+        setOpenTooltip(true)
+    };
+
+    const handlePopoverClose = () => {
+        setOpenTooltip(false)
+    };
+
     const costsFilter = cost => cost?._resourcetype !== 'Ships'
     const hasCosts = card?.info?.cost?.some(costsFilter)
 
@@ -20,7 +30,7 @@ export const CardItem = React.memo(({ card, showInfo = true, onClickCard }) => {
                 alt={cost?._resourcetype}
                 key={uniqid()} />
         ))
-    
+
     return (
         <CardTooltip
             showInfo={showInfo}
@@ -30,8 +40,9 @@ export const CardItem = React.memo(({ card, showInfo = true, onClickCard }) => {
             key={uniqid()}
             disableFocusListener
             disableTouchListener
+            open={openTooltip}
         >
-            <div className='card' onClick={handleOnClick}>
+            <div className='card' onClick={handleOnClick} onMouseEnter={handlePopoverOpen} onMouseLeave={handlePopoverClose}>
                 <img loading='lazy' className='card__img' src={`/${card?.info?.icon?.toLowerCase()}`} alt={card?.name} />
                 {card?.maxcount === '-1' && 
                     <div className='card__maxcount'>∞</div>}
@@ -45,5 +56,6 @@ export const CardItem = React.memo(({ card, showInfo = true, onClickCard }) => {
                 {card?.isSelected && <img loading='lazy' className='card__check-icon' src={'/resources/hp_cp_check.png'} alt="check card"></img>}
             </div>
         </CardTooltip>
+
     )
 })
