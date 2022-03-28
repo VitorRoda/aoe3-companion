@@ -1,65 +1,69 @@
 import './CardItem.css'
-import React, {useState} from 'react'
+import React, { useCallback } from 'react'
+import PropTypes from "prop-types";
 import uniqid from 'uniqid'
-import { CardTooltip } from "../components/CardTooltip";
+import HoverPopover from 'material-ui-popup-state/HoverPopover'
+import PopupState, { bindHover, bindPopover } from 'material-ui-popup-state'
+import { popoverClasses } from '@mui/material/Popover';
+import Box from '@mui/material/Box';
 import { CardInfo } from "../components/CardInfo";
+import { Card } from "../components/Card";
 
-export const CardItem = React.memo(({ card, showInfo = true, onClickCard }) => {
-    const [openTooltip, setOpenTooltip] = useState(false);
-
-    const handlePopoverOpen = (event) => {
-        if (showInfo) setOpenTooltip(true)
-    };
-
-    const handlePopoverClose = () => {
-        if (showInfo) setOpenTooltip(false)
-    };
-
-    const costsFilter = cost => cost?._resourcetype !== 'Ships'
-    const hasCosts = card?.info?.cost?.some(costsFilter)
-
-    const handleOnClick = () => { 
+export const CardItem = React.memo(({ card, showInfo, onClickCard }) => {
+    const handleOnClick = useCallback(() => {
         onClickCard(card)
-        setOpenTooltip(false)
-    }
-    
-    const getResourceIcon = (type) => `/resources/resource_${type.toLowerCase()}.png`
-
-    const cardCostIcons = (card) => card?.info?.cost
-        .filter(costsFilter)
-        .map(cost => (
-            <img
-                loading='lazy'
-                src={getResourceIcon(cost?._resourcetype)}
-                alt={cost?._resourcetype}
-                key={uniqid()} />
-        ))
+    }, [])
 
     return (
-        <CardTooltip
-            showInfo={showInfo}
-            title={<CardInfo card={card}></CardInfo>}
-            placement="top"
-            followCursor
-            key={uniqid()}
-            disableFocusListener
-            disableTouchListener
-            open={openTooltip}
-        >
-            <div className='card' onClick={handleOnClick} onMouseEnter={handlePopoverOpen} onMouseLeave={handlePopoverClose}>
-                <img loading='lazy' className='card__img' src={`/${card?.info?.icon?.toLowerCase()}`} alt={card?.name} />
-                {card?.maxcount === '-1' && 
-                    <div className='card__maxcount'>∞</div>}
-                {+card?.maxcount > 1 && 
-                    <div className='card__maxcount'>x{card?.maxcount}</div>}
-                {!!+card?.displayunitcount && 
-                    <div className='card__unit-count'>{card?.displayunitcount}</div>}
-                {hasCosts && 
-                    <div className='card__resources-cost'>{cardCostIcons(card)}</div>}
+        <PopupState variant="popover" popupId={`tooltip-${card.id}-${uniqid()}`} disableAutoFocus>
+            {(popupState) => <Box sx={{ margin: '4px' }} onClick={handleOnClick} {...bindHover(popupState)}>
+                <Card
+                    name={card?.name}
+                    icon={card?.info?.icon}
+                    maxcount={+card?.maxcount}
+                    displayunitcount={card?.displayunitcount}
+                    isSelected={card?.isSelected}
+                    costs={card?.info?.cost}
+                ></Card>
 
-                {card?.isSelected && <img loading='lazy' className='card__check-icon' src={'/resources/hp_cp_check.png'} alt="check card"></img>}
-            </div>
-        </CardTooltip>
-
+                {showInfo &&
+                    <HoverPopover
+                        {...bindPopover(popupState)}
+                        anchorOrigin={{
+                            vertical: 'top',
+                            horizontal: 'right',
+                        }}
+                        transformOrigin={{
+                            vertical: 'bottom',
+                            horizontal: 'center',
+                        }}
+                        sx={{
+                            [`& .${popoverClasses.paper}`]: {
+                                px: 2,
+                                py: 1,
+                                backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                                color: 'white',
+                                maxWidth: 500,
+                                pointerEvents: 'none !important',
+                            }
+                        }}
+                    >
+                        <CardInfo card={card}></CardInfo>
+                    </HoverPopover>
+                }
+            </Box>}
+        </PopupState>
     )
 })
+
+CardItem.propTypes = {
+    card: PropTypes.object,
+    showInfo: PropTypes.bool,
+    onClickCard: PropTypes.func,
+}
+
+CardItem.defaultProps = {
+    card: {},
+    showInfo: true,
+    onClickCard: () => { }
+}
