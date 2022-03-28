@@ -8,6 +8,8 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import Switch from '@mui/material/Switch';
 import { CivSelector } from "./CivSelector";
 import { translate } from "../utils/translator";
+import IconButton from '@mui/material/IconButton';
+import GithubIcon from '@mui/icons-material/GitHub'
 
 export const Header = React.memo(({ onSelectCiv }) => {
     const [langEsp, setLangEsp] = useState(() => {
@@ -32,6 +34,11 @@ export const Header = React.memo(({ onSelectCiv }) => {
         borderBottom: '1px solid #EBC837',
     })
 
+    const goToGithub = () => {
+        const url = 'https://github.com/eBaeza/aoe3de-deck-builder'
+        window.open(url, '_blank').focus();
+    }
+
     return (
         <AppBar position="sticky" >
             <Toolbar>
@@ -48,12 +55,13 @@ export const Header = React.memo(({ onSelectCiv }) => {
                 </Box>
 
                 <FormControlLabel
-                    edge="end"
                     label={langEsp ? 'en' : 'es'}
-                    control={
-                        <Switch color='warning' checked={langEsp} onChange={handleSwitchEsp} />
-                    }
+                    control={<Switch color='warning' checked={langEsp} onChange={handleSwitchEsp} />}
                 />
+
+                <IconButton edge="start" size="large" onClick={goToGithub} color="inherit">
+                    <GithubIcon />
+                </IconButton>
             </Toolbar>
         </AppBar>
     )
