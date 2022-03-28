@@ -1,0 +1,12 @@
+.deck-board {
+    min-height: 288px;
+    background-image: url('../../public/resources/wood.png');
+    background-size: cover;
+    padding: 16px 0;
+}
+
+.deck-board__age {
+    background-repeat: no-repeat;
+    background-size: 70px;
+    background-position: left center;
+}

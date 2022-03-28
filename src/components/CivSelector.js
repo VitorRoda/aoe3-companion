@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import uniqid from 'uniqid'
 import PropTypes from "prop-types";
 import './CivSelector.css'
 import civsData from '../data/civs.json'
@@ -7,29 +8,7 @@ import FormControl from "@mui/material/FormControl";
 import InputLabel from '@mui/material/InputLabel';
 import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
-
-const whitelistCivs = [
-  0,
-  1,
-  2,
-  3,
-  4,
-  5,
-  6,
-  7,
-  14,
-  15,
-  16,
-  18,
-  19,
-  20,
-  26,
-  27,
-  37,
-  38,
-  39,
-  41
-]
+import { whitelistCivs } from "../constants";
 
 export function CivSelector({ onSelectCiv }) {
   const [civ, setCiv] = useState('')
@@ -40,9 +19,9 @@ export function CivSelector({ onSelectCiv }) {
   }
 
   const civItems = civsData.civ
-    .filter((item, idx) => whitelistCivs.includes(idx))
+    .filter((item, index) => whitelistCivs.includes(index))
     .map(civ =>
-      <MenuItem value={civ.homecityfilename.replace('.xml', '')} key={civ.displaynameid}>
+      <MenuItem value={civ.homecityfilename.replace('.xml', '')} key={uniqid()}>
         <img loading='lazy' className='civ-selector__item-flag' src={`/${civ.homecityflagiconwpf}`} alt={civ.name} />
         {translate(civ?.displaynameid)}
       </MenuItem>
@@ -50,9 +29,13 @@ export function CivSelector({ onSelectCiv }) {
 
   return (
     <div className='civ-selector'>
-      <FormControl fullWidth sx={{ bgColor: 'secondary.main' }}>
-        <InputLabel>{translate('18682')}</InputLabel>
-        <Select label="Civilization" value={civ} onChange={handleOnChange}>
+      <FormControl fullWidth sx={{ minWidth: 220 }}>
+        <InputLabel id="label-civ" sx={{ color: "#000" }}>{translate('18682')}</InputLabel>
+        <Select labelId="label-civ" 
+          label={translate('18682')} 
+          value={civ}
+          sx={{ backgroundColor: 'rgba(255, 255, 255, 0.25)' }}
+          onChange={handleOnChange}>
           <MenuItem value="">---</MenuItem>
           {civItems}
         </Select>

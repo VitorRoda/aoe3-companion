@@ -1,9 +1,10 @@
-.card-selector__container {
+.deck-panel__container {
     background-image: url('../../public/resources/wood.png');
     background-size: cover;
+    padding: 16px;
 }
 
-.cards {
+.cards-list {
     display: flex;
     flex-wrap: wrap;
 }
