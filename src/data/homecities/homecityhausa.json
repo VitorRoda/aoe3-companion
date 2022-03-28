@@ -357,13 +357,6 @@
             "displayunitcount": "1"
          },
          {
-            "name": "DEHCAfricanHeroCombat",
-            "maxcount": "1",
-            "level": "0",
-            "prereqtech": "-1",
-            "age": "0"
-         },
-         {
             "name": "DEHCShipJavelinRidersRepeat1",
             "maxcount": "-1",
             "level": "0",
