@@ -1,24 +1,28 @@
 import './CardItem.css'
-import React from 'react'
+import React, {useState} from 'react'
 import uniqid from 'uniqid'
 import { CardTooltip } from "../components/CardTooltip";
 import { CardInfo } from "../components/CardInfo";
 
 export const CardItem = React.memo(({ card, showInfo = true, onClickCard }) => {
-    const [openTooltip, setOpenTooltip] = React.useState(null);
+    const [openTooltip, setOpenTooltip] = useState(false);
 
     const handlePopoverOpen = (event) => {
-        setOpenTooltip(true)
+        if (showInfo) setOpenTooltip(true)
     };
 
     const handlePopoverClose = () => {
-        setOpenTooltip(false)
+        if (showInfo) setOpenTooltip(false)
     };
 
     const costsFilter = cost => cost?._resourcetype !== 'Ships'
     const hasCosts = card?.info?.cost?.some(costsFilter)
 
-    const handleOnClick = () => { onClickCard(card) }
+    const handleOnClick = () => { 
+        onClickCard(card)
+        setOpenTooltip(false)
+    }
+    
     const getResourceIcon = (type) => `/resources/resource_${type.toLowerCase()}.png`
 
     const cardCostIcons = (card) => card?.info?.cost

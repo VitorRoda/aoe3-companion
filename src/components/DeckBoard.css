@@ -1,4 +1,5 @@
 .deck-board {
+    position: relative;
     min-height: 288px;
     background-image: url('../../public/resources/wood.png');
     background-size: cover;
