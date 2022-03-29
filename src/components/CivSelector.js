@@ -2,7 +2,6 @@ import React, { useCallback, useState } from 'react'
 import uniqid from 'uniqid'
 import PropTypes from "prop-types";
 import './CivSelector.css'
-import civsData from '../data/civs.json'
 import { translate } from "../utils/translator";
 import FormControl from "@mui/material/FormControl";
 import InputLabel from '@mui/material/InputLabel';
@@ -10,19 +9,19 @@ import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 import { whitelistCivs } from "../constants";
 
-export const CivSelector = React.memo(({ onSelectCiv }) => {
+export const CivSelector = React.memo(({ civs, onSelectCiv }) => {
   const [civ, setCiv] = useState('')
 
   const handleOnChange = useCallback((event) => {
-    const value = event.target.value.replace('.xml', '')
-    setCiv(value)
+    const value = event.target.value
+    setCiv(() => value)
     onSelectCiv(value)
   }, [])
 
-  const civItems = civsData.civ
+  const civItems = civs
     .filter((item, index) => whitelistCivs.includes(index))
     .map(civ =>
-      <MenuItem value={civ.homecityfilename.replace('.xml', '')} key={uniqid()}>
+      <MenuItem value={civ} key={uniqid()}>
         <img loading='lazy' className='civ-selector__item-flag' src={`/${civ.homecityflagiconwpf}`} alt={civ.name} />
         {translate(civ?.displaynameid)}
       </MenuItem>

@@ -1,13 +1,16 @@
 import './DeckBoard.css'
-import React, { Fragment } from 'react'
+import React, { useState } from 'react'
 import uniqid from 'uniqid'
-import { CardList } from "./CardList";
-import Box from '@mui/material/Box';
 import html2canvas from 'html2canvas';
-import IconButton from '@mui/material/IconButton';
-import DownloadForOfflineIcon from '@mui/icons-material/DownloadForOffline';
+import { green } from '@mui/material/colors';
+import Box from '@mui/material/Box';
+import Fab from '@mui/material/Fab';
+import Download from '@mui/icons-material/Download';
+import CircularProgress from '@mui/material/CircularProgress';
+import { CardList } from "./CardList";
 
-export function DeckBoard({ age1Cards, age2Cards, age3Cards, age4Cards, onClickCard }) {
+export function DeckBoard({ civName, maxCards, selectedCards, onClickCard }) {
+  const [isGeneratingImg, setIsGeneratingImg] = useState(false)
   const handleOnClickCard = (card) => {
     onClickCard(card)
   }
@@ -16,16 +19,15 @@ export function DeckBoard({ age1Cards, age2Cards, age3Cards, age4Cards, onClickC
 
   const handleDownloadImage = async () => {
     const element = printRef.current;
-
-    const canvas = await html2canvas(element, { width: 800 });
-
-    const data = canvas.toDataURL('image/jpg');
+    setIsGeneratingImg(true)
+    const canvas = await html2canvas(element, { windowWidth: 900, width: 800, height: 355 });
+    setIsGeneratingImg(false)
+    const data = canvas.toDataURL('image/png');
     const link = document.createElement('a');
 
     if (typeof link.download === 'string') {
       link.href = data;
-      link.download = 'deck.jpg';
-
+      link.download = `${civName.toLowerCase()}-deck-${uniqid()}.png`;
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
@@ -34,7 +36,7 @@ export function DeckBoard({ age1Cards, age2Cards, age3Cards, age4Cards, onClickC
     }
   };
 
-  const listCards = (cards, age) =>
+  const listCards = (age) =>
     <Box
       className={`deck-board__age deck-board__age${age}`}
       sx={{
@@ -43,23 +45,42 @@ export function DeckBoard({ age1Cards, age2Cards, age3Cards, age4Cards, onClickC
         py: 0.5,
         backgroundImage: `url(/resources/Age${age}.png)`
       }}>
-      <CardList key={uniqid()} cards={cards} showInfo={false} onClickCard={handleOnClickCard}>
+      <CardList key={uniqid()} cards={selectedCards[`age${age}`]} showInfo={false} onClickCard={handleOnClickCard}>
       </CardList>
     </Box>
 
   return (
-    <Fragment>
-      <Box textAlign="right">      
-        <IconButton size="large" onClick={handleDownloadImage} sx={{ color: '#EBC837'}}>
-          <DownloadForOfflineIcon />
-        </IconButton>
-      </Box>
-      <div className='deck-board' ref={printRef}>
-        {listCards(age1Cards, 1)}
-        {listCards(age2Cards, 2)}
-        {listCards(age3Cards, 3)}
-        {listCards(age4Cards, 4)}
+    <Box>
+      <div className='global-counter-cards'>{`${selectedCards.total}/${maxCards}`}</div>
+      <div className='download-button'>
+        <Fab onClick={handleDownloadImage} sx={{
+          bgcolor: '#EBC837',
+          '&:hover': {
+            bgcolor: '#FFEB8B',
+          }
+        }}>
+          <Download size="large" />
+        </Fab>
+
+        {isGeneratingImg && (
+          <CircularProgress
+            size={68}
+            sx={{
+              color: green[500],
+              position: 'absolute',
+              top: -6,
+              left: -6,
+              zIndex: 1,
+            }}
+          />
+        )}
       </div>
-    </Fragment>
+      <div className='deck-board' ref={printRef}>
+        {listCards(1)}
+        {listCards(2)}
+        {listCards(3)}
+        {listCards(4)}
+      </div>
+    </Box>
   )
 }

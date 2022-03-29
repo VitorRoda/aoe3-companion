@@ -9,8 +9,10 @@ import { getHomeCityData } from "./services/getHomeCityData";
 import { cardsReducer, cardsInitialState } from "./reducers/cards.reducer";
 import { selectedCardsReducer, selectedCardsInitialState } from "./reducers/selectedCards.reducer";
 import { useImmerReducer } from 'use-immer';
+import { translate } from './utils/translator';
 
 function App() {
+  const [civs, setCivs] = useState([])
   const [civ, setCiv] = useState('')
   const [maxCards, setMaxCards] = useState(25)
   const [cards, dispatchCards] = useImmerReducer(cardsReducer, cardsInitialState)
@@ -23,12 +25,18 @@ function App() {
     selectedCardsRef.current = selectedCards
   }, [maxCards, selectedCards])
 
+  useEffect(() => {
+    import('./data/civs.json').then(data => {
+      setCivs(() => data.civ)
+    })
+  }, [])
+
   const handleSelectCiv = useCallback((value) => {
     setCiv(() => value)
     dispatchSelectedCards({ type: 'reset' })
 
     if (value) {
-      getHomeCityData(value).then(data => {
+      getHomeCityData(value.homecityfilename).then(data => {
         dispatchCards({ type: 'update', data: data.cards })
         setMaxCards(() => data.maxcardsperdeck)
       })
@@ -61,16 +69,14 @@ function App() {
 
   return (
     <Box>
-      <Header onSelectCiv={handleSelectCiv}></Header>
+      <Header civs={civs} onSelectCiv={handleSelectCiv}></Header>
 
       <Container className="aoe3de-deck-creator-app" sx={{ py: 4, position: 'relative' }}>
-        {civ && <div className='global-counter-cards'>{selectedCards.total + '/' + maxCards}</div>}
         {civ &&
           <DeckBoard
-            age1Cards={selectedCards.age1}
-            age2Cards={selectedCards.age2}
-            age3Cards={selectedCards.age3}
-            age4Cards={selectedCards.age4}
+            civName={translate(civ.displaynameid)}
+            maxCards={maxCards}
+            selectedCards={selectedCards}
             onClickCard={handleOnClickDeckCard}
           ></DeckBoard>
         }

@@ -7,18 +7,3 @@
     max-width: 300px;
     box-shadow: 0 0 10px #000;
 }
-
-.global-counter-cards {
-    width: 100px;
-    font-size: 20px;
-    background: linear-gradient(to right, #EBC837, #FFEB8B);
-    display: inline-block;
-    padding: 4px;
-    border-radius: 20px;
-    position: absolute;
-    top: 62px;
-    font-weight: bolder;
-    box-shadow: 0 0 4px #000;
-    text-align: center;
-    z-index: 999;
-}

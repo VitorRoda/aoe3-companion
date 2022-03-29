@@ -11,7 +11,7 @@ import { translate } from "../utils/translator";
 import IconButton from '@mui/material/IconButton';
 import GithubIcon from '@mui/icons-material/GitHub'
 
-export const Header = React.memo(({ onSelectCiv }) => {
+export const Header = React.memo(({ civs, onSelectCiv }) => {
     const [langEsp, setLangEsp] = useState(() => {
         const langEsp = JSON.parse(localStorage.getItem('langEsp'))
         if (langEsp === null) return true
@@ -51,7 +51,7 @@ export const Header = React.memo(({ onSelectCiv }) => {
                 </Typography>
 
                 <Box sx={{ mr: 2, py: 1 }}>
-                    <CivSelector onSelectCiv={handleSelectCiv} />
+                    <CivSelector civs={civs} onSelectCiv={handleSelectCiv} />
                 </Box>
 
                 <FormControlLabel
