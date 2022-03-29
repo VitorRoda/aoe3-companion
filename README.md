@@ -6,6 +6,10 @@ Deck builder online for Age Of Empires III Definitive Edition
 
 ![Esta es una imagen](./screen-shot2.png)
 
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
 ## Contact
 
 - Discord: Dori#9185
