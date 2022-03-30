@@ -1,7 +1,7 @@
+import './CivSelector.css'
 import React, { useCallback, useState } from 'react'
 import uniqid from 'uniqid'
 import PropTypes from "prop-types";
-import './CivSelector.css'
 import { translate } from "../utils/translator";
 import FormControl from "@mui/material/FormControl";
 import InputLabel from '@mui/material/InputLabel';
@@ -29,7 +29,7 @@ export const CivSelector = React.memo(({ civs, onSelectCiv }) => {
 
   return (
     <div className='civ-selector'>
-      <FormControl fullWidth sx={{ minWidth: 220 }}>
+      <FormControl sx={{ width: 220 }}>
         <InputLabel id="label-civ" sx={{ color: "#000" }}>{translate('18682')}</InputLabel>
         <Select labelId="label-civ" 
           label={translate('18682')} 

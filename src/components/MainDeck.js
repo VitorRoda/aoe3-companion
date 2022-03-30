@@ -35,7 +35,7 @@ export const MainDeck = React.memo(({ cards, onClickCard }) => {
 
 	return (
 		<Box>
-			<Tabs value={tabValue} onChange={handleTabChange}>
+			<Tabs value={tabValue} variant="scrollable" scrollButtons="auto" onChange={handleTabChange}>
 				<Tab label={translate('18966')} />
 				<Tab label={translate('19156')} />
 				<Tab label={translate('34352')} />

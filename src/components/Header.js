@@ -3,15 +3,17 @@ import { styled } from '@mui/material/styles';
 import AppBarMui from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Switch from '@mui/material/Switch';
-import { CivSelector } from "./CivSelector";
-import { translate } from "../utils/translator";
 import IconButton from '@mui/material/IconButton';
 import GithubIcon from '@mui/icons-material/GitHub'
+import { useTheme } from '@mui/material/styles'
+import { Container } from '@mui/material';
+import { CivSelector } from "./CivSelector";
+import { MobileMenu } from "./MobileMenu";
 
 export const Header = React.memo(({ civs, onSelectCiv }) => {
+    const theme = useTheme()
     const [langEsp, setLangEsp] = useState(() => {
         const langEsp = JSON.parse(localStorage.getItem('langEsp'))
         if (langEsp === null) return true
@@ -40,29 +42,31 @@ export const Header = React.memo(({ civs, onSelectCiv }) => {
     }
 
     return (
-        <AppBar position="sticky" >
-            <Toolbar>
-                <Box sx={{ mr: 2 }} edge="start">
-                    <img className='aoe3de-logo' src='/resources/aoe3_de_logo.png' alt="logo aoe3de"></img>
-                </Box>
+        <AppBar position="sticky">
+            <Container>
+                <Toolbar disableGutters>
+                    <Box sx={{ flexGrow: 1 }}>
+                        <img className='aoe3de-logo' src='/resources/aoe3_de_logo.png' alt="logo aoe3de"></img>
+                    </Box>
 
-                <Typography variant="h6" color="inherit" component="div" sx={{ flexGrow: 1 }}>
-                    {translate('70846')}
-                </Typography>
+                    <Box sx={{ py: 1, flexGrow: 1 }}>
+                        <CivSelector civs={civs} onSelectCiv={handleSelectCiv} />
+                    </Box>
 
-                <Box sx={{ mr: 2, py: 1 }}>
-                    <CivSelector civs={civs} onSelectCiv={handleSelectCiv} />
-                </Box>
+                    <Box edge="end" sx={{ [theme.breakpoints.down('md')]: { display: 'none' } }}>
+                        <FormControlLabel
+                            label={langEsp ? 'en' : 'es'}
+                            control={<Switch color='warning' checked={langEsp} onChange={handleSwitchEsp} />}
+                        />
 
-                <FormControlLabel
-                    label={langEsp ? 'en' : 'es'}
-                    control={<Switch color='warning' checked={langEsp} onChange={handleSwitchEsp} />}
-                />
+                        <IconButton size="large" onClick={goToGithub} color="inherit">
+                            <GithubIcon />
+                        </IconButton>
+                    </Box>
 
-                <IconButton edge="start" size="large" onClick={goToGithub} color="inherit">
-                    <GithubIcon />
-                </IconButton>
-            </Toolbar>
+                    <MobileMenu edge="end" langEsp={langEsp} onChangeLang={handleSwitchEsp}></MobileMenu>
+                </Toolbar>
+            </Container>
         </AppBar>
     )
 })
