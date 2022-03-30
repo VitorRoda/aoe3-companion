@@ -2,7 +2,7 @@ import React, {useCallback} from 'react'
 import uniqid from 'uniqid'
 import { CardItem } from "./CardItem";
 
-export const CardList = React.memo(({ cards, showInfo, onClickCard }) => {
+export const CardList = React.memo(({ cards, onClickCard }) => {
   const handleOnClickCard = useCallback((card) => {
     onClickCard(card)
   }, [])
@@ -13,7 +13,6 @@ export const CardList = React.memo(({ cards, showInfo, onClickCard }) => {
         <CardItem 
           key={uniqid()}
           card={card} 
-          showInfo={showInfo}  
           onClickCard={handleOnClickCard}>
         </CardItem>
       )}

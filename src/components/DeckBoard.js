@@ -45,7 +45,7 @@ export function DeckBoard({ civName, maxCards, selectedCards, onClickCard }) {
         py: 0.5,
         backgroundImage: `url(/resources/Age${age}.png)`
       }}>
-      <CardList key={uniqid()} cards={selectedCards[`age${age}`]} showInfo={false} onClickCard={handleOnClickCard}>
+      <CardList key={uniqid()} cards={selectedCards[`age${age}`]} onClickCard={handleOnClickCard}>
       </CardList>
     </Box>
 

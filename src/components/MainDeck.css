@@ -1,6 +1,7 @@
 .deck-panel__container {
     background-image: url('../../public/resources/wood.png');
-    background-size: cover;
+    background-size: 900px;
+    background-position: left center;
     padding: 16px;
 }
 

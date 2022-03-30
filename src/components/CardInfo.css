@@ -1,0 +1,10 @@
+.card-info {
+    background: tomato;
+    width: 100%;
+    max-width: 500px;
+    padding: .5rem 1rem;
+    pointer-events: none;
+    background-color:  rgba(0, 0, 0, 0.8);
+    color: white;
+    border-radius: 5px;
+}

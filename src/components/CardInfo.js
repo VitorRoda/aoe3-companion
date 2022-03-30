@@ -1,4 +1,4 @@
-import React from 'react'
+import './CardInfo.css'
 import uniqid from 'uniqid'
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
@@ -29,7 +29,7 @@ export function CardInfo({ card }) {
     const hasCosts = card?.info?.cost?.some(cost => cost?._resourcetype !== 'Ships')
 
     return (
-        <Box>
+        <Box className='card-info'>
             {!!displayName && 
                 <Typography variant='subtitle1'>{displayName}</Typography>}
             {hasCosts && 
