@@ -30,16 +30,20 @@ const getDirRecursively = (dir) => {
   console.log("sourceDirs", sourceDirs);
 
   for (let inDir of sourceDirs) {
-    const destDir = "public/" + inDir;
-    const filesInDir = await imagemin([`${inDir}/*.{jpg,png,JPG,PNG}`], {
-      destination: destDir,
-      plugins: [
-        imageminJpegtran(),
-        imageminPngquant({
-          quality: [0.6, 0.8],
-        }),
-      ],
-    });
-    files.push(...filesInDir);
+    try {
+      const destDir = "public/" + inDir;
+      const filesInDir = await imagemin([`${inDir}/*.{jpg,png,JPG,PNG}`], {
+        destination: destDir,
+        plugins: [
+          imageminJpegtran(),
+          imageminPngquant({
+            quality: [0.6, 0.8],
+          }),
+        ],
+      });
+      files.push(...filesInDir);
+    } catch (error) {
+      console.log(error, inDir)
+    }
   }
 })();
