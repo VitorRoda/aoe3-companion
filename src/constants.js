@@ -22,7 +22,13 @@ export const whitelistCivs = [
 ]
 
 export const blacklistCards = [
-    'DEHCAfricanHeroCombat'
+    {
+        id: 'DEHCAfricanHeroCombat',
+    },
+    {
+        id: 'HCXPZapotecAllies1',
+        civs: ['homecitydeinca']
+    }
 ]
 
 export const injectedCards = [{
