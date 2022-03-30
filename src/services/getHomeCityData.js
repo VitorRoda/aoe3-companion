@@ -33,13 +33,22 @@ function appendCard(cards, card, civ, prop = undefined) {
     return cards
 }
 
+function isExcludedCard(card, homecity) {
+    const item = blacklistCards.find(blCard => {
+        const isSameCard = blCard.id === card.name
+        if (blCard.civs)
+            return isSameCard && blCard.civs.includes(homecity)
+        return isSameCard
+    }) 
+    return !!item
+}
+
 export async function getHomeCityData(homecity) {
     const homecityName = homecity.replace('.xml', '')
     const data = await import(`../data/homecities/${homecityName}.json`)
-    const cards = data?.cards?.card?.reduce((cards, card, idx) => {
-        if (blacklistCards.includes(card.name)) {
-            return cards
-        }
+    const cards = data?.cards?.card?.reduce((cards, card) => {
+        if (isExcludedCard(card, homecityName)) { return cards}
+
         const ageKey = `age${+card?.age + 1}`
         const civ = data?.civ
 
