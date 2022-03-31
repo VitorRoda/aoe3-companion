@@ -43,30 +43,14 @@ export const blacklistCards = [
     }
 ]
 
-export const injectedCards = [{
-    dbid: '5070',
-    name: 'ypHCConsulateRelationsIndians',
-    age: 2,
-    homecity: 'homecityindians',
-    order: 30
-}, {
-    dbid: '5061',
-    name: 'ypHCConsulateRelations',
-    age: 2,
-    homecity: 'homecityjapanese',
-    order: 29,
-},
-{
-    dbid: '4060',
-    name: 'YPHCShipCastleWagons2',
-    age: 2,
-    homecity: 'homecitychinese',
-    order: 32,
-}, 
-{
-    dbid: '5061',
-    name: 'ypHCConsulateRelations',
-    age: 2,
-    homecity: 'homecitychinese',
-    order: 34,
-}]
+export const injectedCards = [
+    /* Example of injected card
+    {
+        dbid: '5061',
+        name: 'ypHCConsulateRelations',
+        age: 2,
+        homecity: 'homecityjapanese',
+        order: 29,
+    }
+    */
+]
