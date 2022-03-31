@@ -45,7 +45,7 @@ export const Header = React.memo(({ civs, onSelectCiv }) => {
             <Container>
                 <Toolbar disableGutters>
                     <Box sx={{ flexGrow: 1 }}>
-                        <img className='aoe3de-logo' src='/resources/aoe3_de_logo.png' alt="logo aoe3de"></img>
+                        <img className='aoe3de-logo' src='/assets/aoe3_de_logo.png' alt="logo aoe3de"></img>
                     </Box>
 
                     <Box sx={{ py: 1, flexGrow: 1 }}>

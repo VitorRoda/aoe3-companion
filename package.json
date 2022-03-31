@@ -47,7 +47,7 @@
   },
   "devDependencies": {
     "imagemin": "^8.0.1",
-    "imagemin-jpegtran": "^7.0.0",
-    "imagemin-pngquant": "^9.0.2"
+    "imagemin-pngquant": "^9.0.2",
+    "jimp": "^0.16.1"
   }
 }

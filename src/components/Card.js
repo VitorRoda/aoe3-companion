@@ -15,7 +15,7 @@ export const Card = React.memo(({
                 <div className='card__unit-count'>{displayunitcount}</div>}
             {<CardCosts costs={costs}></CardCosts>}
 
-            {isSelected && <img loading='lazy' className='card__check-icon' src={'/resources/hp_cp_check.png'} alt="check card"></img>}
+            {isSelected && <img loading='lazy' className='card__check-icon' src={'/assets/hp_cp_check.png'} alt="check card"></img>}
         </div>
     )
 })

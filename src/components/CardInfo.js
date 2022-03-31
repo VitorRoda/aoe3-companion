@@ -12,7 +12,7 @@ export function CardInfo({ card }) {
                 {Math.round(cost?.__text)}
                 <img loading='lazy'
                     className='card_resource-cost-icon'
-                    src={`/resources/resource_${cost?._resourcetype?.toLowerCase()}.png`}
+                    src={`/assets/resource_${cost?._resourcetype?.toLowerCase()}.png`}
                     alt={cost?._resourcetype} />
             </span>
         )).reduce((accu, elem) => {

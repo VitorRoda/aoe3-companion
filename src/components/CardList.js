@@ -12,7 +12,7 @@ export const CardList = React.memo(({ cards, age, onClickCard }) => {
     minHeight: 72,
     pl: 8.5,
     py: 1,
-    backgroundImage: `url(/resources/Age${age}.png)`,
+    backgroundImage: `url(/assets/Age${age}.png)`,
     backgroundRepeat: 'no-repeat',
     backgroundSize: 70,
     backgroundPosition: 'left center',

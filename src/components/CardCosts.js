@@ -2,7 +2,7 @@ import React from 'react'
 
 export const CardCosts = ({ costs }) => {
     const costsFilter = cost => cost?._resourcetype !== 'Ships'
-    const getResourceIcon = (type) => `/resources/resource_${type.toLowerCase()}.png`
+    const getResourceIcon = (type) => `/assets/resource_${type.toLowerCase()}.png`
 
   return (
     <div className='card__resources-cost' hidden={!costs?.some(costsFilter)}>
