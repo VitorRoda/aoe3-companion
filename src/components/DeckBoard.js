@@ -1,5 +1,5 @@
 import './DeckBoard.css'
-import React, { useState } from 'react'
+import React, { useCallback, useState } from 'react'
 import uniqid from 'uniqid'
 import html2canvas from 'html2canvas';
 import { green } from '@mui/material/colors';
@@ -9,20 +9,20 @@ import Download from '@mui/icons-material/Download';
 import CircularProgress from '@mui/material/CircularProgress';
 import { CardList } from "./CardList";
 
-export function DeckBoard({ civName, maxCards, selectedCards, onClickCard }) {
+export const DeckBoard = (({ civName, maxCards, selectedCards, onClickCard }) => {
   const [isGeneratingImg, setIsGeneratingImg] = useState(false)
-  const handleOnClickCard = (card) => {
-    onClickCard(card)
-  }
-
   const printRef = React.useRef();
 
-  const handleDownloadImage = async () => {
+  const handleOnClickCard = useCallback((card) => {
+    onClickCard(card)
+  }, [])
+
+  const handleDownloadImage = useCallback(async () => {
     const element = printRef.current;
-    setIsGeneratingImg(true)
+    setIsGeneratingImg(() => true)
     const canvas = await html2canvas(element, { windowWidth: 900, width: 800, height: 355 });
-    setIsGeneratingImg(false)
-    const data = canvas.toDataURL('image/png');
+    setIsGeneratingImg(() => false)
+    const data = canvas.toDataURL('image/png', 1.0);
     const link = document.createElement('a');
 
     if (typeof link.download === 'string') {
@@ -34,20 +34,7 @@ export function DeckBoard({ civName, maxCards, selectedCards, onClickCard }) {
     } else {
       window.open(data);
     }
-  };
-
-  const listCards = (age) =>
-    <Box
-      className={`deck-board__age deck-board__age${age}`}
-      sx={{
-        minHeight: 72,
-        pl: 8,
-        py: 0.5,
-        backgroundImage: `url(/resources/Age${age}.png)`
-      }}>
-      <CardList key={uniqid()} cards={selectedCards[`age${age}`]} onClickCard={handleOnClickCard}>
-      </CardList>
-    </Box>
+  }, []);
 
   return (
     <Box>
@@ -76,11 +63,15 @@ export function DeckBoard({ civName, maxCards, selectedCards, onClickCard }) {
         )}
       </div>
       <div className='deck-board' ref={printRef}>
-        {listCards(1)}
-        {listCards(2)}
-        {listCards(3)}
-        {listCards(4)}
+        <CardList cards={selectedCards.age1} age={1} onClickCard={handleOnClickCard}>
+        </CardList>
+        <CardList cards={selectedCards.age2} age={2} onClickCard={handleOnClickCard}>
+        </CardList>
+        <CardList cards={selectedCards.age3} age={3} onClickCard={handleOnClickCard}>
+        </CardList>
+        <CardList cards={selectedCards.age4} age={4} onClickCard={handleOnClickCard}>
+        </CardList>
       </div>
     </Box>
   )
-}
+})

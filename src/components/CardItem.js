@@ -1,7 +1,6 @@
 import './CardItem.css'
-import React, { useCallback } from 'react'
+import React from 'react'
 import PropTypes from "prop-types";
-import uniqid from 'uniqid'
 import Popper from '@mui/material/Popper'
 import { usePopupState, bindHover, bindPopper } from 'material-ui-popup-state/hooks'
 import Box from '@mui/material/Box';
@@ -9,11 +8,11 @@ import { CardInfo } from "../components/CardInfo";
 import { Card } from "../components/Card";
 
 export const CardItem = React.memo(({ card, onClickCard }) => {
-    const popupState = usePopupState({ variant: 'popover', popupId: `tooltip-${card.id}-${uniqid()}`, disableAutoFocus: true })
+    const popupState = usePopupState({ variant: 'popover', popupId: `tooltip-${card.id}`, disableAutoFocus: true })
 
-    const handleOnClick = useCallback(() => {
+    const handleOnClick = () => {
         onClickCard(card)
-    }, [])
+    }
 
     return (
         <Box sx={{ margin: '4px' }} onClick={handleOnClick} {...bindHover(popupState)}>

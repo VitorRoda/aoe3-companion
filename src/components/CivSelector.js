@@ -1,6 +1,5 @@
 import './CivSelector.css'
 import React, { useCallback, useState } from 'react'
-import uniqid from 'uniqid'
 import PropTypes from "prop-types";
 import { translate } from "../utils/translator";
 import FormControl from "@mui/material/FormControl";
@@ -20,8 +19,8 @@ export const CivSelector = React.memo(({ civs, onSelectCiv }) => {
 
   const civItems = civs
     .filter((item, index) => whitelistCivs.includes(index))
-    .map(civ =>
-      <MenuItem value={civ} key={uniqid()}>
+    .map((civ, idx) =>
+      <MenuItem value={civ} key={`civ-${civ.name}-${idx}`}>
         <img loading='lazy' className='civ-selector__item-flag' src={`/${civ.homecityflagiconwpf}`} alt={civ.name} />
         {translate(civ?.displaynameid)}
       </MenuItem>

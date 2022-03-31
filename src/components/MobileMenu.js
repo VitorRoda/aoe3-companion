@@ -4,10 +4,9 @@ import IconButton from '@mui/material/IconButton';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Switch from '@mui/material/Switch';
 import { useTheme } from '@mui/material/styles'
 import GithubIcon from '@mui/icons-material/GitHub'
+import { LangSwitcher } from "./LangSwitcher";
 
 export const MobileMenu = ({ langEsp, onChangeLang }) => {
     const [anchorElNav, setAnchorElNav] = useState(null);
@@ -59,19 +58,13 @@ export const MobileMenu = ({ langEsp, onChangeLang }) => {
                 }}
                 open={Boolean(anchorElNav)}
                 onClose={handleCloseNavMenu}
-                sx={{
-                    display: { xs: 'block', md: 'none' },
-                }}
+                sx={{ display: { xs: 'block', md: 'none' } }}
             >
                 <MenuItem onClick={handleCloseNavMenu}>
-                    <FormControlLabel
-                        label={langEsp ? 'en' : 'es'}
-                        control={
-                            <Switch color='warning' checked={langEsp} onChange={handleSwitchEsp} />
-                        }
-                    />
+                    <LangSwitcher langEsp={langEsp} onChangeLang={handleSwitchEsp} />
                 </MenuItem>
                 <MenuItem onClick={handleCloseNavMenu}>
+                    Github
                     <IconButton size="large" onClick={goToGithub} color="inherit">
                         <GithubIcon />
                     </IconButton>

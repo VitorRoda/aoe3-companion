@@ -3,14 +3,13 @@ import { styled } from '@mui/material/styles';
 import AppBarMui from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Box from '@mui/material/Box';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Switch from '@mui/material/Switch';
 import IconButton from '@mui/material/IconButton';
 import GithubIcon from '@mui/icons-material/GitHub'
 import { useTheme } from '@mui/material/styles'
 import { Container } from '@mui/material';
 import { CivSelector } from "./CivSelector";
 import { MobileMenu } from "./MobileMenu";
+import { LangSwitcher } from "./LangSwitcher";
 
 export const Header = React.memo(({ civs, onSelectCiv }) => {
     const theme = useTheme()
@@ -53,11 +52,8 @@ export const Header = React.memo(({ civs, onSelectCiv }) => {
                         <CivSelector civs={civs} onSelectCiv={handleSelectCiv} />
                     </Box>
 
-                    <Box edge="end" sx={{ [theme.breakpoints.down('md')]: { display: 'none' } }}>
-                        <FormControlLabel
-                            label={langEsp ? 'en' : 'es'}
-                            control={<Switch color='warning' checked={langEsp} onChange={handleSwitchEsp} />}
-                        />
+                    <Box sx={{ display: 'flex', [theme.breakpoints.down('md')]: { display: 'none' } }}>
+                        <LangSwitcher langEsp={langEsp} onChangeLang={handleSwitchEsp} />
 
                         <IconButton size="large" onClick={goToGithub} color="inherit">
                             <GithubIcon />

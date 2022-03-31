@@ -1,5 +1,4 @@
 import React from 'react'
-import uniqid from 'uniqid'
 
 export const CardCosts = ({ costs }) => {
     const costsFilter = cost => cost?._resourcetype !== 'Ships'
@@ -9,12 +8,12 @@ export const CardCosts = ({ costs }) => {
     <div className='card__resources-cost' hidden={!costs?.some(costsFilter)}>
         {costs
             .filter(costsFilter)
-            .map(cost => (
+            .map(({ _resourcetype }, idx) => (
                 <img
                     loading='lazy'
-                    src={getResourceIcon(cost?._resourcetype)}
-                    alt={cost?._resourcetype}
-                    key={uniqid()} />
+                    src={getResourceIcon(_resourcetype)}
+                    alt={_resourcetype}
+                    key={`cost-${_resourcetype}-${idx}`} />
             ))}
     </div>
   )

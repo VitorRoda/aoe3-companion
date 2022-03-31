@@ -8,16 +8,6 @@
     padding: 16px 0;
 }
 
-.deck-board__age {
-    background-repeat: no-repeat;
-    background-size: 70px;
-    background-position: left center;
-}
-
-.deck-board__age:not(:last-child) {
-    border-bottom: 1px solid #EBC837;
-}
-
 .global-counter-cards {
     width: 100px;
     font-size: 20px;
