@@ -10,6 +10,7 @@ import { Container } from '@mui/material';
 import { CivSelector } from "./CivSelector";
 import { MobileMenu } from "./MobileMenu";
 import { LangSwitcher } from "./LangSwitcher";
+import { DonateButton } from "./DonateButton";
 
 export const Header = React.memo(({ civs, onSelectCiv }) => {
     const theme = useTheme()
@@ -52,12 +53,14 @@ export const Header = React.memo(({ civs, onSelectCiv }) => {
                         <CivSelector civs={civs} onSelectCiv={handleSelectCiv} />
                     </Box>
 
-                    <Box sx={{ display: 'flex', [theme.breakpoints.down('md')]: { display: 'none' } }}>
+                    <Box sx={{ display: 'flex', alignItems: 'center', [theme.breakpoints.down('md')]: { display: 'none' } }}>
                         <LangSwitcher langEsp={langEsp} onChangeLang={handleSwitchEsp} />
 
                         <IconButton size="large" onClick={goToGithub} color="inherit">
                             <GithubIcon />
                         </IconButton>
+
+                        <DonateButton />
                     </Box>
 
                     <MobileMenu edge="end" langEsp={langEsp} onChangeLang={handleSwitchEsp}></MobileMenu>

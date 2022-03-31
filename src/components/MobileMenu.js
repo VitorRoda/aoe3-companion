@@ -7,6 +7,7 @@ import MenuItem from '@mui/material/MenuItem';
 import { useTheme } from '@mui/material/styles'
 import GithubIcon from '@mui/icons-material/GitHub'
 import { LangSwitcher } from "./LangSwitcher";
+import { DonateButton } from "./DonateButton";
 
 export const MobileMenu = ({ langEsp, onChangeLang }) => {
     const [anchorElNav, setAnchorElNav] = useState(null);
@@ -69,6 +70,9 @@ export const MobileMenu = ({ langEsp, onChangeLang }) => {
                         <GithubIcon />
                     </IconButton>
                 </MenuItem>
+                <MenuItem onClick={handleCloseNavMenu}>
+                    <DonateButton />
+                </MenuItem>                
             </Menu>
         </Box>
     )
