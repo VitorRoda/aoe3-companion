@@ -28,6 +28,18 @@ export const blacklistCards = [
     {
         id: 'HCXPZapotecAllies1',
         civs: ['homecitydeinca']
+    },
+    {
+        id: 'HCPioneers',
+        civs: ['homecityhausa']
+    },
+    {
+        id: 'DEHCShipCampWagonsRepeat',
+        civs: ['homecityhausa']
+    },
+    {
+        id: 'HCAdvancedArsenal',
+        civs: ['homecityhausa']
     }
 ]
 
