@@ -4,7 +4,7 @@ import Switch from '@mui/material/Switch';
 import Avatar from '@mui/material/Avatar';
 
 export const LangSwitcher = ({ langEsp, onChangeLang }) => {
-    const baseIcoPath = '/resources/images/icons/flags/flag_'
+    const baseIcoPath = '/resources/images/icons/flags/Flag_'
     const icoSizeSx = { width: 24, height: 24 }
     const handleSwitchEsp = (event) => {
         onChangeLang(event)
@@ -15,12 +15,12 @@ export const LangSwitcher = ({ langEsp, onChangeLang }) => {
             <Avatar
                 sx={icoSizeSx}
                 alt="English"
-                src={`${baseIcoPath}british.png`} />
+                src={`${baseIcoPath}British.png`} />
             <Switch color='warning' checked={langEsp} onChange={handleSwitchEsp}></Switch>
             <Avatar
                 sx={icoSizeSx}
                 alt="Español"
-                src={`${baseIcoPath}spanish.png`} />
+                src={`${baseIcoPath}Spanish.png`} />
         </Stack>
     )
 }
