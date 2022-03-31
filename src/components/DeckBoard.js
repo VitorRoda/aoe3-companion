@@ -20,9 +20,9 @@ export const DeckBoard = (({ civName, maxCards, selectedCards, onClickCard }) =>
   const handleDownloadImage = useCallback(async () => {
     const element = printRef.current;
     setIsGeneratingImg(() => true)
-    const canvas = await html2canvas(element, { windowWidth: 900, width: 800, height: 355 });
+    const canvas = await html2canvas(element, { windowWidth: 900, width: 800, height: 387 });
     setIsGeneratingImg(() => false)
-    const data = canvas.toDataURL('image/png', 1.0);
+    const data = canvas.toDataURL();
     const link = document.createElement('a');
 
     if (typeof link.download === 'string') {
