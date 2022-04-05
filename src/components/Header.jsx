@@ -1,8 +1,10 @@
 import React, { useCallback, useState } from 'react'
+import { Link as RouterLink } from "react-router-dom";
 import { styled } from '@mui/material/styles';
 import AppBarMui from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Box from '@mui/material/Box';
+import Link from '@mui/material/Link';
 import IconButton from '@mui/material/IconButton';
 import GithubIcon from '@mui/icons-material/GitHub'
 import { useTheme } from '@mui/material/styles'
@@ -10,6 +12,7 @@ import { Container } from '@mui/material';
 import { CivSelector } from "./CivSelector";
 import { MobileMenu } from "./MobileMenu";
 import { LangSwitcher } from "./LangSwitcher";
+import { translate } from '../utils/translator';
 // import { DonateButton } from "./DonateButton";
 
 export const Header = React.memo(({ civs, onSelectCiv }) => {
@@ -50,6 +53,11 @@ export const Header = React.memo(({ civs, onSelectCiv }) => {
                 <Toolbar disableGutters>
                     <Box sx={{ flexGrow: 1 }}>
                         <img className='aoe3de-logo' src='/assets/aoe3_de_logo.png' alt="logo aoe3de"></img>
+                    </Box>
+
+                    <Box variation="row" sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+                        <Link component={RouterLink} color="#b8862d" to='/' px={1}>{ translate('49151') }</Link>
+                        <Link component={RouterLink} color="#b8862d" to='/units' px={1}>{ translate('70749') }</Link>
                     </Box>
 
                     <Box sx={{ py: 1, flexGrow: 1 }}>

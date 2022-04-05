@@ -4,9 +4,12 @@ import IconButton from '@mui/material/IconButton';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import MenuItem from '@mui/material/MenuItem';
+import { Link as RouterLink } from "react-router-dom";
+import Link from '@mui/material/Link';
 import { useTheme } from '@mui/material/styles'
 import GithubIcon from '@mui/icons-material/GitHub'
 import { LangSwitcher } from "./LangSwitcher";
+import { translate } from '../utils/translator';
 // import { DonateButton } from "./DonateButton";
 
 export const MobileMenu = ({ langEsp, onChangeLang }) => {
@@ -63,6 +66,12 @@ export const MobileMenu = ({ langEsp, onChangeLang }) => {
             >
                 <MenuItem onClick={handleCloseNavMenu}>
                     <LangSwitcher langEsp={langEsp} onChangeLang={handleSwitchEsp} />
+                </MenuItem>
+                <MenuItem>
+                    <Link component={RouterLink} underline="none" color="#000" to='/'>{translate('49151')}</Link>
+                </MenuItem>
+                <MenuItem>
+                    <Link component={RouterLink} underline="none" color="#000" to='/units'>{translate('70749')}</Link>
                 </MenuItem>
                 <MenuItem onClick={handleCloseNavMenu}>
                     Github
