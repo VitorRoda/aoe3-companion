@@ -1,9 +1,9 @@
 import { translate } from "../utils/translator";
 import protoData from "../data/protoy.json";
 import exactMath from "exact-math";
+import { replace_n } from "../utils/replaceN";
 
 const prefixSymbol = 'cString'
-const replace_n = (str, ...ns) => str.replace(/%(\d+)(!.+?!)?/g, (_, n) => ns[n - 1]).replace('%%', '%')
 
 const WHITE_LIST_EFFECTS = [
     'Hitpoints',

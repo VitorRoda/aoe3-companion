@@ -1,8 +1,8 @@
 import fs from "fs"
 import imagemin from "imagemin"
 import imageminPngquant from "imagemin-pngquant"
-import path from "path"
-import jimp from 'jimp'
+// import path from "path"
+// import jimp from 'jimp'
 
 const getDirRecursively = (dir) => {
   const getChildrenRecursively = (dir) => {
@@ -32,7 +32,7 @@ const getDirRecursively = (dir) => {
 
   for (let inDir of sourceDirs) {
     try {
-      const destDir = "./min/" + inDir;
+      const destDir = "./public/" + inDir;
       const filesInDir = await imagemin([`${inDir}/*.png`], {
         destination: destDir,
         plugins: [

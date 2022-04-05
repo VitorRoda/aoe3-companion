@@ -16,7 +16,7 @@
     padding: 4px;
     border-radius: 20px;
     position: absolute;
-    top: 17px;
+    top: -17px;
     left: 0;
     font-weight: bolder;
     box-shadow: 0 0 4px #000;
@@ -27,5 +27,5 @@
 .download-button {
     position: absolute !important;
     right: 0;
-    top: 14px;
+    top: -14px;
 }
