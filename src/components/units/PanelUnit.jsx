@@ -1,13 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { translate } from "../../utils/translator";
 import Box from '@mui/material/Box';
-import CardContent from '@mui/material/CardContent';
-import Typography from '@mui/material/Typography';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
+import CardContent from '@mui/material/CardContent';
+import CardActions from '@mui/material/CardActions';
+import Typography from '@mui/material/Typography';
 import Avatar from '@mui/material/Avatar';
+import Dialog from '@mui/material/Dialog';
+import DialogTitle from '@mui/material/DialogTitle';
+import IconButton from '@mui/material/IconButton';
+import FeedIcon from '@mui/icons-material/Feed';
 import { CostsUnit } from "./CostsUnit";
 import { MainStats } from "./MainStats";
+import { AdvancedStats } from "./AdvancedStats";
 
 const descUnitStyle = {
     backgroundImage: 'linear-gradient(to right, #EBC837, #FFEB8B)',
@@ -18,6 +24,15 @@ const descUnitStyle = {
 }
 
 export const PanelUnit = ({ unit }) => {
+    const [openAdvancedInfo, setOpenAvancedInfo] = useState(false)
+    const handleClickOpen = () => {
+        setOpenAvancedInfo(true);
+    };
+
+    const handleClose = () => {
+        setOpenAvancedInfo(false);
+    };
+
     return (
         <Card sx={{
             backgroundImage: 'url(/assets/wood.png)',
@@ -27,8 +42,8 @@ export const PanelUnit = ({ unit }) => {
                 title={translate(unit.info.displaynameid)}
                 titleTypographyProps={{ color: '#f2f2f2', fontSize: 16, fontWeight: 'bold', pr: 0.5 }}
                 subheader={
-                    <MainStats 
-                        initialhitpoints={unit?.info?.initialhitpoints} 
+                    <MainStats
+                        initialhitpoints={unit?.info?.initialhitpoints}
                         maxvelocity={unit?.info?.maxvelocity}
                         populationcount={unit?.info?.populationcount}
                         armor={unit?.info?.armor}
@@ -59,7 +74,26 @@ export const PanelUnit = ({ unit }) => {
                 </CardContent>
             </Box>
 
-        </Card>
+            <CardActions>
+                <IconButton
+                    aria-label="advanced stats"
+                    sx={{
+                        color: '#EBC837',
+                        '&:hover': {
+                            color: '#FFEB8B',
+                        }
+                    }}
+                    onClick={handleClickOpen}
+                >
+                    <FeedIcon />
+                </IconButton>
+
+                <Dialog open={openAdvancedInfo} onClose={handleClose}>
+                    <DialogTitle>{translate(unit.info.displaynameid)}</DialogTitle>
+                    <AdvancedStats protoaction={unit?.info?.protoaction} />
+                </Dialog>
+            </CardActions>
+        </Card >
 
     )
 }
