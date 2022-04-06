@@ -22,11 +22,12 @@ export const AdvancedStats = ({ unitname, protoaction }) => {
                 <Table>
                     <TableHead>
                         <TableRow>
-                            <TableCell>Name</TableCell>
+                            <TableCell>Stat</TableCell>
                             <TableCell align="right">Damage</TableCell>
                             <TableCell align="right">ROF</TableCell>
                             <TableCell align="right">Range</TableCell>
-                            <TableCell align="right">Damage bonus</TableCell>
+                            <TableCell align="right">Area</TableCell>
+                            <TableCell align="right">Bonus</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
@@ -40,9 +41,10 @@ export const AdvancedStats = ({ unitname, protoaction }) => {
                             .map((row) => (
                                 <TableRow key={row?.name}>
                                     <TableCell align='left'>{`${row.name} (${row?.damagetype?.[0]})`}</TableCell>
-                                    <TableCell align="right">{row?.damage && exactMath.round(row?.damage, -2)}</TableCell>
-                                    <TableCell align="right">{row?.rof?.[0] && exactMath.round(row?.rof?.[0], -2)}</TableCell>
-                                    <TableCell align="right">{row?.maxrange && exactMath.round(row?.maxrange, -2)}</TableCell>
+                                    <TableCell align="right">{row?.damage ? exactMath.round(row?.damage, -2) : '---'}</TableCell>
+                                    <TableCell align="right">{row?.rof?.[0] ? exactMath.round(row?.rof?.[0], -2) : '---'}</TableCell>
+                                    <TableCell align="right">{row?.maxrange ? exactMath.round(row?.maxrange, -2) : '---'}</TableCell>
+                                    <TableCell align="right">{row?.damagearea?.[0] ? exactMath.round(row?.damagearea?.[0], -2) : '---'}</TableCell>
                                     <TableCell>{
                                         row?.damagebonus && row.damagebonus.map(bonus =>
                                             <Stack direction={'row'} spacing={1} key={`bonus-${bonus?._type}`}>

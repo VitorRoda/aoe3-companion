@@ -88,8 +88,16 @@ export const PanelUnit = ({ unit }) => {
                     <FeedIcon />
                 </IconButton>
 
-                <Dialog open={openAdvancedInfo} onClose={handleClose}>
-                    <DialogTitle>{translate(unit.info.displaynameid)}</DialogTitle>
+                <Dialog open={openAdvancedInfo} onClose={handleClose} fullWidth maxWidth='md'>
+                    <DialogTitle sx={{ display: 'flex', alignItems: 'center' }}>
+                        <Avatar
+                            src={unit.info.portraiticon}
+                            alt={translate(unit.info.displaynameid)}
+                            sx={{ width: 60, height: 60, fontSize: 12, mr: 1,  boxShadow: '0 0 8px #333333' }}
+                            variant="rounded"
+                        />
+                        {translate(unit.info.displaynameid)}
+                    </DialogTitle>
                     <AdvancedStats protoaction={unit?.info?.protoaction} />
                 </Dialog>
             </CardActions>
