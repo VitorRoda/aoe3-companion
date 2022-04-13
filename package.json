@@ -10,6 +10,7 @@
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
+    "change-case": "^4.1.2",
     "exact-math": "^2.2.3",
     "html2canvas": "^1.4.1",
     "material-ui-popup-state": "^2.0.0",

@@ -40,16 +40,10 @@ export const PanelUnit = ({ unit }) => {
         }}>
             <CardHeader
                 title={translate(unit.info.displaynameid)}
-                titleTypographyProps={{ color: '#f2f2f2', fontSize: 16, fontWeight: 'bold', pr: 0.5 }}
-                subheader={
-                    <MainStats
-                        initialhitpoints={unit?.info?.initialhitpoints}
-                        maxvelocity={unit?.info?.maxvelocity}
-                        populationcount={unit?.info?.populationcount}
-                        armor={unit?.info?.armor}
-                    />
-                }
-                subheaderTypographyProps={{ color: '#f4f4f4', fontSize: 13 }}
+                titleTypographyProps={{
+                    fontSize: 18,
+                    fontWeight: 'bold',
+                }}
                 avatar={
                     <Avatar
                         src={unit.info.portraiticon}
@@ -60,21 +54,31 @@ export const PanelUnit = ({ unit }) => {
                 }
                 action={<CostsUnit costs={unit?.info?.cost} />}
             />
+
+            <Box px={2} mb={1}>
+                <MainStats
+                    initialhitpoints={unit?.info?.initialhitpoints}
+                    maxvelocity={unit?.info?.maxvelocity}
+                    populationcount={unit?.info?.populationcount}
+                    armor={unit?.info?.armor}
+                />
+            </Box>
+
             <Box sx={descUnitStyle}>
                 <CardContent sx={{ position: 'relative' }}>
                     {unit.info.rollovertextid.map((idtext, idx) =>
-                        <Typography variant="body2" key={`description-${unit.info._name}-${idx}`}>
+                        <Typography variant="body2" color="primary.contrastText" key={`description-${unit.info._name}-${idx}`}>
                             {translate(idtext)}
                         </Typography>
                     )}
 
                     <Box sx={{ height: 32, position: 'absolute', top: -13, right: -5, boxShadow: '0 0 6px 2px #111' }}>
-                        <img height={32} src={`/assets/icon_age_${+unit.info.allowedage[0] + 1}.png`} alt="" />
+                        <img loading='lazy' height={32} src={`/assets/icon_age_${+unit.info.allowedage[0] + 1}.png`} alt="" />
                     </Box>
                 </CardContent>
             </Box>
 
-            <CardActions>
+            <CardActions sx={{ justifyContent: 'flex-end' }}>
                 <IconButton
                     aria-label="advanced stats"
                     sx={{
@@ -93,7 +97,7 @@ export const PanelUnit = ({ unit }) => {
                         <Avatar
                             src={unit.info.portraiticon}
                             alt={translate(unit.info.displaynameid)}
-                            sx={{ width: 60, height: 60, fontSize: 12, mr: 1,  boxShadow: '0 0 8px #333333' }}
+                            sx={{ width: 60, height: 60, fontSize: 12, mr: 1, boxShadow: '0 0 8px #333333' }}
                             variant="rounded"
                         />
                         {translate(unit.info.displaynameid)}

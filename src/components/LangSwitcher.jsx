@@ -4,6 +4,14 @@ import Switch from '@mui/material/Switch';
 import Avatar from '@mui/material/Avatar';
 import FormControlLabel from '@mui/material/FormControlLabel';
 
+const formControlLabelStyles = { 
+    m: 0,
+     mt: '-17px', 
+    '.MuiFormControlLabel-label': { 
+        position: 'relative', top: 6, fontSize: 11 
+    } 
+}
+
 export const LangSwitcher = ({ langEsp, onChangeLang }) => {
     const baseIcoPath = '/resources/images/icons/flags/Flag_'
     const icoSizeSx = { width: 24, height: 24 }
@@ -19,13 +27,10 @@ export const LangSwitcher = ({ langEsp, onChangeLang }) => {
                 src={`${baseIcoPath}British.png`} />
 
             <FormControlLabel
-                control={<Switch color='warning' checked={langEsp} onChange={handleSwitchEsp} />}
+                control={<Switch checked={langEsp} onChange={handleSwitchEsp} />}
                 label={'LANG'}
                 labelPlacement="top"
-                sx={{ 
-                    m: 0, mt: '-17px', 
-                    '.MuiFormControlLabel-label': { position: 'relative', top: 6, fontSize: 11, textTransform: 'uppercase' } 
-                }}
+                sx={formControlLabelStyles}
             />
 
             <Avatar

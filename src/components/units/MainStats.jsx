@@ -19,7 +19,7 @@ const statIcon = (iconName) => `/resources/images/hud/stat_${iconName}.png`
 
 export const MainStats = ({ initialhitpoints, maxvelocity, populationcount, armor }) => {
     return (
-        <Stack direction={'row'} alignItems='center' spacing={0.5} sx={{ flexWrap: 'wrap' }}>
+        <Stack direction={'row'} alignItems='center' spacing={0.5} fontSize={14}>
             <Stack direction={'row'} alignItems='center'>
                 {exactMath.round(initialhitpoints, 0)}
                 <img width="18" src={statIcon`large_hp`} title={translate('68852')} alt="hitpoints" />

@@ -29,11 +29,10 @@ export const CivSelector = React.memo(({ civs, onSelectCiv }) => {
   return (
     <div className='civ-selector'>
       <FormControl sx={{ width: 220 }}>
-        <InputLabel id="label-civ" sx={{ color: "#000" }}>{translate('18682')}</InputLabel>
+        <InputLabel id="label-civ">{translate('18682')}</InputLabel>
         <Select labelId="label-civ" 
           label={translate('18682')} 
           value={civ}
-          sx={{ backgroundColor: 'rgba(255, 255, 255, 0.25)' }}
           onChange={handleOnChange}>
           <MenuItem value="">---</MenuItem>
           {civItems}
