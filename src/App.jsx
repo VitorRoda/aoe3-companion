@@ -1,13 +1,16 @@
 import './App.css'
 import { useCallback, useEffect, useState } from 'react';
 import { Routes, Route } from "react-router-dom";
+import uniqueRandomRange from "unique-random-range";
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
+import { createTheme, ThemeProvider } from "@mui/material/styles"
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { DeckBuilder } from "./pages/DeckBuilder";
 import { UnitsInfo } from "./pages/UnitsInfo";
-import { createTheme, ThemeProvider } from "@mui/material/styles"
+import { whitelistCivs } from "./constants";
+
 
 const theme = createTheme({
   palette: {
@@ -41,7 +44,7 @@ function App() {
 
   useEffect(() => {
     import('./data/civs.json').then(({ civ }) => {
-      setCivs(() => civ)
+      setCivs(() => civ.filter((item, index) => whitelistCivs.includes(index)))
     })
   }, [])
 
@@ -49,14 +52,19 @@ function App() {
     setCiv(() => value)
   }, [])
 
+  const handleRandomCiv = () => {
+    const randomIdx = uniqueRandomRange(0, civs.length)()
+    setCiv(civs[randomIdx])
+  }
+
   return (
     <ThemeProvider theme={theme}>
       <Box sx={{ pb: '64px' }}>
-        <Header civs={civs} onSelectCiv={handleSelectCiv}></Header>
+        <Header selectedCiv={civ} civs={civs} onSelectCiv={handleSelectCiv}></Header>
 
         <Container sx={{ py: 4 }}>
           <Routes>
-            <Route path='/' element={<DeckBuilder civ={civ} />} />
+            <Route path='/' element={<DeckBuilder civ={civ} onClickRandomCiv={handleRandomCiv} />} />
             <Route path='/units' element={<UnitsInfo civ={civ} />} />
           </Routes>
         </Container>

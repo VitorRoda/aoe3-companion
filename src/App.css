@@ -4,6 +4,12 @@
 
 .flag-random {
     width: 100%;
-    max-width: 300px;
+    max-width: 270px;
     box-shadow: 0 0 10px #000;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.flag-random:hover {
+    transform: scale(1.2);
 }

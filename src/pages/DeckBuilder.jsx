@@ -10,7 +10,7 @@ import { getHomeCityData } from "../services/getHomeCityData";
 import { translate } from '../utils/translator';
 import { randomSumGenerator } from '../utils/randomSum';
 
-export const DeckBuilder = ({ civ }) => {
+export const DeckBuilder = ({ civ, onClickRandomCiv }) => {
     const [maxCards, setMaxCards] = useState(25)
     const [cards, dispatchCards] = useImmerReducer(cardsReducer, cardsInitialState)
     const [selectedCards, dispatchSelectedCards] = useImmerReducer(selectedCardsReducer, selectedCardsInitialState)
@@ -80,6 +80,10 @@ export const DeckBuilder = ({ civ }) => {
         dispatchSelectedCards({ type: 'addBatch', cards: selections })
     }
 
+    const handleRandomCiv = () => {
+        onClickRandomCiv()
+    }
+
     return (
         <Box>
             {civ &&
@@ -94,7 +98,13 @@ export const DeckBuilder = ({ civ }) => {
             {civ ?
                 <MainDeck cards={cards} onClickCard={handleOnClickCard} /> :
                 <Box sx={{ py: 4, textAlign: 'center' }}>
-                    <img className='flag-random' src='/resources/images/icons/flags/Flag_Random.png' alt="flag random" />
+                    <img 
+                        className='flag-random' 
+                        loading='lazy'
+                        src='/resources/images/icons/flags/Flag_Random.png' 
+                        alt="flag random"
+                        onClick={handleRandomCiv}
+                    />
                 </Box>
             }
         </Box>

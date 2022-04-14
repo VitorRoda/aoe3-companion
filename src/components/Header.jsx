@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from 'react'
-import { Link as RouterLink } from "react-router-dom";
+import { Link as RouterLink, Route } from "react-router-dom";
 import { styled } from '@mui/material/styles';
 import AppBarMui from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
@@ -15,7 +15,7 @@ import { LangSwitcher } from "./LangSwitcher";
 import { translate } from '../utils/translator';
 // import { DonateButton } from "./DonateButton";
 
-export const Header = React.memo(({ civs, onSelectCiv }) => {
+export const Header = React.memo(({ selectedCiv, civs, onSelectCiv }) => {
     const theme = useTheme()
     const [langEsp, setLangEsp] = useState(() => {
         const langEsp = JSON.parse(localStorage.getItem('langEsp'))
@@ -52,16 +52,19 @@ export const Header = React.memo(({ civs, onSelectCiv }) => {
             <Container>
                 <Toolbar disableGutters>
                     <Box sx={{ flexGrow: 1 }}>
-                        <img className='aoe3de-logo' src='/assets/aoe3_de_logo.png' alt="logo aoe3de"></img>
+                        <Link component={RouterLink} to='/'>
+                            <img className='aoe3de-logo' src='/assets/aoe3_de_logo.png' alt="logo aoe3de"></img>
+                        </Link>
+
                     </Box>
 
                     <Box variation="row" sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-                        <Link variant='subtitle1' component={RouterLink} to='/' px={1}>{ translate('49151') }</Link>
-                        <Link variant='subtitle1' component={RouterLink} to='/units' px={1}>{ translate('70749') }</Link>
+                        <Link variant='subtitle1' component={RouterLink} to='/' px={1}>{translate('49151')}</Link>
+                        <Link variant='subtitle1' component={RouterLink} to='/units' px={1}>{translate('70749')}</Link>
                     </Box>
 
                     <Box sx={{ py: 1, flexGrow: 1 }}>
-                        <CivSelector civs={civs} onSelectCiv={handleSelectCiv} />
+                        <CivSelector selectedCiv={selectedCiv} civs={civs} onSelectCiv={handleSelectCiv} />
                     </Box>
 
                     <Box sx={{ display: 'flex', alignItems: 'center', [theme.breakpoints.down('md')]: { display: 'none' } }}>

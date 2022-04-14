@@ -6,10 +6,9 @@ import FormControl from "@mui/material/FormControl";
 import InputLabel from '@mui/material/InputLabel';
 import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
-import { whitelistCivs } from "../constants";
 
-export const CivSelector = React.memo(({ civs, onSelectCiv }) => {
-  const [civ, setCiv] = useState('')
+export const CivSelector = React.memo(({ selectedCiv, civs, onSelectCiv }) => {
+  const [civ, setCiv] = useState(() => selectedCiv)
 
   const handleOnChange = useCallback((event) => {
     const value = event.target.value
@@ -18,7 +17,7 @@ export const CivSelector = React.memo(({ civs, onSelectCiv }) => {
   }, [])
 
   const civItems = civs
-    .filter((item, index) => whitelistCivs.includes(index))
+    
     .map((civ, idx) =>
       <MenuItem value={civ} key={`civ-${civ.name}-${idx}`} sx={{ fontFamily: 'TrajanPro' }}>
         <img loading='lazy' className='civ-selector__item-flag' src={`/${civ.homecityflagiconwpf}`} alt={civ.name} />
