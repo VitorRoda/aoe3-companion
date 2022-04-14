@@ -56,8 +56,8 @@ export const Header = React.memo(({ civs, onSelectCiv }) => {
                     </Box>
 
                     <Box variation="row" sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-                        <Link component={RouterLink} to='/' px={1}>{ translate('49151') }</Link>
-                        <Link component={RouterLink} to='/units' px={1}>{ translate('70749') }</Link>
+                        <Link variant='subtitle1' component={RouterLink} to='/' px={1}>{ translate('49151') }</Link>
+                        <Link variant='subtitle1' component={RouterLink} to='/units' px={1}>{ translate('70749') }</Link>
                     </Box>
 
                     <Box sx={{ py: 1, flexGrow: 1 }}>

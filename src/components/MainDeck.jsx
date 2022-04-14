@@ -25,7 +25,9 @@ export const MainDeck = React.memo(({ cards, onClickCard }) => {
 		},
 		'& .MuiTab-root': {
 			color: '#EBC837',
-			fontWeight: 'bold'
+			fontWeight: 'bold',
+			fontFamily: 'TrajanPro',
+			textTransform: 'none'
 		},
 		'& .MuiTab-root.Mui-selected': {
 			backgroundImage: 'linear-gradient(to right, #EBC837, #FFEB8B)',

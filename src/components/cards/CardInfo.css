@@ -3,7 +3,7 @@
     max-width: 500px;
     padding: .5rem 1rem;
     pointer-events: none;
-    background-color:  rgba(0, 0, 0, 0.8);
-    color: white;
+    background-color:  #121111ca;
+    color: #f2f2f2;
     border-radius: 5px;
 }

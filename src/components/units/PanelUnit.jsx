@@ -41,7 +41,8 @@ export const PanelUnit = ({ unit }) => {
             <CardHeader
                 title={translate(unit.info.displaynameid)}
                 titleTypographyProps={{
-                    fontSize: 18,
+                    fontFamily: 'TrajanPro',
+                    fontSize: '16px',
                     fontWeight: 'bold',
                 }}
                 avatar={

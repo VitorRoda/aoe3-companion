@@ -20,7 +20,7 @@ export const CivSelector = React.memo(({ civs, onSelectCiv }) => {
   const civItems = civs
     .filter((item, index) => whitelistCivs.includes(index))
     .map((civ, idx) =>
-      <MenuItem value={civ} key={`civ-${civ.name}-${idx}`}>
+      <MenuItem value={civ} key={`civ-${civ.name}-${idx}`} sx={{ fontFamily: 'TrajanPro' }}>
         <img loading='lazy' className='civ-selector__item-flag' src={`/${civ.homecityflagiconwpf}`} alt={civ.name} />
         {translate(civ?.displaynameid)}
       </MenuItem>
@@ -29,10 +29,11 @@ export const CivSelector = React.memo(({ civs, onSelectCiv }) => {
   return (
     <div className='civ-selector'>
       <FormControl sx={{ width: 220 }}>
-        <InputLabel id="label-civ">{translate('18682')}</InputLabel>
+        <InputLabel id="label-civ" sx={{ fontFamily: 'TrajanPro' }}>{translate('18682')}</InputLabel>
         <Select labelId="label-civ" 
           label={translate('18682')} 
           value={civ}
+          sx={{ fontFamily: 'TrajanPro' }}
           onChange={handleOnChange}>
           <MenuItem value="">---</MenuItem>
           {civItems}

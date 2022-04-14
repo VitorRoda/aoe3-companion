@@ -103,7 +103,9 @@ export const DeckBoard = ({ civName, maxCards, selectedCards, onClickCard }) => 
           )}
         </div>
         <div className='deck-board' ref={printRef}>
-          <Typography className='deck-name' variant='h5' color="primary">{deckName}</Typography>
+          <Typography className='deck-name' variant='h6' color="text.primary">
+            {deckName} ({selectedCards.total}/{maxCards})
+          </Typography>
           <CardList cards={selectedCards.age1} age={1} onClickCard={handleOnClickCard}>
           </CardList>
           <CardList cards={selectedCards.age2} age={2} onClickCard={handleOnClickCard}>

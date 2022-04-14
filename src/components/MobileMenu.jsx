@@ -10,6 +10,7 @@ import { useTheme } from '@mui/material/styles'
 import GithubIcon from '@mui/icons-material/GitHub'
 import { LangSwitcher } from "./LangSwitcher";
 import { translate } from '../utils/translator';
+import { Typography } from '@mui/material';
 // import { DonateButton } from "./DonateButton";
 
 export const MobileMenu = ({ langEsp, onChangeLang }) => {
@@ -68,14 +69,18 @@ export const MobileMenu = ({ langEsp, onChangeLang }) => {
                     <LangSwitcher langEsp={langEsp} onChangeLang={handleSwitchEsp} />
                 </MenuItem>
                 <MenuItem>
-                    <Link component={RouterLink} underline="none" color="#000" to='/'>{translate('49151')}</Link>
+                    <Link variant='subtitle2' component={RouterLink} underline="none" to='/'>
+                        {translate('49151')}
+                    </Link>
                 </MenuItem>
                 <MenuItem>
-                    <Link component={RouterLink} underline="none" color="#000" to='/units'>{translate('70749')}</Link>
+                    <Link variant='subtitle2' component={RouterLink} underline="none" to='/units'>
+                        {translate('70749')}
+                    </Link>
                 </MenuItem>
                 <MenuItem onClick={handleCloseNavMenu}>
-                    Github
-                    <IconButton size="large" onClick={goToGithub} color="inherit">
+                    <Typography variant='subtitle2' color="primary">Github</Typography>
+                    <IconButton size="large" onClick={goToGithub}>
                         <GithubIcon />
                     </IconButton>
                 </MenuItem>

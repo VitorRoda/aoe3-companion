@@ -16,3 +16,15 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
+
+@font-face {
+  font-family: 'TrajanPro';
+  src: url(./fonts/TrajanPro-Regular.ttf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'TrajanPro';
+  src: url(./fonts/TrajanPro-Bold.ttf);
+  font-weight: bold;
+}

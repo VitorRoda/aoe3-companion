@@ -22,6 +22,16 @@ const theme = createTheme({
       default: '#181c29',
       paper: '#394766',
     },
+  },
+  typography: {
+    h1: { fontFamily: 'TrajanPro', fontWeight: 'bold' },
+    h2: { fontFamily: 'TrajanPro', fontWeight: 'bold' },
+    h3: { fontFamily: 'TrajanPro', fontWeight: 'bold' },
+    h4: { fontFamily: 'TrajanPro', fontWeight: 'bold' },
+    h5: { fontFamily: 'TrajanPro', fontWeight: 'bold' },
+    h6: { fontFamily: 'TrajanPro', fontWeight: 'bold' },
+    subtitle1: { fontFamily: 'TrajanPro' },
+    subtitle2: { fontFamily: 'TrajanPro' },
   }
 })
 
