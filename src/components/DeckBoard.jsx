@@ -1,12 +1,14 @@
 import './DeckBoard.css'
-import React, { useCallback, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { paramCase } from 'change-case'
 import html2canvas from 'html2canvas';
 import Box from '@mui/material/Box';
+import Stack from '@mui/material/Stack';
 import Fab from '@mui/material/Fab';
+import CircularProgress from '@mui/material/CircularProgress';
 import DownloadIcon from '@mui/icons-material/Download';
 import PhotoCameraIcon from '@mui/icons-material/PhotoCamera';
-import CircularProgress from '@mui/material/CircularProgress';
+import WifiProtectedSetupIcon from '@mui/icons-material/WifiProtectedSetup';
 import TextField from '@mui/material/TextField';
 import Dialog from '@mui/material/Dialog';
 import DialogContent from '@mui/material/DialogContent';
@@ -15,7 +17,7 @@ import { Typography } from '@mui/material';
 import { CardList } from "./cards/CardList";
 import { translate } from '../utils/translator';
 
-export const DeckBoard = ({ civName, maxCards, selectedCards, onClickCard }) => {
+export const DeckBoard = ({ civName, maxCards, selectedCards, onClickCard, onClickRandomDeck }) => {
   const [deckName, setDeckName] = useState('')
   const [generatedImg, setGeneratedImg] = useState('')
   const [isGeneratingImg, setIsGeneratingImg] = useState(false)
@@ -26,11 +28,15 @@ export const DeckBoard = ({ civName, maxCards, selectedCards, onClickCard }) => 
     setDeckName('')
   }, [civName])
 
+  const handleChangeDeckName = (event) => {
+    setDeckName(event.target.value)
+  }
+
   const handleOnClickCard = (card) => {
     onClickCard(card)
   }
 
-  const handleShowImage = useCallback(async () => {
+  const handleShowPreview = async () => {
     const element = printRef.current;
     setIsGeneratingImg(() => true)
     const canvas = await html2canvas(element, {
@@ -43,9 +49,9 @@ export const DeckBoard = ({ civName, maxCards, selectedCards, onClickCard }) => 
     setShowGeneratedImg(() => true)
     setGeneratedImg(() => canvas.toDataURL())
 
-  }, [civName]);
+  };
 
-  const handleDownloadImage =  () => {
+  const handleDownloadImage = () => {
     const link = document.createElement('a');
 
     if (typeof link.download === 'string') {
@@ -59,12 +65,12 @@ export const DeckBoard = ({ civName, maxCards, selectedCards, onClickCard }) => 
     }
   }
 
-  const handleClose = () => {
+  const handleClosePreview = () => {
     setShowGeneratedImg(false)
   }
 
-  const handleChangeDeckName = (event) => {
-    setDeckName(event.target.value)
+  const handleRandomDeck = () => {
+    onClickRandomDeck()
   }
 
   return (
@@ -74,37 +80,42 @@ export const DeckBoard = ({ civName, maxCards, selectedCards, onClickCard }) => 
           id="deckname-text-field"
           variant="filled"
           label={translate('38236')}
-          inputProps={{
-            maxLength: 20
-          }}
+          inputProps={{ maxLength: 20 }}
           value={deckName}
           onChange={handleChangeDeckName}
         />
       </Box>
 
       <Box className='deckboard-wrapper' sx={{ position: 'relative' }}>
-        <div className='global-counter-cards'>{`${selectedCards.total}/${maxCards}`}</div>
-        <div className='download-button'>
-          <Fab onClick={handleShowImage} color="primary">
-            <PhotoCameraIcon size="large" />
-          </Fab>
+        <Box className='global-counter-cards'>{`${selectedCards.total}/${maxCards}`}</Box>
+        <Stack className='deckboard-actions' spacing={1}>
+          <Box className='download-button' position="relative">
+            <Fab color="primary" onClick={handleShowPreview} >
+              <PhotoCameraIcon size="large" />
+            </Fab>
 
-          {isGeneratingImg && (
-            <CircularProgress
-              size={68}
-              color="success"
-              sx={{
-                position: 'absolute',
-                top: -6,
-                left: -6,
-                zIndex: 1,
-              }}
-            />
-          )}
-        </div>
-        <div className='deck-board' ref={printRef}>
+            {isGeneratingImg && (
+              <CircularProgress
+                size={68}
+                color="success"
+                sx={{
+                  position: 'absolute',
+                  top: -6,
+                  left: -6,
+                  zIndex: 1,
+                }}
+              />
+            )}
+          </Box>
+
+          <Fab className='random-deck-button' color="primary" onClick={handleRandomDeck} >
+            <WifiProtectedSetupIcon size="large" />
+          </Fab>
+        </Stack>
+
+        <Box className='deck-board' ref={printRef}>
           <Typography className='deck-name' variant='h6' color="text.primary">
-            {deckName} ({selectedCards.total}/{maxCards})
+            {deckName}
           </Typography>
           <CardList cards={selectedCards.age1} age={1} onClickCard={handleOnClickCard}>
           </CardList>
@@ -114,10 +125,10 @@ export const DeckBoard = ({ civName, maxCards, selectedCards, onClickCard }) => 
           </CardList>
           <CardList cards={selectedCards.age4} age={4} onClickCard={handleOnClickCard}>
           </CardList>
-        </div>
+        </Box>
       </Box>
 
-      <Dialog open={showGeneratedImg} onClose={handleClose} maxWidth="md">
+      <Dialog open={showGeneratedImg} onClose={handleClosePreview} maxWidth="md">
         <DialogContent>
           <img src={generatedImg} alt="generateImg" width="100%" />
         </DialogContent>

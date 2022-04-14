@@ -10,6 +10,12 @@ export const selectedCardsInitialState = {
     age4Count: 0,
 }
 
+const sortCards = (a, b) => {
+    const [, , valA] = a.id.split('-')
+    const [, , valB] = b.id.split('-')
+
+    return +valA - +valB
+}
 
 export const selectedCardsReducer = (draft, action) => {
     switch (action.type) {
@@ -18,13 +24,7 @@ export const selectedCardsReducer = (draft, action) => {
             draft.total++
             draft[card.ageKey].push(card)
             draft[`${card.ageKey}Count`]++
-            draft[card.ageKey] = draft[card.ageKey].sort((a, b) => {
-                const [,,valA] = a.id.split('-')
-                const [,,valB] = b.id.split('-')
-            
-                return +valA - +valB
-              })
-
+            draft[card.ageKey] = draft[card.ageKey].sort(sortCards)
             return
         case 'removeCard':
             const { id, ageKey } = action
@@ -32,7 +32,15 @@ export const selectedCardsReducer = (draft, action) => {
             draft.total--
             draft[`${ageKey}Count`]--
             draft[ageKey].splice(idx, 1)
-
+            return
+        case 'addBatch':
+            const { cards } = action
+            cards.forEach((age, idx) => {
+                const ageKey = `age${idx+1}`
+                draft.total += age.length
+                draft[ageKey] = age.map(item => item.card).sort(sortCards)
+                draft[`${ageKey}Count`] += age.length
+            });
             return
         case 'reset':
             return selectedCardsInitialState
