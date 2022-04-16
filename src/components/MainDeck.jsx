@@ -14,9 +14,9 @@ export const MainDeck = React.memo(({ cards, onClickCard }) => {
 		setTabValue(() => newValue);
 	}, []);
 
-	const handleOnClickCard = useCallback((card) => {
+	const handleOnClickCard = (card) => {
 		onClickCard(card)
-	}, [])
+	}
 
 	const Tabs = styled(TabsMui)({
 		borderBottom: '1px solid #EBC837',

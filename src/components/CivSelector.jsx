@@ -1,5 +1,5 @@
 import './CivSelector.css'
-import React, { useCallback, useState } from 'react'
+import React, { useState } from 'react'
 import PropTypes from "prop-types";
 import { translate } from "../utils/translator";
 import FormControl from "@mui/material/FormControl";
@@ -10,11 +10,11 @@ import MenuItem from '@mui/material/MenuItem';
 export const CivSelector = React.memo(({ selectedCiv, civs, onSelectCiv }) => {
   const [civ, setCiv] = useState(() => selectedCiv)
 
-  const handleOnChange = useCallback((event) => {
+  const handleOnChange = (event) => {
     const value = event.target.value
     setCiv(() => value)
     onSelectCiv(value)
-  }, [])
+  }
 
   const civItems = civs
     

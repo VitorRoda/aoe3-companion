@@ -1,12 +1,12 @@
-import React, { useCallback } from 'react'
+import React from 'react'
 import PropTypes from "prop-types";
 import Box from '@mui/material/Box';
 import { CardItem } from "./CardItem";
 
 export const CardList = React.memo(({ cards, age, onClickCard }) => {
-  const handleOnClickCard = useCallback((card) => {
+  const handleOnClickCard = (card) => {
     onClickCard(card)
-  }, [])
+  }
 
   const singleAgeSx = {
     minHeight: 72,

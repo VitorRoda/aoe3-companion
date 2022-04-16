@@ -1,5 +1,5 @@
-import React, { useCallback, useState } from 'react'
-import { Link as RouterLink, Route } from "react-router-dom";
+import React, { useState } from 'react'
+import { Link as RouterLink } from "react-router-dom";
 import { styled } from '@mui/material/styles';
 import AppBarMui from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
@@ -23,9 +23,9 @@ export const Header = React.memo(({ selectedCiv, civs, onSelectCiv }) => {
         return langEsp
     })
 
-    const handleSelectCiv = useCallback((event) => {
+    const handleSelectCiv = (event) => {
         onSelectCiv(event)
-    }, [])
+    }
 
     const handleSwitchEsp = (event) => {
         const value = event.target.checked
@@ -55,15 +55,14 @@ export const Header = React.memo(({ selectedCiv, civs, onSelectCiv }) => {
                         <Link component={RouterLink} to='/'>
                             <img className='aoe3de-logo' src='/assets/aoe3_de_logo.png' alt="logo aoe3de"></img>
                         </Link>
-
                     </Box>
 
                     <Box variation="row" sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-                        <Link variant='subtitle1' component={RouterLink} to='/' px={1}>{translate('49151')}</Link>
-                        <Link variant='subtitle1' component={RouterLink} to='/units' px={1}>{translate('70749')}</Link>
+                        <Link variant='subtitle1' underline='none' component={RouterLink} to='/' px={1}>{translate('49151')}</Link>
+                        <Link variant='subtitle1' underline='none' component={RouterLink} to='/units' px={1}>{translate('70749')}</Link>
                     </Box>
 
-                    <Box sx={{ py: 1, flexGrow: 1 }}>
+                    <Box sx={{ pt: 2, pb: 1,  flexGrow: 1 }}>
                         <CivSelector selectedCiv={selectedCiv} civs={civs} onSelectCiv={handleSelectCiv} />
                     </Box>
 

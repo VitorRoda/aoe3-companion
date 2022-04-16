@@ -1,68 +1,80 @@
 import React from 'react'
-import exactMath from "exact-math";
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
-import Stack from '@mui/material/Stack';
-import Chip from '@mui/material/Chip';
+import { UnitActionTransl } from './UnitActionTransl';
+import { Box } from '@mui/material';
+import Divider from '@mui/material/Divider';
+import { StatIcon } from './StatIcon';
+import { RofStat } from './RofStat';
+import { StatBonus } from './StatBonus';
 
-const mapValueDamage = {
+
+const mapValueDamageType = {
     'Ranged': 1,
     'Hand': 2,
     'Siege': 3
 }
 
-export const AdvancedStats = ({ unitname, protoaction }) => {
-    return (
-        <TableContainer>
-            <Table size="small">
-                <TableHead>
-                    <TableRow>
-                        <TableCell>Stat</TableCell>
-                        <TableCell align="right">Damage</TableCell>
-                        <TableCell align="right">ROF</TableCell>
-                        <TableCell align="right">Range</TableCell>
-                        <TableCell align="right">Area</TableCell>
-                        <TableCell>Bonus</TableCell>
-                    </TableRow>
-                </TableHead>
-                <TableBody>
-                    {protoaction
-                        .filter(item => item?.name?.includes('Attack'))
-                        .sort((a, b) => {
-                            const [damageTypeA] = a?.damagetype
-                            const [damageTypeB] = b?.damagetype
-                            return mapValueDamage[damageTypeA] - mapValueDamage[damageTypeB]
-                        })
-                        .map((row) => (
-                            <TableRow key={row?.name}>
-                                <TableCell align='left'>{`${row.name}`} <br /> {row?.damagetype?.[0]}</TableCell>
-                                <TableCell align="right">{row?.damage ? exactMath.round(row?.damage, -2) : '---'}</TableCell>
-                                <TableCell align="right">{row?.rof?.[0] ? exactMath.round(row?.rof?.[0], -2) : '---'}</TableCell>
-                                <TableCell align="right">{row?.maxrange ? exactMath.round(row?.maxrange, -2) : '---'}</TableCell>
-                                <TableCell align="right">{row?.damagearea?.[0] ? exactMath.round(row?.damagearea?.[0], -2) : '---'}</TableCell>
-                                <TableCell>{
-                                    row?.damagebonus && row.damagebonus.map(bonus => {
-                                        const label = `x${exactMath.round(bonus?.__text, -2)} ${bonus?._type?.replace('Abstract', '')}`
+const mapValueDamageMode = {
+    'Volley': 1,
+    'Stagger': 2,
+    'Melee': 3,
+    'Cover': 4,
+    'Defend': 5
+}
 
-                                        return (
-                                        <Stack direction={'row'} spacing={1} key={`bonus-${bonus?._type}`}>
-                                            <Chip label={label} sx={{ mb: 0.5 }} />
-                                        </Stack>
-                                        )
-                                    })
-                                }</TableCell>
-                            </TableRow>
-                        ))}
-                </TableBody>
-            </Table>
-        </TableContainer>
-    )
+const getValueByDamageMode = (value) => {
+    const mode = Object.keys(mapValueDamageMode).find((mode) => value.includes(mode))
+    if (mode) return mapValueDamageMode[mode]
+    return 99
+}
+
+export const AdvancedStats = ({ tactics, protoaction }) => {
+    return (<Box>{
+        protoaction
+            .filter(item => item?.name?.includes('Attack'))
+            .sort((a, b) => {
+                const [damageTypeA] = a?.damagetype
+                const [damageTypeB] = b?.damagetype
+
+                if (mapValueDamageType[damageTypeA] > mapValueDamageType[damageTypeB]) return 1
+                if (mapValueDamageType[damageTypeA] < mapValueDamageType[damageTypeB]) return -1
+
+                return getValueByDamageMode(a?.name) - getValueByDamageMode(b?.name)
+            })
+            .map((row) => {
+                const [damageType] = row?.damagetype || []
+                const [rof] = row?.rof
+                const [damagearea] = row?.damagearea || []
+                return (
+                    <Box key={row?.name}>
+                        <UnitActionTransl tacticskey={tactics} name={row?.name}></UnitActionTransl>
+
+                        <Box sx={{
+                            display: 'flex',
+                            flexWrap: 'wrap',
+                            alignItems: 'end',
+                            '&>:not(:last-child)': {
+                                mr: 1,
+                            }
+                        }}>
+                            {row?.damage && <StatIcon type={damageType} value={row?.damage} />}
+                            {rof && <RofStat rof={rof} />}
+                            {row?.maxrange && <StatIcon type="range" value={row?.maxrange} />}
+                            {damagearea && <StatIcon type="area" value={damagearea} />}
+                            {row?.damagebonus && row.damagebonus.map(bonus => 
+                                <StatBonus bonus={bonus} key={`bonus-${bonus?._type}`} />
+                            )}
+                        </Box>
+                    </Box>
+                )
+            }).reduce((prev, curr) => [
+                prev,
+                <Divider sx={{ my: 1 }} key={`divider-${prev.key}`} />,
+                curr
+            ])
+    }</Box>)
 }
 
 AdvancedStats.defaultProps = {
-    protoaction: []
+    protoaction: [],
+    tactics: ''
 }

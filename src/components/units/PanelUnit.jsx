@@ -7,13 +7,13 @@ import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
 import Typography from '@mui/material/Typography';
 import Avatar from '@mui/material/Avatar';
-import Dialog from '@mui/material/Dialog';
-import DialogTitle from '@mui/material/DialogTitle';
+import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
 import FeedIcon from '@mui/icons-material/Feed';
 import { CostsUnit } from "./CostsUnit";
 import { MainStats } from "./MainStats";
 import { AdvancedStats } from "./AdvancedStats";
+import { Container, Grid } from '@mui/material';
 
 const descUnitStyle = {
     backgroundImage: 'linear-gradient(to right, #EBC837, #FFEB8B)',
@@ -42,28 +42,19 @@ export const PanelUnit = ({ unit }) => {
                 title={translate(unit.info.displaynameid)}
                 titleTypographyProps={{
                     fontFamily: 'TrajanPro',
-                    fontSize: '16px',
+                    fontSize: '15px',
                     fontWeight: 'bold',
                 }}
                 avatar={
                     <Avatar
                         src={unit.info.portraiticon}
                         alt={translate(unit.info.displaynameid)}
-                        sx={{ width: 60, height: 60, fontSize: 12, boxShadow: '0 0 8px #f2f2f2' }}
+                        sx={{ width: 55, height: 55, boxShadow: '0 0 8px #f2f2f2' }}
                         variant="rounded"
                     />
                 }
                 action={<CostsUnit costs={unit?.info?.cost} />}
             />
-
-            <Box px={2} mb={1}>
-                <MainStats
-                    initialhitpoints={unit?.info?.initialhitpoints}
-                    maxvelocity={unit?.info?.maxvelocity}
-                    populationcount={unit?.info?.populationcount}
-                    armor={unit?.info?.armor}
-                />
-            </Box>
 
             <Box sx={descUnitStyle}>
                 <CardContent sx={{ position: 'relative' }}>
@@ -93,18 +84,36 @@ export const PanelUnit = ({ unit }) => {
                     <FeedIcon />
                 </IconButton>
 
-                <Dialog open={openAdvancedInfo} onClose={handleClose} fullWidth maxWidth='md'>
-                    <DialogTitle sx={{ display: 'flex', alignItems: 'center' }}>
-                        <Avatar
-                            src={unit.info.portraiticon}
-                            alt={translate(unit.info.displaynameid)}
-                            sx={{ width: 60, height: 60, fontSize: 12, mr: 1, boxShadow: '0 0 8px #333333' }}
-                            variant="rounded"
-                        />
-                        {translate(unit.info.displaynameid)}
-                    </DialogTitle>
-                    <AdvancedStats protoaction={unit?.info?.protoaction} />
-                </Dialog>
+                <Drawer anchor='right' open={openAdvancedInfo} onClose={handleClose} 
+                PaperProps={{
+                    sx: {
+                        backgroundImage: 'linear-gradient(45deg, #181c29, #394766 50%, #181c29)',
+                    }
+                }}>
+                    <Container maxWidth="md" sx={{ py: 3 }}>
+                        <Typography variant='h6' mb={1}>{translate(unit.info.displaynameid)}</Typography>
+
+                        <Box display="flex">
+                            <Box pr={2}>
+                                <Avatar
+                                    src={unit.info.portraiticon}
+                                    alt={translate(unit.info.displaynameid)}
+                                    sx={{ width: 170, height: 170, boxShadow: '0 0 8px #333333', mb: 1 }}
+                                    variant="rounded"
+                                />
+                                <MainStats
+                                    initialhitpoints={unit?.info?.initialhitpoints}
+                                    maxvelocity={unit?.info?.maxvelocity}
+                                    populationcount={unit?.info?.populationcount}
+                                    armor={unit?.info?.armor}
+                                />
+                            </Box>
+                            <Box>
+                                <AdvancedStats tactics={unit?.info?.tactics} protoaction={unit?.info?.protoaction} />
+                            </Box>
+                        </Box>
+                    </Container>
+                </Drawer>
             </CardActions>
         </Card >
 

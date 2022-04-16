@@ -28,7 +28,7 @@ export const DeckBuilder = ({ civ, onClickRandomCiv }) => {
         } else {
             dispatchCards({ type: 'reset' })
         }
-    }, [civ])
+    }, [civ, dispatchCards, dispatchSelectedCards])
 
     useEffect(() => {
         maxCardsRef.current = maxCards
@@ -50,7 +50,7 @@ export const DeckBuilder = ({ civ, onClickRandomCiv }) => {
         if ((!card.isSelected && ageCount < 10 && total < maxCardsRef.current) || card.isSelected) {
             dispatchCards({ type: 'toggleSelected', id, ageKey })
         }
-    }, [])
+    }, [dispatchCards, dispatchSelectedCards])
 
     const handleOnClickDeckCard = (card) => {
         const { id, ageKey } = card
