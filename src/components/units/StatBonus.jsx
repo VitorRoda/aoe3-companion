@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { getBonusByType } from "../../services/damagebonuses.service";
+import { translate } from '../../utils/translator';
 import { StatIcon } from './StatIcon';
 
 export const StatBonus = ({ bonus }) => {
@@ -17,6 +18,7 @@ export const StatBonus = ({ bonus }) => {
             type={bonus?._type}
             value={bonus?.__text}
             bonus={true}
+            title={translate(data?.displaynameid)}
         />
     )
 }

@@ -15,9 +15,9 @@ const stylesCostNumber = {
     borderRadius: '4px'
 }
 
-export const CostsUnit = ({ costs, unitName }) => {
+export const CostsUnit = ({ costs, unitName, sx }) => {
     return (
-        <Stack alignItems="flex-end" spacing={0.5}>
+        <Stack alignItems="flex-end" spacing={0.5} sx={sx}>
             {costs.map(({ _resourcetype, __text }, idx) => (
                 <Box sx={{ position: 'relative', height: 22 }} key={`unit-cost-${unitName}-${_resourcetype}`}>
                     <Box sx={stylesCostNumber}>{parseInt(__text)}</Box>
