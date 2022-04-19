@@ -10,22 +10,27 @@ import GithubIcon from '@mui/icons-material/GitHub'
 import { useTheme } from '@mui/material/styles'
 import { Container } from '@mui/material';
 import { MobileMenu } from "./MobileMenu";
-import { LangSwitcher } from "./LangSwitcher";
+import { LangMenu } from "./LangSwitcher";
 import { translate } from '../utils/translator';
+import { DEFAULT_LANG } from '../utils/languageSettings'
 // import { DonateButton } from "./DonateButton";
 
 export const Header = React.memo(() => {
     const theme = useTheme()
-    const [langEsp, setLangEsp] = useState(() => {
-        const langEsp = JSON.parse(localStorage.getItem('langEsp'))
-        if (langEsp === null) return true
-        return langEsp
+
+    const [lang, setLang] = useState(() => {
+        const lang = localStorage.getItem('lang')
+        if (lang === null) return DEFAULT_LANG.code
+        return lang
     })
 
-    const handleSwitchEsp = (event) => {
-        const value = event.target.checked
-        setLangEsp(event.target.checked);
-        localStorage.setItem('langEsp', JSON.stringify(value));
+    const handleSelectCiv = (event) => {
+        onSelectCiv(event)
+    }
+
+    const handleChangeLang = (event) => {
+        setLang(event)
+        localStorage.setItem('lang', event)
         window.location.reload()
     }
 
@@ -58,7 +63,7 @@ export const Header = React.memo(() => {
                     </Box>
 
                     <Box sx={{ display: 'flex', alignItems: 'center', [theme.breakpoints.down('md')]: { display: 'none' } }}>
-                        <LangSwitcher langEsp={langEsp} onChangeLang={handleSwitchEsp} />
+                        <LangMenu lang={lang} onChangeLang={handleChangeLang} />
 
                         <IconButton size="large" onClick={goToGithub} color="inherit">
                             <GithubIcon />
@@ -67,7 +72,7 @@ export const Header = React.memo(() => {
                         {/* <DonateButton /> */}
                     </Box>
 
-                    <MobileMenu edge="end" langEsp={langEsp} onChangeLang={handleSwitchEsp}></MobileMenu>
+                    <MobileMenu edge="end" lang={lang} onChangeLang={handleChangeLang} />
                 </Toolbar>
             </Container>
         </AppBar>
