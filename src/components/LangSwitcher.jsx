@@ -92,8 +92,8 @@ export const LangMenu = ({ lang, onChangeLang }) => {
                     horizontal: 'left',
                 }}
             >
-                {DISPLAY_TEXT_LIST.map(({id, text}) => (
-                    <MenuItem key={id} onClick={handleSelectLang(id)}>{`${text}`}</MenuItem>
+                {DISPLAY_TEXT_LIST.map(({ code, text }) => (
+                    <MenuItem key={code} onClick={handleSelectLang(code)}>{`${text}`}</MenuItem>
                 ))}
             </Menu>
         </div>
@@ -126,8 +126,8 @@ export const MobileLangDrawer = ({ enable, onChangeLang, onToggle }) => {
                 onOpen={toggleDrawer(true)}
             >
                 <List>
-                    {DISPLAY_TEXT_LIST.map(({id, text}) => (
-                        <ListItem button key={id} onClick={handleSelectLang(id)}>
+                    {DISPLAY_TEXT_LIST.map(({ code, text }) => (
+                        <ListItem button key={code} onClick={handleSelectLang(code)}>
                             <ListItemText primary={text} />
                         </ListItem>
                     ))}

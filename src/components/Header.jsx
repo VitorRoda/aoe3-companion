@@ -13,6 +13,7 @@ import { CivSelector } from "./CivSelector";
 import { MobileMenu } from "./MobileMenu";
 import { LangMenu } from "./LangSwitcher";
 import { translate } from '../utils/translator';
+import { DEFAULT_LANG } from '../utils/languageSettings'
 // import { DonateButton } from "./DonateButton";
 
 export const Header = React.memo(({ selectedCiv, civs, onSelectCiv }) => {
@@ -20,7 +21,7 @@ export const Header = React.memo(({ selectedCiv, civs, onSelectCiv }) => {
 
     const [lang, setLang] = useState(() => {
         const lang = localStorage.getItem('lang')
-        if (lang === null) return 'es'
+        if (lang === null) return DEFAULT_LANG.code
         return lang
     })
 

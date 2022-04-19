@@ -4,6 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+// import { DEFAULT_LANG } from "./utils/languageSettings";
 
 async function  loadTranslations() {
   const langConfig = JSON.parse(localStorage.getItem('langEsp'))
@@ -17,7 +18,7 @@ async function  loadTranslations() {
 
   // default language
   // if (lang === null) {
-  //   lang = 'es'
+  //   lang = DEFAULT_LANG.code
   // }
 
   const data = await import(`./data/localization/stringtabley_${lang}.json`)

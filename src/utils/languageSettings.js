@@ -1,17 +1,17 @@
 export const DEFAULT_LANG = {
-  id: 'es',
+  code: 'es',
   text: 'ESP'
 }
 
 export const DISPLAY_TEXT_LIST = [
-  {id: 'es', text: 'ESP'},
-  {id: 'en', text: 'ENG'},
-  {id: 'zh', text: '繁體中文'}
+  {code: 'es', text: 'ESP'},
+  {code: 'en', text: 'ENG'},
+  {code: 'zh', text: '繁體中文'}
 ]
 
 export const langToText = (lang) => {
   if (lang) {
-      const { text } = DISPLAY_TEXT_LIST.find(({ id }) => id === lang)
+      const { text } = DISPLAY_TEXT_LIST.find(({ code }) => code === lang)
       return text
   }
   return DEFAULT_LANG.text
