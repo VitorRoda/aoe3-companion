@@ -15,6 +15,7 @@ async function  loadTranslations() {
 
   // let lang = localStorage.getItem('lang')
 
+  // default language
   // if (lang === null) {
   //   lang = 'es'
   // }

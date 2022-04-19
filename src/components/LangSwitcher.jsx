@@ -7,6 +7,10 @@ import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import LanguageIcon from '@mui/icons-material/Language';
+import SwipeableDrawer from '@mui/material/SwipeableDrawer';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemText from '@mui/material/ListItemText';
 
 const formControlLabelStyles = { 
     m: 0,
@@ -15,6 +19,12 @@ const formControlLabelStyles = {
         position: 'relative', top: 6, fontSize: 11 
     } 
 }
+
+const languageMapArray = [
+    {id: 'es', text: 'ESP'},
+    {id: 'en', text: 'ENG'},
+    {id: 'zh', text: 'Chinese(Traditional)'}
+]
 
 export const LangSwitcher = ({ langEsp, onChangeLang }) => {
     const baseIcoPath = '/resources/images/icons/flags/Flag_'
@@ -55,9 +65,17 @@ export const LangMenu = ({ lang, onChangeLang }) => {
         setAnchorEl(null)
     }
 
-    const handleSelectLang = (event) => {
+    const handleSelectLang = (event) => () => {
         setAnchorEl(null)
         onChangeLang(event)
+    }
+
+    const langToText = () => {
+        if (lang) {
+            const { text } = languageMapArray.find(({ id }) => id === lang)
+            return text
+        }
+        return 'ESP'
     }
 
     return (
@@ -70,7 +88,7 @@ export const LangMenu = ({ lang, onChangeLang }) => {
                 startIcon={<LanguageIcon />}
                 onClick={handleClick}
             >
-                {`${lang}`}
+                {langToText()}
             </Button>
             <Menu
                 id="demo-positioned-menu"
@@ -87,10 +105,61 @@ export const LangMenu = ({ lang, onChangeLang }) => {
                     horizontal: 'left',
                 }}
             >
-                <MenuItem onClick={() => handleSelectLang('es')}>ESP</MenuItem>
-                <MenuItem onClick={() => handleSelectLang('en')}>ENG</MenuItem>
-                <MenuItem onClick={() => handleSelectLang('zh')}>ZH</MenuItem>
+                {languageMapArray.map(({id, text}) => (
+                    <MenuItem key={id} onClick={handleSelectLang(id)}>{`${text}`}</MenuItem>
+                ))}
             </Menu>
+        </div>
+    )
+}
+
+export const MobileLangDrawer = ({ lang, onChangeLang }) => {
+    const [enable, setEnable] = useState(false)
+
+    const toggleDrawer = (open) => (event) => {
+        if (
+            event &&
+            event.type === 'keydown' &&
+            (event.key === 'Tab' || event.key === 'Shift')
+        ) {
+            return;
+        }
+    
+        setEnable(open)
+    }
+
+    const handleSelectLang = (event) => () => {
+        setEnable(false)
+        onChangeLang(event)
+    }
+
+    const langToText = () => {
+        if (lang) {
+            const { text } = languageMapArray.find(({ id }) => id === lang)
+            return text
+        }
+        return 'ESP'
+    }
+
+    return (
+        <div>
+            <Button startIcon={<LanguageIcon />} onClick={toggleDrawer(true)}>
+                {langToText()}
+            </Button>
+            <SwipeableDrawer
+                anchor='bottom'
+                open={enable}
+                onClose={toggleDrawer(false)}
+                onOpen={toggleDrawer(true)}
+            >
+                <List>
+                    {languageMapArray.map(({id, text}) => (
+                    <ListItem button key={id} onClick={handleSelectLang(id)}>
+                        <ListItemText primary={text} />
+                    </ListItem>
+                    ))}
+                </List>
+            </SwipeableDrawer>
         </div>
     )
 }

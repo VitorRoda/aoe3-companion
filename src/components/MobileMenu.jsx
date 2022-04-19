@@ -8,12 +8,12 @@ import { Link as RouterLink } from "react-router-dom";
 import Link from '@mui/material/Link';
 import { useTheme } from '@mui/material/styles'
 import GithubIcon from '@mui/icons-material/GitHub'
-import { LangSwitcher } from "./LangSwitcher";
+import { MobileLangDrawer } from "./LangSwitcher";
 import { translate } from '../utils/translator';
 import { Typography } from '@mui/material';
 // import { DonateButton } from "./DonateButton";
 
-export const MobileMenu = ({ langEsp, onChangeLang }) => {
+export const MobileMenu = ({ lang, onChangeLang }) => {
     const [anchorElNav, setAnchorElNav] = useState(null);
     const theme = useTheme()
 
@@ -25,7 +25,7 @@ export const MobileMenu = ({ langEsp, onChangeLang }) => {
         setAnchorElNav(null);
     };
 
-    const handleSwitchEsp = (event) => {
+    const handleChangeLang = (event) => {
         onChangeLang(event)
     }
 
@@ -66,7 +66,7 @@ export const MobileMenu = ({ langEsp, onChangeLang }) => {
                 sx={{ display: { xs: 'block', md: 'none' } }}
             >
                 <MenuItem onClick={handleCloseNavMenu}>
-                    <LangSwitcher langEsp={langEsp} onChangeLang={handleSwitchEsp} />
+                    <MobileLangDrawer lang={lang} onChangeLang={handleChangeLang} />
                 </MenuItem>
                 <MenuItem>
                     <Link variant='subtitle2' component={RouterLink} underline="none" to='/'>
