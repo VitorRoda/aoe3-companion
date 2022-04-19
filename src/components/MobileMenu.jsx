@@ -11,10 +11,15 @@ import GithubIcon from '@mui/icons-material/GitHub'
 import { MobileLangDrawer } from "./LangSwitcher";
 import { translate } from '../utils/translator';
 import { Typography } from '@mui/material';
+import LanguageIcon from '@mui/icons-material/Language';
+import { langToText } from "../utils/languageSettings";
+import ListItemText from '@mui/material/ListItemText';
+import ListItemIcon from '@mui/material/ListItemIcon';
 // import { DonateButton } from "./DonateButton";
 
 export const MobileMenu = ({ lang, onChangeLang }) => {
     const [anchorElNav, setAnchorElNav] = useState(null);
+    const [openLangDrawer, setOpenLangDrawer] = useState(false)
     const theme = useTheme()
 
     const handleOpenNavMenu = (event) => {
@@ -25,7 +30,13 @@ export const MobileMenu = ({ lang, onChangeLang }) => {
         setAnchorElNav(null);
     };
 
+    const handleOpenLangDrawer = () => {
+        setAnchorElNav(null)
+        setOpenLangDrawer(true)
+    }
+
     const handleChangeLang = (event) => {
+        setOpenLangDrawer(false)
         onChangeLang(event)
     }
 
@@ -65,8 +76,16 @@ export const MobileMenu = ({ lang, onChangeLang }) => {
                 onClose={handleCloseNavMenu}
                 sx={{ display: { xs: 'block', md: 'none' } }}
             >
-                <MenuItem onClick={handleCloseNavMenu}>
-                    <MobileLangDrawer lang={lang} onChangeLang={handleChangeLang} />
+                <MenuItem onClick={handleOpenLangDrawer}>
+                    <ListItemIcon>
+                        <LanguageIcon fontSize="small" />
+                    </ListItemIcon>
+                    <ListItemText>{langToText(lang)}</ListItemText>
+                    <MobileLangDrawer
+                        enable={openLangDrawer}
+                        onChangeLang={handleChangeLang}
+                        onToggle={setOpenLangDrawer}
+                    />
                 </MenuItem>
                 <MenuItem>
                     <Link variant='subtitle2' component={RouterLink} underline="none" to='/'>
