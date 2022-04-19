@@ -27,7 +27,7 @@ export const CivSelector = React.memo(({ selectedCiv, civs, onSelectCiv }) => {
 
   return (
     <div className='civ-selector'>
-      <FormControl sx={{ width: 220 }}>
+      <FormControl sx={{ width: 245 }}>
         <InputLabel id="label-civ" sx={{ fontFamily: 'TrajanPro' }}>{translate('18682')}</InputLabel>
         <Select labelId="label-civ" 
           label={translate('18682')} 

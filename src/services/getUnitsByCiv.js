@@ -1,5 +1,5 @@
 import { getTechInfo } from "../utils/getTechInfo";
-import { getProtoInfo } from "./getProtoInfo"
+import { getProtoInfo } from "./proto.service"
 import { blackListUnitTypes } from "../constants";
 
 export function getUnitsByCiv(civ) {

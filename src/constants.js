@@ -59,4 +59,71 @@ export const blackListUnitTypes = [
     'Hero',
     'AbstractPet',
     'AbstractBannerArmy',
+    'Guardian',
+    'EmbellishmentClass'
+]
+
+export const blacklistFlags = [
+    'NotPlayerPlaceable',
+    'NonAutoFormedUnit'
+]
+
+export const unitTypes = [
+    {
+        id: 'AbstractRangedInfantry',
+        nameId: '42032'
+    },
+    {
+        id: 'AbstractHeavyInfantry',
+        nameId: '42017'
+    },
+    {
+        id: 'AbstractHandInfantry',
+        nameId: '42034'
+    },
+    {
+        id: 'AbstractLightInfantry',
+        nameId: '42089'
+    },
+    
+    {
+        id: 'AbstractRangedShockInfantry',
+        nameId: '44138'
+    },
+    {
+        id: 'AbstractCavalry',
+        nameId: '38214',
+    },
+    {
+        id: 'AbstractHeavyCavalry',
+        nameId: '42088',
+    },
+    {
+        id: 'AbstractLightCavalry',
+        nameId: '42018'
+    },
+    {
+        id: 'AbstractArtillery',
+        nameId: '42094'
+    },
+    {
+        id: 'AbstractNativeWarrior',
+        nameId: '42022'
+    },
+    {
+        id: 'Mercenary',
+        nameId: '42020'
+    },
+    {
+        id: 'MercType5',
+        nameId: '101599'
+    },
+    {
+        id: 'AbstractOutlaw',
+        nameId: '110185'
+    },
+    {
+        id: 'AbstractWarShip',
+        nameId: '42036'
+    }
 ]

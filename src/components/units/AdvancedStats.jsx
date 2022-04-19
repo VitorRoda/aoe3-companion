@@ -48,13 +48,16 @@ export const AdvancedStats = ({ tactics, protoaction }) => {
 
                 return getValueByDamageMode(a?.name) - getValueByDamageMode(b?.name)
             })
-            .map((row) => {
-                const [damageType] = row?.damagetype || []
-                const [rof] = row?.rof
-                const [damagearea] = row?.damagearea || []
+            .map((action) => {
+                const [damageType] = action?.damagetype || []
+                let [rof] = action?.rof || []
+                const [damagearea] = action?.damagearea || []
+
+                if (rof?.__text) { rof = rof?.__text }
+
                 return (
-                    <Box key={row?.name}>
-                        <UnitActionTransl tacticskey={tactics} name={row?.name}></UnitActionTransl>
+                    <Box key={action?.name}>
+                        <UnitActionTransl tacticskey={tactics} name={action?.name}></UnitActionTransl>
 
                         <Box sx={{
                             display: 'flex',
@@ -64,10 +67,10 @@ export const AdvancedStats = ({ tactics, protoaction }) => {
                                 mr: 1,
                             }
                         }}>
-                            {row?.damage &&
+                            {action?.damage &&
                                 <StatIcon
                                     type={damageType}
-                                    value={row?.damage}
+                                    value={action?.damage}
                                     icon={`stat_icon_${damageType === 'Hand' ? 'attack' : damageType.toLowerCase()}`}
                                     title={translate(mapTranslDamageType[damageType])} />
                             }
@@ -77,10 +80,10 @@ export const AdvancedStats = ({ tactics, protoaction }) => {
                                 icon={'stat_large_rof'}
                                 title={replace_n(translate('91816'), exactMath.round(rof, -2))} />
                             }
-                            {row?.maxrange && <StatIcon type="range" icon={'stat_icon_range'} value={row?.maxrange} />}
+                            {action?.maxrange && <StatIcon type="range" icon={'stat_icon_range'} value={action?.maxrange} />}
                             {damagearea && <StatIcon type="area" icon={'stat_icon_area'} value={damagearea} />}
-                            {row?.damagebonus && row.damagebonus.map(bonus =>
-                                <StatBonus bonus={bonus} key={`bonus-${bonus?._type}`} />
+                            {action?.damagebonus && action.damagebonus.map((bonus, idx) =>
+                                <StatBonus bonus={bonus} key={`bonus-${bonus?._type}-${idx}`} />
                             )}
                         </Box>
                     </Box>
@@ -89,7 +92,7 @@ export const AdvancedStats = ({ tactics, protoaction }) => {
                 prev,
                 <Divider sx={{ my: 1 }} key={`divider-${prev.key}`} />,
                 curr
-            ])
+            ], [])
     }</Box>)
 }
 

@@ -7,8 +7,12 @@ export const UnitActionTransl = ({ tacticskey, name }) => {
     const [tacticTransl, setTacticTransl] = useState('')
 
     useEffect(() => {
-        getActionTranslByName(tacticskey, name).then(value => setTacticTransl(value))
-    })
+        if (tacticskey) {
+            getActionTranslByName(tacticskey, name).then(value => setTacticTransl(value))
+        } else {
+            setTacticTransl(name)
+        }
+    }, [tacticskey, name])
     return (
         <Typography variant='subtitle2' color='primary'>{tacticTransl}</Typography>
     )

@@ -1,7 +1,6 @@
 import './App.css'
-import { useCallback, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Routes, Route } from "react-router-dom";
-import uniqueRandomRange from "unique-random-range";
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from "@mui/material/styles"
@@ -40,7 +39,6 @@ const theme = createTheme({
 
 function App() {
   const [civs, setCivs] = useState([])
-  const [civ, setCiv] = useState('')
 
   useEffect(() => {
     import('./data/civs.json').then(({ civ }) => {
@@ -48,24 +46,15 @@ function App() {
     })
   }, [])
 
-  const handleSelectCiv = useCallback((value) => {
-    setCiv(() => value)
-  }, [])
-
-  const handleRandomCiv = () => {
-    const randomIdx = uniqueRandomRange(0, civs.length)()
-    setCiv(civs[randomIdx])
-  }
-
   return (
     <ThemeProvider theme={theme}>
-      <Box sx={{ pb: '64px' }}>
-        <Header selectedCiv={civ} civs={civs} onSelectCiv={handleSelectCiv}></Header>
+      <Box sx={{ pb: '60px' }}>
+        <Header></Header>
 
         <Container sx={{ py: 4 }}>
           <Routes>
-            <Route path='/' element={<DeckBuilder civ={civ} onClickRandomCiv={handleRandomCiv} />} />
-            <Route path='/units' element={<UnitsInfo civ={civ} />} />
+            <Route path='/' element={<DeckBuilder civs={civs} />} />
+            <Route path='/units' element={<UnitsInfo />} />
           </Routes>
         </Container>
 

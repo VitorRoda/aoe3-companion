@@ -18,6 +18,9 @@
    "numpropunlocksearned": "0",
    "ambientsounds": "homecity\\spanishambientsounds.xml",
    "xsai": "generic_city",
+   "heroprotounits": {
+      "protounit": "Explorer"
+   },
    "coffers": {
       "current": {
          "food": "0",
@@ -270,8 +273,22 @@
             "maxcount": "1",
             "level": "40",
             "prereqtech": "-1",
-            "age": "1",
-            "displayunitcount": "1"
+            "age": "1"
+         },
+         {
+            "name": "DEHCMarvelousYear",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "2"
+         },
+         {
+            "name": "DEHCNewSpainViceroyalty",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "2",
+            "displayunitcount": "2"
          },
          {
             "name": "HCCheapBarracksTeam",
@@ -402,7 +419,7 @@
             "level": "10",
             "prereqtech": "HCShipRodeleros2",
             "age": "3",
-            "displayunitcount": "13",
+            "displayunitcount": "16",
             "infiniteinlastage": "1"
          },
          {
@@ -411,7 +428,7 @@
             "level": "10",
             "prereqtech": "HCShipRodeleros2",
             "age": "3",
-            "displayunitcount": "10"
+            "displayunitcount": "14"
          },
          {
             "name": "HCShipRodeleros4",
@@ -489,15 +506,6 @@
             "displayunitcount": "4"
          },
          {
-            "name": "HCShipLancers2",
-            "maxcount": "1",
-            "level": "0",
-            "prereqtech": "HCShipLancers1",
-            "age": "3",
-            "displayunitcount": "6",
-            "infiniteinlastage": "1"
-         },
-         {
             "name": "HCShipLancers3",
             "maxcount": "1",
             "level": "10",
@@ -508,7 +516,7 @@
          },
          {
             "name": "HCShipLancers4",
-            "maxcount": "1",
+            "maxcount": "-1",
             "level": "10",
             "prereqtech": "HCShipLancers3",
             "age": "3",
@@ -608,6 +616,45 @@
             "prereqtech": "HCShipCannons1",
             "age": "3",
             "displayunitcount": "2"
+         },
+         {
+            "name": "DEHCShipFalconets1Team",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "2",
+            "displayunitcount": "1",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "DEHCShipCannons1Team",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "3",
+            "displayunitcount": "1",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "DEHCPeninsularGuerrillas",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "3"
+         },
+         {
+            "name": "DEHCReconquista",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "1"
+         },
+         {
+            "name": "DEHCLiberationMarch",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "2"
          },
          {
             "name": "HCNativeLore",
@@ -719,20 +766,6 @@
             "age": "1"
          },
          {
-            "name": "HCFencingSchool",
-            "maxcount": "1",
-            "level": "10",
-            "prereqtech": "HCCheapBarracksTeam",
-            "age": "1"
-         },
-         {
-            "name": "HCRidingSchool",
-            "maxcount": "1",
-            "level": "10",
-            "prereqtech": "-1",
-            "age": "1"
-         },
-         {
             "name": "HCRoyalDecreeSpanish",
             "maxcount": "1",
             "level": "10",
@@ -837,6 +870,13 @@
             "age": "3",
             "displayunitcount": "15",
             "infiniteinlastage": "1"
+         },
+         {
+            "name": "DEHCHouseOfTrastamara",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "1"
          },
          {
             "name": "HCFishMarket",
@@ -1220,6 +1260,23 @@
             "age": "2"
          },
          {
+            "name": "DEHCShipNuestrasSenoras",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "3",
+            "infiniteinlastage": "1",
+            "displayunitcount": "2"
+         },
+         {
+            "name": "DEHCShipBattleshipRepeat",
+            "maxcount": "-1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "3",
+            "displayunitcount": "1"
+         },
+         {
             "name": "HCREVShipGatlingGuns",
             "maxcount": "-1",
             "level": "0",
@@ -1438,26 +1495,6 @@
       "deck": [
          {
             "name": "$$71332$$Beginner",
-            "cards": {
-               "card": [
-                  "HCShipSettlers3",
-                  "HCShipFoodCrates1",
-                  "HCShipWoodCrates1",
-                  "HCShipCoinCrates1",
-                  "HCShipPikemen1",
-                  "HCShipRodeleros1",
-                  "HCShipHussars4",
-                  "HCShipLancers3",
-                  "HCXPShipCulverins2",
-                  "HCXPShipRedolerosRepeat",
-                  "HCUnlockFort",
-                  "HCUnlockFactory",
-                  "HCFrontierDefenses"
-               ]
-            }
-         },
-         {
-            "name": "$$71332$$Beginner",
             "default": "",
             "cards": {
                "card": [
@@ -1516,14 +1553,6 @@
                   {
                      "_dbid": "2674",
                      "__text": "HCShipRodeleros5"
-                  },
-                  {
-                     "_dbid": "2038",
-                     "__text": "HCRidingSchool"
-                  },
-                  {
-                     "_dbid": "2037",
-                     "__text": "HCFencingSchool"
                   },
                   {
                      "_dbid": "2234",
@@ -1653,10 +1682,6 @@
                      "__text": "HCShipPikemen4"
                   },
                   {
-                     "_dbid": "2037",
-                     "__text": "HCFencingSchool"
-                  },
-                  {
                      "_dbid": "1957",
                      "__text": "HCAdvancedArsenal"
                   }
@@ -1730,10 +1755,6 @@
                   {
                      "_dbid": "2622",
                      "__text": "HCCaballeros"
-                  },
-                  {
-                     "_dbid": "2038",
-                     "__text": "HCRidingSchool"
                   },
                   {
                      "_dbid": "2099",
@@ -2034,6 +2055,16 @@
                   "_x": "7.0",
                   "_y": "5.0",
                   "__text": "HCShipBalloons"
+               },
+               {
+                  "_x": "7.2",
+                  "_y": "7.0",
+                  "__text": "DEHCMarvelousYear"
+               },
+               {
+                  "_x": "7.2",
+                  "_y": "7.0",
+                  "__text": "DEHCNewSpainViceroyalty"
                }
             ]
          },
@@ -2173,6 +2204,16 @@
                   "_x": "7.0",
                   "_y": "5.0",
                   "__text": "HCShipBalloons"
+               },
+               {
+                  "_x": "7.2",
+                  "_y": "7.0",
+                  "__text": "DEHCMarvelousYear"
+               },
+               {
+                  "_x": "7.2",
+                  "_y": "7.0",
+                  "__text": "DEHCNewSpainViceroyalty"
                }
             ]
          },
@@ -2323,11 +2364,6 @@
                },
                {
                   "_x": "5.7",
-                  "_y": "2.0",
-                  "__text": "HCShipLancers2"
-               },
-               {
-                  "_x": "5.7",
                   "_y": "3.0",
                   "__text": "HCShipLancers3"
                },
@@ -2395,6 +2431,31 @@
                   "_x": "7.2",
                   "_y": "7.0",
                   "__text": "DEHCHandMortar"
+               },
+               {
+                  "_x": "7.2",
+                  "_y": "7.0",
+                  "__text": "DEHCShipFalconets1Team"
+               },
+               {
+                  "_x": "7.2",
+                  "_y": "7.0",
+                  "__text": "DEHCShipCannons1Team"
+               },
+               {
+                  "_x": "7.2",
+                  "_y": "7.0",
+                  "__text": "DEHCPeninsularGuerrillas"
+               },
+               {
+                  "_x": "7.2",
+                  "_y": "7.0",
+                  "__text": "DEHCReconquista"
+               },
+               {
+                  "_x": "7.2",
+                  "_y": "7.0",
+                  "__text": "DEHCLiberationMarch"
                }
             ]
          },
@@ -2527,11 +2588,6 @@
                },
                {
                   "_x": "5.7",
-                  "_y": "2.0",
-                  "__text": "HCShipLancers2"
-               },
-               {
-                  "_x": "5.7",
                   "_y": "3.0",
                   "__text": "HCShipLancers3"
                },
@@ -2599,6 +2655,31 @@
                   "_x": "7.2",
                   "_y": "7.0",
                   "__text": "DEHCHandMortar"
+               },
+               {
+                  "_x": "7.2",
+                  "_y": "7.0",
+                  "__text": "DEHCShipFalconets1Team"
+               },
+               {
+                  "_x": "7.2",
+                  "_y": "7.0",
+                  "__text": "DEHCShipCannons1Team"
+               },
+               {
+                  "_x": "7.2",
+                  "_y": "7.0",
+                  "__text": "DEHCPeninsularGuerrillas"
+               },
+               {
+                  "_x": "7.2",
+                  "_y": "7.0",
+                  "__text": "DEHCReconquista"
+               },
+               {
+                  "_x": "7.2",
+                  "_y": "7.0",
+                  "__text": "DEHCLiberationMarch"
                }
             ]
          },
@@ -2653,16 +2734,6 @@
                   "__text": "HCCheapBarracksTeam"
                },
                {
-                  "_x": "0.9",
-                  "_y": "3.0",
-                  "__text": "HCFencingSchool"
-               },
-               {
-                  "_x": "1.6",
-                  "_y": "3.0",
-                  "__text": "HCRidingSchool"
-               },
-               {
                   "_x": "2.8",
                   "_y": "1.0",
                   "__text": "HCFrontierDefenses"
@@ -2781,6 +2852,11 @@
                   "_x": "7.4",
                   "_y": "5.0",
                   "__text": "HCColonialEstancias"
+               },
+               {
+                  "_x": "7.4",
+                  "_y": "5.0",
+                  "__text": "DEHCHouseOfTrastamara"
                }
             ]
          },
@@ -2817,16 +2893,6 @@
                   "__text": "HCCheapBarracksTeam"
                },
                {
-                  "_x": "0.9",
-                  "_y": "3.0",
-                  "__text": "HCFencingSchool"
-               },
-               {
-                  "_x": "1.6",
-                  "_y": "3.0",
-                  "__text": "HCRidingSchool"
-               },
-               {
                   "_x": "2.8",
                   "_y": "1.0",
                   "__text": "HCFrontierDefenses"
@@ -2945,6 +3011,11 @@
                   "_x": "7.4",
                   "_y": "5.0",
                   "__text": "HCColonialEstancias"
+               },
+               {
+                  "_x": "7.4",
+                  "_y": "5.0",
+                  "__text": "DEHCHouseOfTrastamara"
                }
             ]
          },
@@ -3342,6 +3413,16 @@
                   "_x": "7.2",
                   "_y": "7.0",
                   "__text": "HCXPMayanAlliesRepeat"
+               },
+               {
+                  "_x": "7.2",
+                  "_y": "7.0",
+                  "__text": "DEHCShipNuestrasSenoras"
+               },
+               {
+                  "_x": "7.2",
+                  "_y": "7.0",
+                  "__text": "DEHCShipBattleshipRepeat"
                }
             ]
          },
@@ -3486,6 +3567,16 @@
                   "_x": "7.2",
                   "_y": "7.0",
                   "__text": "HCXPMayanAlliesRepeat"
+               },
+               {
+                  "_x": "7.2",
+                  "_y": "7.0",
+                  "__text": "DEHCShipNuestrasSenoras"
+               },
+               {
+                  "_x": "7.2",
+                  "_y": "7.0",
+                  "__text": "DEHCShipBattleshipRepeat"
                }
             ]
          },
@@ -3834,7 +3925,8 @@
          "Spanish_DockTexture4",
          "Spanish_DockTexture5",
          "Spanish_DockTexture6",
-         "Spanish_DockTexture7"
+         "Spanish_DockTexture7",
+         "ExplorerSpanish"
       ]
    }
 }

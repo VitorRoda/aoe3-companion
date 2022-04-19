@@ -33,7 +33,7 @@ export const PanelUnit = ({ unit }) => {
             backgroundSize: 'cover',
         }}>
             <CardHeader
-                title={translate(unit.info.displaynameid)}
+                title={translate(unit?.displaynameid)}
                 titleTypographyProps={{
                     fontFamily: 'TrajanPro',
                     fontSize: '15px',
@@ -41,25 +41,25 @@ export const PanelUnit = ({ unit }) => {
                 }}
                 avatar={
                     <Avatar
-                        src={unit.info.portraiticon}
-                        alt={translate(unit.info.displaynameid)}
+                        src={unit?.portraiticon}
+                        alt={translate(unit?.displaynameid)}
                         sx={{ width: 55, height: 55, boxShadow: '0 0 8px #f2f2f2' }}
                         variant="rounded"
                     />
                 }
-                action={<CostsUnit costs={unit?.info?.cost} />}
+                action={<CostsUnit costs={unit?.cost} />}
             />
 
             <Box sx={descUnitStyle}>
                 <CardContent sx={{ position: 'relative' }}>
-                    {unit.info.rollovertextid.map((idtext, idx) =>
-                        <Typography variant="body2" color="primary.contrastText" key={`description-${unit.info._name}-${idx}`}>
+                    {unit?.rollovertextid?.map((idtext, idx) =>
+                        <Typography variant="body2" color="primary.contrastText" key={`description-${unit?._name}-${idx}`}>
                             {translate(idtext)}
                         </Typography>
                     )}
 
                     <Box sx={{ height: 32, position: 'absolute', top: -13, right: -5, boxShadow: '0 0 6px 2px #111' }}>
-                        <img loading='lazy' width={32} src={`/assets/icon_age_${+unit.info.allowedage[0] + 1}.png`} alt="" />
+                        <img loading='lazy' width={32} src={`/assets/icon_age_${+unit?.allowedage?.[0] + 1}.png`} alt="" />
                     </Box>
                 </CardContent>
             </Box>
