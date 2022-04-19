@@ -41,7 +41,7 @@ export const PanelUnit = ({ unit }) => {
                 }}
                 avatar={
                     <Avatar
-                        src={unit?.portraiticon}
+                        src={unit?.portraiticon?.toLowerCase()}
                         alt={translate(unit?.displaynameid)}
                         sx={{ width: 55, height: 55, boxShadow: '0 0 8px #f2f2f2' }}
                         variant="rounded"

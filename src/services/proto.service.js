@@ -11,7 +11,7 @@ export function getAllUnitsByTypes(types = []) {
     return protoData.unit.filter(unit => {
         const unitTypes = unit?.unittype || []
         const flags =  unit?.flag || []
-        const blackListName = ['IGC', 'SPC']
+        const blackListName = ['IGC', 'SPC', 'Boneguard', 'Drummer', 'FlagBearerDefault']
 
         if (!unitTypes) return false
         

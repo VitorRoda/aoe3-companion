@@ -12,7 +12,8 @@ const WHITE_LIST_EFFECTS = [
     'FreeHomeCityUnit',
     'WorkRate',
     'WorkRateEspecific',
-    'TrainPoints'
+    'TrainPoints',
+    'MaximumVelocity'
 ]
 
 const NO_ABSTRACT = [
@@ -64,6 +65,9 @@ export function getEffectsTranslations(effects = []) {
             params = [parseInt(effect?._amount), unitText]
         } else if (effect?._subtype === 'TrainPoints') {
             params = [targetText, percentage]
+        } else if (effect?._subtype === 'MaximumVelocity') {
+            console.log(mainText)
+            params = [targetText, percentage]
         } else {
             params = [targetText, effect?._action, unitText, percentage, resourceText]
         }
@@ -83,7 +87,11 @@ function buildSymbolId(effect) {
     }
 
     if (!subType.includes('FreeHomeCity')) {
-        operationText = +effect?.amount > 0 ? 'Increase' : 'Decrease'
+        operationText = (+effect?._amount - 1) > 0 ? 'Increase' : 'Decrease'
+    }
+    if (effect?._subtype === 'MaximumVelocity') {
+        operationText = (+effect?._amount - 1) > 0 ? 'Increase' : 'Decrease'
+        subType = 'SpeedEffect'
     }
 
     return [prefixSymbol, operationText, subType].join('')
