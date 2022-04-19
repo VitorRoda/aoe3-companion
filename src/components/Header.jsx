@@ -9,23 +9,18 @@ import IconButton from '@mui/material/IconButton';
 import GithubIcon from '@mui/icons-material/GitHub'
 import { useTheme } from '@mui/material/styles'
 import { Container } from '@mui/material';
-import { CivSelector } from "./CivSelector";
 import { MobileMenu } from "./MobileMenu";
 import { LangSwitcher } from "./LangSwitcher";
 import { translate } from '../utils/translator';
 // import { DonateButton } from "./DonateButton";
 
-export const Header = React.memo(({ selectedCiv, civs, onSelectCiv }) => {
+export const Header = React.memo(() => {
     const theme = useTheme()
     const [langEsp, setLangEsp] = useState(() => {
         const langEsp = JSON.parse(localStorage.getItem('langEsp'))
         if (langEsp === null) return true
         return langEsp
     })
-
-    const handleSelectCiv = (event) => {
-        onSelectCiv(event)
-    }
 
     const handleSwitchEsp = (event) => {
         const value = event.target.checked
@@ -60,10 +55,6 @@ export const Header = React.memo(({ selectedCiv, civs, onSelectCiv }) => {
                     <Box variation="row" sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                         <Link variant='subtitle1' underline='none' component={RouterLink} to='/' px={1}>{translate('49151')}</Link>
                         <Link variant='subtitle1' underline='none' component={RouterLink} to='/units' px={1}>{translate('70749')}</Link>
-                    </Box>
-
-                    <Box sx={{ pt: 2, pb: 1,  flexGrow: 1 }}>
-                        <CivSelector selectedCiv={selectedCiv} civs={civs} onSelectCiv={handleSelectCiv} />
                     </Box>
 
                     <Box sx={{ display: 'flex', alignItems: 'center', [theme.breakpoints.down('md')]: { display: 'none' } }}>

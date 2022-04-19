@@ -4,8 +4,13 @@ import exactMath from "exact-math";
 import { Stack, Typography } from '@mui/material'
 import Avatar from '@mui/material/Avatar';
 
-export const StatIcon = ({ type, icon, value, title, bonus, src }) => {
-  const iconSize = 16
+const iconSizes = {
+  sm: 16,
+  md: 20
+}
+
+export const StatIcon = ({ value, type, icon, src, title, bonus, size = 'sm', isTime }) => {
+  const iconSize = iconSizes[size]
   const [errorImg, setErrorImg] = useState(false)
   const _src = src || `/resources/images/hud/${icon}.png`
 
@@ -20,7 +25,7 @@ export const StatIcon = ({ type, icon, value, title, bonus, src }) => {
 
   return (
     <Stack direction="row" spacing={0.25} alignItems="center">
-      <Typography variant='body2'>{bonus && 'x'}{exactMath.round(value, -2)}</Typography>
+      <Typography variant='body2'>{bonus && 'x'}{exactMath.round(value, -2)}{isTime && 's'}</Typography>
       {!errorImg && <img width={iconSize} height={iconSize} src={_src} alt={type} title={title || type} onError={fallbackImg} />}
       {errorImg && <Avatar sx={{
         width: iconSize,

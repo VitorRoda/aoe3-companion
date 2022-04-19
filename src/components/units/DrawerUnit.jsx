@@ -25,26 +25,30 @@ export const DrawerUnit = ({ unit, open, onClose }) => {
                 }
             }}>
             <Container maxWidth="md" sx={{ py: 3 }}>
-                <Typography variant='h6' mb={1}>{translate(unit.info.displaynameid)}</Typography>
+                <Typography variant='h6' mb={1}>{translate(unit?.displaynameid)}</Typography>
 
                 <Box display="flex">
-                    <Box pr={2} position="relative">
+                    <Box pr={2} flexBasis={170} position="relative">
                         <Avatar
-                            src={unit.info.portraiticon}
-                            alt={translate(unit.info.displaynameid)}
+                            src={unit?.portraiticon}
+                            alt={translate(unit?.displaynameid)}
                             sx={{ width: 170, height: 170, boxShadow: '0 0 8px #333333', mb: 1 }}
                             variant="rounded"
                         />
-                        <CostsUnit costs={unit?.info?.cost} sx={{ position: 'absolute', left: 0, top: 0 }} />
+                        <CostsUnit costs={unit?.cost} sx={{ position: 'absolute', left: 0, top: 0 }} />
                         <MainStats
-                            initialhitpoints={unit?.info?.initialhitpoints}
-                            maxvelocity={unit?.info?.maxvelocity}
-                            populationcount={unit?.info?.populationcount}
-                            armor={unit?.info?.armor}
+                            initialhitpoints={unit?.initialhitpoints}
+                            maxvelocity={unit?.maxvelocity}
+                            populationcount={unit?.populationcount}
+                            armor={unit?.armor}
+                            buildbounty={unit?.buildbounty}
+                            bounty={unit?.bounty}
+                            trainpoints={unit?.trainpoints}
+                            los={unit?.los}
                         />
                     </Box>
                     <Box>
-                        <AdvancedStats tactics={unit?.info?.tactics} protoaction={unit?.info?.protoaction} />
+                        <AdvancedStats tactics={unit?.tactics} protoaction={unit?.protoaction} />
                     </Box>
                 </Box>
             </Container>

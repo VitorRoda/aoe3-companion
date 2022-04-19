@@ -9,13 +9,25 @@ import { MainDeck } from "../components/MainDeck";
 import { getHomeCityData } from "../services/getHomeCityData";
 import { translate } from '../utils/translator';
 import { randomSumGenerator } from '../utils/randomSum';
+import { CivSelector } from '../components/CivSelector';
+import { Container } from '@mui/material';
 
-export const DeckBuilder = ({ civ, onClickRandomCiv }) => {
+export const DeckBuilder = ({ civs }) => {
+    const [civ, setCiv] = useState('')
     const [maxCards, setMaxCards] = useState(25)
     const [cards, dispatchCards] = useImmerReducer(cardsReducer, cardsInitialState)
     const [selectedCards, dispatchSelectedCards] = useImmerReducer(selectedCardsReducer, selectedCardsInitialState)
     const maxCardsRef = useRef(maxCards)
     const selectedCardsRef = useRef(selectedCards)
+
+    const handleSelectCiv = (value) => {
+        setCiv(() => value)
+    }
+
+    const handleRandomCiv = () => {
+        const randomIdx = uniqueRandomRange(0, civs.length)()
+        setCiv(civs[randomIdx])
+    }
 
     useEffect(() => {
         dispatchSelectedCards({ type: 'reset' })
@@ -68,10 +80,12 @@ export const DeckBuilder = ({ civ, onClickRandomCiv }) => {
             let arr = []
             for (let index = 0; index < count; index++) {
                 const cardIdx = randomIdx()
-                arr.push({ idx: cardIdx, card: {
-                    ...cards[ageKey][cardIdx],
-                    isSelected: false
-                } })
+                arr.push({
+                    idx: cardIdx, card: {
+                        ...cards[ageKey][cardIdx],
+                        isSelected: false
+                    }
+                })
             }
 
             return arr
@@ -80,12 +94,12 @@ export const DeckBuilder = ({ civ, onClickRandomCiv }) => {
         dispatchSelectedCards({ type: 'addBatch', cards: selections })
     }
 
-    const handleRandomCiv = () => {
-        onClickRandomCiv()
-    }
-
     return (
         <Box>
+            <Container disableGutters sx={{ display: 'flex', justifyContent: 'center', mb: 1 }}>
+                <CivSelector selectedCiv={civ} civs={civs} onSelectCiv={handleSelectCiv} />
+            </Container>
+
             {civ &&
                 <DeckBoard
                     civName={translate(civ.displaynameid)}
@@ -98,10 +112,10 @@ export const DeckBuilder = ({ civ, onClickRandomCiv }) => {
             {civ ?
                 <MainDeck cards={cards} onClickCard={handleOnClickCard} /> :
                 <Box sx={{ py: 4, textAlign: 'center' }}>
-                    <img 
-                        className='flag-random' 
+                    <img
+                        className='flag-random'
                         loading='lazy'
-                        src='/resources/images/icons/flags/Flag_Random.png' 
+                        src='/resources/images/icons/flags/Flag_Random.png'
                         alt="flag random"
                         onClick={handleRandomCiv}
                     />
