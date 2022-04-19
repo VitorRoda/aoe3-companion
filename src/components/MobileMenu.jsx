@@ -12,7 +12,7 @@ import { Typography } from '@mui/material';
 import LanguageIcon from '@mui/icons-material/Language';
 import ListItemText from '@mui/material/ListItemText';
 import ListItemIcon from '@mui/material/ListItemIcon';
-import { MobileLangDrawer } from "./LangSwitcher";
+import { MobileLangDrawer } from "./LangMenu";
 import { translate } from '../utils/translator';
 import { langToText } from "../utils/languageSettings";
 // import { DonateButton } from "./DonateButton";

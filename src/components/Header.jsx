@@ -10,7 +10,7 @@ import GithubIcon from '@mui/icons-material/GitHub'
 import { useTheme } from '@mui/material/styles'
 import { Container } from '@mui/material';
 import { MobileMenu } from "./MobileMenu";
-import { LangMenu } from "./LangSwitcher";
+import { LangMenu } from "./LangMenu";
 import { translate } from '../utils/translator';
 import { DEFAULT_LANG } from '../utils/languageSettings'
 // import { DonateButton } from "./DonateButton";
@@ -23,10 +23,6 @@ export const Header = React.memo(() => {
         if (lang === null) return DEFAULT_LANG.code
         return lang
     })
-
-    const handleSelectCiv = (event) => {
-        onSelectCiv(event)
-    }
 
     const handleChangeLang = (event) => {
         setLang(event)

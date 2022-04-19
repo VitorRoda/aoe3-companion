@@ -16,8 +16,6 @@ const mapArmorTextId = {
     'Siege': '35761'
 }
 
-const statIcon = (iconName) => `/resources/images/hud/stat_${iconName}.png`
-
 export const MainStats = ({
     initialhitpoints, maxvelocity, populationcount,
     armor, buildbounty, bounty, trainpoints, los
