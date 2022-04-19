@@ -11,7 +11,7 @@ import { useTheme } from '@mui/material/styles'
 import { Container } from '@mui/material';
 import { CivSelector } from "./CivSelector";
 import { MobileMenu } from "./MobileMenu";
-import { LangSwitcher } from "./LangSwitcher";
+import { LangSwitcher, LangMenu } from "./LangSwitcher";
 import { translate } from '../utils/translator';
 // import { DonateButton } from "./DonateButton";
 
@@ -23,6 +23,12 @@ export const Header = React.memo(({ selectedCiv, civs, onSelectCiv }) => {
         return langEsp
     })
 
+    const [lang, setLang] = useState(() => {
+        const lang = localStorage.getItem('lang')
+        if (lang === null) return 'es'
+        return lang
+    })
+
     const handleSelectCiv = (event) => {
         onSelectCiv(event)
     }
@@ -31,6 +37,12 @@ export const Header = React.memo(({ selectedCiv, civs, onSelectCiv }) => {
         const value = event.target.checked
         setLangEsp(event.target.checked);
         localStorage.setItem('langEsp', JSON.stringify(value));
+        window.location.reload()
+    }
+
+    const handleChangeLang = (event) => {
+        setLang(event)
+        localStorage.setItem('lang', event)
         window.location.reload()
     }
 
@@ -67,7 +79,8 @@ export const Header = React.memo(({ selectedCiv, civs, onSelectCiv }) => {
                     </Box>
 
                     <Box sx={{ display: 'flex', alignItems: 'center', [theme.breakpoints.down('md')]: { display: 'none' } }}>
-                        <LangSwitcher langEsp={langEsp} onChangeLang={handleSwitchEsp} />
+                        {/* <LangSwitcher langEsp={langEsp} onChangeLang={handleSwitchEsp} /> */}
+                        <LangMenu lang={lang} onChangeLang={handleChangeLang} />
 
                         <IconButton size="large" onClick={goToGithub} color="inherit">
                             <GithubIcon />

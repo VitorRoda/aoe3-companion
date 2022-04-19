@@ -13,6 +13,12 @@ async function  loadTranslations() {
     lang = 'en'
   }
 
+  // let lang = localStorage.getItem('lang')
+
+  // if (lang === null) {
+  //   lang = 'es'
+  // }
+
   const data = await import(`./data/localization/stringtabley_${lang}.json`)
   window.dict = data?.language?.string
 }

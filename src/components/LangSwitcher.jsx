@@ -3,10 +3,14 @@ import Stack from '@mui/material/Stack';
 import Switch from '@mui/material/Switch';
 import Avatar from '@mui/material/Avatar';
 import FormControlLabel from '@mui/material/FormControlLabel';
+import Button from '@mui/material/Button';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import LanguageIcon from '@mui/icons-material/Language';
 
 const formControlLabelStyles = { 
     m: 0,
-     mt: '-17px', 
+    mt: '-17px', 
     '.MuiFormControlLabel-label': { 
         position: 'relative', top: 6, fontSize: 11 
     } 
@@ -38,5 +42,55 @@ export const LangSwitcher = ({ langEsp, onChangeLang }) => {
                 alt="Español"
                 src={`${baseIcoPath}Spanish.png`} />
         </Stack>
+    )
+}
+
+export const LangMenu = ({ lang, onChangeLang }) => {
+    const [anchorEl, setAnchorEl] = useState(null)
+    const open = Boolean(anchorEl)
+    const handleClick = (event) => {
+        setAnchorEl(event.currentTarget)
+    }
+    const handleClose = () => {
+        setAnchorEl(null)
+    }
+
+    const handleSelectLang = (event) => {
+        setAnchorEl(null)
+        onChangeLang(event)
+    }
+
+    return (
+        <div>
+            <Button
+                id="demo-positioned-button"
+                aria-controls={open ? 'demo-positioned-menu' : undefined}
+                aria-haspopup="true"
+                aria-expanded={open ? 'true' : undefined}
+                startIcon={<LanguageIcon />}
+                onClick={handleClick}
+            >
+                {`${lang}`}
+            </Button>
+            <Menu
+                id="demo-positioned-menu"
+                aria-labelledby="demo-positioned-button"
+                anchorEl={anchorEl}
+                open={open}
+                onClose={handleClose}
+                anchorOrigin={{
+                    vertical: 'top',
+                    horizontal: 'left',
+                }}
+                transformOrigin={{
+                    vertical: 'top',
+                    horizontal: 'left',
+                }}
+            >
+                <MenuItem onClick={() => handleSelectLang('es')}>ESP</MenuItem>
+                <MenuItem onClick={() => handleSelectLang('en')}>ENG</MenuItem>
+                <MenuItem onClick={() => handleSelectLang('zh')}>ZH</MenuItem>
+            </Menu>
+        </div>
     )
 }
