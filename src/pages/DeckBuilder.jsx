@@ -11,6 +11,7 @@ import { translate } from '../utils/translator';
 import { randomSumGenerator } from '../utils/randomSum';
 import { CivSelector } from '../components/CivSelector';
 import { Container } from '@mui/material';
+import { getStorageURL } from '../utils/getStorageURL';
 
 export const DeckBuilder = ({ civs }) => {
     const [civ, setCiv] = useState('')
@@ -115,7 +116,7 @@ export const DeckBuilder = ({ civs }) => {
                     <img
                         loading='lazy'
                         className='flag-random'
-                        src='/resources/images/icons/flags/Flag_Random.png'
+                        src={getStorageURL('resources/images/icons/flags/Flag_Random.png', false)}
                         alt="flag random"
                         onClick={handleRandomCiv}
                     />

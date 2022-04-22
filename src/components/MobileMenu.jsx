@@ -14,7 +14,7 @@ import ListItemText from '@mui/material/ListItemText';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import { MobileLangDrawer } from "./LangMenu";
 import { translate } from '../utils/translator';
-import { langToText } from "../utils/languageSettings";
+import { langToText } from "../config/language";
 // import { DonateButton } from "./DonateButton";
 
 export const MobileMenu = ({ lang, onChangeLang }) => {

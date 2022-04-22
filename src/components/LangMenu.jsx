@@ -7,7 +7,7 @@ import SwipeableDrawer from '@mui/material/SwipeableDrawer';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
-import { langToText, DISPLAY_TEXT_LIST } from "../utils/languageSettings";
+import { langToText, DISPLAY_TEXT_LIST } from "../config/language";
 import { Box } from '@mui/material';
 
 export const LangMenu = ({ lang, onChangeLang }) => {

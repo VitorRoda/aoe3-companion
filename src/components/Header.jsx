@@ -12,7 +12,7 @@ import { Container } from '@mui/material';
 import { MobileMenu } from "./MobileMenu";
 import { LangMenu } from "./LangMenu";
 import { translate } from '../utils/translator';
-import { DEFAULT_LANG } from '../utils/languageSettings'
+import { DEFAULT_LANG } from '../config/language'
 // import { DonateButton } from "./DonateButton";
 
 export const Header = React.memo(() => {

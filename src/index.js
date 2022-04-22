@@ -4,7 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { DEFAULT_LANG } from "./utils/languageSettings";
+import { DEFAULT_LANG } from "./config/language";
 
 async function  loadTranslations() {
   let lang = localStorage.getItem('lang')

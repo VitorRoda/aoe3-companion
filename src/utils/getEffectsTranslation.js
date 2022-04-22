@@ -64,7 +64,6 @@ export function getEffectsTranslations(effects = []) {
         } else if (effect?._subtype === 'TrainPoints') {
             params = [targetText, percentage]
         } else if (effect?._subtype === 'MaximumVelocity') {
-            console.log(mainText)
             params = [targetText, percentage]
         } else {
             params = [targetText, effect?._action, unitText, percentage, resourceText]

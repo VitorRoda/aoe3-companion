@@ -11,6 +11,7 @@ import { CostsUnit } from "./CostsUnit";
 import { blackListUnitTypesPanelUnit } from '../../constants';
 import { useTheme } from '@mui/system';
 import CloseIcon from '@mui/icons-material/Close';
+import { getStorageURL } from '../../utils/getStorageURL';
 
 export const DrawerUnit = React.memo(({ unit, open, onClose }) => {
     const theme = useTheme()
@@ -39,7 +40,7 @@ export const DrawerUnit = React.memo(({ unit, open, onClose }) => {
                 <Box sx={{ [theme.breakpoints.up('sm')]: { display: 'flex' } }}>
                     <Box pr={2} mb={2} width={170} flexBasis={170} position="relative">
                         <Avatar
-                            src={`/${unit?.portraiticon?.toLowerCase()}`}
+                            src={getStorageURL(unit?.portraiticon, true)}
                             alt={translate(unit?.displaynameid)}
                             sx={{ width: 170, height: 170, boxShadow: '0 0 8px #333333', mb: 1 }}
                             variant="rounded"

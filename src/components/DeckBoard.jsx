@@ -42,8 +42,7 @@ export const DeckBoard = ({ civName, maxCards, selectedCards, onClickCard, onCli
     const canvas = await html2canvas(element, {
       windowWidth: 925,
       width: 825,
-      height: 403,
-
+      height: 403
     });
     setIsGeneratingImg(() => false)
     setShowGeneratedImg(() => true)

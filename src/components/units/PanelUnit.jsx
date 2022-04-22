@@ -10,6 +10,7 @@ import Avatar from '@mui/material/Avatar';
 import IconButton from '@mui/material/IconButton';
 import FeedIcon from '@mui/icons-material/Feed';
 import { CostsUnit } from "./CostsUnit";
+import { getStorageURL } from '../../utils/getStorageURL';
 
 const descUnitStyle = {
     backgroundImage: 'linear-gradient(to right, #EBC837, #FFEB8B)',
@@ -38,7 +39,7 @@ export const PanelUnit = ({ unit, onClickAdvInfo }) => {
                 }}
                 avatar={
                     <Avatar
-                        src={`/${unit?.portraiticon?.toLowerCase()}`}
+                        src={getStorageURL(unit?.portraiticon, true)}
                         alt={translate(unit?.displaynameid)}
                         sx={{ width: 55, height: 55, boxShadow: '0 0 8px #f2f2f2' }}
                         variant="rounded"
