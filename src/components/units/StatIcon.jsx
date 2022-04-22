@@ -26,7 +26,7 @@ export const StatIcon = ({ value, type, icon, src, title, bonus, size = 'sm', is
   return (
     <Stack direction="row" spacing={0.25} alignItems="center">
       <Typography variant='body2'>{bonus && 'x'}{exactMath.round(value, -2)}{isTime && 's'}</Typography>
-      {!errorImg && <img width={iconSize} height={iconSize} src={_src} alt={type} title={title || type} onError={fallbackImg} />}
+      {!errorImg && <img loading='lazy' width={iconSize} height={iconSize} src={_src} alt={type} title={title || type} onError={fallbackImg} />}
       {errorImg && <Avatar sx={{
         width: iconSize,
         height: iconSize,

@@ -49,7 +49,7 @@ export const Header = React.memo(() => {
                 <Toolbar disableGutters>
                     <Box sx={{ flexGrow: 1 }}>
                         <Link component={RouterLink} to='/'>
-                            <img className='aoe3de-logo' src='/assets/aoe3_de_logo.png' alt="logo aoe3de"></img>
+                            <img loading='lazy' className='aoe3de-logo' src='/assets/aoe3_de_logo.png' alt="logo aoe3de"></img>
                         </Link>
                     </Box>
 

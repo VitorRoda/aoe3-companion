@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { translate } from "../../utils/translator";
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
@@ -10,7 +10,6 @@ import Avatar from '@mui/material/Avatar';
 import IconButton from '@mui/material/IconButton';
 import FeedIcon from '@mui/icons-material/Feed';
 import { CostsUnit } from "./CostsUnit";
-import { DrawerUnit } from './DrawerUnit';
 
 const descUnitStyle = {
     backgroundImage: 'linear-gradient(to right, #EBC837, #FFEB8B)',
@@ -20,12 +19,10 @@ const descUnitStyle = {
     borderStyle: 'solid'
 }
 
-export const PanelUnit = ({ unit }) => {
-    const [openAdvInfo, setOpenAdvInfo] = useState(false)
-
-    const handleClickOpen = () => { setOpenAdvInfo(true) };
-
-    const handleOnCloseAdvInfo = () => { setOpenAdvInfo(false) }
+export const PanelUnit = ({ unit, onClickAdvInfo }) => {
+    const handleClickOpen = () => {
+        onClickAdvInfo(unit)
+    };
 
     return (
         <Card sx={{
@@ -69,8 +66,6 @@ export const PanelUnit = ({ unit }) => {
                     <FeedIcon />
                 </IconButton>
             </CardActions>
-
-            <DrawerUnit unit={unit} open={openAdvInfo} onClose={handleOnCloseAdvInfo} />
         </Card >
     )
 }

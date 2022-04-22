@@ -67,11 +67,6 @@ export const blackListUnitTypes = [
     'EmbellishmentClass'
 ]
 
-export const blacklistFlags = [
-    'NotPlayerPlaceable',
-    'NonAutoFormedUnit'
-]
-
 export const unitTypes = [
     {
         id: 'AbstractRangedInfantry',
@@ -143,5 +138,20 @@ export const unitTypes = [
 export const blackListUnitTypesPanelUnit = [
     'UnitClass',
     'Military',
-    'LogicalTypeScout'
+    'LogicalTypeScout',
+    'LogicalTypeLandMilitary'
 ]
+
+export const blacklistFlags = [
+    'NotPlayerPlaceable',
+    'NonAutoFormedUnit'
+]
+
+export const blackListUnitName = [
+    'IGC', 
+    'SPC', 
+    'Boneguard', 
+    'Drummer', 
+    'FlagBearerDefault'
+]
+

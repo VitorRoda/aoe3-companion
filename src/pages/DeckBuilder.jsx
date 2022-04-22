@@ -113,8 +113,8 @@ export const DeckBuilder = ({ civs }) => {
                 <MainDeck cards={cards} onClickCard={handleOnClickCard} /> :
                 <Box sx={{ py: 4, textAlign: 'center' }}>
                     <img
-                        className='flag-random'
                         loading='lazy'
+                        className='flag-random'
                         src='/resources/images/icons/flags/Flag_Random.png'
                         alt="flag random"
                         onClick={handleRandomCiv}

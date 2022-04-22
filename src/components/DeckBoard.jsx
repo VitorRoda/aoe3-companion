@@ -130,7 +130,7 @@ export const DeckBoard = ({ civName, maxCards, selectedCards, onClickCard, onCli
 
       <Dialog open={showGeneratedImg} onClose={handleClosePreview} maxWidth="md">
         <DialogContent>
-          <img src={generatedImg} alt="generateImg" width="100%" />
+          <img loading='lazy' src={generatedImg} alt="generateImg" width="100%" />
         </DialogContent>
         <DialogActions>
           <Fab color="primary" onClick={handleDownloadImage} ><DownloadIcon /></Fab>

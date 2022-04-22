@@ -12,7 +12,7 @@ import { blackListUnitTypesPanelUnit } from '../../constants';
 import { useTheme } from '@mui/system';
 import CloseIcon from '@mui/icons-material/Close';
 
-export const DrawerUnit = ({ unit, open, onClose }) => {
+export const DrawerUnit = React.memo(({ unit, open, onClose }) => {
     const theme = useTheme()
 
     const handleClose = () => {
@@ -75,4 +75,4 @@ export const DrawerUnit = ({ unit, open, onClose }) => {
             </Container>
         </Drawer>
     )
-}
+})

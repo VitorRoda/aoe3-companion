@@ -1,28 +1,19 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react'
-import Grid from '@mui/material/Grid';
+import React, { useCallback, useEffect, useState } from 'react'
 import Box from '@mui/material/Box'
-import { PanelUnit } from "../components/units/PanelUnit";
 import { getAllUnitsByTypes } from '../services/proto.service';
 import { UnitTypeSelector } from '../components/units/UnitTypeSelector';
+import { DrawerUnit } from "../components/units/DrawerUnit";
+import { UnitList } from '../components/units/UnitList';
 
 export const UnitsInfo = () => {
-  const PAGE_SIZE = 8
+  const PAGE_SIZE = 12
   const [types, seTypes] = useState([])
   const [units, setUnits] = useState([])
   const [paginatedUnits, setPaginatedUnits] = useState([])
   const [page, setPage] = useState(1)
   const [hasMore, setHasMore] = useState(false)
-
-  const observer = useRef()
-  const lasElRef = useCallback(node => {
-    if (observer.current) observer.current.disconnect()
-    observer.current = new IntersectionObserver(([target]) => {
-      if (target.isIntersecting && hasMore) {
-        setPage(prev => prev + 1)
-      }
-    })
-    if (node) observer.current.observe(node)
-  }, [hasMore])
+  const [selectedUnit, setSelectedUnit] = useState(null)
+  const [openAdvInfo, setOpenAdvInfo] = useState(false)
 
   useEffect(() => {
     if (types.length) {
@@ -49,36 +40,40 @@ export const UnitsInfo = () => {
     }
   }, [page])
 
-  const handleOnChageTypes = (value) => {
-    seTypes(value)
-  }
+  const handleOnChageTypes = useCallback((value) => {
+    seTypes(() => value)
+  }, [])
+
+  const handleOnCloseAdvInfo = useCallback(() => {
+    setOpenAdvInfo(() => false)
+  }, [])
+
+  const handleOnClickAdvInfo = useCallback((value) => {
+    setSelectedUnit(() => value)
+    setOpenAdvInfo(() => true)
+  }, [])
+
+  const handleOnLastEl = useCallback(() => {
+    if (hasMore) {
+      setPage(prev => prev + 1)
+    }
+  }, [hasMore])
 
   return (
     <Box>
       <Box display={'flex'} justifyContent="center">
         <UnitTypeSelector onChange={handleOnChageTypes} />
       </Box>
-      
-      {!units?.length ?
-        <Box sx={{ py: 4, textAlign: 'center' }}>
-          <img width={300} src='/assets/revolution_guns.png' alt="Revolution guns" />
-        </Box> :
 
-        <Grid container spacing={4}>
-          {paginatedUnits.map((unit, idx) =>
-            <Grid
-              item
-              key={unit?._id}
-              xs={12}
-              sm={6}
-              md={4}
-              lg={3}
-              ref={paginatedUnits.length === idx + 1 ? lasElRef : undefined}>
-              <PanelUnit unit={unit} />
-            </Grid>
-          )}
-        </Grid>
+      {!units?.length &&
+        <Box sx={{ py: 4, textAlign: 'center' }}>
+          <img loading='lazy' width={300} src='/assets/revolution_guns.png' alt="Revolution guns" />
+        </Box>
       }
+
+      <UnitList units={paginatedUnits} onLastEl={handleOnLastEl} onClickAdvInfo={handleOnClickAdvInfo} />
+
+      <DrawerUnit unit={selectedUnit} open={openAdvInfo} onClose={handleOnCloseAdvInfo} />
     </Box>
   )
 }
