@@ -78,6 +78,14 @@ export const unitTypes = [
         nameId: '42032'
     },
     {
+       id: 'AbstractRifleman',
+       nameId: '110161'
+    },
+    {
+        id: 'AbstractMusketeer',
+        nameId: '110184'
+    },
+    {
         id: 'AbstractHeavyInfantry',
         nameId: '42017'
     },
@@ -130,4 +138,10 @@ export const unitTypes = [
         id: 'AbstractWarShip',
         nameId: '42036'
     }
+]
+
+export const blackListUnitTypesPanelUnit = [
+    'UnitClass',
+    'Military',
+    'LogicalTypeScout'
 ]

@@ -3,8 +3,6 @@ import protoData from "../data/protoy.json";
 import exactMath from "exact-math";
 import { replace_n } from "../utils/replaceN";
 
-const prefixSymbol = 'cString'
-
 const WHITE_LIST_EFFECTS = [
     'Hitpoints',
     'Damage',
@@ -27,7 +25,7 @@ const TARGETS_MAP = {
 
 export function getEffectsTranslations(effects = []) {
     return effects.filter(effect => WHITE_LIST_EFFECTS.includes(effect?._subtype)).map(effect => {
-        const mainText = translate(buildSymbolId(effect), '_symbol') || ''
+        const mainText = translate(buildSymbolId(effect), true) || ''
         const percentage = exactMath.formula(`((${+effect?._amount}) - 1) * 100`)
         let targetText = ''
         let unitText = ''
@@ -45,7 +43,7 @@ export function getEffectsTranslations(effects = []) {
                 targetLabel = TARGETS_MAP[targetLabel]
             }
 
-            targetText = translate(prefixSymbol + targetLabel, '_symbol') || getUnitTranslation(targetLabel)
+            targetText = translate(targetLabel, true) || getUnitTranslation(targetLabel)
         }
 
         if (effect?._unittype) {
@@ -53,13 +51,13 @@ export function getEffectsTranslations(effects = []) {
         }
         
         if (effect?._resource) {
-            resourceText = translate(`cStringResourceName${effect?._resource}`, '_symbol')
+            resourceText = translate(`ResourceName${effect?._resource}`, true)
         }
 
         if (effect?._subtype === 'Hitpoints') {
             params = [targetText, percentage]
         } else if (effect?._subtype === 'Damage') {
-            const actionDamage = +effect?._allactions ? translate('cStringAllActionsEffect', '_symbol') : ''
+            const actionDamage = +effect?._allactions ? translate('AllActionsEffect', true) : ''
             params = [targetText, actionDamage, percentage]
         } else if (effect?._subtype === 'FreeHomeCityUnit') {
             params = [parseInt(effect?._amount), unitText]
@@ -94,7 +92,7 @@ function buildSymbolId(effect) {
         subType = 'SpeedEffect'
     }
 
-    return [prefixSymbol, operationText, subType].join('')
+    return [operationText, subType].join('')
 }
 
 function getUnitTranslation(unitType) {
