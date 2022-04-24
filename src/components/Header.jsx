@@ -13,7 +13,7 @@ import { MobileMenu } from "./MobileMenu";
 import { LangMenu } from "./LangMenu";
 import { translate } from '../utils/translator';
 import { DEFAULT_LANG } from '../config/language'
-// import { DonateButton } from "./DonateButton";
+import { DonateButton } from "./DonateButton";
 
 export const Header = React.memo(() => {
     const theme = useTheme()
@@ -65,7 +65,7 @@ export const Header = React.memo(() => {
                             <GithubIcon />
                         </IconButton>
 
-                        {/* <DonateButton /> */}
+                        <DonateButton />
                     </Box>
 
                     <MobileMenu edge="end" lang={lang} onChangeLang={handleChangeLang} />

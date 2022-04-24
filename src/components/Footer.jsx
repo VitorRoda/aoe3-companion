@@ -22,8 +22,8 @@ export const Footer = () => {
     return (
         <Box component="footer" sx={footerStyles}>
             <Container>
-                <Typography color="text.primary">
-                    <i>Age of Empires III: Definitive Edition©</i> This site was created under Microsoft's "<Link className='link-ms-gc-rules' href={MSGCR} target='_blank' rel="noreferrer">Game Content Usage Rules</Link>".
+                <Typography variant='body2' color="text.primary">
+                    <i>Age of Empires III: Definitive Edition © Microsoft Corporation</i> This site was created under Microsoft's "<Link className='link-ms-gc-rules' href={MSGCR} target='_blank' rel="noreferrer">Game Content Usage Rules</Link>" using assets from <i>Age of Empires III: Definitive Edition</i>, and it is not endorsed by or affiliated with Microsoft.  .
                 </Typography>
             </Container>
         </Box>
