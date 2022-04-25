@@ -8,14 +8,13 @@ export const useGaTracker = () => {
 
     useEffect(() => {
         if (!window.location.href.includes('localhost')) {
-            ReactGA.initialize('G-NHC98Q0NJ2')
+            ReactGA.initialize(process.env.GA_ID)
             setInitialized(true)
         }
     }, [])
 
     useEffect(() => {
         if (initialized) {
-            console.log(location)
             ReactGA.pageview(location.pathname + location.search);
         }
     }, [initialized, location])
