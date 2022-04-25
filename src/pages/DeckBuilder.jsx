@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react'
+import React, { useState, useEffect, useRef, useCallback, Fragment } from 'react'
 import { useImmerReducer } from 'use-immer';
 import uniqueRandomRange from "unique-random-range";
 import Box from '@mui/material/Box'
@@ -101,17 +101,19 @@ export const DeckBuilder = ({ civs }) => {
                 <CivSelector selectedCiv={civ} civs={civs} onSelectCiv={handleSelectCiv} />
             </Container>
 
-            {civ &&
-                <DeckBoard
-                    civName={translate(civ.displaynameid)}
-                    maxCards={maxCards}
-                    selectedCards={selectedCards}
-                    onClickCard={handleOnClickDeckCard}
-                    onClickRandomDeck={handleRandomDeck}
-                ></DeckBoard>
-            }
             {civ ?
-                <MainDeck cards={cards} onClickCard={handleOnClickCard} /> :
+                <Fragment>
+                    <DeckBoard
+                        civName={translate(civ.displaynameid)}
+                        maxCards={maxCards}
+                        selectedCards={selectedCards}
+                        onClickCard={handleOnClickDeckCard}
+                        onClickRandomDeck={handleRandomDeck}
+                    ></DeckBoard>
+
+                    <MainDeck cards={cards} onClickCard={handleOnClickCard} /> :
+                </Fragment>
+                :
                 <Box sx={{ py: 4, textAlign: 'center' }}>
                     <img
                         loading='lazy'

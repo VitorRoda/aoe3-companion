@@ -1,12 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from "react-router-dom";
+import Analytics from "analytics";
+import { AnalyticsProvider } from "use-analytics";
+import googleAnalytics from "@analytics/google-analytics";
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { DEFAULT_LANG } from "./config/language";
 
-async function  loadTranslations() {
+const analytics = Analytics({
+  app: 'aoe3-deck-builder',
+  plugins: [googleAnalytics({
+    trackingId: 'G-NHC98Q0NJ2'
+  })]
+})
+
+async function loadTranslations() {
   let lang = localStorage.getItem('lang')
 
   if (lang === null) {
@@ -21,11 +31,11 @@ async function  loadTranslations() {
   await loadTranslations();
 
   ReactDOM.render(
-    <React.StrictMode>
+    <AnalyticsProvider instance={analytics}>
       <BrowserRouter>
         <App />
       </BrowserRouter>
-    </React.StrictMode>,
+    </AnalyticsProvider>,
     document.getElementById('root')
   );
 })();
