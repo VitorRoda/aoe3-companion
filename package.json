@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@analytics/google-analytics": "^0.5.3",
     "@emotion/react": "^11.8.2",
     "@emotion/styled": "^11.8.1",
     "@mui/icons-material": "^5.5.1",
@@ -11,7 +10,6 @@
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
-    "analytics": "^0.8.1",
     "change-case": "^4.1.2",
     "exact-math": "^2.2.3",
     "html2canvas": "^1.4.1",
@@ -19,11 +17,11 @@
     "prop-types": "^15.8.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-ga": "^3.3.0",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.0",
     "uniqid": "^5.4.0",
     "unique-random-range": "^1.0.7",
-    "use-analytics": "^0.0.5",
     "use-immer": "^0.6.0",
     "web-vitals": "^2.1.4"
   },

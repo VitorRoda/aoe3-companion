@@ -1,10 +1,10 @@
 import './App.css'
 import { useEffect, useState } from 'react';
 import { Routes, Route, useLocation } from "react-router-dom";
-import { useAnalytics } from 'use-analytics';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from "@mui/material/styles"
+import { useGaTracker } from "./utils/useGaTracker";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { DeckBuilder } from "./pages/DeckBuilder";
@@ -39,13 +39,8 @@ const theme = createTheme({
 })
 
 function App() {
-  const location = useLocation()
-  const analytics = useAnalytics()
+  useGaTracker()
   const [civs, setCivs] = useState([])
-
-  useEffect(() => {
-    analytics.page()
-  }, [location, analytics])
 
   useEffect(() => {
     import('./data/civs.json').then(({ civ }) => {
