@@ -68,10 +68,10 @@ export const blackListUnitTypes = [
 ]
 
 export const unitTypes = [
-    {
-        id: 'AbstractRangedInfantry',
-        nameId: '42032'
-    },
+    // {
+    //     id: 'AbstractRangedInfantry',
+    //     nameId: '42032'
+    // },
     {
        id: 'AbstractRifleman',
        nameId: '110161'
@@ -92,15 +92,14 @@ export const unitTypes = [
         id: 'AbstractLightInfantry',
         nameId: '42089'
     },
-    
     {
         id: 'AbstractRangedShockInfantry',
         nameId: '44138'
     },
-    {
-        id: 'AbstractCavalry',
-        nameId: '38214',
-    },
+    // {
+    //     id: 'AbstractCavalry',
+    //     nameId: '38214',
+    // },
     {
         id: 'AbstractHeavyCavalry',
         nameId: '42088',
@@ -108,6 +107,10 @@ export const unitTypes = [
     {
         id: 'AbstractLightCavalry',
         nameId: '42018'
+    },
+    {
+        id: 'AbstractSiegeTrooper',
+        nameId: '42026'
     },
     {
         id: 'AbstractArtillery',
@@ -139,7 +142,7 @@ export const blackListUnitTypesPanelUnit = [
     'UnitClass',
     'Military',
     'LogicalTypeScout',
-    'LogicalTypeLandMilitary'
+    'LogicalTypeLandMilitary',
 ]
 
 export const blacklistFlags = [

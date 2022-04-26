@@ -1,6 +1,6 @@
 import React, { useCallback, useRef } from 'react'
 import Grid from '@mui/material/Grid';
-import { PanelUnit } from "./PanelUnit";
+import { GridPanelUnit } from './GridPanelUnit'
 
 export const UnitList = React.memo(({ units, onLastEl, onClickAdvInfo }) => {
     const observer = useRef()
@@ -15,17 +15,18 @@ export const UnitList = React.memo(({ units, onLastEl, onClickAdvInfo }) => {
         if (node) observer.current.observe(node)
     }, [onLastEl])
 
-    const handleOnClickAdvInfo = (value) => {
+    const handleOnClickAdvInfo = useCallback((value) => {
         onClickAdvInfo(value)
-    }
+    }, [onClickAdvInfo])
 
     return (
         <Grid container spacing={4}>
             {units.map((unit, idx) =>
-                <Grid key={unit?._id} item xs={12} sm={6} md={4} lg={3}
-                    ref={units.length === idx + 1 ? lastElRef : undefined}>
-                    <PanelUnit unit={unit} onClickAdvInfo={handleOnClickAdvInfo} />
-                </Grid>
+                <GridPanelUnit 
+                    key={unit?._id} 
+                    unit={unit} 
+                    ref={units.length === idx + 1 ? lastElRef : undefined}
+                    onClickAdvInfo={handleOnClickAdvInfo} />
             )}
         </Grid>
     )
