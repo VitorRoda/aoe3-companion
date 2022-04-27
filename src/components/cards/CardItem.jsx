@@ -44,7 +44,7 @@ export const CardItem = React.memo(({ card, onClickCard }) => {
                         rootBoundary: 'document',
                     },
                 }]}
-                sx={{ pointerEvents: 'none' }}
+                sx={{ pointerEvents: 'none', zIndex: 999 }}
             >
                 <CardInfo card={card}></CardInfo>
             </Popper>

@@ -9,7 +9,7 @@ import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { DeckBuilder } from "./pages/DeckBuilder";
 import { UnitsInfo } from "./pages/UnitsInfo";
-import { whitelistCivs } from "./constants";
+import { getCivs } from './services/civs.service';
 
 
 const theme = createTheme({
@@ -43,17 +43,17 @@ function App() {
   const [civs, setCivs] = useState([])
 
   useEffect(() => {
-    import('./data/civs.json').then(({ civ }) => {
-      setCivs(() => civ.filter((item, index) => whitelistCivs.includes(index)))
+    getCivs().then(data => {
+      setCivs(() => data)
     })
   }, [])
 
   return (
     <ThemeProvider theme={theme}>
-      <Box sx={{ pb: '60px' }}>
+      <Box>
         <Header></Header>
 
-        <Container sx={{ py: 4 }}>
+        <Container sx={{ py: 4, minHeight: 'calc(100vh - 68px - 78px)' }}>
           <Routes>
             <Route path='/' element={<DeckBuilder civs={civs} />} />
             <Route path='/units' element={<UnitsInfo />} />
