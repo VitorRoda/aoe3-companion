@@ -22,7 +22,7 @@ export const CardList = React.memo(({ cards, age, onClickCard }) => {
   }
 
   return (
-    <Box className='cards-list' sx={age && singleAgeSx}>
+    <Box className='cards-list' sx={age >= 0 ? singleAgeSx : {}}>
       {cards.map(card =>
         <CardItem
           key={card.id}

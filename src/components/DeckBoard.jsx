@@ -1,5 +1,5 @@
 import './DeckBoard.css'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { paramCase } from 'change-case'
 import html2canvas from 'html2canvas';
 import Box from '@mui/material/Box';
@@ -17,12 +17,12 @@ import { Typography } from '@mui/material';
 import { CardList } from "./cards/CardList";
 import { translate } from '../utils/translator';
 
-export const DeckBoard = ({ civName, maxCards, selectedCards, onClickCard, onClickRandomDeck }) => {
+export const DeckBoard = ({ civName, maxCards, selectedCards, hideRandomAction, onClickCard, onClickRandomDeck }) => {
   const [deckName, setDeckName] = useState('')
   const [generatedImg, setGeneratedImg] = useState('')
   const [isGeneratingImg, setIsGeneratingImg] = useState(false)
   const [showGeneratedImg, setShowGeneratedImg] = useState(false)
-  const printRef = React.useRef();
+  const printRef = useRef();
 
   useEffect(() => {
     setDeckName('')
@@ -42,13 +42,12 @@ export const DeckBoard = ({ civName, maxCards, selectedCards, onClickCard, onCli
     const canvas = await html2canvas(element, {
       windowWidth: 925,
       width: 825,
-      height: 403,
+      height: selectedCards?.age0?.length ? 492 : 403,
       useCORS: true
     });
     setIsGeneratingImg(() => false)
     setShowGeneratedImg(() => true)
     setGeneratedImg(() => canvas.toDataURL())
-
   };
 
   const handleDownloadImage = () => {
@@ -108,15 +107,22 @@ export const DeckBoard = ({ civName, maxCards, selectedCards, onClickCard, onCli
             )}
           </Box>
 
-          <Fab className='random-deck-button' color="primary" onClick={handleRandomDeck} >
-            <WifiProtectedSetupIcon size="large" />
-          </Fab>
+          {!hideRandomAction &&
+            <Fab className='random-deck-button' color="primary" onClick={handleRandomDeck} >
+              <WifiProtectedSetupIcon size="large" />
+            </Fab>
+          }
         </Stack>
 
         <Box className='deck-board' ref={printRef}>
           <Typography className='deck-name' variant='h6' color="text.primary">
             {deckName}
           </Typography>
+
+          {!!selectedCards?.age0?.length &&
+            <CardList cards={selectedCards.age0} age={0} onClickCard={handleOnClickCard}>
+            </CardList>
+          }
           <CardList cards={selectedCards.age1} age={1} onClickCard={handleOnClickCard}>
           </CardList>
           <CardList cards={selectedCards.age2} age={2} onClickCard={handleOnClickCard}>

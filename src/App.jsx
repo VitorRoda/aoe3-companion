@@ -43,9 +43,7 @@ function App() {
   const [civs, setCivs] = useState([])
 
   useEffect(() => {
-    getCivs().then(data => {
-      setCivs(() => data)
-    })
+    setCivs(() => getCivs())
   }, [])
 
   return (

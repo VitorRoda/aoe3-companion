@@ -1,28 +1,37 @@
 import React, { useState, useEffect, useRef, useCallback, Fragment } from 'react'
 import { useImmerReducer } from 'use-immer';
 import uniqueRandomRange from "unique-random-range";
+import { Container } from '@mui/material';
 import Box from '@mui/material/Box'
+import Stack from '@mui/material/Stack';
 import { cardsReducer, cardsInitialState } from "../reducers/cards.reducer";
 import { selectedCardsReducer, selectedCardsInitialState } from "../reducers/selectedCards.reducer";
 import { DeckBoard } from "../components/DeckBoard";
 import { MainDeck } from "../components/MainDeck";
-import { getHomeCityData } from "../services/getHomeCityData";
+import { getHomeCityData, getRevoltCards } from "../services/homecity.service";
 import { translate } from '../utils/translator';
 import { randomSumGenerator } from '../utils/randomSum';
 import { CivSelector } from '../components/CivSelector';
-import { Container } from '@mui/material';
 import { getStorageURL } from '../utils/getStorageURL';
+import { RevoltSelector } from '../components/RevoltSelector';
 
 export const DeckBuilder = ({ civs }) => {
     const [civ, setCiv] = useState('')
+    const [revolt, setRevolt] = useState('')
+    const [revolts, setRevolts] = useState([])
     const [maxCards, setMaxCards] = useState(25)
     const [cards, dispatchCards] = useImmerReducer(cardsReducer, cardsInitialState)
     const [selectedCards, dispatchSelectedCards] = useImmerReducer(selectedCardsReducer, selectedCardsInitialState)
+    const [revoltCards, setRevoltCards] = useState(selectedCardsInitialState)
     const maxCardsRef = useRef(maxCards)
     const selectedCardsRef = useRef(selectedCards)
 
     const handleSelectCiv = (value) => {
         setCiv(() => value)
+    }
+
+    const handleSelectRevolt = (value) => {
+        setRevolt(() => value)
     }
 
     const handleRandomCiv = () => {
@@ -31,12 +40,24 @@ export const DeckBuilder = ({ civs }) => {
     }
 
     useEffect(() => {
+        if (revolt) {
+            getRevoltCards(civ.homecityfilename, revolt.name, revolt.cards.card)
+                .then(data => { setRevoltCards(data) })
+        } else {
+            setRevoltCards(selectedCardsInitialState)
+        }
+    }, [revolt])
+
+    useEffect(() => {
+        setRevolt('')
+        setRevolts([])
         dispatchSelectedCards({ type: 'reset' })
 
         if (civ) {
             getHomeCityData(civ.homecityfilename).then(data => {
                 dispatchCards({ type: 'update', data: data.cards })
                 setMaxCards(() => +data.maxcardsperdeck)
+                setRevolts(data?.revolts)
             })
         } else {
             dispatchCards({ type: 'reset' })
@@ -47,7 +68,6 @@ export const DeckBuilder = ({ civs }) => {
         maxCardsRef.current = maxCards
         selectedCardsRef.current = selectedCards
     }, [maxCards, selectedCards])
-
 
     const handleOnClickCard = useCallback((card) => {
         const { id, ageKey } = card
@@ -66,6 +86,7 @@ export const DeckBuilder = ({ civs }) => {
     }, [dispatchCards, dispatchSelectedCards])
 
     const handleOnClickDeckCard = (card) => {
+        if (revolt) return
         const { id, ageKey } = card
         dispatchSelectedCards({ type: 'removeCard', id, ageKey })
         dispatchCards({ type: 'toggleSelected', id, ageKey })
@@ -97,8 +118,11 @@ export const DeckBuilder = ({ civs }) => {
 
     return (
         <Box>
-            <Container disableGutters sx={{ display: 'flex', justifyContent: 'center', mb: 1 }}>
-                <CivSelector selectedCiv={civ} civs={civs} onSelectCiv={handleSelectCiv} />
+            <Container disableGutters sx={{ display: 'flex', justifyContent: 'center' }}>
+                <Stack direction={{ xs: 'column', md: 'row' }} spacing={1} sx={{ mb: 1 }}>
+                    <CivSelector selectedCiv={civ} civs={civs} onSelectCiv={handleSelectCiv} />
+                    {!!revolts.length && <RevoltSelector revolts={revolts} selectedRevolt={revolt} onSelectRevolt={handleSelectRevolt} />}
+                </Stack>
             </Container>
 
             {civ ?
@@ -106,12 +130,13 @@ export const DeckBuilder = ({ civs }) => {
                     <DeckBoard
                         civName={translate(civ.displaynameid)}
                         maxCards={maxCards}
-                        selectedCards={selectedCards}
+                        selectedCards={revolt ? revoltCards : selectedCards}
+                        hideRandomAction={!!revolt}
                         onClickCard={handleOnClickDeckCard}
                         onClickRandomDeck={handleRandomDeck}
                     ></DeckBoard>
 
-                    <MainDeck cards={cards} onClickCard={handleOnClickCard} /> :
+                    {!revolt && <MainDeck cards={cards} onClickCard={handleOnClickCard} />}
                 </Fragment>
                 :
                 <Box sx={{ py: 4, textAlign: 'center' }}>

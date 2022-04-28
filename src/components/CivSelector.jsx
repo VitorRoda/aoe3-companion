@@ -22,7 +22,6 @@ export const CivSelector = React.memo(({ selectedCiv, civs, onSelectCiv }) => {
   }
 
   const civItems = civs
-    
     .map((civ, idx) =>
       <MenuItem value={civ} key={`civ-${civ.name}-${idx}`} sx={{ fontFamily: 'TrajanPro' }}>
         <img loading='lazy' className='civ-selector__item-flag' src={getStorageURL(civ?.homecityflagiconwpf)} alt={civ.name} />

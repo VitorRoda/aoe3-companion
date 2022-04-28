@@ -22,7 +22,7 @@ export const CardItem = React.memo(({ card, onClickCard }) => {
                 maxcount={+card?.maxcount}
                 displayunitcount={card?.displayunitcount}
                 isSelected={card?.isSelected}
-                costs={card?.info?.cost}
+                costs={card?.info?.cost || []}
             ></Card>
 
             <Popper {...bindPopper(popupState)}
