@@ -73,6 +73,10 @@ export const unitTypes = [
     //     nameId: '42032'
     // },
     {
+        id: 'AbstractFootArcher',
+        nameId: '110165'
+    },
+    {
        id: 'AbstractRifleman',
        nameId: '110161'
     },
