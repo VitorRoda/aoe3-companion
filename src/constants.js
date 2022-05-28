@@ -151,7 +151,7 @@ export const blackListUnitTypesPanelUnit = [
 
 export const blacklistFlags = [
     'NotPlayerPlaceable',
-    'NonAutoFormedUnit'
+    // 'NonAutoFormedUnit'
 ]
 
 export const blackListUnitName = [

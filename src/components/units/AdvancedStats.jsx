@@ -40,8 +40,8 @@ export const AdvancedStats = ({ tactics, protoaction }) => {
         protoaction
             .filter(item => item?.name?.includes('Attack'))
             .sort((a, b) => {
-                const [damageTypeA] = a?.damagetype
-                const [damageTypeB] = b?.damagetype
+                const [damageTypeA] = a?.damagetype || []
+                const [damageTypeB] = b?.damagetype || []
 
                 if (mapValueDamageType[damageTypeA] > mapValueDamageType[damageTypeB]) return 1
                 if (mapValueDamageType[damageTypeA] < mapValueDamageType[damageTypeB]) return -1

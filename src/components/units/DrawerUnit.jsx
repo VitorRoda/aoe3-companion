@@ -52,7 +52,7 @@ export const DrawerUnit = React.memo(({ unit, open, onClose }) => {
                             populationcount={unit?.populationcount}
                             armor={unit?.armor}
                             buildbounty={unit?.buildbounty}
-                            bounty={unit?.bounty}
+                            bounty={unit?.bounty?.[0]}
                             trainpoints={unit?.trainpoints}
                             los={unit?.los}
                         />

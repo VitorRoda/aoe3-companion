@@ -5,8 +5,9 @@ function getCardData(card, { idx, civ, includeRevolt = false }) {
     const info = getTechInfo(card.name)
     const ageKey = `age${+card?.age + 1}`
     const revoltValidation = includeRevolt ? true : !card?.hasOwnProperty('revoltcard')
+    const fakeCard = card?.hasOwnProperty('fakecard')
 
-    if (info && revoltValidation) {
+    if (info && revoltValidation && !fakeCard) {
         return {
             ...card,
             id: `${civ}-${ageKey}-${idx}`.toLocaleLowerCase(),
