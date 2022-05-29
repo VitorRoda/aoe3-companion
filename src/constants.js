@@ -68,10 +68,10 @@ export const blackListUnitTypes = [
 ]
 
 export const unitTypes = [
-    // {
-    //     id: 'AbstractRangedInfantry',
-    //     nameId: '42032'
-    // },
+    {
+        id: 'AbstractRangedInfantry',
+        nameId: '42032'
+    },
     {
         id: 'AbstractFootArcher',
         nameId: '110165'
