@@ -868,7 +868,7 @@
             "prereqtech": [
                "DEHCExtensiveFortificationsEuropean"
             ],
-            "age": "0"
+            "age": "3"
          },
          {
             "name": "HCFrontierDefenses",
@@ -1525,77 +1525,6 @@
       "deck": [
          {
             "name": "$$71332$$Beginner",
-            "cards": {
-               "card": [
-                  {
-                     "_dbid": "3382",
-                     "__text": "HCXPAdvancedBalloon"
-                  },
-                  {
-                     "_dbid": "2218",
-                     "__text": "HCShipSheep1"
-                  },
-                  {
-                     "_dbid": "2212",
-                     "__text": "HCShipWoodCrates3"
-                  },
-                  {
-                     "_dbid": "7028",
-                     "__text": "DEHCShipRegulars1"
-                  },
-                  {
-                     "_dbid": "814",
-                     "__text": "HCUnlockFort"
-                  },
-                  {
-                     "_dbid": "2220",
-                     "__text": "HCShipCows"
-                  },
-                  {
-                     "_dbid": "1688",
-                     "__text": "HCHeavyFortificationsUS"
-                  },
-                  {
-                     "_dbid": "3438",
-                     "__text": "HCXPCapitalism"
-                  },
-                  {
-                     "_dbid": "7067",
-                     "__text": "DEHCImmigrantsIrish"
-                  },
-                  {
-                     "_dbid": "7196",
-                     "__text": "DEHCHamiltonianEconomics"
-                  },
-                  {
-                     "_dbid": "7183",
-                     "__text": "DEHCSpringfieldArmory"
-                  },
-                  {
-                     "_dbid": "2237",
-                     "__text": "HCShipMortars1"
-                  },
-                  {
-                     "_dbid": "7027",
-                     "__text": "DEHCShipStateMilitiaRepeat1"
-                  },
-                  {
-                     "_dbid": "7215",
-                     "__text": "DEHCApacheScouts"
-                  },
-                  {
-                     "_dbid": "7225",
-                     "__text": "DEHCUSExpedition"
-                  },
-                  {
-                     "_dbid": "7210",
-                     "__text": "DEHCLouisianaPurchase"
-                  }
-               ]
-            }
-         },
-         {
-            "name": "$$71332$$Beginner",
             "default": "",
             "cards": {
                "card": [
@@ -1831,6 +1760,98 @@
                   }
                ]
             }
+         },
+         {
+            "name": "$$55547$$Tycoon",
+            "cards": {
+               "card": [
+                  {
+                     "_dbid": "3521",
+                     "__text": "HCShipCoinCrates5"
+                  },
+                  {
+                     "_dbid": "3438",
+                     "__text": "HCXPCapitalism"
+                  },
+                  {
+                     "_dbid": "2211",
+                     "__text": "HCShipWoodCrates2"
+                  },
+                  {
+                     "_dbid": "2212",
+                     "__text": "HCShipWoodCrates3"
+                  },
+                  {
+                     "_dbid": "2215",
+                     "__text": "HCShipCoinCrates3"
+                  },
+                  {
+                     "_dbid": "2213",
+                     "__text": "HCShipWoodCrates4"
+                  },
+                  {
+                     "_dbid": "2216",
+                     "__text": "HCShipCoinCrates4"
+                  },
+                  {
+                     "_dbid": "814",
+                     "__text": "HCUnlockFort"
+                  },
+                  {
+                     "_dbid": "2041",
+                     "__text": "HCRefrigeration"
+                  },
+                  {
+                     "_dbid": "2102",
+                     "__text": "HCTextileMills"
+                  },
+                  {
+                     "_dbid": "2032",
+                     "__text": "HCFurrier"
+                  },
+                  {
+                     "_dbid": "2091",
+                     "__text": "HCExoticHardwoods"
+                  },
+                  {
+                     "_dbid": "1950",
+                     "__text": "HCIronmonger"
+                  },
+                  {
+                     "_dbid": "7056",
+                     "__text": "DEHCImmigrantsDutch"
+                  },
+                  {
+                     "_dbid": "7067",
+                     "__text": "DEHCImmigrantsIrish"
+                  },
+                  {
+                     "_dbid": "7115",
+                     "__text": "DEHCFedGeneralAssembly"
+                  },
+                  {
+                     "_dbid": "7017",
+                     "__text": "DEHCImmigrantsBritish"
+                  },
+                  {
+                     "_dbid": "2268",
+                     "__text": "HCShipFoodCrates5"
+                  },
+                  {
+                     "_dbid": "7199",
+                     "__text": "DEHCMinneapolisMills"
+                  },
+                  {
+                     "_dbid": "7342",
+                     "__text": "DEHCKosciuszkoFortifications"
+                  },
+                  {
+                     "_dbid": "474",
+                     "__text": "HCCigarRoller"
+                  }
+               ]
+            },
+            "_version": "8"
          }
       ],
       "revoltdeck": {
@@ -3777,8 +3798,7 @@
             "__text": "American_AcademyTexture0"
          },
          "American_AcademyTexture1",
-         "American_AcademyTexture2",
-         "deGeneralUS"
+         "American_AcademyTexture2"
       ]
    }
 }

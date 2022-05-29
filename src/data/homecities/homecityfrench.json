@@ -696,7 +696,7 @@
             "maxcount": "1",
             "level": "10",
             "prereqtech": "HCPioneers",
-            "age": "0"
+            "age": "3"
          },
          {
             "name": "HCFrontierDefenses",
@@ -1110,7 +1110,7 @@
             "level": "25",
             "prereqtech": "-1",
             "age": "3",
-            "displayunitcount": "13",
+            "displayunitcount": "8",
             "infiniteinlastage": "1"
          },
          {
@@ -1387,26 +1387,6 @@
    },
    "decks": {
       "deck": [
-         {
-            "name": "$$71332$$Beginner",
-            "cards": {
-               "card": [
-                  "HCShipCoureurs3",
-                  "HCShipFoodCrates1",
-                  "HCShipWoodCrates1",
-                  "HCShipCoinCrates1",
-                  "HCShipCrossbowmen1",
-                  "HCShipHussars1",
-                  "HCShipSkirmishers3",
-                  "HCXPShipCuirassiersRepeat",
-                  "HCShipDragoons1",
-                  "HCShipFalconets4",
-                  "HCUnlockFort",
-                  "HCFrontierDefenses",
-                  "HCUnlockFactory"
-               ]
-            }
-         },
          {
             "name": "$$71332$$Beginner",
             "default": "",
@@ -1720,6 +1700,114 @@
                   }
                ]
             }
+         },
+         {
+            "name": "$$55547$$Tycoon",
+            "cards": {
+               "card": [
+                  {
+                     "_dbid": "3381",
+                     "__text": "HCShipCoureurs4"
+                  },
+                  {
+                     "_dbid": "2263",
+                     "__text": "HCShipWoodCrates5"
+                  },
+                  {
+                     "_dbid": "625",
+                     "__text": "HCUnlockFactory"
+                  },
+                  {
+                     "_dbid": "2031",
+                     "__text": "HCRobberBarons"
+                  },
+                  {
+                     "_dbid": "2213",
+                     "__text": "HCShipWoodCrates4"
+                  },
+                  {
+                     "_dbid": "2216",
+                     "__text": "HCShipCoinCrates4"
+                  },
+                  {
+                     "_dbid": "814",
+                     "__text": "HCUnlockFort"
+                  },
+                  {
+                     "_dbid": "2093",
+                     "__text": "HCRoyalMint"
+                  },
+                  {
+                     "_dbid": "2041",
+                     "__text": "HCRefrigeration"
+                  },
+                  {
+                     "_dbid": "2212",
+                     "__text": "HCShipWoodCrates3"
+                  },
+                  {
+                     "_dbid": "2215",
+                     "__text": "HCShipCoinCrates3"
+                  },
+                  {
+                     "_dbid": "2261",
+                     "__text": "HCShipCoureurs2"
+                  },
+                  {
+                     "_dbid": "2262",
+                     "__text": "HCShipCoureurs3"
+                  },
+                  {
+                     "_dbid": "1992",
+                     "__text": "HCColonialMilitia"
+                  },
+                  {
+                     "_dbid": "1796",
+                     "__text": "HCAdvancedTradingPost"
+                  },
+                  {
+                     "_dbid": "3387",
+                     "__text": "HCXPEconomicTheory"
+                  },
+                  {
+                     "_dbid": "3440",
+                     "__text": "HCXPDistributivism"
+                  },
+                  {
+                     "_dbid": "2051",
+                     "__text": "HCExplorerFrench"
+                  },
+                  {
+                     "_dbid": "2647",
+                     "__text": "HCRoyalDecreeFrench"
+                  },
+                  {
+                     "_dbid": "2091",
+                     "__text": "HCExoticHardwoods"
+                  },
+                  {
+                     "_dbid": "3388",
+                     "__text": "HCXPLandGrab"
+                  },
+                  {
+                     "_dbid": "2066",
+                     "__text": "HCNorthwestPassage"
+                  },
+                  {
+                     "_dbid": "3504",
+                     "__text": "HCXPFurTrade"
+                  },
+                  {
+                     "_dbid": "2102",
+                     "__text": "HCTextileMills"
+                  },
+                  {
+                     "_dbid": "2095",
+                     "__text": "HCSustainableAgriculture"
+                  }
+               ]
+            },
+            "_version": "8"
          }
       ],
       "revoltdeck": [

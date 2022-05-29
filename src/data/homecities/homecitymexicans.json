@@ -770,7 +770,7 @@
             "maxcount": "1",
             "level": "10",
             "prereqtech": "HCPioneers",
-            "age": "0"
+            "age": "3"
          },
          {
             "name": "HCFrontierDefenses",
@@ -2065,7 +2065,7 @@
             "level": "0",
             "prereqtech": "XPRevolution",
             "bindtotech": "HCXPBloodBrothers",
-            "age": "2",
+            "age": "3",
             "revoltcard": ""
          },
          {
@@ -2444,93 +2444,6 @@
       "deck": [
          {
             "name": "$$71332$$Beginner",
-            "cards": {
-               "card": [
-                  {
-                     "_dbid": "7600",
-                     "__text": "DEHCAlhondigaDeGranaditas"
-                  },
-                  {
-                     "_dbid": "7864",
-                     "__text": "DEHCBarbacoa"
-                  },
-                  {
-                     "_dbid": "2206",
-                     "__text": "HCShipSettlers2"
-                  },
-                  {
-                     "_dbid": "2236",
-                     "__text": "HCShipFalconets3"
-                  },
-                  {
-                     "_dbid": "7613",
-                     "__text": "DEHCPorfiriato"
-                  },
-                  {
-                     "_dbid": "625",
-                     "__text": "HCUnlockFactory"
-                  },
-                  {
-                     "_dbid": "7467",
-                     "__text": "DEHCShipHaciendaWagon1"
-                  },
-                  {
-                     "_dbid": "7626",
-                     "__text": "DEHCLiberationMarch"
-                  },
-                  {
-                     "_dbid": "7618",
-                     "__text": "DEHCChipotles"
-                  },
-                  {
-                     "_dbid": "814",
-                     "__text": "HCUnlockFort"
-                  },
-                  {
-                     "_dbid": "7588",
-                     "__text": "DEHCPinatas"
-                  },
-                  {
-                     "_dbid": "2212",
-                     "__text": "HCShipWoodCrates3"
-                  },
-                  {
-                     "_dbid": "2215",
-                     "__text": "HCShipCoinCrates3"
-                  },
-                  {
-                     "_dbid": "7569",
-                     "__text": "DEHCShipInsurgente1"
-                  },
-                  {
-                     "_dbid": "7573",
-                     "__text": "DEHCShipEmboscador1"
-                  },
-                  {
-                     "_dbid": "7576",
-                     "__text": "DEHCShipChinaco1"
-                  },
-                  {
-                     "_dbid": "7574",
-                     "__text": "DEHCShipEmboscador2"
-                  },
-                  {
-                     "_dbid": "7577",
-                     "__text": "DEHCShipChinaco2"
-                  },
-                  {
-                     "_dbid": "2192",
-                     "__text": "HCShipFalconets1"
-                  },
-                  {
-                     "_dbid": "3382",
-                     "__text": "HCXPAdvancedBalloon"
-                  }
-               ]
-            }
-         },
-         {
-            "name": "$$71332$$Beginner",
             "default": "",
             "cards": {
                "card": [
@@ -2798,6 +2711,98 @@
                   }
                ]
             }
+         },
+         {
+            "name": "$$55547$$Tycoon",
+            "cards": {
+               "card": [
+                  {
+                     "_dbid": "2263",
+                     "__text": "HCShipWoodCrates5"
+                  },
+                  {
+                     "_dbid": "3521",
+                     "__text": "HCShipCoinCrates5"
+                  },
+                  {
+                     "_dbid": "625",
+                     "__text": "HCUnlockFactory"
+                  },
+                  {
+                     "_dbid": "2213",
+                     "__text": "HCShipWoodCrates4"
+                  },
+                  {
+                     "_dbid": "2216",
+                     "__text": "HCShipCoinCrates4"
+                  },
+                  {
+                     "_dbid": "814",
+                     "__text": "HCUnlockFort"
+                  },
+                  {
+                     "_dbid": "2623",
+                     "__text": "HCColonialEstancias"
+                  },
+                  {
+                     "_dbid": "7594",
+                     "__text": "DEHCMexicanMint"
+                  },
+                  {
+                     "_dbid": "2206",
+                     "__text": "HCShipSettlers2"
+                  },
+                  {
+                     "_dbid": "2208",
+                     "__text": "HCShipSettlers4"
+                  },
+                  {
+                     "_dbid": "2212",
+                     "__text": "HCShipWoodCrates3"
+                  },
+                  {
+                     "_dbid": "2215",
+                     "__text": "HCShipCoinCrates3"
+                  },
+                  {
+                     "_dbid": "7600",
+                     "__text": "DEHCAlhondigaDeGranaditas"
+                  },
+                  {
+                     "_dbid": "7607",
+                     "__text": "DEHCGeneralMexicans"
+                  },
+                  {
+                     "_dbid": "1796",
+                     "__text": "HCAdvancedTradingPost"
+                  },
+                  {
+                     "_dbid": "7815",
+                     "__text": "DEHCCathedralConstruction"
+                  },
+                  {
+                     "_dbid": "2032",
+                     "__text": "HCFurrier"
+                  },
+                  {
+                     "_dbid": "1950",
+                     "__text": "HCIronmonger"
+                  },
+                  {
+                     "_dbid": "2041",
+                     "__text": "HCRefrigeration"
+                  },
+                  {
+                     "_dbid": "2102",
+                     "__text": "HCTextileMills"
+                  },
+                  {
+                     "_dbid": "474",
+                     "__text": "HCCigarRoller"
+                  }
+               ]
+            },
+            "_version": "8"
          }
       ],
       "revoltdeck": [
@@ -2954,7 +2959,10 @@
                   "HCXPAdvancedScouts",
                   "DEHCREVMXJungleWarfare",
                   "DEHCREVMXMayaPootsPlan",
-                  "DEHCREVMXMayaMariaUicab"
+                  "DEHCREVMXMayaMariaUicab",
+                  "HCNativeWarriors",
+                  "DEHCREVMXFoodSilos",
+                  "HCSustainableAgriculture"
                ]
             },
             "_civ": "DERevMXMaya"
@@ -5013,7 +5021,6 @@
             "__text": "Mexico_NWTCTexture0"
          },
          "Mexico_NWTCTexture1",
-         "deGeneralMexican",
          "Mexico_DayOfTheDead_Festival_1",
          "Mexico_DayOfTheDead_Festival_2",
          "Mexico_Night_Lights",

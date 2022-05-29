@@ -689,7 +689,7 @@
             "maxcount": "1",
             "level": "10",
             "prereqtech": "DEHCExtensiveFortificationsEuropean",
-            "age": "0"
+            "age": "3"
          },
          {
             "name": "HCFrontierDefenses",
@@ -1150,7 +1150,7 @@
             "level": "25",
             "prereqtech": "HCMercsCorsairs",
             "age": "3",
-            "displayunitcount": "13",
+            "displayunitcount": "8",
             "infiniteinlastage": "1"
          },
          {
@@ -1574,26 +1574,6 @@
       "deck": [
          {
             "name": "$$71332$$Beginner",
-            "cards": {
-               "card": [
-                  "HCShipSettlers3",
-                  "HCShipFoodCrates1",
-                  "HCShipWoodCrates1",
-                  "HCShipCoinCrates1",
-                  "HCShipLongbowmen1",
-                  "HCShipMusketeers1",
-                  "HCShipMusketeers4",
-                  "HCShipHussars4",
-                  "HCXPShipRocketsRepeat",
-                  "HCFrontierDefenses",
-                  "HCUnlockFort",
-                  "HCUnlockFactory",
-                  "HCShipFalconets2"
-               ]
-            }
-         },
-         {
-            "name": "$$71332$$Beginner",
             "default": "",
             "cards": {
                "card": [
@@ -1905,6 +1885,114 @@
                   }
                ]
             }
+         },
+         {
+            "name": "$$55547$$Tycoon",
+            "cards": {
+               "card": [
+                  {
+                     "_dbid": "2207",
+                     "__text": "HCShipSettlers3"
+                  },
+                  {
+                     "_dbid": "1992",
+                     "__text": "HCColonialMilitia"
+                  },
+                  {
+                     "_dbid": "1796",
+                     "__text": "HCAdvancedTradingPost"
+                  },
+                  {
+                     "_dbid": "3440",
+                     "__text": "HCXPDistributivism"
+                  },
+                  {
+                     "_dbid": "625",
+                     "__text": "HCUnlockFactory"
+                  },
+                  {
+                     "_dbid": "2031",
+                     "__text": "HCRobberBarons"
+                  },
+                  {
+                     "_dbid": "2213",
+                     "__text": "HCShipWoodCrates4"
+                  },
+                  {
+                     "_dbid": "2216",
+                     "__text": "HCShipCoinCrates4"
+                  },
+                  {
+                     "_dbid": "2567",
+                     "__text": "HCShipSettlers5"
+                  },
+                  {
+                     "_dbid": "2208",
+                     "__text": "HCShipSettlers4"
+                  },
+                  {
+                     "_dbid": "2211",
+                     "__text": "HCShipWoodCrates2"
+                  },
+                  {
+                     "_dbid": "2212",
+                     "__text": "HCShipWoodCrates3"
+                  },
+                  {
+                     "_dbid": "2214",
+                     "__text": "HCShipCoinCrates2"
+                  },
+                  {
+                     "_dbid": "2215",
+                     "__text": "HCShipCoinCrates3"
+                  },
+                  {
+                     "_dbid": "2088",
+                     "__text": "HCExplorerBritish"
+                  },
+                  {
+                     "_dbid": "6691",
+                     "__text": "DEHCExtensiveFortificationsEuropean"
+                  },
+                  {
+                     "_dbid": "814",
+                     "__text": "HCUnlockFort"
+                  },
+                  {
+                     "_dbid": "2093",
+                     "__text": "HCRoyalMint"
+                  },
+                  {
+                     "_dbid": "2075",
+                     "__text": "HCCheaperManors"
+                  },
+                  {
+                     "_dbid": "2218",
+                     "__text": "HCShipSheep1"
+                  },
+                  {
+                     "_dbid": "1950",
+                     "__text": "HCIronmonger"
+                  },
+                  {
+                     "_dbid": "2607",
+                     "__text": "HCStockyards"
+                  },
+                  {
+                     "_dbid": "2614",
+                     "__text": "HCHouseEstates"
+                  },
+                  {
+                     "_dbid": "3450",
+                     "__text": "HCXPSouthSeaBubble"
+                  },
+                  {
+                     "_dbid": "2041",
+                     "__text": "HCRefrigeration"
+                  }
+               ]
+            },
+            "_version": "8"
          }
       ],
       "revoltdeck": [
@@ -3930,8 +4018,7 @@
          "British_ManuPlantTexture4",
          "British_ManuPlantTexture5",
          "British_ManuPlantTexture6",
-         "British_ManuPlantTexture7",
-         "ExplorerBritish"
+         "British_ManuPlantTexture7"
       ]
    }
 }

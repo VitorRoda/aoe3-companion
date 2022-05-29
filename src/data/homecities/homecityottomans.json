@@ -1119,6 +1119,15 @@
             "level": "25",
             "prereqtech": "HCMercsCorsairs",
             "age": "3",
+            "displayunitcount": "8",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "DEHCMercsOttoman",
+            "maxcount": "-1",
+            "level": "25",
+            "prereqtech": "HCMercsCorsairs",
+            "age": "3",
             "displayunitcount": "13",
             "infiniteinlastage": "1"
          },
@@ -1511,7 +1520,7 @@
             "level": "0",
             "prereqtech": "XPRevolution",
             "age": "2",
-            "displayunitcount": "5",
+            "displayunitcount": "12",
             "revoltcard": ""
          },
          {
@@ -1520,7 +1529,7 @@
             "level": "0",
             "prereqtech": "XPRevolution",
             "age": "2",
-            "displayunitcount": "7",
+            "displayunitcount": "10",
             "revoltcard": ""
          },
          {
@@ -1587,26 +1596,6 @@
    },
    "decks": {
       "deck": [
-         {
-            "name": "$$71332$$Beginner",
-            "cards": {
-               "card": [
-                  "HCShipSettlers3",
-                  "HCShipFoodCrates1",
-                  "HCShipWoodCrates1",
-                  "HCShipCoinCrates1",
-                  "HCShipJanissaries1",
-                  "HCShipHussars1",
-                  "HCShipSpahis3",
-                  "HCShipCavArchers1",
-                  "HCShipAbusGuns3",
-                  "HCXPShipGrenadiersRepeat",
-                  "HCFrontierDefenses",
-                  "HCFrontierDefenses2",
-                  "HCUnlockFactory"
-               ]
-            }
-         },
          {
             "name": "$$71332$$Beginner",
             "default": "",
@@ -1920,6 +1909,114 @@
                   }
                ]
             }
+         },
+         {
+            "name": "$$55547$$Tycoon",
+            "cards": {
+               "card": [
+                  {
+                     "_dbid": "2207",
+                     "__text": "HCShipSettlers3"
+                  },
+                  {
+                     "_dbid": "2340",
+                     "__text": "HCSilkRoadTeam"
+                  },
+                  {
+                     "_dbid": "1993",
+                     "__text": "HCPioneers"
+                  },
+                  {
+                     "_dbid": "1992",
+                     "__text": "HCColonialMilitia"
+                  },
+                  {
+                     "_dbid": "2341",
+                     "__text": "HCExplorerOttoman"
+                  },
+                  {
+                     "_dbid": "1796",
+                     "__text": "HCAdvancedTradingPost"
+                  },
+                  {
+                     "_dbid": "3438",
+                     "__text": "HCXPCapitalism"
+                  },
+                  {
+                     "_dbid": "3455",
+                     "__text": "HCXPSublimePorte"
+                  },
+                  {
+                     "_dbid": "3387",
+                     "__text": "HCXPEconomicTheory"
+                  },
+                  {
+                     "_dbid": "2094",
+                     "__text": "HCFoodSilos"
+                  },
+                  {
+                     "_dbid": "2208",
+                     "__text": "HCShipSettlers4"
+                  },
+                  {
+                     "_dbid": "2211",
+                     "__text": "HCShipWoodCrates2"
+                  },
+                  {
+                     "_dbid": "2212",
+                     "__text": "HCShipWoodCrates3"
+                  },
+                  {
+                     "_dbid": "2214",
+                     "__text": "HCShipCoinCrates2"
+                  },
+                  {
+                     "_dbid": "2215",
+                     "__text": "HCShipCoinCrates3"
+                  },
+                  {
+                     "_dbid": "6691",
+                     "__text": "DEHCExtensiveFortificationsEuropean"
+                  },
+                  {
+                     "_dbid": "2095",
+                     "__text": "HCSustainableAgriculture"
+                  },
+                  {
+                     "_dbid": "474",
+                     "__text": "HCCigarRoller"
+                  },
+                  {
+                     "_dbid": "2213",
+                     "__text": "HCShipWoodCrates4"
+                  },
+                  {
+                     "_dbid": "814",
+                     "__text": "HCUnlockFort"
+                  },
+                  {
+                     "_dbid": "2093",
+                     "__text": "HCRoyalMint"
+                  },
+                  {
+                     "_dbid": "2598",
+                     "__text": "HCTeamCoinCrates2"
+                  },
+                  {
+                     "_dbid": "625",
+                     "__text": "HCUnlockFactory"
+                  },
+                  {
+                     "_dbid": "2031",
+                     "__text": "HCRobberBarons"
+                  },
+                  {
+                     "_dbid": "2041",
+                     "__text": "HCRefrigeration"
+                  }
+               ]
+            },
+            "_version": "8"
          }
       ],
       "revoltdeck": [
@@ -3467,6 +3564,11 @@
                   "__text": "HCMercsMediterranean"
                },
                {
+                  "_x": "4.2",
+                  "_y": "5.0",
+                  "__text": "DEHCMercsOttoman"
+               },
+               {
                   "_x": "4.6",
                   "_y": "1.0",
                   "__text": "DEHCTheaters"
@@ -3594,6 +3696,11 @@
                   "_x": "4.2",
                   "_y": "5.0",
                   "__text": "HCMercsMediterranean"
+               },
+               {
+                  "_x": "4.2",
+                  "_y": "5.0",
+                  "__text": "DEHCMercsOttoman"
                },
                {
                   "_x": "4.6",

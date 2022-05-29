@@ -621,7 +621,7 @@
             "maxcount": "1",
             "level": "10",
             "prereqtech": "YPHCZenDiet",
-            "age": "0"
+            "age": "3"
          },
          {
             "name": "YPHCShipCastleWagons1",
@@ -1209,26 +1209,6 @@
       "deck": [
          {
             "name": "$$71332$$Beginner",
-            "cards": {
-               "card": [
-                  "HCShipFoodCrates1",
-                  "HCShipWoodCrates1",
-                  "HCShipCoinCrates1",
-                  "YPHCShipSettlersAsian1",
-                  "YPHCShipYumi1",
-                  "YPHCShipAshigaru2",
-                  "YPHCShipSamurai3",
-                  "YPHCShipNaginataRider2",
-                  "YPHCShipFlamingArrow2",
-                  "YPHCShipMorutaru1",
-                  "YPHCShipSamurai4",
-                  "YPHCShipDaimyoSatsuma",
-                  "YPHCDojoGenbukan"
-               ]
-            }
-         },
-         {
-            "name": "$$71332$$Beginner",
             "default": "",
             "cards": {
                "card": [
@@ -1540,6 +1520,114 @@
                   }
                ]
             }
+         },
+         {
+            "name": "$$55547$$Tycoon",
+            "cards": {
+               "card": [
+                  {
+                     "_dbid": "1842",
+                     "__text": "HCImprovedBuildings"
+                  },
+                  {
+                     "_dbid": "4269",
+                     "__text": "YPHCShipSettlersAsian5"
+                  },
+                  {
+                     "_dbid": "5226",
+                     "__text": "ypHCShipFoodCrates4"
+                  },
+                  {
+                     "_dbid": "5228",
+                     "__text": "ypHCShipWoodCrates4"
+                  },
+                  {
+                     "_dbid": "5224",
+                     "__text": "ypHCShipCoinCrates4"
+                  },
+                  {
+                     "_dbid": "2093",
+                     "__text": "HCRoyalMint"
+                  },
+                  {
+                     "_dbid": "2041",
+                     "__text": "HCRefrigeration"
+                  },
+                  {
+                     "_dbid": "4268",
+                     "__text": "YPHCShipSettlersAsian2"
+                  },
+                  {
+                     "_dbid": "5225",
+                     "__text": "ypHCShipFoodCrates2"
+                  },
+                  {
+                     "_dbid": "5227",
+                     "__text": "ypHCShipWoodCrates2"
+                  },
+                  {
+                     "_dbid": "5223",
+                     "__text": "ypHCShipCoinCrates2"
+                  },
+                  {
+                     "_dbid": "4682",
+                     "__text": "YPHCShipShrineWagon2"
+                  },
+                  {
+                     "_dbid": "5033",
+                     "__text": "YPHCShrineLearning"
+                  },
+                  {
+                     "_dbid": "4267",
+                     "__text": "YPHCShipSettlersAsian1"
+                  },
+                  {
+                     "_dbid": "4215",
+                     "__text": "YPHCShipShrineWagon"
+                  },
+                  {
+                     "_dbid": "4216",
+                     "__text": "YPHCIncreasedTribute"
+                  },
+                  {
+                     "_dbid": "3583",
+                     "__text": "YPHCJapaneseMonkCombat"
+                  },
+                  {
+                     "_dbid": "4128",
+                     "__text": "YPHCExpandedTradingPost"
+                  },
+                  {
+                     "_dbid": "3965",
+                     "__text": "YPHCAdvancedRicePaddy"
+                  },
+                  {
+                     "_dbid": "4228",
+                     "__text": "YPHCAdvancedWonders"
+                  },
+                  {
+                     "_dbid": "3967",
+                     "__text": "YPHCAdvancedConsulate"
+                  },
+                  {
+                     "_dbid": "4760",
+                     "__text": "YPHCBerryGrove"
+                  },
+                  {
+                     "_dbid": "474",
+                     "__text": "HCCigarRoller"
+                  },
+                  {
+                     "_dbid": "4871",
+                     "__text": "YPHCStoneCastles"
+                  },
+                  {
+                     "_dbid": "2102",
+                     "__text": "HCTextileMills"
+                  }
+               ]
+            },
+            "_version": "8"
          }
       ]
    },

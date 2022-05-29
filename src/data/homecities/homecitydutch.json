@@ -691,7 +691,7 @@
             "maxcount": "1",
             "level": "10",
             "prereqtech": "HCPioneers",
-            "age": "0"
+            "age": "3"
          },
          {
             "name": "HCHeavyFortifications",
@@ -1503,26 +1503,6 @@
       "deck": [
          {
             "name": "$$71332$$Beginner",
-            "cards": {
-               "card": [
-                  "HCShipSettlers3",
-                  "HCShipFoodCrates1",
-                  "HCShipWoodCrates1",
-                  "HCShipCoinCrates1",
-                  "HCShipPikemen1",
-                  "HCShipHussars1",
-                  "HCXPBankWagon",
-                  "HCShipSkirmishers3",
-                  "HCUnlockFort",
-                  "HCXPShipHalberdiersRepeat",
-                  "HCShipRuyters1",
-                  "HCShipMortars1",
-                  "HCUnlockFactory"
-               ]
-            }
-         },
-         {
-            "name": "$$71332$$Beginner",
             "default": "",
             "cards": {
                "card": [
@@ -1830,6 +1810,114 @@
                   }
                ]
             }
+         },
+         {
+            "name": "$$55547$$Tycoon",
+            "cards": {
+               "card": [
+                  {
+                     "_dbid": "2263",
+                     "__text": "HCShipWoodCrates5"
+                  },
+                  {
+                     "_dbid": "625",
+                     "__text": "HCUnlockFactory"
+                  },
+                  {
+                     "_dbid": "2031",
+                     "__text": "HCRobberBarons"
+                  },
+                  {
+                     "_dbid": "2213",
+                     "__text": "HCShipWoodCrates4"
+                  },
+                  {
+                     "_dbid": "2216",
+                     "__text": "HCShipCoinCrates4"
+                  },
+                  {
+                     "_dbid": "814",
+                     "__text": "HCUnlockFort"
+                  },
+                  {
+                     "_dbid": "2093",
+                     "__text": "HCRoyalMint"
+                  },
+                  {
+                     "_dbid": "2041",
+                     "__text": "HCRefrigeration"
+                  },
+                  {
+                     "_dbid": "2206",
+                     "__text": "HCShipSettlers2"
+                  },
+                  {
+                     "_dbid": "2211",
+                     "__text": "HCShipWoodCrates2"
+                  },
+                  {
+                     "_dbid": "2212",
+                     "__text": "HCShipWoodCrates3"
+                  },
+                  {
+                     "_dbid": "2215",
+                     "__text": "HCShipCoinCrates3"
+                  },
+                  {
+                     "_dbid": "3394",
+                     "__text": "HCXPBankWagon"
+                  },
+                  {
+                     "_dbid": "2207",
+                     "__text": "HCShipSettlers3"
+                  },
+                  {
+                     "_dbid": "2413",
+                     "__text": "HCExplorerDutch"
+                  },
+                  {
+                     "_dbid": "2426",
+                     "__text": "HCBanks1"
+                  },
+                  {
+                     "_dbid": "1992",
+                     "__text": "HCColonialMilitia"
+                  },
+                  {
+                     "_dbid": "2094",
+                     "__text": "HCFoodSilos"
+                  },
+                  {
+                     "_dbid": "1950",
+                     "__text": "HCIronmonger"
+                  },
+                  {
+                     "_dbid": "2648",
+                     "__text": "HCRoyalDecreeDutch"
+                  },
+                  {
+                     "_dbid": "6691",
+                     "__text": "DEHCExtensiveFortificationsEuropean"
+                  },
+                  {
+                     "_dbid": "2190",
+                     "__text": "HCShipCoveredWagons"
+                  },
+                  {
+                     "_dbid": "1796",
+                     "__text": "HCAdvancedTradingPost"
+                  },
+                  {
+                     "_dbid": "2427",
+                     "__text": "HCBanks2"
+                  },
+                  {
+                     "_dbid": "3450",
+                     "__text": "HCXPSouthSeaBubble"
+                  }
+               ]
+            },
+            "_version": "8"
          }
       ],
       "revoltdeck": [

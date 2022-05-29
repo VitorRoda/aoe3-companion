@@ -684,7 +684,7 @@
             "maxcount": "1",
             "level": "10",
             "prereqtech": "HCPioneers",
-            "age": "0"
+            "age": "3"
          },
          {
             "name": "HCHeavyFortifications",
@@ -1512,25 +1512,6 @@
       "deck": [
          {
             "name": "$$71332$$Beginner",
-            "cards": {
-               "card": [
-                  "HCShipSettlers1",
-                  "HCShipFoodCrates1",
-                  "HCShipWoodCrates1",
-                  "HCShipCoinCrates1",
-                  "HCShipPikemen1",
-                  "DEHCShipLeatherCannons1",
-                  "DEHCDominions",
-                  "HCUnlockFort",
-                  "DEHCShipCaroleansRepeat",
-                  "DEHCShipDragoonsRepeat",
-                  "HCShipMortars2",
-                  "HCUnlockFactory"
-               ]
-            }
-         },
-         {
-            "name": "$$71332$$Beginner",
             "default": "",
             "cards": {
                "card": [
@@ -1842,6 +1823,114 @@
                   }
                ]
             }
+         },
+         {
+            "name": "$$55547$$Tycoon",
+            "cards": {
+               "card": [
+                  {
+                     "_dbid": "2268",
+                     "__text": "HCShipFoodCrates5"
+                  },
+                  {
+                     "_dbid": "2263",
+                     "__text": "HCShipWoodCrates5"
+                  },
+                  {
+                     "_dbid": "625",
+                     "__text": "HCUnlockFactory"
+                  },
+                  {
+                     "_dbid": "3345",
+                     "__text": "HCXPIndustrialRevolution"
+                  },
+                  {
+                     "_dbid": "2213",
+                     "__text": "HCShipWoodCrates4"
+                  },
+                  {
+                     "_dbid": "2216",
+                     "__text": "HCShipCoinCrates4"
+                  },
+                  {
+                     "_dbid": "6589",
+                     "__text": "DEHCKalmarCastle"
+                  },
+                  {
+                     "_dbid": "2093",
+                     "__text": "HCRoyalMint"
+                  },
+                  {
+                     "_dbid": "2041",
+                     "__text": "HCRefrigeration"
+                  },
+                  {
+                     "_dbid": "2211",
+                     "__text": "HCShipWoodCrates2"
+                  },
+                  {
+                     "_dbid": "2212",
+                     "__text": "HCShipWoodCrates3"
+                  },
+                  {
+                     "_dbid": "2215",
+                     "__text": "HCShipCoinCrates3"
+                  },
+                  {
+                     "_dbid": "6534",
+                     "__text": "DEHCEngelsbergIronworks"
+                  },
+                  {
+                     "_dbid": "6403",
+                     "__text": "DEHCDominions"
+                  },
+                  {
+                     "_dbid": "2207",
+                     "__text": "HCShipSettlers3"
+                  },
+                  {
+                     "_dbid": "6396",
+                     "__text": "DEHCExplorerSwedish"
+                  },
+                  {
+                     "_dbid": "1796",
+                     "__text": "HCAdvancedTradingPost"
+                  },
+                  {
+                     "_dbid": "1992",
+                     "__text": "HCColonialMilitia"
+                  },
+                  {
+                     "_dbid": "6395",
+                     "__text": "DEHCTorpTeam"
+                  },
+                  {
+                     "_dbid": "2032",
+                     "__text": "HCFurrier"
+                  },
+                  {
+                     "_dbid": "2091",
+                     "__text": "HCExoticHardwoods"
+                  },
+                  {
+                     "_dbid": "6535",
+                     "__text": "DEHCBlueberries"
+                  },
+                  {
+                     "_dbid": "6398",
+                     "__text": "DEHCOxenstiernaReforms"
+                  },
+                  {
+                     "_dbid": "2102",
+                     "__text": "HCTextileMills"
+                  },
+                  {
+                     "_dbid": "474",
+                     "__text": "HCCigarRoller"
+                  }
+               ]
+            },
+            "_version": "8"
          }
       ],
       "revoltdeck": [

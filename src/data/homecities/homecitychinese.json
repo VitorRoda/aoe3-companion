@@ -834,7 +834,7 @@
             "maxcount": "1",
             "level": "10",
             "prereqtech": "YPHCAdvancedIrregulars",
-            "age": "0"
+            "age": "3"
          },
          {
             "name": "YPHCGreatWall",
@@ -1125,7 +1125,7 @@
             "maxcount": "1",
             "level": "10",
             "prereqtech": "YPHCShipWarJunk1",
-            "age": "1"
+            "age": "0"
          },
          {
             "name": "YPHCEuropeanCannons",
@@ -1257,26 +1257,6 @@
    },
    "decks": {
       "deck": [
-         {
-            "name": "$$71332$$Beginner",
-            "cards": {
-               "card": [
-                  "HCShipFoodCrates1",
-                  "HCShipWoodCrates1",
-                  "HCShipCoinCrates1",
-                  "YPHCShipDisciple1",
-                  "YPHCShipChuKoNu1",
-                  "YPHCShipQiangPikeman2",
-                  "YPHCShipArquebusier1",
-                  "YPHCShipChangdao2",
-                  "YPHCShipMandarinDuckSquad",
-                  "YPHCShipEverVictoriousArmy",
-                  "YPHCShipMeteorHammer3",
-                  "YPHCShipSteppeRider3",
-                  "YPHCShipIronCapPrincesArmy"
-               ]
-            }
-         },
          {
             "name": "$$71332$$Beginner",
             "default": "",
@@ -1594,6 +1574,114 @@
                   }
                ]
             }
+         },
+         {
+            "name": "$$55547$$Tycoon",
+            "cards": {
+               "card": [
+                  {
+                     "_dbid": "4823",
+                     "__text": "YPHCSpawnMigrants1"
+                  },
+                  {
+                     "_dbid": "2268",
+                     "__text": "HCShipFoodCrates5"
+                  },
+                  {
+                     "_dbid": "2263",
+                     "__text": "HCShipWoodCrates5"
+                  },
+                  {
+                     "_dbid": "3521",
+                     "__text": "HCShipCoinCrates5"
+                  },
+                  {
+                     "_dbid": "4825",
+                     "__text": "YPHCSpawnRefugees2"
+                  },
+                  {
+                     "_dbid": "2213",
+                     "__text": "HCShipWoodCrates4"
+                  },
+                  {
+                     "_dbid": "2216",
+                     "__text": "HCShipCoinCrates4"
+                  },
+                  {
+                     "_dbid": "4802",
+                     "__text": "YPHCSpawnLivestock2"
+                  },
+                  {
+                     "_dbid": "3962",
+                     "__text": "YPHCConfusciousGift"
+                  },
+                  {
+                     "_dbid": "2212",
+                     "__text": "HCShipWoodCrates3"
+                  },
+                  {
+                     "_dbid": "2215",
+                     "__text": "HCShipCoinCrates3"
+                  },
+                  {
+                     "_dbid": "2043",
+                     "__text": "HCSilversmith"
+                  },
+                  {
+                     "_dbid": "2098",
+                     "__text": "HCSpiceTrade"
+                  },
+                  {
+                     "_dbid": "4189",
+                     "__text": "YPHCExtensiveFortifications"
+                  },
+                  {
+                     "_dbid": "8515",
+                     "__text": "DEHCTeaExport"
+                  },
+                  {
+                     "_dbid": "4824",
+                     "__text": "YPHCSpawnRefugees1"
+                  },
+                  {
+                     "_dbid": "4801",
+                     "__text": "YPHCSpawnLivestock1"
+                  },
+                  {
+                     "_dbid": "3551",
+                     "__text": "YPHCShipVillageWagon1"
+                  },
+                  {
+                     "_dbid": "5038",
+                     "__text": "YPHCRainbowTrickle"
+                  },
+                  {
+                     "_dbid": "2032",
+                     "__text": "HCFurrier"
+                  },
+                  {
+                     "_dbid": "2094",
+                     "__text": "HCFoodSilos"
+                  },
+                  {
+                     "_dbid": "4228",
+                     "__text": "YPHCAdvancedWonders"
+                  },
+                  {
+                     "_dbid": "2093",
+                     "__text": "HCRoyalMint"
+                  },
+                  {
+                     "_dbid": "2041",
+                     "__text": "HCRefrigeration"
+                  },
+                  {
+                     "_dbid": "2102",
+                     "__text": "HCTextileMills"
+                  }
+               ]
+            },
+            "_version": "8"
          }
       ]
    },
@@ -3561,8 +3649,7 @@
          "ChineseCHTexture3",
          "ChineseCHTexture4",
          "ChineseLanterns",
-         "ChineseBanners",
-         "ypMonkChinese"
+         "ChineseBanners"
       ]
    }
 }

@@ -497,7 +497,7 @@
             "level": "25",
             "prereqtech": "HCCavalryDamageGermanTeam",
             "age": "3",
-            "displayunitcount": "10",
+            "displayunitcount": "6",
             "infiniteinlastage": "1"
          },
          {
@@ -697,7 +697,7 @@
             "maxcount": "1",
             "level": "10",
             "prereqtech": "HCPioneers",
-            "age": "0"
+            "age": "3"
          },
          {
             "name": "HCTeamTeutonTownCenter",
@@ -1154,7 +1154,7 @@
             "level": "25",
             "prereqtech": "-1",
             "age": "3",
-            "displayunitcount": "15",
+            "displayunitcount": "9",
             "infiniteinlastage": "1"
          },
          {
@@ -1277,7 +1277,7 @@
             "level": "0",
             "prereqtech": "XPRevolution",
             "age": "2",
-            "displayunitcount": "5",
+            "displayunitcount": "12",
             "revoltcard": ""
          },
          {
@@ -1286,7 +1286,7 @@
             "level": "0",
             "prereqtech": "XPRevolution",
             "age": "2",
-            "displayunitcount": "7",
+            "displayunitcount": "10",
             "revoltcard": ""
          },
          {
@@ -1400,26 +1400,6 @@
    },
    "decks": {
       "deck": [
-         {
-            "name": "$$71332$$Beginner",
-            "cards": {
-               "card": [
-                  "HCShipFoodCrates1",
-                  "HCShipWoodCrates1",
-                  "HCShipCoinCrates1",
-                  "HCShipSettlerWagons1",
-                  "HCXPShipCannonsRepeat",
-                  "HCShipWarWagons2",
-                  "HCShipCrossbowmen3German",
-                  "HCShipDopplesoldners1",
-                  "HCShipSkirmishers3German",
-                  "HCShipUhlans4",
-                  "HCPalatineSettlements",
-                  "HCUnlockFortGerman",
-                  "HCUnlockFactoryGerman"
-               ]
-            }
-         },
          {
             "name": "$$71332$$Beginner",
             "default": "",
@@ -1725,6 +1705,114 @@
                   }
                ]
             }
+         },
+         {
+            "name": "$$55547$$Tycoon",
+            "cards": {
+               "card": [
+                  {
+                     "_dbid": "3511",
+                     "__text": "HCXPShipSettlerWagons5"
+                  },
+                  {
+                     "_dbid": "2502",
+                     "__text": "HCUnlockFactoryGerman"
+                  },
+                  {
+                     "_dbid": "2677",
+                     "__text": "HCRobberBaronsGerman"
+                  },
+                  {
+                     "_dbid": "2466",
+                     "__text": "HCShipWoodCrates4German"
+                  },
+                  {
+                     "_dbid": "2463",
+                     "__text": "HCShipCoinCrates4German"
+                  },
+                  {
+                     "_dbid": "2494",
+                     "__text": "HCUnlockFortGerman"
+                  },
+                  {
+                     "_dbid": "2515",
+                     "__text": "HCRoyalMintGerman"
+                  },
+                  {
+                     "_dbid": "2517",
+                     "__text": "HCRefrigerationGerman"
+                  },
+                  {
+                     "_dbid": "2456",
+                     "__text": "HCShipSettlerWagons4"
+                  },
+                  {
+                     "_dbid": "2465",
+                     "__text": "HCShipWoodCrates3German"
+                  },
+                  {
+                     "_dbid": "2462",
+                     "__text": "HCShipCoinCrates3German"
+                  },
+                  {
+                     "_dbid": "2455",
+                     "__text": "HCShipSettlerWagons3"
+                  },
+                  {
+                     "_dbid": "2156",
+                     "__text": "HCExplorerGerman"
+                  },
+                  {
+                     "_dbid": "1796",
+                     "__text": "HCAdvancedTradingPost"
+                  },
+                  {
+                     "_dbid": "1992",
+                     "__text": "HCColonialMilitia"
+                  },
+                  {
+                     "_dbid": "3438",
+                     "__text": "HCXPCapitalism"
+                  },
+                  {
+                     "_dbid": "3387",
+                     "__text": "HCXPEconomicTheory"
+                  },
+                  {
+                     "_dbid": "3388",
+                     "__text": "HCXPLandGrab"
+                  },
+                  {
+                     "_dbid": "2518",
+                     "__text": "HCFurrierGerman"
+                  },
+                  {
+                     "_dbid": "2538",
+                     "__text": "HCGuildArtisans"
+                  },
+                  {
+                     "_dbid": "2450",
+                     "__text": "HCTeamTeutonTownCenter"
+                  },
+                  {
+                     "_dbid": "2514",
+                     "__text": "HCSilversmithGerman"
+                  },
+                  {
+                     "_dbid": "2658",
+                     "__text": "HCGermantownFarmers"
+                  },
+                  {
+                     "_dbid": "2523",
+                     "__text": "HCTextileMillsGerman"
+                  },
+                  {
+                     "_dbid": "2516",
+                     "__text": "HCSustainableAgricultureGerman"
+                  }
+               ]
+            },
+            "_version": "8"
          }
       ],
       "revoltdeck": [

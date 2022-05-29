@@ -743,7 +743,7 @@
             "maxcount": "1",
             "level": "10",
             "prereqtech": "HCXPTownDance",
-            "age": "0"
+            "age": "3"
          },
          {
             "name": "HCXPExtensiveFortificationsAztec",
@@ -1257,25 +1257,6 @@
       "deck": [
          {
             "name": "$$71332$$Beginner",
-            "cards": {
-               "card": [
-                  "HCShipFoodCrates1",
-                  "HCShipWoodCrates1",
-                  "HCShipCoinCrates1",
-                  "HCXPShipVillagers3",
-                  "HCXPShipMedicineMen2Aztec",
-                  "HCXPShipCoyoteMen1",
-                  "HCXPShipWarHutTravois1",
-                  "HCXPShipNoblesHutTravois1",
-                  "HCXPShipNoblesHutTravois2",
-                  "HCXPShipMacehualtinsRepeat",
-                  "HCXPShipJaguarKnights1",
-                  "HCXPShipEagleKnights1"
-               ]
-            }
-         },
-         {
-            "name": "$$71332$$Beginner",
             "default": "",
             "cards": {
                "card": [
@@ -1587,6 +1568,114 @@
                   }
                ]
             }
+         },
+         {
+            "name": "$$55547$$Tycoon",
+            "cards": {
+               "card": [
+                  {
+                     "_dbid": "2263",
+                     "__text": "HCShipWoodCrates5"
+                  },
+                  {
+                     "_dbid": "2982",
+                     "__text": "HCXPChinampa1"
+                  },
+                  {
+                     "_dbid": "2983",
+                     "__text": "HCXPChinampa2"
+                  },
+                  {
+                     "_dbid": "2217",
+                     "__text": "HCXPCoinCratesAztec5"
+                  },
+                  {
+                     "_dbid": "2917",
+                     "__text": "HCXPShipVillagers5"
+                  },
+                  {
+                     "_dbid": "2213",
+                     "__text": "HCShipWoodCrates4"
+                  },
+                  {
+                     "_dbid": "2981",
+                     "__text": "HCXPAztecMining"
+                  },
+                  {
+                     "_dbid": "3328",
+                     "__text": "HCXPShipFarmTravois3"
+                  },
+                  {
+                     "_dbid": "2797",
+                     "__text": "HCXPShipVillagers2"
+                  },
+                  {
+                     "_dbid": "2799",
+                     "__text": "HCXPShipVillagers4"
+                  },
+                  {
+                     "_dbid": "2211",
+                     "__text": "HCShipWoodCrates2"
+                  },
+                  {
+                     "_dbid": "2212",
+                     "__text": "HCShipWoodCrates3"
+                  },
+                  {
+                     "_dbid": "3360",
+                     "__text": "HCXPCoinCratesAztec4"
+                  },
+                  {
+                     "_dbid": "3359",
+                     "__text": "HCXPCoinCratesAztec3"
+                  },
+                  {
+                     "_dbid": "2798",
+                     "__text": "HCXPShipVillagers3"
+                  },
+                  {
+                     "_dbid": "2880",
+                     "__text": "HCXPWarChiefAztec1"
+                  },
+                  {
+                     "_dbid": "1796",
+                     "__text": "HCAdvancedTradingPost"
+                  },
+                  {
+                     "_dbid": "8492",
+                     "__text": "DEHCCalendarCeremony"
+                  },
+                  {
+                     "_dbid": "2091",
+                     "__text": "HCExoticHardwoods"
+                  },
+                  {
+                     "_dbid": "2094",
+                     "__text": "HCFoodSilos"
+                  },
+                  {
+                     "_dbid": "2032",
+                     "__text": "HCFurrier"
+                  },
+                  {
+                     "_dbid": "2033",
+                     "__text": "HCGrainMarket"
+                  },
+                  {
+                     "_dbid": "3327",
+                     "__text": "HCXPShipFarmTravois2"
+                  },
+                  {
+                     "_dbid": "2980",
+                     "__text": "HCXPSilversmithTeam"
+                  },
+                  {
+                     "_dbid": "2190",
+                     "__text": "HCShipCoveredWagons"
+                  }
+               ]
+            },
+            "_version": "8"
          }
       ]
    },

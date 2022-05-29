@@ -635,7 +635,7 @@
             "maxcount": "1",
             "level": "0",
             "prereqtech": "-1",
-            "age": "0"
+            "age": "3"
          },
          {
             "name": "DEHCExtensiveFortificationsInca",
@@ -806,7 +806,7 @@
          },
          {
             "name": "HCXPSpanishAllies1",
-            "maxcount": "1",
+            "maxcount": "2",
             "level": "0",
             "prereqtech": "-1",
             "age": "1",
@@ -815,7 +815,7 @@
          },
          {
             "name": "HCXPSpanishAllies2",
-            "maxcount": "1",
+            "maxcount": "2",
             "level": "0",
             "prereqtech": "-1",
             "age": "3",
@@ -1191,26 +1191,6 @@
       "deck": [
          {
             "name": "$$71332$$Beginner",
-            "cards": {
-               "card": [
-                  "HCShipFoodCrates1",
-                  "DEHCResettlements",
-                  "DEHCWarChiefInca1",
-                  "DEHCShipIncaRunners1",
-                  "DEHCShipIncaRunners2",
-                  "DEHCShipIncaSpearmen1",
-                  "DEHCShipJungleBowmen1",
-                  "DEHCShipJungleBowmen2",
-                  "HCPioneers",
-                  "HCXPAdvancedFarms",
-                  "DEHCExtensiveFortificationsInca",
-                  "HCXPShipFarmTravois1",
-                  "DEHCShipFatLlamasRepeat"
-               ]
-            }
-         },
-         {
-            "name": "$$71332$$Beginner",
             "default": "",
             "cards": {
                "card": [
@@ -1522,6 +1502,114 @@
                   }
                ]
             }
+         },
+         {
+            "name": "$$55547$$Tycoon",
+            "cards": {
+               "card": [
+                  {
+                     "_dbid": "2263",
+                     "__text": "HCShipWoodCrates5"
+                  },
+                  {
+                     "_dbid": "6073",
+                     "__text": "HCShipWoodCrates6"
+                  },
+                  {
+                     "_dbid": "6098",
+                     "__text": "DEHCShipVillagersInca"
+                  },
+                  {
+                     "_dbid": "6117",
+                     "__text": "DEHCTerraceFarming"
+                  },
+                  {
+                     "_dbid": "2917",
+                     "__text": "HCXPShipVillagers5"
+                  },
+                  {
+                     "_dbid": "2213",
+                     "__text": "HCShipWoodCrates4"
+                  },
+                  {
+                     "_dbid": "6085",
+                     "__text": "DEHCResettlements"
+                  },
+                  {
+                     "_dbid": "2799",
+                     "__text": "HCXPShipVillagers4"
+                  },
+                  {
+                     "_dbid": "2209",
+                     "__text": "HCShipFoodCrates3"
+                  },
+                  {
+                     "_dbid": "2215",
+                     "__text": "HCShipCoinCrates3"
+                  },
+                  {
+                     "_dbid": "6086",
+                     "__text": "DEHCShipWoodCratesInfInca"
+                  },
+                  {
+                     "_dbid": "2798",
+                     "__text": "HCXPShipVillagers3"
+                  },
+                  {
+                     "_dbid": "6154",
+                     "__text": "DEHCLlamaLifestyle"
+                  },
+                  {
+                     "_dbid": "6087",
+                     "__text": "DEHCWarChiefInca1"
+                  },
+                  {
+                     "_dbid": "2091",
+                     "__text": "HCExoticHardwoods"
+                  },
+                  {
+                     "_dbid": "2032",
+                     "__text": "HCFurrier"
+                  },
+                  {
+                     "_dbid": "6107",
+                     "__text": "DEHCCequeSystem"
+                  },
+                  {
+                     "_dbid": "6143",
+                     "__text": "DEHCAdvancedTambos"
+                  },
+                  {
+                     "_dbid": "6108",
+                     "__text": "DEHCChichaBrewing"
+                  },
+                  {
+                     "_dbid": "3474",
+                     "__text": "HCXPAgrarianWays"
+                  },
+                  {
+                     "_dbid": "3327",
+                     "__text": "HCXPShipFarmTravois2"
+                  },
+                  {
+                     "_dbid": "6116",
+                     "__text": "DEHCShipBuilderTravois1"
+                  },
+                  {
+                     "_dbid": "8486",
+                     "__text": "DEHCAutarky"
+                  },
+                  {
+                     "_dbid": "6084",
+                     "__text": "DEHCShipPriestessRepeat2"
+                  },
+                  {
+                     "_dbid": "6144",
+                     "__text": "DEHCShipCoveredWagons2Inca"
+                  }
+               ]
+            },
+            "_version": "8"
          }
       ]
    },

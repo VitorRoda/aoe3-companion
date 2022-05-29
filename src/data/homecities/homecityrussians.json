@@ -691,7 +691,7 @@
             "maxcount": "1",
             "level": "10",
             "prereqtech": "-1",
-            "age": "0"
+            "age": "3"
          },
          {
             "name": "HCFrontierDefensesRussian",
@@ -1382,7 +1382,7 @@
             "level": "0",
             "prereqtech": "XPRevolution",
             "age": "2",
-            "displayunitcount": "5",
+            "displayunitcount": "12",
             "revoltcard": ""
          },
          {
@@ -1391,7 +1391,7 @@
             "level": "0",
             "prereqtech": "XPRevolution",
             "age": "2",
-            "displayunitcount": "7",
+            "displayunitcount": "10",
             "revoltcard": ""
          },
          {
@@ -1458,25 +1458,6 @@
    },
    "decks": {
       "deck": [
-         {
-            "name": "$$71332$$Beginner",
-            "cards": {
-               "card": [
-                  "HCShipFoodCrates1",
-                  "HCShipWoodCrates1",
-                  "HCShipCoinCrates1",
-                  "HCShipStrelets1",
-                  "HCShipCossacks4",
-                  "HCShipMusketeersRussian2",
-                  "HCShipOprichniks1",
-                  "HCXPShipCavArchersRepeat",
-                  "HCShipFalconets2",
-                  "HCUnlockFort",
-                  "HCUnlockFactory",
-                  "HCFrontierDefensesRussian"
-               ]
-            }
-         },
          {
             "name": "$$71332$$Beginner",
             "default": "",
@@ -1790,6 +1771,114 @@
                   }
                ]
             }
+         },
+         {
+            "name": "$$55547$$Tycoon",
+            "cards": {
+               "card": [
+                  {
+                     "_dbid": "2263",
+                     "__text": "HCShipWoodCrates5"
+                  },
+                  {
+                     "_dbid": "3521",
+                     "__text": "HCShipCoinCrates5"
+                  },
+                  {
+                     "_dbid": "625",
+                     "__text": "HCUnlockFactory"
+                  },
+                  {
+                     "_dbid": "3345",
+                     "__text": "HCXPIndustrialRevolution"
+                  },
+                  {
+                     "_dbid": "2213",
+                     "__text": "HCShipWoodCrates4"
+                  },
+                  {
+                     "_dbid": "2216",
+                     "__text": "HCShipCoinCrates4"
+                  },
+                  {
+                     "_dbid": "814",
+                     "__text": "HCUnlockFort"
+                  },
+                  {
+                     "_dbid": "2093",
+                     "__text": "HCRoyalMint"
+                  },
+                  {
+                     "_dbid": "2041",
+                     "__text": "HCRefrigeration"
+                  },
+                  {
+                     "_dbid": "2212",
+                     "__text": "HCShipWoodCrates3"
+                  },
+                  {
+                     "_dbid": "2215",
+                     "__text": "HCShipCoinCrates3"
+                  },
+                  {
+                     "_dbid": "2170",
+                     "__text": "HCExplorerRussian"
+                  },
+                  {
+                     "_dbid": "1796",
+                     "__text": "HCAdvancedTradingPost"
+                  },
+                  {
+                     "_dbid": "1992",
+                     "__text": "HCColonialMilitia"
+                  },
+                  {
+                     "_dbid": "3387",
+                     "__text": "HCXPEconomicTheory"
+                  },
+                  {
+                     "_dbid": "3440",
+                     "__text": "HCXPDistributivism"
+                  },
+                  {
+                     "_dbid": "2094",
+                     "__text": "HCFoodSilos"
+                  },
+                  {
+                     "_dbid": "2286",
+                     "__text": "HCFurrierTeam"
+                  },
+                  {
+                     "_dbid": "2209",
+                     "__text": "HCShipFoodCrates3"
+                  },
+                  {
+                     "_dbid": "2210",
+                     "__text": "HCShipFoodCrates4"
+                  },
+                  {
+                     "_dbid": "2268",
+                     "__text": "HCShipFoodCrates5"
+                  },
+                  {
+                     "_dbid": "2043",
+                     "__text": "HCSilversmith"
+                  },
+                  {
+                     "_dbid": "2102",
+                     "__text": "HCTextileMills"
+                  },
+                  {
+                     "_dbid": "474",
+                     "__text": "HCCigarRoller"
+                  },
+                  {
+                     "_dbid": "2095",
+                     "__text": "HCSustainableAgriculture"
+                  }
+               ]
+            },
+            "_version": "8"
          }
       ],
       "revoltdeck": [

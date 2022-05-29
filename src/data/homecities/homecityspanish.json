@@ -710,7 +710,7 @@
             "maxcount": "1",
             "level": "10",
             "prereqtech": "HCPioneers",
-            "age": "0"
+            "age": "3"
          },
          {
             "name": "HCFrontierDefenses",
@@ -1181,7 +1181,7 @@
             "level": "25",
             "prereqtech": "HCMercsStradiots",
             "age": "3",
-            "displayunitcount": "13",
+            "displayunitcount": "8",
             "infiniteinlastage": "1"
          },
          {
@@ -1790,6 +1790,114 @@
                   }
                ]
             }
+         },
+         {
+            "name": "$$55547$$Tycoon",
+            "cards": {
+               "card": [
+                  {
+                     "_dbid": "2268",
+                     "__text": "HCShipFoodCrates5"
+                  },
+                  {
+                     "_dbid": "625",
+                     "__text": "HCUnlockFactory"
+                  },
+                  {
+                     "_dbid": "3345",
+                     "__text": "HCXPIndustrialRevolution"
+                  },
+                  {
+                     "_dbid": "2213",
+                     "__text": "HCShipWoodCrates4"
+                  },
+                  {
+                     "_dbid": "2093",
+                     "__text": "HCRoyalMint"
+                  },
+                  {
+                     "_dbid": "2041",
+                     "__text": "HCRefrigeration"
+                  },
+                  {
+                     "_dbid": "814",
+                     "__text": "HCUnlockFort"
+                  },
+                  {
+                     "_dbid": "2623",
+                     "__text": "HCColonialEstancias"
+                  },
+                  {
+                     "_dbid": "2208",
+                     "__text": "HCShipSettlers4"
+                  },
+                  {
+                     "_dbid": "2212",
+                     "__text": "HCShipWoodCrates3"
+                  },
+                  {
+                     "_dbid": "2206",
+                     "__text": "HCShipSettlers2"
+                  },
+                  {
+                     "_dbid": "2215",
+                     "__text": "HCShipCoinCrates3"
+                  },
+                  {
+                     "_dbid": "2207",
+                     "__text": "HCShipSettlers3"
+                  },
+                  {
+                     "_dbid": "1849",
+                     "__text": "HCExplorerSpanish"
+                  },
+                  {
+                     "_dbid": "1796",
+                     "__text": "HCAdvancedTradingPost"
+                  },
+                  {
+                     "_dbid": "1992",
+                     "__text": "HCColonialMilitia"
+                  },
+                  {
+                     "_dbid": "3387",
+                     "__text": "HCXPEconomicTheory"
+                  },
+                  {
+                     "_dbid": "3438",
+                     "__text": "HCXPCapitalism"
+                  },
+                  {
+                     "_dbid": "2032",
+                     "__text": "HCFurrier"
+                  },
+                  {
+                     "_dbid": "2091",
+                     "__text": "HCExoticHardwoods"
+                  },
+                  {
+                     "_dbid": "2090",
+                     "__text": "HCSawmills"
+                  },
+                  {
+                     "_dbid": "2190",
+                     "__text": "HCShipCoveredWagons"
+                  },
+                  {
+                     "_dbid": "2102",
+                     "__text": "HCTextileMills"
+                  },
+                  {
+                     "_dbid": "3464",
+                     "__text": "HCXPSpanishGold"
+                  },
+                  {
+                     "_dbid": "2095",
+                     "__text": "HCSustainableAgriculture"
+                  }
+               ]
+            },
+            "_version": "8"
          }
       ],
       "revoltdeck": [
@@ -3925,8 +4033,7 @@
          "Spanish_DockTexture4",
          "Spanish_DockTexture5",
          "Spanish_DockTexture6",
-         "Spanish_DockTexture7",
-         "ExplorerSpanish"
+         "Spanish_DockTexture7"
       ]
    }
 }

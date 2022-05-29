@@ -283,6 +283,13 @@
             "displayunitcount": "1"
          },
          {
+            "name": "DEHCAfricanHeroCombat",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "0"
+         },
+         {
             "name": "DEHCShipOromoRepeat",
             "maxcount": "-1",
             "level": "0",
@@ -1148,109 +1155,6 @@
       "deck": [
          {
             "name": "$$71332$$Beginner",
-            "cards": {
-               "card": [
-                  {
-                     "_dbid": "8300",
-                     "__text": "DEHCShipInfluence2"
-                  },
-                  {
-                     "_dbid": "8302",
-                     "__text": "DEHCShipInfluence1"
-                  },
-                  {
-                     "_dbid": "6727",
-                     "__text": "DEHCFasilidesCastle"
-                  },
-                  {
-                     "_dbid": "8269",
-                     "__text": "DEHCShipZebu3"
-                  },
-                  {
-                     "_dbid": "6762",
-                     "__text": "DEHCShipGascenya1"
-                  },
-                  {
-                     "_dbid": "6773",
-                     "__text": "DEHCShipSebastopolMortar1"
-                  },
-                  {
-                     "_dbid": "6774",
-                     "__text": "DEHCShipSebastopolMortar2"
-                  },
-                  {
-                     "_dbid": "6748",
-                     "__text": "DEHCAdvancedLivestockMarket"
-                  },
-                  {
-                     "_dbid": "8359",
-                     "__text": "DEHCShipChonkyCattle"
-                  },
-                  {
-                     "_dbid": "6763",
-                     "__text": "DEHCShipGascenya2"
-                  },
-                  {
-                     "_dbid": "6767",
-                     "__text": "DEHCShipShotel2"
-                  },
-                  {
-                     "_dbid": "2215",
-                     "__text": "HCShipCoinCrates3"
-                  },
-                  {
-                     "_dbid": "2212",
-                     "__text": "HCShipWoodCrates3"
-                  },
-                  {
-                     "_dbid": "8270",
-                     "__text": "DEHCShipVillagersAbunRepeat"
-                  },
-                  {
-                     "_dbid": "6879",
-                     "__text": "DEHCShipVillagers2"
-                  },
-                  {
-                     "_dbid": "8348",
-                     "__text": "DEHCCartridgeCurrency"
-                  },
-                  {
-                     "_dbid": "6750",
-                     "__text": "DEHCShipVillagerRepeat"
-                  },
-                  {
-                     "_dbid": "6766",
-                     "__text": "DEHCShipShotel1"
-                  },
-                  {
-                     "_dbid": "8220",
-                     "__text": "DEHCJesuitInfluence"
-                  },
-                  {
-                     "_dbid": "8226",
-                     "__text": "DEHCOromoMigrations"
-                  },
-                  {
-                     "_dbid": "8470",
-                     "__text": "DEHCGascenyaRepeat"
-                  },
-                  {
-                     "_dbid": "6751",
-                     "__text": "DEHCShipJavelinRidersRepeat1"
-                  },
-                  {
-                     "_dbid": "8354",
-                     "__text": "DEHCKingKings"
-                  },
-                  {
-                     "_dbid": "8389",
-                     "__text": "DEHCIyasuReforms"
-                  }
-               ]
-            }
-         },
-         {
-            "name": "$$71332$$Beginner",
             "default": "",
             "cards": {
                "card": [
@@ -1566,6 +1470,114 @@
                   }
                ]
             }
+         },
+         {
+            "name": "$$55547$$Tycoon",
+            "cards": {
+               "card": [
+                  {
+                     "_dbid": "2268",
+                     "__text": "HCShipFoodCrates5"
+                  },
+                  {
+                     "_dbid": "3521",
+                     "__text": "HCShipCoinCrates5"
+                  },
+                  {
+                     "_dbid": "8270",
+                     "__text": "DEHCShipVillagersAbunRepeat"
+                  },
+                  {
+                     "_dbid": "6879",
+                     "__text": "DEHCShipVillagers2"
+                  },
+                  {
+                     "_dbid": "2212",
+                     "__text": "HCShipWoodCrates3"
+                  },
+                  {
+                     "_dbid": "2215",
+                     "__text": "HCShipCoinCrates3"
+                  },
+                  {
+                     "_dbid": "2213",
+                     "__text": "HCShipWoodCrates4"
+                  },
+                  {
+                     "_dbid": "2216",
+                     "__text": "HCShipCoinCrates4"
+                  },
+                  {
+                     "_dbid": "8380",
+                     "__text": "DEHCHeyWat"
+                  },
+                  {
+                     "_dbid": "2090",
+                     "__text": "HCSawmills"
+                  },
+                  {
+                     "_dbid": "8442",
+                     "__text": "DEHCIronmongerEthiopians"
+                  },
+                  {
+                     "_dbid": "2032",
+                     "__text": "HCFurrier"
+                  },
+                  {
+                     "_dbid": "8301",
+                     "__text": "DEHCShipInfluence3"
+                  },
+                  {
+                     "_dbid": "8302",
+                     "__text": "DEHCShipInfluence1"
+                  },
+                  {
+                     "_dbid": "6750",
+                     "__text": "DEHCShipVillagerRepeat"
+                  },
+                  {
+                     "_dbid": "6743",
+                     "__text": "DEHCShipCoveredWagonsAfrica"
+                  },
+                  {
+                     "_dbid": "6727",
+                     "__text": "DEHCFasilidesCastle"
+                  },
+                  {
+                     "_dbid": "8352",
+                     "__text": "DEHCDejazmach"
+                  },
+                  {
+                     "_dbid": "8386",
+                     "__text": "DEHCMountainRelics"
+                  },
+                  {
+                     "_dbid": "8381",
+                     "__text": "DEHCBushburning"
+                  },
+                  {
+                     "_dbid": "8220",
+                     "__text": "DEHCJesuitInfluence"
+                  },
+                  {
+                     "_dbid": "6758",
+                     "__text": "DEHCShipAbuns1"
+                  },
+                  {
+                     "_dbid": "8391",
+                     "__text": "DEHCFazogli"
+                  },
+                  {
+                     "_dbid": "8389",
+                     "__text": "DEHCIyasuReforms"
+                  },
+                  {
+                     "_dbid": "8392",
+                     "__text": "DEHCRoofAfrica"
+                  }
+               ]
+            },
+            "_version": "8"
          }
       ],
       "revoltdeck": {
@@ -3487,8 +3499,7 @@
          },
          "Ethiopian_LibraryTexture1",
          "EthBuntingWater",
-         "EthTimkatFestival",
-         "EthExplorer"
+         "EthTimkatFestival"
       ]
    }
 }

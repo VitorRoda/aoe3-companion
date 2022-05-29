@@ -703,7 +703,7 @@
             "maxcount": "1",
             "level": "0",
             "prereqtech": "-1",
-            "age": "0"
+            "age": "3"
          },
          {
             "name": "DEHCExtensiveFortificationsWarchief",
@@ -1242,26 +1242,6 @@
       "deck": [
          {
             "name": "$$71332$$Beginner",
-            "cards": {
-               "card": [
-                  "HCXPShipVillagers3",
-                  "HCShipFoodCrates1",
-                  "HCShipWoodCrates1",
-                  "HCShipCoinCrates1",
-                  "HCXPShipWarBows1",
-                  "HCXPShipWarClubs1",
-                  "HCXPShipWarHutTravois1",
-                  "HCXPShipWarRifles1",
-                  "HCXPShipAxeRiders2",
-                  "HCXPShipAxeRidersRepeat",
-                  "HCXPShipCoupRiders3",
-                  "HCXPShipDogsoldiers2",
-                  "HCXPShipFarmTravois2"
-               ]
-            }
-         },
-         {
-            "name": "$$71332$$Beginner",
             "default": "",
             "cards": {
                "card": [
@@ -1565,6 +1545,114 @@
                   }
                ]
             }
+         },
+         {
+            "name": "$$55547$$Tycoon",
+            "cards": {
+               "card": [
+                  {
+                     "_dbid": "2268",
+                     "__text": "HCShipFoodCrates5"
+                  },
+                  {
+                     "_dbid": "3051",
+                     "__text": "HCXPTeamFoodCrates2"
+                  },
+                  {
+                     "_dbid": "2996",
+                     "__text": "HCXPBuffalo2"
+                  },
+                  {
+                     "_dbid": "2210",
+                     "__text": "HCShipFoodCrates4"
+                  },
+                  {
+                     "_dbid": "2213",
+                     "__text": "HCShipWoodCrates4"
+                  },
+                  {
+                     "_dbid": "2190",
+                     "__text": "HCShipCoveredWagons"
+                  },
+                  {
+                     "_dbid": "3000",
+                     "__text": "HCXPAdoption"
+                  },
+                  {
+                     "_dbid": "2799",
+                     "__text": "HCXPShipVillagers4"
+                  },
+                  {
+                     "_dbid": "2211",
+                     "__text": "HCShipWoodCrates2"
+                  },
+                  {
+                     "_dbid": "2212",
+                     "__text": "HCShipWoodCrates3"
+                  },
+                  {
+                     "_dbid": "2214",
+                     "__text": "HCShipCoinCrates2"
+                  },
+                  {
+                     "_dbid": "2215",
+                     "__text": "HCShipCoinCrates3"
+                  },
+                  {
+                     "_dbid": "3327",
+                     "__text": "HCXPShipFarmTravois2"
+                  },
+                  {
+                     "_dbid": "6618",
+                     "__text": "deHCSilversmithNative"
+                  },
+                  {
+                     "_dbid": "2098",
+                     "__text": "HCSpiceTrade"
+                  },
+                  {
+                     "_dbid": "2798",
+                     "__text": "HCXPShipVillagers3"
+                  },
+                  {
+                     "_dbid": "2797",
+                     "__text": "HCXPShipVillagers2"
+                  },
+                  {
+                     "_dbid": "2881",
+                     "__text": "HCXPWarChiefSioux1"
+                  },
+                  {
+                     "_dbid": "1796",
+                     "__text": "HCAdvancedTradingPost"
+                  },
+                  {
+                     "_dbid": "3411",
+                     "__text": "HCXPNomadicExpansion"
+                  },
+                  {
+                     "_dbid": "3049",
+                     "__text": "HCXPWoodcrafting"
+                  },
+                  {
+                     "_dbid": "2094",
+                     "__text": "HCFoodSilos"
+                  },
+                  {
+                     "_dbid": "2032",
+                     "__text": "HCFurrier"
+                  },
+                  {
+                     "_dbid": "3494",
+                     "__text": "HCXPEarthBounty"
+                  },
+                  {
+                     "_dbid": "2999",
+                     "__text": "HCXPGreatHunter"
+                  }
+               ]
+            },
+            "_version": "8"
          }
       ]
    },

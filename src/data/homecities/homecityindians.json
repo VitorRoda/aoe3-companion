@@ -686,7 +686,7 @@
             "maxcount": "1",
             "level": "10",
             "prereqtech": "YPHCTheRaj",
-            "age": "0"
+            "age": "3"
          },
          {
             "name": "YPHCMughalArchitecture",
@@ -1224,26 +1224,6 @@
       "deck": [
          {
             "name": "$$71332$$Beginner",
-            "cards": {
-               "card": [
-                  "YPHCShipCoinCrates1Indians",
-                  "YPHCShipWoodCrates1Indians",
-                  "YPHCShipFoodCrates1Indians",
-                  "YPHCShipLions1",
-                  "YPHCShipRajput1",
-                  "YPHCShipIndianHandCavalry1",
-                  "YPHCShipSepoy3",
-                  "YPHCShipUrumi2",
-                  "YPHCShipHowdah1",
-                  "YPHCShipSiegeElephant2",
-                  "YPHCShipCoveredWagons2Indians",
-                  "YPHCShipCoveredWagonsIndians",
-                  "YPHCShipGroveWagonIndians2"
-               ]
-            }
-         },
-         {
-            "name": "$$71332$$Beginner",
             "default": "",
             "cards": {
                "card": [
@@ -1555,6 +1535,114 @@
                   }
                ]
             }
+         },
+         {
+            "name": "$$55547$$Tycoon",
+            "cards": {
+               "card": [
+                  {
+                     "_dbid": "4314",
+                     "__text": "YPHCShipWoodCrates5Indians"
+                  },
+                  {
+                     "_dbid": "4679",
+                     "__text": "YPHCShipWoodCratesInf4Indians"
+                  },
+                  {
+                     "_dbid": "4327",
+                     "__text": "YPHCShipCoveredWagons2Indians"
+                  },
+                  {
+                     "_dbid": "4313",
+                     "__text": "YPHCShipWoodCrates4Indians"
+                  },
+                  {
+                     "_dbid": "4318",
+                     "__text": "YPHCShipCoinCrates4Indians"
+                  },
+                  {
+                     "_dbid": "4371",
+                     "__text": "YPHCRoyalMintIndians"
+                  },
+                  {
+                     "_dbid": "4310",
+                     "__text": "YPHCShipWoodCrates2Indians"
+                  },
+                  {
+                     "_dbid": "4316",
+                     "__text": "YPHCShipCoinCrates2Indians"
+                  },
+                  {
+                     "_dbid": "4872",
+                     "__text": "YPHCExtensiveFortificationsIndians"
+                  },
+                  {
+                     "_dbid": "5030",
+                     "__text": "YPHCSmoothRelationsIndians"
+                  },
+                  {
+                     "_dbid": "4993",
+                     "__text": "YPHCShipGroveWagonIndians2"
+                  },
+                  {
+                     "_dbid": "3554",
+                     "__text": "YPHCIndianMonkCombat"
+                  },
+                  {
+                     "_dbid": "4354",
+                     "__text": "YPHCAdvancedMonasteryIndians"
+                  },
+                  {
+                     "_dbid": "4355",
+                     "__text": "YPHCAdvancedRicePaddyIndians"
+                  },
+                  {
+                     "_dbid": "4359",
+                     "__text": "YPHCAdvancedWondersIndians"
+                  },
+                  {
+                     "_dbid": "4369",
+                     "__text": "YPHCWoodcraftingIndians"
+                  },
+                  {
+                     "_dbid": "4370",
+                     "__text": "YPHCIronmongerIndians"
+                  },
+                  {
+                     "_dbid": "4373",
+                     "__text": "YPHCFoodSilosIndians"
+                  },
+                  {
+                     "_dbid": "5053",
+                     "__text": "YPHCRainbowTrickleTeam"
+                  },
+                  {
+                     "_dbid": "4307",
+                     "__text": "YPHCShipFoodCrates3Indians"
+                  },
+                  {
+                     "_dbid": "4308",
+                     "__text": "YPHCShipFoodCrates4Indians"
+                  },
+                  {
+                     "_dbid": "4376",
+                     "__text": "YPHCFurTradeIndians"
+                  },
+                  {
+                     "_dbid": "4374",
+                     "__text": "YPHCSustainableAgricultureIndians"
+                  },
+                  {
+                     "_dbid": "4756",
+                     "__text": "YPHCRumDistilleryIndians"
+                  },
+                  {
+                     "_dbid": "3689",
+                     "__text": "YPHCForeignLogging"
+                  }
+               ]
+            },
+            "_version": "8"
          }
       ]
    },
