@@ -7,6 +7,9 @@ export const getStorageURL = (value, toLowerCase = false) => {
 
     if (toLowerCase)
         _value = _value.toLowerCase()
+
+    if (_value[0] === '/')
+        _value = _value.slice(1)
     
     return `${BASE_URL_STORAGE}${_value}`
 }

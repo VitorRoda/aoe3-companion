@@ -12,6 +12,7 @@ import { blackListUnitTypesPanelUnit } from '../../constants';
 import { useTheme } from '@mui/system';
 import CloseIcon from '@mui/icons-material/Close';
 import { getStorageURL } from '../../utils/getStorageURL';
+import AbilitiesUnit from './AbilitiesUnit';
 
 export const DrawerUnit = React.memo(({ unit, open, onClose }) => {
     const theme = useTheme()
@@ -56,6 +57,7 @@ export const DrawerUnit = React.memo(({ unit, open, onClose }) => {
                             trainpoints={unit?.trainpoints}
                             los={unit?.los}
                         />
+                        <AbilitiesUnit unitName={unit?._name} />
                     </Box>
                     <Box>
                         <Typography variant='subtitle2' color={'primary'}>{translate('69635')}</Typography>
