@@ -1,4 +1,5 @@
 export const cardsInitialState = {
+    age0: [],
     age1: [],
     age2: [],
     age3: [],
@@ -19,6 +20,7 @@ export const cardsReducer = (draft, action) => {
             return cardsInitialState
         case 'unSelectAll':
             const unSelectAll = (item) => { item.isSelected = false }
+            draft.age0.forEach(unSelectAll)
             draft.age1.forEach(unSelectAll)
             draft.age2.forEach(unSelectAll)
             draft.age3.forEach(unSelectAll)

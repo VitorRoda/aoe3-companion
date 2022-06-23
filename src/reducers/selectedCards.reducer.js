@@ -1,5 +1,7 @@
 export const selectedCardsInitialState = {
     total: 0,
+    age0: [],
+    age0Count: 0,
     age1: [],
     age1Count: 0,
     age2: [],
@@ -21,7 +23,7 @@ export const selectedCardsReducer = (draft, action) => {
     switch (action.type) {
         case 'addCard':
             const { card } = action
-            draft.total++
+            card.ageKey !== 'age0' && draft.total++
             draft[card.ageKey].push(card)
             draft[`${card.ageKey}Count`]++
             draft[card.ageKey] = draft[card.ageKey].sort(sortCards)
@@ -29,7 +31,7 @@ export const selectedCardsReducer = (draft, action) => {
         case 'removeCard':
             const { id, ageKey } = action
             const idx = draft[ageKey].findIndex(item => item.id === id)
-            draft.total--
+            ageKey !== 'age0' && draft.total--
             draft[`${ageKey}Count`]--
             draft[ageKey].splice(idx, 1)
             return

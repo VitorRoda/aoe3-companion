@@ -54,7 +54,9 @@ export const DeckBuilder = ({ civs }) => {
         dispatchSelectedCards({ type: 'reset' })
 
         if (civ) {
-            getHomeCityData(civ.homecityfilename).then(data => {
+            const [age0Key] = civ?.agetech
+
+            getHomeCityData(civ.homecityfilename, age0Key.tech).then(data => {
                 dispatchCards({ type: 'update', data: data.cards })
                 setMaxCards(() => +data.maxcardsperdeck)
                 setRevolts(data?.revolts)
@@ -74,13 +76,19 @@ export const DeckBuilder = ({ civs }) => {
         const ageCount = selectedCardsRef.current[`${ageKey}Count`]
         const total = selectedCardsRef.current.total
 
-        if (!card.isSelected && ageCount < 10 && total < maxCardsRef.current) {
+        if (
+            (ageKey !== 'age0' && !card.isSelected && (ageCount < 10 && total < maxCardsRef.current)) ||
+            (ageKey === 'age0' && !card.isSelected && ageCount < 10)
+        ) {
             dispatchSelectedCards({ type: 'addCard', card })
-        } else if (card.isSelected) {
+        }  else if (card.isSelected) {
             dispatchSelectedCards({ type: 'removeCard', id, ageKey })
         }
 
-        if ((!card.isSelected && ageCount < 10 && total < maxCardsRef.current) || card.isSelected) {
+        if (
+            ((ageKey !== 'age0' && !card.isSelected && ageCount < 10 && total < maxCardsRef.current) || card.isSelected) ||
+            ((ageKey === 'age0' && !card.isSelected && ageCount < 10) || card.isSelected)
+        ) {
             dispatchCards({ type: 'toggleSelected', id, ageKey })
         }
     }, [dispatchCards, dispatchSelectedCards])
@@ -136,7 +144,7 @@ export const DeckBuilder = ({ civs }) => {
                         onClickRandomDeck={handleRandomDeck}
                     ></DeckBoard>
 
-                    {!revolt && <MainDeck cards={cards} onClickCard={handleOnClickCard} />}
+                    {!revolt && <MainDeck cards={cards} showFederalCards={!!cards?.age0?.length} onClickCard={handleOnClickCard} />}
                 </Fragment>
                 :
                 <Box sx={{ py: 4, textAlign: 'center' }}>

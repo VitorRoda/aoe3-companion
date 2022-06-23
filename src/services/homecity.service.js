@@ -1,4 +1,4 @@
-import { getCardsFromTechEffects, getTechInfo } from "./techtree.service";
+import { getCardsFromPoliticians, getCardsFromTechEffects, getTechInfo } from "./techtree.service";
 import { blacklistCards } from "../constants";
 
 function getCardData(card, { idx, civ, includeRevolt = false }) {
@@ -30,7 +30,7 @@ function isExcludedCard(card, homecity) {
     return !!item
 }
 
-export async function getHomeCityData(homecity) {
+export async function getHomeCityData(homecity, age0Key) {
     const homecityName = homecity.replace('.xml', '')
     const data = await import(`../data/homecities/${homecityName}.json`)
     const cards = data?.cards?.card?.reduce((cards, card) => {
@@ -46,6 +46,9 @@ export async function getHomeCityData(homecity) {
         return cards
     }, { age1: [], age2: [], age3: [], age4: [] })
 
+    const federalCards = getCardsFromPoliticians(age0Key)
+    cards['age0'] = federalCards.map((fC, idx) => getCardData(fC, { idx, civ: data?.civ }))
+
     const revoltDecks = data?.decks?.revoltdeck
 
     return {
@@ -59,7 +62,7 @@ export async function getHomeCityData(homecity) {
 export async function getRevoltCards(homecity, revName, revoltCards) {
     const homecityName = homecity.replace('.xml', '')
     const { cards, civ } = await import(`../data/homecities/${homecityName}.json`)
-    const effectCards = getCardsFromTechEffects(revName).map((eC, idx) => getCardData(eC, { idx, civ, includeRevolt: true }))
+    const effectCards = getCardsFromTechEffects(revName, true).map((eC, idx) => getCardData(eC, { idx, civ, includeRevolt: true }))
 
     return revoltCards.reduce((revCards, cardName) => {
         const card = cards.card.find(c => c.name === cardName)
@@ -67,7 +70,7 @@ export async function getRevoltCards(homecity, revName, revoltCards) {
         if (card) {
             const ageKey = `age${+card?.age + 1}`
             const count = revCards[`${ageKey}Count`]
-            const cardData = getCardData(card, {idx: count, civ, includeRevolt: true })
+            const cardData = getCardData(card, { idx: count, civ, includeRevolt: true })
             cardData && revCards[ageKey].push(cardData)
             ++revCards[`${ageKey}Count`]
             ++revCards.total
