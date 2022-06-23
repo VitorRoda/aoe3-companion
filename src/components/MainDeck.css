@@ -9,3 +9,8 @@
     display: flex;
     flex-wrap: wrap;
 }
+
+.federal-cards-disabled {
+    filter: grayscale(100%);
+    opacity: 0.7;
+}
