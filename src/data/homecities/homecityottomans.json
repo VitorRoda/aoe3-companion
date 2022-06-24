@@ -1242,6 +1242,14 @@
             "age": "2"
          },
          {
+            "name": "DEHCShipBattleshipRepeat",
+            "maxcount": "-1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "3",
+            "displayunitcount": "1"
+         },
+         {
             "name": "HCFoodSilos",
             "maxcount": "1",
             "level": "10",
@@ -3607,6 +3615,11 @@
                   "_x": "6.8",
                   "_y": "3.0",
                   "__text": "HCPrivateers2"
+               },
+               {
+                  "_x": "6.8",
+                  "_y": "3.0",
+                  "__text": "DEHCShipBattleshipRepeat"
                }
             ]
          },
@@ -3741,6 +3754,11 @@
                   "_x": "6.8",
                   "_y": "3.0",
                   "__text": "HCPrivateers2"
+               },
+               {
+                  "_x": "6.8",
+                  "_y": "3.0",
+                  "__text": "DEHCShipBattleshipRepeat"
                }
             ]
          },

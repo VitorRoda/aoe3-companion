@@ -1206,6 +1206,14 @@
             "age": "2"
          },
          {
+            "name": "DEHCShipBattleshipRepeat",
+            "maxcount": "-1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "3",
+            "displayunitcount": "1"
+         },
+         {
             "name": "HCREVShipGatlingGuns",
             "maxcount": "-1",
             "level": "0",
@@ -3516,6 +3524,11 @@
                   "_x": "6.5",
                   "_y": "3.0",
                   "__text": "HCPrivateers2"
+               },
+               {
+                  "_x": "6.5",
+                  "_y": "3.0",
+                  "__text": "DEHCShipBattleshipRepeat"
                }
             ]
          },
@@ -3645,6 +3658,11 @@
                   "_x": "6.5",
                   "_y": "3.0",
                   "__text": "HCPrivateers2"
+               },
+               {
+                  "_x": "6.5",
+                  "_y": "3.0",
+                  "__text": "DEHCShipBattleshipRepeat"
                }
             ]
          },

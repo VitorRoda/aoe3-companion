@@ -71,15 +71,6 @@
             "infiniteinlastage": "1"
          },
          {
-            "name": "DEHCShipVillagers2",
-            "maxcount": "1",
-            "level": "0",
-            "prereqtech": "-1",
-            "age": "1",
-            "displayunitcount": "4",
-            "infiniteinlastage": "1"
-         },
-         {
             "name": "DEHCOromoMigrations",
             "maxcount": "1",
             "age": "0"
@@ -1215,8 +1206,8 @@
                      "__text": "DEHCShipVillagersAbunRepeat"
                   },
                   {
-                     "_dbid": "6879",
-                     "__text": "DEHCShipVillagers2"
+                     "_dbid": "6758",
+                     "__text": "DEHCShipAbuns1"
                   },
                   {
                      "_dbid": "8348",
@@ -1314,8 +1305,8 @@
                      "__text": "DEHCTigrayMekonnen"
                   },
                   {
-                     "_dbid": "6879",
-                     "__text": "DEHCShipVillagers2"
+                     "_dbid": "6758",
+                     "__text": "DEHCShipAbuns1"
                   },
                   {
                      "_dbid": "8359",
@@ -1417,8 +1408,8 @@
                      "__text": "DEHCShipNeftenya1"
                   },
                   {
-                     "_dbid": "6879",
-                     "__text": "DEHCShipVillagers2"
+                     "_dbid": "6758",
+                     "__text": "DEHCShipAbuns1"
                   },
                   {
                      "_dbid": "8413",
@@ -1488,8 +1479,8 @@
                      "__text": "DEHCShipVillagersAbunRepeat"
                   },
                   {
-                     "_dbid": "6879",
-                     "__text": "DEHCShipVillagers2"
+                     "_dbid": "8359",
+                     "__text": "DEHCShipChonkyCattle"
                   },
                   {
                      "_dbid": "2212",
@@ -1642,11 +1633,6 @@
                   "_x": "1.0",
                   "_y": "1.0",
                   "__text": "DEHCShipZebu2"
-               },
-               {
-                  "_x": "1.0",
-                  "_y": "1.0",
-                  "__text": "DEHCShipVillagers2"
                },
                {
                   "_x": "1.0",
@@ -1826,11 +1812,6 @@
                   "_x": "1.0",
                   "_y": "1.0",
                   "__text": "DEHCShipZebu2"
-               },
-               {
-                  "_x": "1.0",
-                  "_y": "1.0",
-                  "__text": "DEHCShipVillagers2"
                },
                {
                   "_x": "1.0",

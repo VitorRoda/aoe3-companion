@@ -1300,11 +1300,19 @@
             "age": "2"
          },
          {
+            "name": "DEHCShipBattleshipRepeat",
+            "maxcount": "-1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "3",
+            "displayunitcount": "1"
+         },
+         {
             "name": "YPHCEngineeringSchoolTeam",
             "maxcount": "1",
             "level": "0",
             "prereqtech": "-1",
-            "age": "3"
+            "age": "1"
          },
          {
             "name": "DEHCHakkapelitMarch",
@@ -3593,6 +3601,11 @@
                   "__text": "HCPrivateersRepeat"
                },
                {
+                  "_x": "6.0",
+                  "_y": "7.0",
+                  "__text": "DEHCShipBattleshipRepeat"
+               },
+               {
                   "_x": "4.6",
                   "_y": "7.0",
                   "__text": "DEHCCaribAlliesRepeat"
@@ -3740,6 +3753,11 @@
                   "_x": "6.0",
                   "_y": "7.0",
                   "__text": "HCPrivateersRepeat"
+               },
+               {
+                  "_x": "6.0",
+                  "_y": "7.0",
+                  "__text": "DEHCShipBattleshipRepeat"
                },
                {
                   "_x": "4.6",

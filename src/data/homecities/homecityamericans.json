@@ -390,7 +390,8 @@
             "prereqtech": [
                "-1"
             ],
-            "age": "3"
+            "age": "3",
+            "displayunitcount": "1"
          },
          {
             "name": "HCXPAdvancedBalloon",
@@ -1238,6 +1239,15 @@
             "infiniteinlastage": "1"
          },
          {
+            "name": "YPHCEuropeanCannons",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": [
+               "HCShipFrigates"
+            ],
+            "age": "1"
+         },
+         {
             "name": "HCNavalGunners",
             "maxcount": "1",
             "level": "25",
@@ -1363,9 +1373,8 @@
             "prereqtech": [
                "-1"
             ],
-            "age": "3",
-            "displayunitcount": "6",
-            "infiniteinlastage": "1"
+            "age": "2",
+            "displayunitcount": "6"
          },
          {
             "name": "DEHCHireManilamen",
@@ -3121,6 +3130,11 @@
                   "__text": "HCShipFrigates"
                },
                {
+                  "_x": "1.0",
+                  "_y": "4.0",
+                  "__text": "YPHCEuropeanCannons"
+               },
+               {
                   "_x": "1.7",
                   "_y": "4.0",
                   "__text": "DEHCShipIroncladsRepeat1"
@@ -3303,6 +3317,11 @@
                   "_x": "1.7",
                   "_y": "3.0",
                   "__text": "HCShipFrigates"
+               },
+               {
+                  "_x": "1.0",
+                  "_y": "4.0",
+                  "__text": "YPHCEuropeanCannons"
                },
                {
                   "_x": "1.7",

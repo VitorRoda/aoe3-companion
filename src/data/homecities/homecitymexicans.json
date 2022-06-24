@@ -967,6 +967,7 @@
             "maxcount": "1",
             "level": "25",
             "prereqtech": "HCSawmills",
+            "bindtotech": "HCExoticHardwoods",
             "age": "0"
          },
          {
@@ -996,6 +997,7 @@
             "maxcount": "1",
             "level": "10",
             "prereqtech": "-1",
+            "bindtotech": "HCSustainableAgriculture",
             "age": "1"
          },
          {
@@ -1126,13 +1128,6 @@
             "level": "10",
             "prereqtech": "-1",
             "age": "0"
-         },
-         {
-            "name": "HCNavalGunners",
-            "maxcount": "1",
-            "level": "10",
-            "prereqtech": "DEHCShipSteamers2",
-            "age": "1"
          },
          {
             "name": "HCNavalCombat",
@@ -1843,6 +1838,7 @@
             "maxcount": "1",
             "level": "0",
             "prereqtech": "XPRevolution",
+            "bindtotech": "DEHCREVMXFoodSilos",
             "age": "3",
             "revoltcard": ""
          },

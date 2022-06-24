@@ -103,7 +103,7 @@
             "maxcount": "1",
             "level": "0",
             "prereqtech": "HCShipSettlers1",
-            "age": "1"
+            "age": "0"
          },
          {
             "name": "DEHCVictoriousCity",
@@ -116,6 +116,15 @@
             "level": "0",
             "prereqtech": "-1",
             "age": "0"
+         },
+         {
+            "name": "HCShipCoveredWagons",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "2",
+            "displayunitcount": "1",
+            "infiniteinlastage": "1"
          },
          {
             "name": "HCShipCows",
@@ -320,7 +329,7 @@
             "level": "0",
             "prereqtech": "HCShipHoopThrowers1",
             "age": "2",
-            "displayunitcount": "8"
+            "displayunitcount": "9"
          },
          {
             "name": "HCShipPikemen1",
@@ -513,7 +522,7 @@
             "name": "DEHCShipHoopThrowers1",
             "maxcount": "1",
             "age": "2",
-            "displayunitcount": "8",
+            "displayunitcount": "9",
             "infiniteinlastage": "1"
          },
          {
@@ -693,8 +702,7 @@
             "name": "DEHCBourbonAllies1",
             "maxcount": "1",
             "age": "3",
-            "displayunitcount": "25",
-            "infiniteinlastage": "1"
+            "displayunitcount": "25"
          },
          {
             "name": "DEHCMercsPandours",
@@ -2103,6 +2111,11 @@
                   "__text": "HCShipCows"
                },
                {
+                  "_x": "6.0",
+                  "_y": "1.0",
+                  "__text": "HCShipCoveredWagons"
+               },
+               {
                   "_x": "7.0",
                   "_y": "1.0",
                   "__text": "DEHCExplorerMaltese"
@@ -2225,6 +2238,11 @@
                   "_x": "5.1",
                   "_y": "2.0",
                   "__text": "HCShipCows"
+               },
+               {
+                  "_x": "6.0",
+                  "_y": "1.0",
+                  "__text": "HCShipCoveredWagons"
                },
                {
                   "_x": "7.0",

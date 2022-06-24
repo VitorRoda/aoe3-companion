@@ -59,7 +59,7 @@
             "maxcount": "1",
             "level": "0",
             "prereqtech": "HCShipSettlers1",
-            "age": "1"
+            "age": "0"
          },
          {
             "name": "DEHCGondolas",
@@ -79,7 +79,7 @@
             "maxcount": "1",
             "level": "0",
             "prereqtech": "-1",
-            "age": "0"
+            "age": "1"
          },
          {
             "name": "DEHCLombardy",
@@ -95,7 +95,7 @@
             "level": "0",
             "prereqtech": "-1",
             "age": "1",
-            "displayunitcount": "2"
+            "displayunitcount": "3"
          },
          {
             "name": "DEHCUffizi",
@@ -322,30 +322,36 @@
             "age": "1"
          },
          {
-            "name": "HCShipMusketeers1",
+            "name": "DEHCShipHalberdiersRepeat",
+            "maxcount": "-1",
+            "age": "2",
+            "displayunitcount": "7"
+         },
+         {
+            "name": "HCShipHalberdiers4",
             "maxcount": "1",
             "level": "0",
-            "prereqtech": "-1",
-            "age": "1",
-            "displayunitcount": "6",
+            "prereqtech": "HCShipMusketeers1",
+            "age": "3",
+            "displayunitcount": "11",
             "infiniteinlastage": "1"
          },
          {
-            "name": "HCShipMusketeers2",
+            "name": "HCShipHalberdiers3",
             "maxcount": "1",
             "level": "10",
-            "prereqtech": "HCShipDragoons4",
+            "prereqtech": "HCShipDragoons1",
             "age": "2",
             "displayunitcount": "8",
             "infiniteinlastage": "1"
          },
          {
-            "name": "HCShipMusketeers4",
+            "name": "HCShipHalberdiers5",
             "maxcount": "1",
-            "level": "0",
-            "prereqtech": "HCShipMusketeers1",
-            "age": "2",
-            "displayunitcount": "9",
+            "level": "10",
+            "prereqtech": "HCShipDragoons1",
+            "age": "3",
+            "displayunitcount": "13",
             "infiniteinlastage": "1"
          },
          {
@@ -384,36 +390,49 @@
             "infiniteinlastage": "1"
          },
          {
-            "name": "DEHCShipHalberdiersRepeat",
-            "maxcount": "-1",
-            "age": "2",
-            "displayunitcount": "7"
-         },
-         {
-            "name": "HCShipHalberdiers4",
+            "name": "DEHCHeavyPaveses",
             "maxcount": "1",
             "level": "0",
-            "prereqtech": "HCShipMusketeers1",
-            "age": "3",
-            "displayunitcount": "11",
+            "prereqtech": "-1",
+            "age": "2"
+         },
+         {
+            "name": "DEHCImprovedCrossbowsItalians",
+            "maxcount": "1",
+            "age": "2"
+         },
+         {
+            "name": "DEHCRomanTactics",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "3"
+         },
+         {
+            "name": "HCShipMusketeers1",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "1",
+            "displayunitcount": "6",
             "infiniteinlastage": "1"
          },
          {
-            "name": "HCShipHalberdiers3",
+            "name": "HCShipMusketeers2",
             "maxcount": "1",
             "level": "10",
-            "prereqtech": "HCShipDragoons1",
+            "prereqtech": "HCShipDragoons4",
             "age": "2",
             "displayunitcount": "8",
             "infiniteinlastage": "1"
          },
          {
-            "name": "HCShipHalberdiers5",
+            "name": "HCShipMusketeers4",
             "maxcount": "1",
-            "level": "10",
-            "prereqtech": "HCShipDragoons1",
-            "age": "3",
-            "displayunitcount": "13",
+            "level": "0",
+            "prereqtech": "HCShipMusketeers1",
+            "age": "2",
+            "displayunitcount": "9",
             "infiniteinlastage": "1"
          },
          {
@@ -432,6 +451,18 @@
             "prereqtech": "HCShipDragoons1",
             "age": "3",
             "displayunitcount": "8"
+         },
+         {
+            "name": "DEHCAlpini",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "-1",
+            "age": "3"
+         },
+         {
+            "name": "DEHCRedshirts",
+            "maxcount": "1",
+            "age": "3"
          },
          {
             "name": "HCShipGrenadiers2",
@@ -470,6 +501,34 @@
             "infiniteinlastage": "1"
          },
          {
+            "name": "DEHCHandMortar",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "2"
+         },
+         {
+            "name": "DEHCInfantryHitpointsItalian",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "DEHCInfantryDamageItalian",
+            "age": "1"
+         },
+         {
+            "name": "DEHCSchiavoniSwords",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "DEHCCavalryHitpointsItalian",
+            "age": "1"
+         },
+         {
+            "name": "DEHCCavalryCombatItalian",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "DEHCSchiavoniSwords",
+            "age": "2"
+         },
+         {
             "name": "HCShipMortars2",
             "maxcount": "1",
             "level": "10",
@@ -503,6 +562,13 @@
             "prereqtech": "DEHCShipPapalBombards",
             "age": "3",
             "displayunitcount": "2"
+         },
+         {
+            "name": "HCAdvancedArtillery",
+            "maxcount": "1",
+            "level": "0",
+            "prereqtech": "-1",
+            "age": "2"
          },
          {
             "name": "HCXPShipCulverins2",
@@ -601,7 +667,7 @@
             "name": "DEHCAlbanianCompany",
             "maxcount": "1",
             "age": "2",
-            "displayunitcount": "8",
+            "displayunitcount": "7",
             "infiniteinlastage": "1"
          },
          {
@@ -700,8 +766,7 @@
             "name": "DEHCBourbonAllies1",
             "maxcount": "1",
             "age": "3",
-            "displayunitcount": "25",
-            "infiniteinlastage": "1"
+            "displayunitcount": "25"
          },
          {
             "name": "DEHCPapalArsenal",
@@ -709,46 +774,6 @@
             "level": "0",
             "prereqtech": "-1",
             "age": "3"
-         },
-         {
-            "name": "DEHCHeavyPaveses",
-            "maxcount": "1",
-            "level": "0",
-            "prereqtech": "-1",
-            "age": "2"
-         },
-         {
-            "name": "DEHCImprovedCrossbowsItalians",
-            "maxcount": "1",
-            "age": "2"
-         },
-         {
-            "name": "DEHCAlpini",
-            "maxcount": "1",
-            "level": "10",
-            "prereqtech": "-1",
-            "age": "3"
-         },
-         {
-            "name": "DEHCCavalryCombatItalian",
-            "maxcount": "1",
-            "level": "25",
-            "prereqtech": "DEHCSchiavoniSwords",
-            "age": "2"
-         },
-         {
-            "name": "DEHCHandMortar",
-            "maxcount": "1",
-            "level": "0",
-            "prereqtech": "-1",
-            "age": "2"
-         },
-         {
-            "name": "HCAdvancedArtillery",
-            "maxcount": "1",
-            "level": "0",
-            "prereqtech": "-1",
-            "age": "2"
          },
          {
             "name": "HCImprovedBuildings",
@@ -802,20 +827,6 @@
             "maxcount": "1",
             "level": "10",
             "prereqtech": "-1",
-            "age": "1"
-         },
-         {
-            "name": "DEHCSchiavoniSwords",
-            "maxcount": "1",
-            "level": "10",
-            "prereqtech": "DEHCCavalryHitpointsItalian",
-            "age": "1"
-         },
-         {
-            "name": "DEHCInfantryHitpointsItalian",
-            "maxcount": "1",
-            "level": "10",
-            "prereqtech": "DEHCInfantryDamageItalian",
             "age": "1"
          },
          {
@@ -2661,6 +2672,11 @@
                },
                {
                   "_x": "2.5",
+                  "_y": "1.0",
+                  "__text": "DEHCRedshirts"
+               },
+               {
+                  "_x": "2.5",
                   "_y": "5.0",
                   "__text": "DEHCShipHalberdiersRepeat"
                },
@@ -2693,6 +2709,11 @@
                   "_x": "0.9",
                   "_y": "1.0",
                   "__text": "DEHCImprovedCrossbowsItalians"
+               },
+               {
+                  "_x": "0.9",
+                  "_y": "1.0",
+                  "__text": "DEHCRomanTactics"
                },
                {
                   "_x": "1.8",
@@ -2850,6 +2871,11 @@
                },
                {
                   "_x": "2.5",
+                  "_y": "1.0",
+                  "__text": "DEHCRedshirts"
+               },
+               {
+                  "_x": "2.5",
                   "_y": "5.0",
                   "__text": "DEHCShipHalberdiersRepeat"
                },
@@ -2882,6 +2908,11 @@
                   "_x": "0.9",
                   "_y": "1.0",
                   "__text": "DEHCImprovedCrossbowsItalians"
+               },
+               {
+                  "_x": "0.9",
+                  "_y": "1.0",
+                  "__text": "DEHCRomanTactics"
                },
                {
                   "_x": "1.8",

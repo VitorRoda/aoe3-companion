@@ -81,6 +81,16 @@
             "overrideicontech": "DEHCVillagerHausaInfiniteIcon"
          },
          {
+            "name": "DEHCShipVillagers3",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "-1",
+            "age": "0",
+            "displayunitcount": "3",
+            "infiniteinlastage": "1",
+            "overrideicontech": "DEHCVillagerHausaIcon"
+         },
+         {
             "name": "DEHCShipSanga2",
             "maxcount": "-1",
             "level": "0",
@@ -96,16 +106,6 @@
             "prereqtech": "-1",
             "age": "1",
             "displayunitcount": "4"
-         },
-         {
-            "name": "DEHCShipVillagers2",
-            "maxcount": "1",
-            "level": "0",
-            "prereqtech": "-1",
-            "age": "1",
-            "displayunitcount": "4",
-            "infiniteinlastage": "1",
-            "overrideicontech": "DEHCVillagerHausaIcon"
          },
          {
             "name": "HCShipFoodCrates1",
@@ -1289,8 +1289,8 @@
                      "__text": "DEHCBerberNomads"
                   },
                   {
-                     "_dbid": "6879",
-                     "__text": "DEHCShipVillagers2"
+                     "_dbid": "6880",
+                     "__text": "DEHCShipVillagers3"
                   },
                   {
                      "_dbid": "8324",
@@ -1376,8 +1376,8 @@
                      "__text": "DEHCBerberNomads"
                   },
                   {
-                     "_dbid": "6879",
-                     "__text": "DEHCShipVillagers2"
+                     "_dbid": "6880",
+                     "__text": "DEHCShipVillagers3"
                   },
                   {
                      "_dbid": "8332",
@@ -1483,8 +1483,8 @@
                      "__text": "DEHCShipMercXebec2"
                   },
                   {
-                     "_dbid": "6879",
-                     "__text": "DEHCShipVillagers2"
+                     "_dbid": "6880",
+                     "__text": "DEHCShipVillagers3"
                   },
                   {
                      "_dbid": "8320",
@@ -1578,8 +1578,8 @@
                      "__text": "HCFurrier"
                   },
                   {
-                     "_dbid": "6879",
-                     "__text": "DEHCShipVillagers2"
+                     "_dbid": "6880",
+                     "__text": "DEHCShipVillagers3"
                   },
                   {
                      "_dbid": "2212",
@@ -1721,12 +1721,12 @@
                {
                   "_x": "1.0",
                   "_y": "1.0",
-                  "__text": "DEHCShipSanga2"
+                  "__text": "DEHCShipVillagers3"
                },
                {
                   "_x": "1.0",
                   "_y": "1.0",
-                  "__text": "DEHCShipVillagers2"
+                  "__text": "DEHCShipSanga2"
                },
                {
                   "_x": "1.3",
@@ -1875,12 +1875,12 @@
                {
                   "_x": "1.0",
                   "_y": "1.0",
-                  "__text": "DEHCShipSanga2"
+                  "__text": "DEHCShipVillagers3"
                },
                {
                   "_x": "1.0",
                   "_y": "1.0",
-                  "__text": "DEHCShipVillagers2"
+                  "__text": "DEHCShipSanga2"
                },
                {
                   "_x": "1.3",

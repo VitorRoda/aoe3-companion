@@ -1,6 +1,7 @@
 {
    "subcivalliancecost": {
-      "gold": "0"
+      "food": "100",
+      "wood": "100"
    },
    "subcivalliancecostfactor": "2.0",
    "maxdecksize": "25",
@@ -51,7 +52,7 @@
          "buildingefficiency": "0.3",
          "freebuildingefficiency": "1.0",
          "investmentamount": "300",
-         "investmentcap": "1500",
+         "investmentcap": "3000",
          "gold": "0",
          "food": "0",
          "wood": "0",
@@ -422,7 +423,7 @@
          "buildingefficiency": "0.3",
          "freebuildingefficiency": "1.0",
          "investmentamount": "300",
-         "investmentcap": "1500",
+         "investmentcap": "3000",
          "gold": "0",
          "food": "0",
          "wood": "0",
@@ -787,7 +788,7 @@
          "buildingefficiency": "0.3",
          "freebuildingefficiency": "1.0",
          "investmentamount": "300",
-         "investmentcap": "1500",
+         "investmentcap": "3000",
          "gold": "0",
          "food": "0",
          "wood": "0",
@@ -1186,7 +1187,7 @@
          "buildingefficiency": "0.3",
          "freebuildingefficiency": "1.0",
          "investmentamount": "300",
-         "investmentcap": "1500",
+         "investmentcap": "3000",
          "gold": "0",
          "food": "0",
          "wood": "0",
@@ -1570,7 +1571,7 @@
          "buildingefficiency": "0.3",
          "freebuildingefficiency": "1.0",
          "investmentamount": "300",
-         "investmentcap": "1500",
+         "investmentcap": "3000",
          "gold": "0",
          "food": "0",
          "wood": "0",
@@ -1956,7 +1957,7 @@
          "buildingefficiency": "0.3",
          "freebuildingefficiency": "1.0",
          "investmentamount": "300",
-         "investmentcap": "1500",
+         "investmentcap": "3000",
          "gold": "0",
          "food": "0",
          "wood": "0",
@@ -2371,7 +2372,7 @@
          "buildingefficiency": "0.3",
          "freebuildingefficiency": "1.0",
          "investmentamount": "300",
-         "investmentcap": "1500",
+         "investmentcap": "3000",
          "gold": "0",
          "food": "0",
          "wood": "0",
@@ -2726,7 +2727,7 @@
          "buildingefficiency": "0.3",
          "freebuildingefficiency": "1.0",
          "investmentamount": "300",
-         "investmentcap": "1500",
+         "investmentcap": "3000",
          "gold": "0",
          "food": "0",
          "wood": "0",
@@ -3563,7 +3564,7 @@
          "buildingefficiency": "0.3",
          "freebuildingefficiency": "1.0",
          "investmentamount": "300",
-         "investmentcap": "1500",
+         "investmentcap": "3000",
          "gold": "0",
          "food": "0",
          "wood": "0",
@@ -3932,7 +3933,7 @@
          "buildingefficiency": "0.3",
          "freebuildingefficiency": "1.0",
          "investmentamount": "300",
-         "investmentcap": "1500",
+         "investmentcap": "3000",
          "gold": "0",
          "food": "0",
          "wood": "0",
@@ -3949,6 +3950,8 @@
             "CrateofFood",
             "CrateofFood",
             "CrateofFood",
+            "CrateofWood",
+            "CrateofWood",
             "CrateofCoin"
          ],
          "empirewarsstartingunit": [
@@ -4305,7 +4308,7 @@
          "buildingefficiency": "0.3",
          "freebuildingefficiency": "1.0",
          "investmentamount": "300",
-         "investmentcap": "1500",
+         "investmentcap": "3000",
          "gold": "0",
          "food": "0",
          "wood": "0",
@@ -4854,7 +4857,7 @@
          "buildingefficiency": "0.3",
          "freebuildingefficiency": "1.0",
          "investmentamount": "300",
-         "investmentcap": "1500",
+         "investmentcap": "3000",
          "gold": "0",
          "food": "0",
          "wood": "0",
@@ -5657,7 +5660,7 @@
          "buildingefficiency": "0.3",
          "freebuildingefficiency": "1.0",
          "investmentamount": "300",
-         "investmentcap": "1500",
+         "investmentcap": "3000",
          "gold": "0",
          "food": "0",
          "wood": "0",
@@ -7929,7 +7932,7 @@
          "buildingefficiency": "0.3",
          "freebuildingefficiency": "1.0",
          "investmentamount": "300",
-         "investmentcap": "1500",
+         "investmentcap": "3000",
          "gold": "0",
          "food": "0",
          "wood": "0",
@@ -11706,7 +11709,7 @@
          "buildingefficiency": "0.3",
          "freebuildingefficiency": "1.0",
          "investmentamount": "300",
-         "investmentcap": "1500",
+         "investmentcap": "3000",
          "gold": "0",
          "food": "0",
          "wood": "0",
@@ -12071,7 +12074,7 @@
          "buildingefficiency": "0.3",
          "freebuildingefficiency": "1.0",
          "investmentamount": "300",
-         "investmentcap": "1500",
+         "investmentcap": "3000",
          "gold": "0",
          "food": "0",
          "wood": "0",
@@ -13522,7 +13525,7 @@
          "buildingefficiency": "0.3",
          "freebuildingefficiency": "1.0",
          "investmentamount": "300",
-         "investmentcap": "1500",
+         "investmentcap": "3000",
          "gold": "0",
          "food": "0",
          "wood": "0",
@@ -14341,7 +14344,7 @@
          "buildingefficiency": "0.3",
          "freebuildingefficiency": "1.0",
          "investmentamount": "300",
-         "investmentcap": "1500",
+         "investmentcap": "3000",
          "gold": "0",
          "food": "0",
          "wood": "0",
@@ -14378,10 +14381,6 @@
             {
                "_resourceamount": "135.00",
                "__text": "deZebuCattle"
-            },
-            {
-               "_resourceamount": "135.00",
-               "__text": "deZebuCattle"
             }
          ],
          "deathmatchstartingunit": {
@@ -14399,10 +14398,6 @@
             "deSettlerAfrican",
             "deSettlerAfrican",
             "deSettlerAfrican",
-            {
-               "_resourceamount": "215.00",
-               "__text": "deZebuCattle"
-            },
             {
                "_resourceamount": "215.00",
                "__text": "deZebuCattle"
@@ -14798,6 +14793,7 @@
          "alliedotherid": "26445",
          "unalliedid": "26444",
          "herohclabelid": "103412",
+         "hcshipmentmodifier": "1.080",
          "agetech": [
             {
                "age": "Age0",
@@ -14828,7 +14824,7 @@
          "buildingefficiency": "0.3",
          "freebuildingefficiency": "1.0",
          "investmentamount": "300",
-         "investmentcap": "1500",
+         "investmentcap": "3000",
          "gold": "0",
          "food": "0",
          "wood": "0",
@@ -14865,10 +14861,6 @@
             {
                "_resourceamount": "135.00",
                "__text": "deSangaCattle"
-            },
-            {
-               "_resourceamount": "135.00",
-               "__text": "deSangaCattle"
             }
          ],
          "deathmatchstartingunit": {
@@ -14884,10 +14876,6 @@
             "deSettlerAfrican",
             "deSettlerAfrican",
             "deSettlerAfrican",
-            {
-               "_resourceamount": "215.00",
-               "__text": "deSangaCattle"
-            },
             {
                "_resourceamount": "215.00",
                "__text": "deSangaCattle"
@@ -15457,7 +15445,7 @@
          "buildingefficiency": "0.3",
          "freebuildingefficiency": "1.0",
          "investmentamount": "300",
-         "investmentcap": "1500",
+         "investmentcap": "3000",
          "gold": "0",
          "food": "0",
          "wood": "0",
@@ -16292,7 +16280,7 @@
          "freebuildingefficiency": "1.0",
          "canpayfreefoundations": "",
          "investmentamount": "300",
-         "investmentcap": "1500",
+         "investmentcap": "3000",
          "gold": "0",
          "food": "0",
          "wood": "0",
@@ -16676,7 +16664,7 @@
          "buildingefficiency": "0.3",
          "freebuildingefficiency": "1.0",
          "investmentamount": "300",
-         "investmentcap": "1500",
+         "investmentcap": "3000",
          "gold": "0",
          "food": "0",
          "wood": "0",
@@ -17031,6 +17019,7 @@
       {
          "name": "Aztecs",
          "main": "0",
+         "subcivtype": "1",
          "portrait": "ui\\native_allies\\aztec",
          "culture": "Stone",
          "displaynameid": "22872",
@@ -17050,6 +17039,7 @@
       {
          "name": "Caribs",
          "main": "0",
+         "subcivtype": "1",
          "portrait": "ui\\native_allies\\carib",
          "culture": "Grass",
          "displaynameid": "22876",
@@ -17126,6 +17116,7 @@
       {
          "name": "Incas",
          "main": "0",
+         "subcivtype": "1",
          "portrait": "ui\\native_allies\\inca",
          "culture": "Stone",
          "displaynameid": "22874",
@@ -17183,6 +17174,7 @@
       {
          "name": "Maya",
          "main": "0",
+         "subcivtype": "1",
          "portrait": "ui\\native_allies\\maya",
          "culture": "Stone",
          "displaynameid": "22873",
@@ -17240,6 +17232,7 @@
       {
          "name": "Tupi",
          "main": "0",
+         "subcivtype": "1",
          "portrait": "ui\\native_allies\\tupi",
          "culture": "Grass",
          "displaynameid": "22875",
@@ -17259,6 +17252,7 @@
       {
          "name": "Zapotec",
          "main": "0",
+         "subcivtype": "1",
          "portrait": "ui\\native_allies\\zapotec",
          "culture": "Stone",
          "displaynameid": "43450",
@@ -17335,6 +17329,7 @@
       {
          "name": "Mapuche",
          "main": "0",
+         "subcivtype": "1",
          "portrait": "ui\\native_allies\\mapuche",
          "culture": "Grass",
          "displaynameid": "45431",
@@ -17392,6 +17387,7 @@
       {
          "name": "Udasi",
          "main": "0",
+         "subcivtype": "2",
          "portrait": "buildings\\native_settlement\\native_udasi_site_icon_portrait",
          "culture": "Stone",
          "displaynameid": "61081",
@@ -17411,6 +17407,7 @@
       {
          "name": "Zen",
          "main": "0",
+         "subcivtype": "2",
          "portrait": "buildings\\native_settlement\\native_zen_site_icon_portrait",
          "culture": "Wood",
          "displaynameid": "61078",
@@ -17430,6 +17427,7 @@
       {
          "name": "Shaolin",
          "main": "0",
+         "subcivtype": "2",
          "portrait": "buildings\\native_settlement\\native_shaolin_site_icon_portrait",
          "culture": "Stone",
          "displaynameid": "61079",
@@ -17468,6 +17466,7 @@
       {
          "name": "Bhakti",
          "main": "0",
+         "subcivtype": "2",
          "portrait": "buildings\\native_settlement\\native_bhakti_site_icon_portrait",
          "culture": "Stone",
          "displaynameid": "61082",
@@ -17487,6 +17486,7 @@
       {
          "name": "Jesuit",
          "main": "0",
+         "subcivtype": "2",
          "portrait": "buildings\\native_settlement\\native_jesuit_site_icon_portrait",
          "culture": "Stone",
          "displaynameid": "61080",
@@ -17506,6 +17506,7 @@
       {
          "name": "Sufi",
          "main": "0",
+         "subcivtype": "2",
          "portrait": "buildings\\native_settlement\\native_sufi_site_icon_portrait",
          "culture": "Stone",
          "displaynameid": "61083",
@@ -17544,6 +17545,7 @@
       {
          "name": "Akan",
          "main": "0",
+         "subcivtype": "3",
          "portrait": "buildings\\native_settlement\\native_akan_site_portrait",
          "culture": "Stone",
          "displaynameid": "102500",
@@ -17563,6 +17565,7 @@
       {
          "name": "Yoruba",
          "main": "0",
+         "subcivtype": "3",
          "portrait": "buildings\\native_settlement\\native_yoruba_site_portrait",
          "culture": "Stone",
          "displaynameid": "102501",
@@ -17582,6 +17585,7 @@
       {
          "name": "Somali",
          "main": "0",
+         "subcivtype": "3",
          "portrait": "buildings\\native_settlement\\native_somali_site_portrait",
          "culture": "Stone",
          "displaynameid": "102502",
@@ -17601,6 +17605,7 @@
       {
          "name": "Sudanese",
          "main": "0",
+         "subcivtype": "3",
          "portrait": "buildings\\native_settlement\\native_sudanese_site_portrait",
          "culture": "Stone",
          "displaynameid": "102503",
@@ -17620,6 +17625,7 @@
       {
          "name": "Berbers",
          "main": "0",
+         "subcivtype": "3",
          "portrait": "buildings\\native_settlement\\native_berber_site_portrait",
          "culture": "Stone",
          "displaynameid": "102504",
@@ -17759,6 +17765,7 @@
       {
          "name": "Jagiellon",
          "main": "0",
+         "subcivtype": "4",
          "portrait": "buildings\\native_settlement\\native_site_jagiellon_icon_portrait.png",
          "culture": "Stone",
          "displaynameid": "122024",
@@ -17782,6 +17789,7 @@
       {
          "name": "Bourbon",
          "main": "0",
+         "subcivtype": "4",
          "portrait": "buildings\\native_settlement\\native_site_bourbon_icon_portrait.png",
          "culture": "Stone",
          "displaynameid": "122142",
@@ -17805,6 +17813,7 @@
       {
          "name": "Habsburg",
          "main": "0",
+         "subcivtype": "4",
          "portrait": "buildings\\native_settlement\\native_site_habsburg_icon_portrait.png",
          "culture": "Stone",
          "displaynameid": "122143",
@@ -17828,6 +17837,7 @@
       {
          "name": "Hanover",
          "main": "0",
+         "subcivtype": "4",
          "portrait": "buildings\\native_settlement\\native_site_hanover_icon_portrait.png",
          "culture": "Stone",
          "displaynameid": "122144",
@@ -17851,6 +17861,7 @@
       {
          "name": "Oldenburg",
          "main": "0",
+         "subcivtype": "4",
          "portrait": "buildings\\native_settlement\\native_site_oldenburg_icon_portrait.png",
          "culture": "Stone",
          "displaynameid": "122145",
@@ -17874,6 +17885,7 @@
       {
          "name": "Phanar",
          "main": "0",
+         "subcivtype": "4",
          "portrait": "buildings\\native_settlement\\native_site_phanar_icon_portrait.png",
          "culture": "Stone",
          "displaynameid": "122146",
@@ -17897,6 +17909,7 @@
       {
          "name": "Vasa",
          "main": "0",
+         "subcivtype": "4",
          "portrait": "buildings\\native_settlement\\native_site_vasa_icon_portrait.png",
          "culture": "Stone",
          "displaynameid": "122147",
@@ -17920,6 +17933,7 @@
       {
          "name": "Wettin",
          "main": "0",
+         "subcivtype": "4",
          "portrait": "buildings\\native_settlement\\native_site_wettin_icon_portrait.png",
          "culture": "Stone",
          "displaynameid": "122148",
@@ -17943,6 +17957,7 @@
       {
          "name": "Wittelsbach",
          "main": "0",
+         "subcivtype": "4",
          "portrait": "buildings\\native_settlement\\native_site_wittelsbach_icon_portrait.png",
          "culture": "Stone",
          "displaynameid": "122149",
@@ -17958,6 +17973,26 @@
             {
                "age": "Age1",
                "tech": "DENativeWittelsbachColonialize"
+            }
+         ],
+         "visible": "0",
+         "visibleineditor": "0"
+      },
+      {
+         "name": "Tengri",
+         "main": "0",
+         "subcivtype": "2",
+         "portrait": "buildings\\native_settlement\\native_tengri_site_icon_portrait",
+         "culture": "Stone",
+         "displaynameid": "61084",
+         "rollovernameid": "61084",
+         "alliedid": "26446",
+         "alliedotherid": "26445",
+         "unalliedid": "26444",
+         "agetech": [
+            {
+               "age": "Age0",
+               "tech": "DENativeTengri"
             }
          ],
          "visible": "0",

@@ -18,6 +18,9 @@
    "numpropunlocksearned": "0",
    "ambientsounds": "homecity\\siouxambientsounds.xml",
    "xsai": "generic_city",
+   "heroprotounits": {
+      "protounit": "xpLakotaWarchief"
+   },
    "coffers": {
       "current": {
          "food": "0",
@@ -34,7 +37,7 @@
          "gold": "0",
          "fame": "0",
          "ships": "0",
-         "skillpoints": "-1",
+         "skillpoints": "10",
          "xp": "-1"
       }
    },
@@ -50,12 +53,12 @@
             "infiniteinlastage": "1"
          },
          {
-            "name": "HCXPShipVillagers4",
+            "name": "HCXPShipVillagers5",
             "maxcount": "1",
             "level": "0",
             "prereqtech": "HCXPShipVillagers1",
-            "age": "1",
-            "displayunitcount": "5",
+            "age": "2",
+            "displayunitcount": "8",
             "infiniteinlastage": "1"
          },
          {
@@ -65,15 +68,6 @@
             "prereqtech": "HCXPShipVillagers4",
             "age": "0",
             "displayunitcount": "3",
-            "infiniteinlastage": "1"
-         },
-         {
-            "name": "HCXPShipVillagers2",
-            "maxcount": "1",
-            "level": "0",
-            "prereqtech": "-1",
-            "age": "0",
-            "displayunitcount": "4",
             "infiniteinlastage": "1"
          },
          {
@@ -122,12 +116,20 @@
             "displayunitcount": "1600"
          },
          {
-            "name": "HCShipSurgeons",
+            "name": "HCTeamMedicineMen",
             "maxcount": "1",
             "level": "10",
             "prereqtech": "-1",
             "age": "1",
             "displayunitcount": "2"
+         },
+         {
+            "name": "HCMedicineMen",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "-1",
+            "age": "1",
+            "displayunitcount": "4"
          },
          {
             "name": "HCXPTeamFoodCrates1",
@@ -265,13 +267,6 @@
             "displayunitcount": "4"
          },
          {
-            "name": "DEHCShipCougarPelts",
-            "maxcount": "1",
-            "level": "10",
-            "prereqtech": "-1",
-            "age": "0"
-         },
-         {
             "name": "HCShipCoveredWagons",
             "maxcount": "1",
             "level": "0",
@@ -290,13 +285,6 @@
             "infiniteinlastage": "1"
          },
          {
-            "name": "HCXPEveningStar",
-            "maxcount": "1",
-            "level": "25",
-            "prereqtech": "HCConestogaWagonsTeam",
-            "age": "1"
-         },
-         {
             "name": "HCXPAdvancedScouts",
             "maxcount": "1",
             "level": "25",
@@ -309,7 +297,7 @@
             "level": "0",
             "prereqtech": "-1",
             "age": "1",
-            "displayunitcount": "6",
+            "displayunitcount": "7",
             "infiniteinlastage": "1"
          },
          {
@@ -318,17 +306,13 @@
             "level": "10",
             "prereqtech": "HCXPShipWarBows1",
             "age": "2",
-            "displayunitcount": "8",
+            "displayunitcount": "10",
             "infiniteinlastage": "1"
          },
          {
-            "name": "HCXPUprising",
+            "name": "DEHCLakotaImprovedSiege",
             "maxcount": "1",
-            "level": "40",
-            "prereqtech": "HCXPShipWarBows2",
-            "age": "3",
-            "displayunitcount": "21",
-            "infiniteinlastage": "1"
+            "age": "2"
          },
          {
             "name": "HCXPShipWarClubs1",
@@ -345,7 +329,7 @@
             "level": "0",
             "prereqtech": "HCXPShipWarClubs1",
             "age": "2",
-            "displayunitcount": "9",
+            "displayunitcount": "10",
             "infiniteinlastage": "1"
          },
          {
@@ -354,7 +338,7 @@
             "level": "10",
             "prereqtech": "HCXPShipWarClubs2",
             "age": "1",
-            "displayunitcount": "7",
+            "displayunitcount": "5",
             "infiniteinlastage": "1"
          },
          {
@@ -389,7 +373,21 @@
             "maxcount": "1",
             "level": "10",
             "prereqtech": "HCXPShipWarRifles2",
-            "age": "1"
+            "age": "3"
+         },
+         {
+            "name": "HCXPUprising",
+            "maxcount": "1",
+            "level": "40",
+            "prereqtech": "HCXPShipWarBows2",
+            "age": "3",
+            "displayunitcount": "21",
+            "infiniteinlastage": "1"
+         },
+         {
+            "name": "DEHCAkicita",
+            "maxcount": "1",
+            "age": "3"
          },
          {
             "name": "HCXPShipAxeRiders1",
@@ -445,17 +443,17 @@
             "displayunitcount": "6"
          },
          {
+            "name": "HCXPEveningStar",
+            "maxcount": "1",
+            "level": "25",
+            "prereqtech": "HCConestogaWagonsTeam",
+            "age": "1"
+         },
+         {
             "name": "HCXPCavalryDamageSioux",
             "maxcount": "1",
             "level": "10",
             "prereqtech": "HCXPShipAxeRiders3",
-            "age": "1"
-         },
-         {
-            "name": "HCXPCavalryHitpointsSioux",
-            "maxcount": "1",
-            "level": "10",
-            "prereqtech": "HCXPCavalryDamageSioux",
             "age": "1"
          },
          {
@@ -464,6 +462,12 @@
             "level": "25",
             "prereqtech": "HCXPCavalryHitpointsSioux",
             "age": "2"
+         },
+         {
+            "name": "HCShipAdvancedCapturedMortars",
+            "maxcount": "1",
+            "age": "3",
+            "displayunitcount": "4"
          },
          {
             "name": "HCXPShipCoupRiders1",
@@ -713,14 +717,6 @@
             "age": "1"
          },
          {
-            "name": "HCXPShipWarHutTravois1",
-            "maxcount": "1",
-            "level": "10",
-            "prereqtech": "DEHCExtensiveFortificationsWarchief",
-            "age": "1",
-            "displayunitcount": "2"
-         },
-         {
             "name": "HCHeavyFortifications",
             "maxcount": "1",
             "level": "10",
@@ -732,14 +728,14 @@
             "maxcount": "1",
             "level": "25",
             "prereqtech": "HCHeavyFortifications",
-            "age": "0"
+            "age": "2"
          },
          {
             "name": "HCXPFriendlyTerritory",
             "maxcount": "1",
             "level": "40",
             "prereqtech": "HCXPNomadicExpansion",
-            "age": "1"
+            "age": "0"
          },
          {
             "name": "HCXPAdvancedFarms",
@@ -798,11 +794,12 @@
             "age": "0"
          },
          {
-            "name": "HCRidingSchool",
+            "name": "DEHCCampMovements",
             "maxcount": "1",
-            "level": "10",
+            "level": "0",
             "prereqtech": "-1",
-            "age": "1"
+            "age": "1",
+            "displayunitcount": "2"
          },
          {
             "name": "HCXPShipFarmTravois1",
@@ -849,6 +846,13 @@
             "age": "0"
          },
          {
+            "name": "DEHCShipCougarPelts",
+            "maxcount": "1",
+            "level": "10",
+            "prereqtech": "-1",
+            "age": "0"
+         },
+         {
             "name": "deHCSilversmithNative",
             "maxcount": "1",
             "level": "0",
@@ -870,17 +874,17 @@
             "age": "0"
          },
          {
-            "name": "HCSpiceTrade",
+            "name": "HCSpiceTradeTeam",
             "maxcount": "1",
             "level": "10",
             "prereqtech": "HCFurrier",
-            "age": "1"
+            "age": "0"
          },
          {
             "name": "HCXPGreatHunter",
             "maxcount": "1",
             "level": "10",
-            "prereqtech": "HCSpiceTrade",
+            "prereqtech": "HCSpiceTradeTeam",
             "age": "1"
          },
          {
@@ -925,7 +929,7 @@
             "level": "10",
             "prereqtech": "HCXPBuffaloTeam",
             "age": "3",
-            "displayunitcount": "15"
+            "displayunitcount": "13"
          },
          {
             "name": "HCXPBuffalo3",
@@ -941,7 +945,7 @@
             "level": "25",
             "prereqtech": "HCXPBuffalo3",
             "age": "1",
-            "displayunitcount": "15"
+            "displayunitcount": "13"
          },
          {
             "name": "HCXPOldWaysSioux",
@@ -1246,14 +1250,6 @@
             "cards": {
                "card": [
                   {
-                     "_dbid": "2798",
-                     "__text": "HCXPShipVillagers2"
-                  },
-                  {
-                     "_dbid": "2881",
-                     "__text": "HCXPWarChiefSioux1"
-                  },
-                  {
                      "_dbid": "2996",
                      "__text": "HCXPBuffalo2"
                   },
@@ -1270,10 +1266,6 @@
                      "__text": "HCXPShipAxeRiders3"
                   },
                   {
-                     "_dbid": "2799",
-                     "__text": "HCXPShipVillagers4"
-                  },
-                  {
                      "_dbid": "3223",
                      "__text": "HCXPMorningStar"
                   },
@@ -1286,24 +1278,12 @@
                      "__text": "HCShipCoinCrates3"
                   },
                   {
-                     "_dbid": "2209",
-                     "__text": "HCShipFoodCrates3"
-                  },
-                  {
                      "_dbid": "2998",
                      "__text": "HCXPBuffalo4"
                   },
                   {
                      "_dbid": "3070",
                      "__text": "HCXPSiouxNakotaSupport"
-                  },
-                  {
-                     "_dbid": "2213",
-                     "__text": "HCShipWoodCrates4"
-                  },
-                  {
-                     "_dbid": "2993",
-                     "__text": "HCXPWarChiefSioux2"
                   },
                   {
                      "_dbid": "3477",
@@ -1322,12 +1302,44 @@
                      "__text": "HCXPCavalryCombatSioux"
                   },
                   {
-                     "_dbid": "3323",
-                     "__text": "HCXPShipWarHutTravois1"
+                     "_dbid": "10134",
+                     "__text": "DEHCCampMovements"
                   },
                   {
                      "_dbid": "3057",
                      "__text": "HCXPShipRifleRiders3"
+                  },
+                  {
+                     "_dbid": "2798",
+                     "__text": "HCXPShipVillagers3"
+                  },
+                  {
+                     "_dbid": "3412",
+                     "__text": "HCXPFriendlyTerritory"
+                  },
+                  {
+                     "_dbid": "3411",
+                     "__text": "HCXPNomadicExpansion"
+                  },
+                  {
+                     "_dbid": "3065",
+                     "__text": "HCXPPistoleroAllies"
+                  },
+                  {
+                     "_dbid": "3066",
+                     "__text": "HCXPComancheroAllies"
+                  },
+                  {
+                     "_dbid": "3001",
+                     "__text": "HCXPShipWarBows1"
+                  },
+                  {
+                     "_dbid": "2917",
+                     "__text": "HCXPShipVillagers5"
+                  },
+                  {
+                     "_dbid": "2214",
+                     "__text": "HCShipCoinCrates2"
                   }
                ]
             }
@@ -1336,18 +1348,6 @@
             "name": "$$20310$$Land",
             "cards": {
                "card": [
-                  {
-                     "_dbid": "2798",
-                     "__text": "HCXPShipVillagers2"
-                  },
-                  {
-                     "_dbid": "2797",
-                     "__text": "HCXPShipVillagers4"
-                  },
-                  {
-                     "_dbid": "3016",
-                     "__text": "HCXPCavalryHitpointsSioux"
-                  },
                   {
                      "_dbid": "3411",
                      "__text": "HCXPNomadicExpansion"
@@ -1381,24 +1381,8 @@
                      "__text": "HCXPAdoption"
                   },
                   {
-                     "_dbid": "2995",
-                     "__text": "HCXPBuffaloTeam"
-                  },
-                  {
-                     "_dbid": "3477",
-                     "__text": "HCXPShipAxeRidersRepeat"
-                  },
-                  {
                      "_dbid": "3011",
                      "__text": "HCXPShipAxeRiders3"
-                  },
-                  {
-                     "_dbid": "2094",
-                     "__text": "HCFoodSilos"
-                  },
-                  {
-                     "_dbid": "3471",
-                     "__text": "HCXPNewWaysSioux"
                   },
                   {
                      "_dbid": "3077",
@@ -1409,32 +1393,60 @@
                      "__text": "HCXPShipTradingPostTravois"
                   },
                   {
-                     "_dbid": "2993",
-                     "__text": "HCXPWarChiefSioux2"
-                  },
-                  {
-                     "_dbid": "2881",
-                     "__text": "HCXPWarChiefSioux1"
-                  },
-                  {
-                     "_dbid": "2210",
-                     "__text": "HCShipFoodCrates4"
-                  },
-                  {
-                     "_dbid": "3065",
-                     "__text": "HCXPPistoleroAllies"
-                  },
-                  {
                      "_dbid": "3015",
                      "__text": "HCXPCavalryDamageSioux"
                   },
                   {
-                     "_dbid": "2038",
-                     "__text": "HCRidingSchool"
+                     "_dbid": "2798",
+                     "__text": "HCXPShipVillagers3"
                   },
                   {
-                     "_dbid": "3027",
-                     "__text": "HCXPShipDogsoldiersTeam2"
+                     "_dbid": "2996",
+                     "__text": "HCXPBuffalo2"
+                  },
+                  {
+                     "_dbid": "10154",
+                     "__text": "DEHCAkicita"
+                  },
+                  {
+                     "_dbid": "2449",
+                     "__text": "HCConestogaWagonsTeam"
+                  },
+                  {
+                     "_dbid": "3412",
+                     "__text": "HCXPFriendlyTerritory"
+                  },
+                  {
+                     "_dbid": "3001",
+                     "__text": "HCXPShipWarBows1"
+                  },
+                  {
+                     "_dbid": "2215",
+                     "__text": "HCShipCoinCrates3"
+                  },
+                  {
+                     "_dbid": "10134",
+                     "__text": "DEHCCampMovements"
+                  },
+                  {
+                     "_dbid": "2214",
+                     "__text": "HCShipCoinCrates2"
+                  },
+                  {
+                     "_dbid": "2917",
+                     "__text": "HCXPShipVillagers5"
+                  },
+                  {
+                     "_dbid": "3481",
+                     "__text": "HCXPAggressivePolicy"
+                  },
+                  {
+                     "_dbid": "3006",
+                     "__text": "HCXPShipWarRifles1"
+                  },
+                  {
+                     "_dbid": "3493",
+                     "__text": "HCXPUprising"
                   }
                ]
             }
@@ -1444,16 +1456,8 @@
             "cards": {
                "card": [
                   {
-                     "_dbid": "2797",
-                     "__text": "HCXPShipVillagers2"
-                  },
-                  {
                      "_dbid": "2212",
                      "__text": "HCShipWoodCrates3"
-                  },
-                  {
-                     "_dbid": "3016",
-                     "__text": "HCXPCavalryHitpointsSioux"
                   },
                   {
                      "_dbid": "3411",
@@ -1468,24 +1472,8 @@
                      "__text": "HCXPMustangs"
                   },
                   {
-                     "_dbid": "3499",
-                     "__text": "HCXPCommandSkill"
-                  },
-                  {
-                     "_dbid": "3477",
-                     "__text": "HCXPShipAxeRidersRepeat"
-                  },
-                  {
-                     "_dbid": "6629",
-                     "__text": "DEHCShipNativeScoutTeam"
-                  },
-                  {
-                     "_dbid": "2866",
+                     "_dbid": "6656",
                      "__text": "DEBirchbark"
-                  },
-                  {
-                     "_dbid": "3049",
-                     "__text": "HCXPWoodcrafting"
                   },
                   {
                      "_dbid": "3404",
@@ -1496,16 +1484,8 @@
                      "__text": "HCXPShipWarCanoes2"
                   },
                   {
-                     "_dbid": "3471",
-                     "__text": "HCXPNewWaysSioux"
-                  },
-                  {
                      "_dbid": "469",
                      "__text": "HCFishMarket"
-                  },
-                  {
-                     "_dbid": "2038",
-                     "__text": "HCRidingSchool"
                   },
                   {
                      "_dbid": "3015",
@@ -1520,28 +1500,60 @@
                      "__text": "HCXPSiouxYanktonSupport"
                   },
                   {
-                     "_dbid": "2864",
-                     "__text": "HCXPShipFishingBoats"
-                  },
-                  {
                      "_dbid": "3011",
                      "__text": "HCXPShipAxeRiders3"
                   },
                   {
-                     "_dbid": "3068",
-                     "__text": "HCXPSiouxDakotaSupport"
+                     "_dbid": "10154",
+                     "__text": "DEHCAkicita"
                   },
                   {
-                     "_dbid": "3476",
-                     "__text": "HCXPMarauders"
+                     "_dbid": "10134",
+                     "__text": "DEHCCampMovements"
                   },
                   {
-                     "_dbid": "3495",
-                     "__text": "HCXPEveningStar"
+                     "_dbid": "2999",
+                     "__text": "HCXPGreatHunter"
                   },
                   {
-                     "_dbid": "3027",
-                     "__text": "HCXPShipDogsoldiersTeam2"
+                     "_dbid": "2996",
+                     "__text": "HCXPBuffalo2"
+                  },
+                  {
+                     "_dbid": "3412",
+                     "__text": "HCXPFriendlyTerritory"
+                  },
+                  {
+                     "_dbid": "2798",
+                     "__text": "HCXPShipVillagers3"
+                  },
+                  {
+                     "_dbid": "3057",
+                     "__text": "HCXPShipRifleRiders3"
+                  },
+                  {
+                     "_dbid": "3024",
+                     "__text": "HCXPShipDogsoldiers3"
+                  },
+                  {
+                     "_dbid": "3000",
+                     "__text": "HCXPAdoption"
+                  },
+                  {
+                     "_dbid": "2865",
+                     "__text": "HCXPShipWarCanoes3"
+                  },
+                  {
+                     "_dbid": "2215",
+                     "__text": "HCShipCoinCrates3"
+                  },
+                  {
+                     "_dbid": "3481",
+                     "__text": "HCXPAggressivePolicy"
+                  },
+                  {
+                     "_dbid": "3001",
+                     "__text": "HCXPShipWarBows1"
                   }
                ]
             }
@@ -1579,10 +1591,6 @@
                      "__text": "HCXPAdoption"
                   },
                   {
-                     "_dbid": "2799",
-                     "__text": "HCXPShipVillagers4"
-                  },
-                  {
                      "_dbid": "2211",
                      "__text": "HCShipWoodCrates2"
                   },
@@ -1607,16 +1615,12 @@
                      "__text": "deHCSilversmithNative"
                   },
                   {
-                     "_dbid": "2098",
-                     "__text": "HCSpiceTrade"
+                     "_dbid": "2428",
+                     "__text": "HCSpiceTradeTeam"
                   },
                   {
                      "_dbid": "2798",
                      "__text": "HCXPShipVillagers3"
-                  },
-                  {
-                     "_dbid": "2797",
-                     "__text": "HCXPShipVillagers2"
                   },
                   {
                      "_dbid": "2881",
@@ -1649,6 +1653,14 @@
                   {
                      "_dbid": "2999",
                      "__text": "HCXPGreatHunter"
+                  },
+                  {
+                     "_dbid": "3473",
+                     "__text": "HCXPShipTradingPostTravois"
+                  },
+                  {
+                     "_dbid": "2917",
+                     "__text": "HCXPShipVillagers5"
                   }
                ]
             },
@@ -1700,18 +1712,13 @@
                },
                {
                   "_x": "0.4",
-                  "_y": "2.0",
-                  "__text": "HCXPShipVillagers4"
+                  "_y": "3.0",
+                  "__text": "HCXPShipVillagers5"
                },
                {
                   "_x": "0.4",
                   "_y": "3.0",
                   "__text": "HCXPShipVillagers3"
-               },
-               {
-                  "_x": "0.4",
-                  "_y": "3.0",
-                  "__text": "HCXPShipVillagers2"
                },
                {
                   "_x": "1.1",
@@ -1786,7 +1793,12 @@
                {
                   "_x": "3.4",
                   "_y": "4.0",
-                  "__text": "HCShipSurgeons"
+                  "__text": "HCTeamMedicineMen"
+               },
+               {
+                  "_x": "3.4",
+                  "_y": "4.0",
+                  "__text": "HCMedicineMen"
                },
                {
                   "_x": "3.4",
@@ -1827,16 +1839,6 @@
                   "_x": "6.0",
                   "_y": "3.0",
                   "__text": "HCConestogaWagonsTeam"
-               },
-               {
-                  "_x": "6.0",
-                  "_y": "5.0",
-                  "__text": "HCXPEveningStar"
-               },
-               {
-                  "_x": "7.0",
-                  "_y": "4.0",
-                  "__text": "DEHCShipCougarPelts"
                },
                {
                   "_x": "7.1",
@@ -1859,18 +1861,13 @@
                },
                {
                   "_x": "0.4",
-                  "_y": "2.0",
-                  "__text": "HCXPShipVillagers4"
+                  "_y": "3.0",
+                  "__text": "HCXPShipVillagers5"
                },
                {
                   "_x": "0.4",
                   "_y": "3.0",
                   "__text": "HCXPShipVillagers3"
-               },
-               {
-                  "_x": "0.4",
-                  "_y": "3.0",
-                  "__text": "HCXPShipVillagers2"
                },
                {
                   "_x": "1.1",
@@ -1945,7 +1942,12 @@
                {
                   "_x": "3.4",
                   "_y": "4.0",
-                  "__text": "HCShipSurgeons"
+                  "__text": "HCTeamMedicineMen"
+               },
+               {
+                  "_x": "3.4",
+                  "_y": "4.0",
+                  "__text": "HCMedicineMen"
                },
                {
                   "_x": "3.4",
@@ -1986,16 +1988,6 @@
                   "_x": "6.0",
                   "_y": "3.0",
                   "__text": "HCConestogaWagonsTeam"
-               },
-               {
-                  "_x": "6.0",
-                  "_y": "5.0",
-                  "__text": "HCXPEveningStar"
-               },
-               {
-                  "_x": "7.0",
-                  "_y": "4.0",
-                  "__text": "DEHCShipCougarPelts"
                },
                {
                   "_x": "7.1",
@@ -2087,13 +2079,13 @@
                },
                {
                   "_x": "2.4",
-                  "_y": "4.0",
-                  "__text": "HCXPCavalryHitpointsSioux"
+                  "_y": "5.0",
+                  "__text": "HCXPCavalryCombatSioux"
                },
                {
                   "_x": "2.4",
                   "_y": "5.0",
-                  "__text": "HCXPCavalryCombatSioux"
+                  "__text": "HCShipAdvancedCapturedMortars"
                },
                {
                   "_x": "3.2",
@@ -2124,6 +2116,11 @@
                   "_x": "3.2",
                   "_y": "7.0",
                   "__text": "HCXPShipAxeRidersRepeat"
+               },
+               {
+                  "_x": "6.0",
+                  "_y": "5.0",
+                  "__text": "HCXPEveningStar"
                },
                {
                   "_x": "4.0",
@@ -2209,6 +2206,16 @@
                   "_x": "7.2",
                   "_y": "5.0",
                   "__text": "HCXPShipDogSoldiersTeam2"
+               },
+               {
+                  "_x": "7.2",
+                  "_y": "5.0",
+                  "__text": "DEHCLakotaImprovedSiege"
+               },
+               {
+                  "_x": "7.2",
+                  "_y": "5.0",
+                  "__text": "DEHCAkicita"
                }
             ]
          },
@@ -2271,13 +2278,13 @@
                },
                {
                   "_x": "2.4",
-                  "_y": "4.0",
-                  "__text": "HCXPCavalryHitpointsSioux"
+                  "_y": "5.0",
+                  "__text": "HCXPCavalryCombatSioux"
                },
                {
                   "_x": "2.4",
                   "_y": "5.0",
-                  "__text": "HCXPCavalryCombatSioux"
+                  "__text": "HCShipAdvancedCapturedMortars"
                },
                {
                   "_x": "3.2",
@@ -2308,6 +2315,11 @@
                   "_x": "3.2",
                   "_y": "7.0",
                   "__text": "HCXPShipAxeRidersRepeat"
+               },
+               {
+                  "_x": "6.0",
+                  "_y": "5.0",
+                  "__text": "HCXPEveningStar"
                },
                {
                   "_x": "4.0",
@@ -2393,6 +2405,16 @@
                   "_x": "7.2",
                   "_y": "5.0",
                   "__text": "HCXPShipDogSoldiersTeam2"
+               },
+               {
+                  "_x": "7.2",
+                  "_y": "5.0",
+                  "__text": "DEHCLakotaImprovedSiege"
+               },
+               {
+                  "_x": "7.2",
+                  "_y": "5.0",
+                  "__text": "DEHCAkicita"
                }
             ]
          },
@@ -2472,11 +2494,6 @@
                   "__text": "HCXPNewWaysSioux"
                },
                {
-                  "_x": "2.5",
-                  "_y": "4.0",
-                  "__text": "HCRidingSchool"
-               },
-               {
                   "_x": "3.4",
                   "_y": "1.0",
                   "__text": "HCPioneers"
@@ -2537,11 +2554,6 @@
                   "__text": "HCAdvancedMarket"
                },
                {
-                  "_x": "6.1",
-                  "_y": "4.0",
-                  "__text": "HCXPShipWarHutTravois1"
-               },
-               {
                   "_x": "7.0",
                   "_y": "1.0",
                   "__text": "HCCheapDocksTeam"
@@ -2550,6 +2562,11 @@
                   "_x": "7.0",
                   "_y": "2.0",
                   "__text": "HCAdvancedDock"
+               },
+               {
+                  "_x": "7.0",
+                  "_y": "2.0",
+                  "__text": "DEHCCampMovements"
                }
             ]
          },
@@ -2611,11 +2628,6 @@
                   "__text": "HCXPNewWaysSioux"
                },
                {
-                  "_x": "2.5",
-                  "_y": "4.0",
-                  "__text": "HCRidingSchool"
-               },
-               {
                   "_x": "3.4",
                   "_y": "1.0",
                   "__text": "HCPioneers"
@@ -2676,11 +2688,6 @@
                   "__text": "HCAdvancedMarket"
                },
                {
-                  "_x": "6.1",
-                  "_y": "4.0",
-                  "__text": "HCXPShipWarHutTravois1"
-               },
-               {
                   "_x": "7.0",
                   "_y": "1.0",
                   "__text": "HCCheapDocksTeam"
@@ -2689,6 +2696,11 @@
                   "_x": "7.0",
                   "_y": "2.0",
                   "__text": "HCAdvancedDock"
+               },
+               {
+                  "_x": "7.0",
+                  "_y": "2.0",
+                  "__text": "DEHCCampMovements"
                }
             ]
          },
@@ -2776,7 +2788,7 @@
                {
                   "_x": "5.0",
                   "_y": "3.0",
-                  "__text": "HCSpiceTrade"
+                  "__text": "HCSpiceTradeTeam"
                },
                {
                   "_x": "5.0",
@@ -2807,6 +2819,11 @@
                   "_x": "6.0",
                   "_y": "5.0",
                   "__text": "HCXPBuffalo4"
+               },
+               {
+                  "_x": "7.0",
+                  "_y": "4.0",
+                  "__text": "DEHCShipCougarPelts"
                },
                {
                   "_x": "7.0",
@@ -2880,7 +2897,7 @@
                {
                   "_x": "5.0",
                   "_y": "3.0",
-                  "__text": "HCSpiceTrade"
+                  "__text": "HCSpiceTradeTeam"
                },
                {
                   "_x": "5.0",
@@ -2911,6 +2928,11 @@
                   "_x": "6.0",
                   "_y": "5.0",
                   "__text": "HCXPBuffalo4"
+               },
+               {
+                  "_x": "7.0",
+                  "_y": "4.0",
+                  "__text": "DEHCShipCougarPelts"
                },
                {
                   "_x": "7.0",
@@ -3419,8 +3441,89 @@
          },
          {
             "bone": "bone_buffalo04"
+         },
+         {
+            "bone": "bone_dogpath_01"
+         },
+         {
+            "bone": "bone_dogpath_02"
+         },
+         {
+            "bone": "bone_dogpath_03"
+         },
+         {
+            "bone": "bone_dogpath_04"
+         },
+         {
+            "bone": "bone_dogpath_05"
+         },
+         {
+            "bone": "bone_dogpath_06"
+         },
+         {
+            "bone": "bone_dogpath_07"
+         },
+         {
+            "bone": "bone_dogpath_08"
+         },
+         {
+            "bone": "bone_dogpath_09"
+         },
+         {
+            "bone": "bone_dogpath_10"
+         },
+         {
+            "bone": "bone_dogpath_11"
+         },
+         {
+            "bone": "bone_dogpath_12"
+         },
+         {
+            "bone": "bone_dogpath_13"
+         },
+         {
+            "bone": "bone_dogpath_14"
+         },
+         {
+            "bone": "bone_dogpath_15"
+         },
+         {
+            "bone": "bone_dogpath_16"
+         },
+         {
+            "bone": "bone_dogpath_17"
+         },
+         {
+            "bone": "bone_dogpath_18"
+         },
+         {
+            "bone": "bone_dogpath_19"
+         },
+         {
+            "bone": "bone_dogpath_20"
          }
       ]
    },
-   "obtainableprops": ""
+   "obtainableprops": {
+      "prop": [
+         {
+            "_active": "1",
+            "__text": "Lakota_Daytime"
+         },
+         "Lakota_Sunrise",
+         "Lakota_Night",
+         "Lakota_NightFF",
+         "Lakota_SeasonsChange",
+         "lakota_workstation",
+         {
+            "_active": "1",
+            "__text": "Lakota_Tipi_Original"
+         },
+         "Lakota_Tipi_New",
+         "Lakota_Horses",
+         "Lakota_Fauna",
+         "lakota_foxes",
+         "Lakota_Fireflies"
+      ]
+   }
 }
