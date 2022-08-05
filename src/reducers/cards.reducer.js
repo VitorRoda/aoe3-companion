@@ -14,6 +14,11 @@ export const cardsReducer = (draft, action) => {
             const idx = draft[ageKey].findIndex(item => item.id === id)
             draft[ageKey][idx].isSelected = !draft[ageKey][idx].isSelected
             return
+        case 'toggleSelectedPoliticanCards':
+            const { idG } = action
+            const idxG = draft['age0'].findIndex(item => item._name === idG)
+            draft['age0'][idxG].isSelected = !draft['age0'][idxG].isSelected
+            return
         case 'update':
             return action.data
         case 'reset':

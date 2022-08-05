@@ -40,9 +40,9 @@ export const DeckBoard = ({ civName, maxCards, selectedCards, hideRandomAction, 
     const element = printRef.current;
     setIsGeneratingImg(() => true)
     const canvas = await html2canvas(element, {
-      windowWidth: 925,
-      width: 825,
-      height: selectedCards?.age0?.length ? 492 : 403,
+      windowWidth: 940,
+      width: 840,
+      height: selectedCards?.age0?.length ? 510 : 403,
       useCORS: true
     });
     setIsGeneratingImg(() => false)

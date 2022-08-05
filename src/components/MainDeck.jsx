@@ -7,8 +7,9 @@ import TabsMui from '@mui/material/Tabs';
 import { translate } from '../utils/translator';
 import { CardList } from './cards/CardList';
 import classNames from 'classnames';
+import { CardListGroup } from './cards/CardListGroup';
 
-export const MainDeck = React.memo(({ cards, showFederalCards, onClickCard }) => {
+export const MainDeck = React.memo(({ cards, showFederalCards, onClickCard, onClickGroupCards }) => {
 	const [tabValue, setTabValue] = useState(0)
 
 	useEffect(() => {
@@ -21,6 +22,10 @@ export const MainDeck = React.memo(({ cards, showFederalCards, onClickCard }) =>
 
 	const handleOnClickCard = (card) => {
 		onClickCard(card)
+	}
+
+	const handleOnClickGroupCards = (cards) => {
+		onClickGroupCards(cards)
 	}
 
 	const Tabs = styled(TabsMui)({
@@ -67,7 +72,7 @@ export const MainDeck = React.memo(({ cards, showFederalCards, onClickCard }) =>
 				{!!cards.age4.length && <CardList cards={cards.age4} onClickCard={handleOnClickCard}></CardList>}
 			</Box>
 			<Box className='deck-panel__container' hidden={tabValue !== 4}>
-				{!!cards?.age0?.length && <CardList cards={cards.age0} onClickCard={handleOnClickCard}></CardList>}
+				{!!cards?.age0?.length && <CardListGroup groups={cards.age0} onClickGroup={handleOnClickGroupCards}></CardListGroup>}
 			</Box>
 		</Box>
 	)

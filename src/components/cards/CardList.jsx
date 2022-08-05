@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from "prop-types";
 import Box from '@mui/material/Box';
 import { CardItem } from "./CardItem";
+import { CardGroup } from './CardGroup';
 
 export const CardList = React.memo(({ cards, age, onClickCard }) => {
   const handleOnClickCard = (card) => {
@@ -24,11 +25,14 @@ export const CardList = React.memo(({ cards, age, onClickCard }) => {
   return (
     <Box className='cards-list' sx={age >= 0 ? singleAgeSx : {}}>
       {cards.map(card =>
-        <CardItem
-          key={card.id}
-          card={card}
-          onClickCard={handleOnClickCard}>
-        </CardItem>
+        !card.isGroup
+          ? <CardItem
+            key={card.id}
+            card={card}
+            onClickCard={handleOnClickCard}>
+          </CardItem>
+          : <CardGroup key={card._name} group={card} onClick={handleOnClickCard} />
+
       )}
     </Box>
   )

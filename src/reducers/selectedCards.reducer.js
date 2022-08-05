@@ -38,11 +38,22 @@ export const selectedCardsReducer = (draft, action) => {
         case 'addBatch':
             const { cards } = action
             cards.forEach((age, idx) => {
-                const ageKey = `age${idx+1}`
+                const ageKey = `age${idx + 1}`
                 draft.total += age.length
                 draft[ageKey] = age.map(item => item.card).sort(sortCards)
                 draft[`${ageKey}Count`] += age.length
             });
+            return
+        case 'addPoliticianCards':
+            const { group } = action
+            draft[`age0Count`] += 2
+            draft['age0'].push(group)
+            return
+        case 'removePoliticianCards':
+            const { idG } = action
+            const idxG = draft['age0'].findIndex(item => item._name === idG)
+            draft[`age0Count`] -= 2
+            draft['age0'].splice(idxG, 1)
             return
         case 'reset':
             return selectedCardsInitialState

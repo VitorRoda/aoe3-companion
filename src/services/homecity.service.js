@@ -47,7 +47,10 @@ export async function getHomeCityData(homecity, age0Key) {
     }, { age1: [], age2: [], age3: [], age4: [] })
 
     const federalCards = getCardsFromPoliticians(age0Key)
-    cards['age0'] = federalCards.map((fC, idx) => getCardData(fC, { idx, civ: data?.civ }))
+    cards['age0'] = federalCards.map(({cards,...politician}, idx) => ({
+        ...politician,
+        cards: cards.map((fC, idxFC) => getCardData(fC, { idx: idxFC + idx, civ: data?.civ }))
+    }))
 
     const revoltDecks = data?.decks?.revoltdeck
 
@@ -62,7 +65,7 @@ export async function getHomeCityData(homecity, age0Key) {
 export async function getRevoltCards(homecity, revName, revoltCards) {
     const homecityName = homecity.replace('.xml', '')
     const { cards, civ } = await import(`../data/homecities/${homecityName}.json`)
-    const effectCards = getCardsFromTechEffects(revName, true).map((eC, idx) => getCardData(eC, { idx, civ, includeRevolt: true }))
+    const effectCards = getCardsFromTechEffects(revName, { revolt: true }).map((eC, idx) => getCardData(eC, { idx, civ, includeRevolt: true }))
 
     return revoltCards.reduce((revCards, cardName) => {
         const card = cards.card.find(c => c.name === cardName)

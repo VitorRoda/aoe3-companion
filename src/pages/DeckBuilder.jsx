@@ -81,7 +81,7 @@ export const DeckBuilder = ({ civs }) => {
             (ageKey === 'age0' && !card.isSelected && ageCount < 10)
         ) {
             dispatchSelectedCards({ type: 'addCard', card })
-        }  else if (card.isSelected) {
+        } else if (card.isSelected) {
             dispatchSelectedCards({ type: 'removeCard', id, ageKey })
         }
 
@@ -93,8 +93,23 @@ export const DeckBuilder = ({ civs }) => {
         }
     }, [dispatchCards, dispatchSelectedCards])
 
+    const handleOnClickGroupCards = useCallback((group) => {
+        if (!group.isSelected)
+            dispatchSelectedCards({ type: 'addPoliticianCards', group })
+        else
+            dispatchSelectedCards({ type: 'removePoliticianCards', idG: group._name })
+        dispatchCards({ type: 'toggleSelectedPoliticanCards', idG: group._name })
+    }, [dispatchSelectedCards, dispatchCards])
+
     const handleOnClickDeckCard = (card) => {
         if (revolt) return
+
+        if (card?.isGroup) {
+            dispatchSelectedCards({ type: 'removePoliticianCards', idG: card._name })
+            dispatchCards({ type: 'toggleSelectedPoliticanCards', idG: card._name })
+            return
+        }
+
         const { id, ageKey } = card
         dispatchSelectedCards({ type: 'removeCard', id, ageKey })
         dispatchCards({ type: 'toggleSelected', id, ageKey })
@@ -120,6 +135,7 @@ export const DeckBuilder = ({ civs }) => {
 
             return arr
         })
+
         dispatchCards({ type: 'batchSelected', selections })
         dispatchSelectedCards({ type: 'addBatch', cards: selections })
     }
@@ -144,7 +160,13 @@ export const DeckBuilder = ({ civs }) => {
                         onClickRandomDeck={handleRandomDeck}
                     ></DeckBoard>
 
-                    {!revolt && <MainDeck cards={cards} showFederalCards={!!cards?.age0?.length} onClickCard={handleOnClickCard} />}
+                    {!revolt &&
+                        <MainDeck
+                            cards={cards}
+                            showFederalCards={!!cards?.age0?.length}
+                            onClickCard={handleOnClickCard}
+                            onClickGroupCards={handleOnClickGroupCards}
+                        />}
                 </Fragment>
                 :
                 <Box sx={{ py: 4, textAlign: 'center' }}>
