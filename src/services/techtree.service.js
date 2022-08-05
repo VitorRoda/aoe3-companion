@@ -43,6 +43,8 @@ export function getCardsFromTechEffects(name, {
 }
 
 export function getCardsFromPoliticians(age0) {
+    if (!['Americans', 'Mexicans'].some(el => age0.includes(el))) return []
+
     const age0Tech = techData.tech.find(tech => tech._name === age0)
     if (age0Tech) {
         const politicians = age0Tech?.effects?.effect.filter(effect => effect?.__text?.includes('Politician'))
