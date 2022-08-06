@@ -7,7 +7,7 @@ import Box from '@mui/material/Box';
 import { CardInfo } from "./CardInfo";
 import { Card } from "./Card";
 
-export const CardItem = React.memo(({ card, onClickCard }) => {
+export const CardItem = React.memo(function CardItem({ card, onClickCard }) {
     const popupState = usePopupState({ variant: 'popover', popupId: `tooltip-${card.id}`, disableAutoFocus: true })
 
     const handleOnClick = () => {

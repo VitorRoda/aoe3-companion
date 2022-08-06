@@ -16,6 +16,8 @@ const sortValue = {
 }
 
 export function getAllUnitsByTypes(types = [], searchTerm = '') {
+    if (!types.length && !searchTerm) return []
+    
     return protoData.unit.filter(unit => {
         const unitTypes = unit?.unittype || []
         const flags = unit?.flag || []

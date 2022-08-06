@@ -4,7 +4,7 @@ import Box from '@mui/material/Box';
 import { CardItem } from "./CardItem";
 import { CardGroup } from './CardGroup';
 
-export const CardList = React.memo(({ cards, age, onClickCard }) => {
+export const CardList = React.memo(function CardList({ cards, age, onClickCard }) {
   const handleOnClickCard = (card) => {
     onClickCard(card)
   }

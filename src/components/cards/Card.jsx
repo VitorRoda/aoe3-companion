@@ -3,9 +3,9 @@ import React from 'react'
 import { CardCosts } from "./CardCosts";
 import { getStorageURL } from '../../utils/getStorageURL';
 
-export const Card = React.memo(({
+export const Card = React.memo(function Card({
     name, icon, maxcount, displayunitcount, isSelected, costs 
-}) => {
+}) {
     const src = getStorageURL(icon, true)
 
     return (

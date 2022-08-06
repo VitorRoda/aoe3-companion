@@ -8,7 +8,7 @@ import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 import { getStorageURL } from '../utils/getStorageURL';
 
-export const CivSelector = React.memo(({ selectedCiv, civs, onSelectCiv }) => {
+export const CivSelector = React.memo(function CivSelector ({ selectedCiv, civs, onSelectCiv }) {
   const [civ, setCiv] = useState(() => selectedCiv)
 
   useEffect(() => {

@@ -14,7 +14,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import { getStorageURL } from '../../utils/getStorageURL';
 import AbilitiesUnit from './AbilitiesUnit';
 
-export const DrawerUnit = React.memo(({ unit, open, onClose }) => {
+export const DrawerUnit = React.memo(function DrawerUnit({ unit, open, onClose }) {
     const theme = useTheme()
 
     const handleClose = () => {

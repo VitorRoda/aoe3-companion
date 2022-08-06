@@ -2,7 +2,7 @@ import React from 'react'
 import Grid from '@mui/material/Grid';
 import { PanelUnit } from "./PanelUnit";
 
-export const GridPanelUnit = React.memo(React.forwardRef(({ unit, onClickAdvInfo }, ref) => {
+export const GridPanelUnit = React.memo(React.forwardRef(function GridPanelUnit({ unit, onClickAdvInfo }, ref) {
     const handleOnClickAdvInfo = (value) => {
         onClickAdvInfo(value)
     }

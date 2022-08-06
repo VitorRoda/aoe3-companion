@@ -2,7 +2,7 @@ import React, { useCallback, useRef } from 'react'
 import Grid from '@mui/material/Grid';
 import { GridPanelUnit } from './GridPanelUnit'
 
-export const UnitList = React.memo(({ units, onLastEl, onClickAdvInfo }) => {
+export const UnitList = React.memo(function UnitList({ units, onLastEl, onClickAdvInfo }) {
     const observer = useRef()
 
     const lastElRef = useCallback(node => {

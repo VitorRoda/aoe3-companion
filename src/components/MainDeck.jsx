@@ -9,7 +9,7 @@ import { CardList } from './cards/CardList';
 import classNames from 'classnames';
 import { CardListGroup } from './cards/CardListGroup';
 
-export const MainDeck = React.memo(({ cards, showFederalCards, onClickCard, onClickGroupCards }) => {
+export const MainDeck = React.memo(function MainDeck({ cards, showFederalCards, onClickCard, onClickGroupCards }) {
 	const [tabValue, setTabValue] = useState(0)
 
 	useEffect(() => {

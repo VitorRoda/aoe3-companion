@@ -15,7 +15,7 @@ import { translate } from '../utils/translator';
 import { DEFAULT_LANG } from '../config/language'
 import { DonateButton } from "./DonateButton";
 
-export const Header = React.memo(() => {
+export const Header = React.memo(function Header() {
     const theme = useTheme()
 
     const [lang, setLang] = useState(() => {

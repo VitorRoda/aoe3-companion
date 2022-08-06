@@ -10,7 +10,7 @@ import { translate } from '../../utils/translator';
 import { unitTypes } from '../../constants';
 import { Typography } from '@mui/material';
 
-export const UnitTypeSelector = React.memo( ({ onChange }) => {
+export const UnitTypeSelector = React.memo(function UnitTypeSelector ({ onChange }) {
     const [selectedTypes, setSelectedTypes] = useState([])
 
     const handleChange = (event) => {
@@ -47,4 +47,4 @@ export const UnitTypeSelector = React.memo( ({ onChange }) => {
             </Select>
         </FormControl>
     )
-} )
+})
