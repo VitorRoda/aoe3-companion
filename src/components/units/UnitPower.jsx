@@ -26,7 +26,7 @@ const UnitPower = ({ powerName }) => {
 
     return (
         <Fragment>
-            <img width={'100%'} src={getStorageURL(power?.icon)} alt="" />
+            <img loading='lazy' width={'100%'} src={getStorageURL(power?.icon)} alt="" />
             <ImageListItemBar
                 sx={{ background: 'transparent' }}
                 actionIcon={

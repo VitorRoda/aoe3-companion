@@ -4,6 +4,8 @@ import { getAllUnitsByTypes } from '../services/proto.service';
 import { DrawerUnit } from "../components/units/DrawerUnit";
 import { UnitList } from '../components/units/UnitList';
 import { UnitsFilter } from '../components/units/UnitsFilter';
+import { Typography } from '@mui/material';
+import { translate } from '../utils/translator';
 
 export const UnitsInfo = () => {
   const PAGE_SIZE = 12
@@ -13,6 +15,7 @@ export const UnitsInfo = () => {
   const [hasMore, setHasMore] = useState(false)
   const [selectedUnit, setSelectedUnit] = useState(null)
   const [openAdvInfo, setOpenAdvInfo] = useState(false)
+  const [showNoResults, setShowNoResults] = useState(false)
 
   useEffect(() => {
     if (page > 1) {
@@ -41,6 +44,7 @@ export const UnitsInfo = () => {
 
   const handleOnChangeFilters = useCallback(({ types, searchTerm }) => {
     setPage(1)
+    setShowNoResults(false)
 
     if (!types.length && !searchTerm) {
       setUnits([])
@@ -54,12 +58,16 @@ export const UnitsInfo = () => {
     const paginated = data.slice(0, PAGE_SIZE)
     setPaginatedUnits(paginated)
     setHasMore(paginated.length < data.length)
+
+    if (!data.length) setShowNoResults(true)
   }, [])
 
   return (
     <Box>
       <UnitsFilter onChange={handleOnChangeFilters} />
       
+      {showNoResults && <Typography variant='h6' color='primary' align='center'>{translate('72302')}</Typography>}
+
       {!units?.length &&
         <Box sx={{ py: 4, textAlign: 'center' }}>
           <img loading='lazy' width={300} src='/assets/revolution_guns.png' alt="Revolution guns" />

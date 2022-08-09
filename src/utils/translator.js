@@ -5,7 +5,8 @@ export function translate(value, bySymbol = false) {
   if (bySymbol) {
     propId = '_symbol'
     valueId = `cString${value}`
+    return window?.dict?.find(item => item[propId] === valueId)?.__text || ''
   }
   
-  return window?.dict?.find(item => item[propId] === valueId)?.__text || ''
+  return window.dictIndexed[value]?.__text || ''
 }
