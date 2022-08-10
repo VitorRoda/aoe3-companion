@@ -13,13 +13,17 @@ async function loadTranslations() {
     lang = DEFAULT_LANG.code
   }
 
-  const data = await import(`./data/localization/stringtabley_${lang}.json`)
-  window.dict = data?.language?.string
-  window.dictIndexed = window.dict.reduce((obj, item) => {
+  const { language: { string } } = await import(`./data/localization/stringtabley_${lang}.json`)
+  
+  window.dictIndexed = string.reduce((obj, item) => {
     obj[item.__locid] = item
     return obj
   }, {})
 
+  window.dictSymbolIndexed = string.filter(item => !!item._symbol).reduce((obj, item) => {
+    obj[item._symbol] = item
+    return obj
+  }, {})
 }
 
 (async () => {

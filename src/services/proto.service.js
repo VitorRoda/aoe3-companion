@@ -15,33 +15,38 @@ const sortValue = {
     'AbstractOutlaw': 1
 }
 
-export function getAllUnitsByTypes(types = [], searchTerm = '') {
+const baseFilters = (unit) => {
+    const flags = unit?.flag || []
+    const unitTypes = unit?.unittype || []
+
+    return unitTypes.includes('Military')
+        && !blackListUnitTypes.some(type => unitTypes.includes(type))
+        && !blacklistFlags.some(flag => flags.includes(flag))
+        && !blackListUnitName.some(namePart => unit._name.includes(namePart))
+}
+
+export function getUnitsByFilters(types = [], searchTerm = '') {
     if (!types.length && !searchTerm) return []
     
     return protoData.unit.filter(unit => {
         const unitTypes = unit?.unittype || []
-        const flags = unit?.flag || []
         if (!unitTypes) return false
 
-        const baseFilters = () => (
-            unitTypes.includes('Military')
-            && !blackListUnitTypes.some(type => unitTypes.includes(type))
-            && !blacklistFlags.some(flag => flags.includes(flag))
-            && !blackListUnitName.some(namePart => unit._name.includes(namePart))
-            && types.every(type => unitTypes.includes(type))
-        )
-
         const normalizeStr = (str) => str.trim().toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")
-
         const unitName = normalizeStr(translate(unit?.displaynameid))
         const normalizedSearchTerm = normalizeStr(searchTerm)
+        const typesValidation = types.every(type => unitTypes.includes(type))
 
         if (searchTerm.trim()) {
-            return unitName.includes(normalizedSearchTerm) && baseFilters()
+            return unitName.includes(normalizedSearchTerm) && baseFilters(unit) && typesValidation
         } else {
-            return baseFilters()
+            return baseFilters(unit) && typesValidation
         }
     }).sort((a, b) => getSortValue(a) - getSortValue(b))
+}
+
+export function getUnitById(unitId) {
+    return protoData.unit.find(unit => baseFilters(unit) && (unit._id === unitId))
 }
 
 function getSortValue(unit) {

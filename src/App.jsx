@@ -54,7 +54,9 @@ function App() {
         <Container sx={{ py: 4, minHeight: 'calc(100vh - 68px - 78px)' }}>
           <Routes>
             <Route path='/' element={<DeckBuilder civs={civs} />} />
-            <Route path='/units' element={<UnitsInfo />} />
+            <Route path='/units' element={<UnitsInfo />}>
+              <Route path=':unitId' />
+            </Route>
           </Routes>
         </Container>
 

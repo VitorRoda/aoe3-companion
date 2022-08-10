@@ -6,6 +6,7 @@ import { translate } from '../../utils/translator';
 import { UnitTypeSelector } from "./UnitTypeSelector";
 import { useCallback } from 'react';
 import { useRef } from 'react';
+import { useMounted } from '../../hooks/useMounted';
 
 export const UnitsFilter = React.memo(function UnitsFilter({ onChange }) {
   const theme = useTheme()
@@ -13,8 +14,10 @@ export const UnitsFilter = React.memo(function UnitsFilter({ onChange }) {
   const [types, setTypes] = useState([])
   const searchTermRef = useRef(searchTerm)
   const typesRef = useRef(types)
+  const isMounted = useMounted()
 
   useEffect(() => {
+    if (!isMounted) return
     searchTermRef.current = searchTerm
     const timer = setTimeout(() => {
       onChange({ types: typesRef.current, searchTerm })
@@ -24,6 +27,7 @@ export const UnitsFilter = React.memo(function UnitsFilter({ onChange }) {
   }, [searchTerm, onChange])
 
   useEffect(() => {
+    if (!isMounted) return
     typesRef.current = types
     onChange({ types, searchTerm: searchTermRef.current })
   }, [types, onChange])
