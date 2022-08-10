@@ -20,6 +20,7 @@ export const UnitsInfo = () => {
   const { unitId } = useParams()
 
   useEffect(() => {
+    if (!unitId) return
     const data = getUnitById(unitId)
 
     if (data) {
@@ -88,7 +89,7 @@ export const UnitsInfo = () => {
 
       {showNoResults && <Typography variant='h6' color='primary' align='center'>{translate('72302')}</Typography>}
 
-      {!units?.length &&
+      {!units?.length && !showNoResults &&
         <Box sx={{ py: 4, textAlign: 'center' }}>
           <img loading='lazy' width={300} src='/assets/revolution_guns.png' alt="Revolution guns" />
         </Box>
