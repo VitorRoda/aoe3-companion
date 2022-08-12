@@ -25,7 +25,7 @@ const descUnitStyle = {
 
 export const PanelUnit = ({ unit, onClickAdvInfo }) => {
     const [openSnack, setOpenSnack] = useState(false)
-    const unitURL = `${window.location.host}/units/${unit?._id}`
+    const unitURL = `${window.location.origin}/units/${unit?._id}`
 
     const handleClickOpen = () => {
         onClickAdvInfo(unit)
