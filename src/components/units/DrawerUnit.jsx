@@ -14,6 +14,23 @@ import CloseIcon from '@mui/icons-material/Close';
 import { getStorageURL } from '../../utils/getStorageURL';
 import AbilitiesUnit from './AbilitiesUnit';
 
+const unitMainInfoStyles = (theme) => ({
+    pr: 2,
+    mb: 2,
+    flexBasis: '170px',
+    position: 'relative',
+    [theme.breakpoints.down('sm')]: { 
+        flexBasis: 'auto',
+    } 
+})
+
+const unitInfoContainerStyles = (theme) => ({
+    display: 'flex',
+    [theme.breakpoints.down('sm')]: { 
+        flexDirection: 'column',
+    } 
+})
+
 export const DrawerUnit = React.memo(function DrawerUnit({ unit, open, onClose }) {
     const theme = useTheme()
 
@@ -38,15 +55,23 @@ export const DrawerUnit = React.memo(function DrawerUnit({ unit, open, onClose }
             <Container maxWidth='sm' sx={{ py: 3 }}>
                 <Typography variant='h6' mb={1}>{translate(unit?.displaynameid)}</Typography>
 
-                <Box sx={{ [theme.breakpoints.up('sm')]: { display: 'flex' } }}>
-                    <Box pr={2} mb={2} width={170} flexBasis={170} position="relative">
-                        <Avatar
-                            src={getStorageURL(unit?.portraiticon, true)}
-                            alt={translate(unit?.displaynameid)}
-                            sx={{ width: 170, height: 170, boxShadow: '0 0 8px #333333', mb: 1 }}
-                            variant="rounded"
-                        />
-                        <CostsUnit costs={unit?.cost} sx={{ position: 'absolute', right: 20, top: 6 }} />
+                {unit?.rollovertextid?.map((idtext, idx) =>
+                    <Typography component={'p'} variant="body" key={`description-${unit?._name}-${idx}`} mb={2}>
+                        {translate(idtext)}
+                    </Typography>
+                )}
+
+                <Box sx={(unitInfoContainerStyles(theme))}>
+                    <Box sx={unitMainInfoStyles(theme)}>
+                        <Box sx={{ position: 'relative', width: 170, ml: 'auto', mr: 'auto'}}>
+                            <Avatar
+                                src={getStorageURL(unit?.portraiticon, true)}
+                                alt={translate(unit?.displaynameid)}
+                                sx={{ width: 170, height: 170, boxShadow: '0 0 8px #333333', mb: 1 }}
+                                variant="rounded"
+                            />
+                            <CostsUnit costs={unit?.cost} sx={{ position: 'absolute', left: -8, top: 0 }} />
+                        </Box>
                         <MainStats
                             initialhitpoints={unit?.initialhitpoints}
                             maxvelocity={unit?.maxvelocity}

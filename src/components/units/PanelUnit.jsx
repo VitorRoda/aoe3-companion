@@ -9,8 +9,11 @@ import Typography from '@mui/material/Typography';
 import Avatar from '@mui/material/Avatar';
 import IconButton from '@mui/material/IconButton';
 import FeedIcon from '@mui/icons-material/Feed';
+import ShareIcon from '@mui/icons-material/Share';
 import { CostsUnit } from "./CostsUnit";
 import { getStorageURL } from '../../utils/getStorageURL';
+import { alpha, Snackbar } from '@mui/material';
+import { useState } from 'react';
 
 const descUnitStyle = {
     backgroundImage: 'linear-gradient(to right, #EBC837, #FFEB8B)',
@@ -21,9 +24,21 @@ const descUnitStyle = {
 }
 
 export const PanelUnit = ({ unit, onClickAdvInfo }) => {
+    const [openSnack, setOpenSnack] = useState(false)
+    const unitURL = `${window.location.host}/units/${unit?._id}`
+
     const handleClickOpen = () => {
         onClickAdvInfo(unit)
     };
+
+    const handleClickShare = () => {
+        setOpenSnack(true)
+        navigator.clipboard.writeText(unitURL)
+    };
+
+    const handleCloseSnack = () => {
+        setOpenSnack(false)
+    }
 
     return (
         <Card sx={{
@@ -63,6 +78,19 @@ export const PanelUnit = ({ unit, onClickAdvInfo }) => {
             </Box>
 
             <CardActions sx={{ justifyContent: 'flex-end' }}>
+                <IconButton color='primary' onClick={handleClickShare}>
+                    <ShareIcon />
+                </IconButton>
+                <Snackbar
+                    anchorOrigin={{ vertical: 'top', horizontal: 'left' }}
+                    open={openSnack}
+                    autoHideDuration={3000}
+                    onClose={handleCloseSnack}
+                    message={`Copied to clipboard: ${unitURL}`}
+                    sx={{ "& .MuiSnackbarContent-root": {
+                        backgroundColor: alpha('#FFEB8B', 0.75),
+                    }}}
+                />
                 <IconButton color='primary' onClick={handleClickOpen}>
                     <FeedIcon />
                 </IconButton>
