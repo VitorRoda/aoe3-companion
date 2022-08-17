@@ -49,7 +49,7 @@ export const UnitsInfo = () => {
   const handleOnClickAdvInfo = useCallback((value) => {
     setSelectedUnit(() => value)
     setOpenAdvInfo(() => true)
-    window.history.pushState("", "", `/units/${value?._id}`)
+    window.history.pushState("", "", `/units/${value?.['@id']}`)
   }, [])
 
   const handleOnCloseAdvInfo = useCallback(() => {

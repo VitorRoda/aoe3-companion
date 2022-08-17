@@ -10,7 +10,7 @@ const iconSizes = {
   md: 20
 }
 
-export const StatIcon = ({ value, type, icon, src, title, bonus, size = 'sm', isTime }) => {
+export const StatIcon = ({ value = 0, type, icon, src, title, bonus, size = 'sm', isTime }) => {
   const iconSize = iconSizes[size]
   const [errorImg, setErrorImg] = useState(false)
   let _src = src || `resources/images/hud/${icon}.png`

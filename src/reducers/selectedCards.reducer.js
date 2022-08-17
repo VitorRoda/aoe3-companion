@@ -51,7 +51,7 @@ export const selectedCardsReducer = (draft, action) => {
             return
         case 'removePoliticianCards':
             const { idG } = action
-            const idxG = draft['age0'].findIndex(item => item._name === idG)
+            const idxG = draft['age0'].findIndex(item => item?.['@name'] === idG)
             draft[`age0Count`] -= 2
             draft['age0'].splice(idxG, 1)
             return

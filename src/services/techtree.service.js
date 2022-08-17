@@ -1,9 +1,15 @@
-import techData from "../data/techtreey.json";
+import techData from "../data/techtreey.xml.json";
 
-export function getTechInfo(value, prop = '_name') {
-    return techData.tech.find(item =>
+export function getTechInfo(value, prop = '@name') {
+    const data = techData.techtree.tech.find(item =>
         item?.[prop]?.toLowerCase() === value?.toLowerCase()
     )
+    const costs = data?.cost
+
+    return {
+        ...data,
+        ...(costs && !Array.isArray(costs) && { cost: [costs] })
+    }
 }
 
 export function getCardsFromTechEffects(name, {
@@ -13,17 +19,17 @@ export function getCardsFromTechEffects(name, {
     let tech = null
 
     if (revolt)
-        tech = techData.tech.find(tech => tech.revolutionciv === name)
+        tech = techData.techtree.tech.find(tech => tech.revolutionciv === name)
     else
-        tech = techData.tech.find(tech => tech._name === name)
+        tech = techData.techtree.tech.find(tech => tech?.['@name'] === name)
 
     if (tech) {
-        const cards = tech?.effects?.effect.filter(effect => effect?._type === 'AddHomeCityCard')
-            .map(({ _tech, _maxcount, _unitcount, ...card }) => ({
+        const cards = tech?.effects?.effect.filter(effect => effect?.['@type'] === 'AddHomeCityCard')
+            .map(({ '@tech': tech, '@maxcount': maxcount, '@unitcount': unitcount, ...card }) => ({
                 ...card,
-                name: _tech,
-                maxcount: _maxcount,
-                displayunitcount: _unitcount,
+                name: tech,
+                maxcount: maxcount,
+                displayunitcount: unitcount,
                 age: -1,
             }))
 
@@ -45,10 +51,10 @@ export function getCardsFromTechEffects(name, {
 export function getCardsFromPoliticians(age0) {
     if (!['Americans', 'Mexicans'].some(el => age0.includes(el))) return []
 
-    const age0Tech = techData.tech.find(tech => tech._name === age0)
+    const age0Tech = techData.techtree.tech.find(tech => tech?.['@name'] === age0)
     if (age0Tech) {
-        const politicians = age0Tech?.effects?.effect.filter(effect => effect?.__text?.includes('Politician'))
-        return politicians.map(politician => getCardsFromTechEffects(politician.__text, { politicianCard: true }))
+        const politicians = age0Tech?.effects?.effect.filter(effect => effect?.['#text']?.includes('Politician'))
+        return politicians.map(politician => getCardsFromTechEffects(politician?.['#text'], { politicianCard: true }))
     }
 
     return []

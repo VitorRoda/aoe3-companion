@@ -12,7 +12,7 @@ export const CardListGroup = ({ groups, onClickGroup }) => {
             {groups.map((group) =>
                 <CardGroup 
                     group={group} 
-                    key={group?._name} 
+                    key={group?.['@name']} 
                     onClick={handleOnClickGroup}
                 />
             )}

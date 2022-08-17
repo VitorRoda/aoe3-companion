@@ -97,16 +97,16 @@ export const DeckBuilder = ({ civs }) => {
         if (!group.isSelected)
             dispatchSelectedCards({ type: 'addPoliticianCards', group })
         else
-            dispatchSelectedCards({ type: 'removePoliticianCards', idG: group._name })
-        dispatchCards({ type: 'toggleSelectedPoliticanCards', idG: group._name })
+            dispatchSelectedCards({ type: 'removePoliticianCards', idG: group?.['@name'] })
+        dispatchCards({ type: 'toggleSelectedPoliticanCards', idG: group?.['@name'] })
     }, [dispatchSelectedCards, dispatchCards])
 
     const handleOnClickDeckCard = (card) => {
         if (revolt) return
 
         if (card?.isGroup) {
-            dispatchSelectedCards({ type: 'removePoliticianCards', idG: card._name })
-            dispatchCards({ type: 'toggleSelectedPoliticanCards', idG: card._name })
+            dispatchSelectedCards({ type: 'removePoliticianCards', idG: card?.['@name'] })
+            dispatchCards({ type: 'toggleSelectedPoliticanCards', idG: card?.['@name'] })
             return
         }
 

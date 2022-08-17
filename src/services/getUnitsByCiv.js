@@ -14,15 +14,15 @@ export function getUnitsByCiv(civ) {
 
     if (data) {
         return [
-            ...data?.effects?.effect?.filter(item => item?.target?._type === 'ProtoUnit'),
+            ...data?.effects?.effect?.filter(item => item?.target?.['@type'] === 'ProtoUnit'),
             ...getShadowUnits(data?.effects?.effect)
         ].map((unit, idx) => ({
             ...unit,
-            id: `${civ.name}-unit-${unit?.target?.__text}-${idx}`,
-            ...(!unit.info && { info: getProtoInfo(unit?.target?.__text)})
+            id: `${civ.name}-unit-${unit?.target?.['#text']}-${idx}`,
+            ...(!unit.info && { info: getProtoInfo(unit?.target?.['#text'])})
         })).filter(({ info, ...data }) => {
             const unitTypes = info?.unittype
-            if (data?._subtype !== 'Enable') return false
+            if (data?.['@subtype'] !== 'Enable') return false
             if (!unitTypes) return false
             if (blackListUnitTypes.some(bUT => unitTypes.includes(bUT))) return false
             return unitTypes.includes('Military')
@@ -59,12 +59,12 @@ function getValueByUnitType(unitInfo) {
 
 export function getShadowUnits(mainEffects) {
     const shadowUnits = mainEffects
-        .filter(mainEffect => mainEffect?._type === 'TechStatus' && mainEffect?._status === 'active')
-        .flatMap(mainEffect => getTechInfo(mainEffect?.__text)?.effects?.effect || [])
-        .filter(subEffect => subEffect?.target?._type === 'ProtoUnit')
+        .filter(mainEffect => mainEffect?.['@type'] === 'TechStatus' && mainEffect?.['@status'] === 'active')
+        .flatMap(mainEffect => getTechInfo(mainEffect?.['#text'])?.effects?.effect || [])
+        .filter(subEffect => subEffect?.target?.['@type'] === 'ProtoUnit')
         .flatMap(subEffect => ({
             ...subEffect,
-            info: getProtoInfo(subEffect?.target?.__text)
+            info: getProtoInfo(subEffect?.target?.['#text'])
         }))
         .filter(({ info }) => info?.unittype?.includes('Military'))
 

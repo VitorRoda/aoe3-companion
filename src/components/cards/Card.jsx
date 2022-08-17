@@ -15,7 +15,7 @@ export const Card = React.memo(function Card({
                 <div className='card__maxcount'>∞</div>}
             {maxcount > 1 &&
                 <div className='card__maxcount'>x{maxcount}</div>}
-            {!!+displayunitcount &&
+            {+displayunitcount > 0 &&
                 <div className='card__unit-count'>{displayunitcount}</div>}
             {<CardCosts costs={costs}></CardCosts>}
 

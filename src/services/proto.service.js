@@ -1,10 +1,10 @@
 import { blacklistFlags, blackListUnitName, blackListUnitTypes } from '../constants'
-import protoData from '../data/protoy.json'
+import protoData from '../data/protoy.xml.json'
 import { translate } from '../utils/translator'
 
 export function getProtoInfo(id) {
-    return protoData.unit.find(unit =>
-        String(unit._name).toLowerCase() === String(id).toLocaleLowerCase()
+    return protoData.proto.unit.find(unit =>
+        String(unit?.['@name']).toLowerCase() === String(id).toLocaleLowerCase()
     )
 }
 
@@ -22,13 +22,13 @@ const baseFilters = (unit) => {
     return unitTypes.includes('Military')
         && !blackListUnitTypes.some(type => unitTypes.includes(type))
         && !blacklistFlags.some(flag => flags.includes(flag))
-        && !blackListUnitName.some(namePart => unit._name.includes(namePart))
+        && !blackListUnitName.some(namePart => unit?.['@name'].includes(namePart))
 }
 
 export function getUnitsByFilters(types = [], searchTerm = '') {
     if (!types.length && !searchTerm) return []
     
-    return protoData.unit.filter(unit => {
+    return protoData.proto.unit.filter(unit => {
         const unitTypes = unit?.unittype || []
         if (!unitTypes) return false
 
@@ -42,11 +42,17 @@ export function getUnitsByFilters(types = [], searchTerm = '') {
         } else {
             return baseFilters(unit) && typesValidation
         }
-    }).sort((a, b) => getSortValue(a) - getSortValue(b))
+    })
+        .sort((a, b) => getSortValue(a) - getSortValue(b))
+        .map(({rollovertextid, cost, ...unit}) => ({ 
+            ...unit, 
+            rollovertextid: !Array.isArray(rollovertextid) ? [rollovertextid] : rollovertextid,
+            cost: !Array.isArray(cost) ? [cost] : cost
+        }))
 }
 
 export function getUnitById(unitId) {
-    return protoData.unit.find(unit => baseFilters(unit) && (unit._id === unitId))
+    return protoData.proto.unit.find(unit => baseFilters(unit) && (unit?.['@id'] === unitId))
 }
 
 function getSortValue(unit) {

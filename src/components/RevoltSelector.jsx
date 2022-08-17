@@ -28,7 +28,7 @@ export const RevoltSelector = ({ revolts, selectedRevolt, onSelectRevolt }) => {
     useEffect(() => {
         setRevolts(revolts.map(revolt => ({
             ...revolt,
-            ...getCivByName(revolt?._civ)
+            ...getCivByName(revolt?.['@civ'])
         })))
     }, [revolts])
 

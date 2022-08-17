@@ -13,15 +13,15 @@ async function loadTranslations() {
     lang = DEFAULT_LANG.code
   }
 
-  const { language: { string } } = await import(`./data/localization/stringtabley_${lang}.json`)
-  
+  const { stringtable: { language: { string } } } = await import(`./data/localization/stringtabley_${lang}.json`)
+
   window.dictIndexed = string.reduce((obj, item) => {
-    obj[item.__locid] = item
+    obj[item?.['@_locid']] = item
     return obj
   }, {})
 
-  window.dictSymbolIndexed = string.filter(item => !!item._symbol).reduce((obj, item) => {
-    obj[item._symbol] = item
+  window.dictSymbolIndexed = string.filter(item => !!item?.['@symbol']).reduce((obj, item) => {
+    obj[item?.['@symbol'].toLowerCase()] = item
     return obj
   }, {})
 }

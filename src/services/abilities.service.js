@@ -1,4 +1,4 @@
-import abilitiesData from '../data/abilities.json'
+import abilitiesData from '../data/abilities.xml.json'
 
 export function getUnitAbilities(unitName = '') {
     const key = unitName.toLocaleLowerCase()

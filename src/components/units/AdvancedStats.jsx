@@ -36,12 +36,13 @@ const getValueByDamageMode = (value) => {
 }
 
 export const AdvancedStats = ({ tactics, protoaction }) => {
+    const actions = !Array.isArray(protoaction) ? [protoaction] : protoaction
     return (<Box>{
-        protoaction
+        actions
             .filter(item => item?.name?.includes('Attack'))
             .sort((a, b) => {
-                const [damageTypeA] = a?.damagetype || []
-                const [damageTypeB] = b?.damagetype || []
+                const damageTypeA = a?.damagetype
+                const damageTypeB = b?.damagetype
 
                 if (mapValueDamageType[damageTypeA] > mapValueDamageType[damageTypeB]) return 1
                 if (mapValueDamageType[damageTypeA] < mapValueDamageType[damageTypeB]) return -1
@@ -49,11 +50,12 @@ export const AdvancedStats = ({ tactics, protoaction }) => {
                 return getValueByDamageMode(a?.name) - getValueByDamageMode(b?.name)
             })
             .map((action) => {
-                const [damageType] = action?.damagetype || []
-                let [rof] = action?.rof || []
-                const [damagearea] = action?.damagearea || []
+                const damageType = action?.damagetype
+                let rof = action?.rof
+                const damagearea = action?.damagearea
+                const damagebonus = !Array.isArray(action.damagebonus) ? [action.damagebonus] : action.damagebonus
 
-                if (rof?.__text) { rof = rof?.__text }
+                if (rof?.['#text']) { rof = rof?.['#text'] }
 
                 return (
                     <Box key={action?.name}>
@@ -82,8 +84,8 @@ export const AdvancedStats = ({ tactics, protoaction }) => {
                             }
                             {action?.maxrange && <StatIcon type="range" icon={'stat_icon_range'} value={action?.maxrange} />}
                             {damagearea && <StatIcon type="area" icon={'stat_icon_area'} value={damagearea} />}
-                            {action?.damagebonus && action.damagebonus.map((bonus, idx) =>
-                                <StatBonus bonus={bonus} key={`bonus-${bonus?._type}-${idx}`} />
+                            {action?.damagebonus && damagebonus.map((bonus, idx) =>
+                                <StatBonus bonus={bonus} key={`bonus-${bonus?.['@type']}-${idx}`} />
                             )}
                         </Box>
                     </Box>

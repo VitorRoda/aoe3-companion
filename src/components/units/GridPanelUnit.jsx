@@ -8,7 +8,7 @@ export const GridPanelUnit = React.memo(React.forwardRef(function GridPanelUnit(
     }
 
     return (
-        <Grid key={unit?._id} item xs={12} sm={6} md={4} lg={3} ref={ref}>
+        <Grid key={unit?.['@id']} item xs={12} sm={6} md={4} lg={3} ref={ref}>
             <PanelUnit unit={unit} onClickAdvInfo={handleOnClickAdvInfo} />
         </Grid>
     )

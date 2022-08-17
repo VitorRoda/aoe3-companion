@@ -56,7 +56,7 @@ export const DrawerUnit = React.memo(function DrawerUnit({ unit, open, onClose }
                 <Typography variant='h6' mb={1}>{translate(unit?.displaynameid)}</Typography>
 
                 {unit?.rollovertextid?.map((idtext, idx) =>
-                    <Typography component={'p'} variant="body" key={`description-${unit?._name}-${idx}`} mb={2}>
+                    <Typography component={'p'} variant="body" key={`description-${unit?.['@name']}-${idx}`} mb={2}>
                         {translate(idtext)}
                     </Typography>
                 )}
@@ -82,7 +82,7 @@ export const DrawerUnit = React.memo(function DrawerUnit({ unit, open, onClose }
                             trainpoints={unit?.trainpoints}
                             los={unit?.los}
                         />
-                        <AbilitiesUnit unitName={unit?._name} />
+                        <AbilitiesUnit unitName={unit?.['@name']} />
                     </Box>
                     <Box>
                         <Typography variant='subtitle2' color={'primary'}>{translate('69635')}</Typography>

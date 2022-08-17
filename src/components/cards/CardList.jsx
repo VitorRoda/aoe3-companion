@@ -31,7 +31,7 @@ export const CardList = React.memo(function CardList({ cards, age, onClickCard }
             card={card}
             onClickCard={handleOnClickCard}>
           </CardItem>
-          : <CardGroup key={card._name} group={card} onClick={handleOnClickCard} />
+          : <CardGroup key={card?.['@name']} group={card} onClick={handleOnClickCard} />
 
       )}
     </Box>

@@ -44,6 +44,30 @@ export const blacklistCards = [
     {
         id: 'HCAdvancedArsenal',
         civs: ['homecityethiopians']
+    },
+    {
+        id: 'HCXPSiegeDiscipline',
+        civs: ['homecityxpiroquois']
+    },
+    {
+        id: 'HCEngineeringSchool',
+        civs: ['homecityxpiroquois']
+    },
+    {
+        id: 'HCXPCavalryCombatIroquois',
+        civs: ['homecityxpiroquois']
+    },
+    {
+        id: 'HCXPShipMantlets2',
+        civs: ['homecityxpiroquois']
+    },
+    {
+        id: 'HCXPShipLightCannon1',
+        civs: ['homecityxpiroquois']
+    },
+    {
+        id: 'HCXPShipCoupRiders2',
+        civs: ['homecityxpsioux']
     }
 ]
 

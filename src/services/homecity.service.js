@@ -32,7 +32,7 @@ function isExcludedCard(card, homecity) {
 
 export async function getHomeCityData(homecity, age0Key) {
     const homecityName = homecity.replace('.xml', '')
-    const data = await import(`../data/homecities/${homecityName}.json`)
+    const { homecity: data } = await import(`../data/homecities/${homecityName}.xml.json`)
     const cards = data?.cards?.card?.reduce((cards, card) => {
         if (isExcludedCard(card, homecityName)) {
             return cards
@@ -58,13 +58,13 @@ export async function getHomeCityData(homecity, age0Key) {
         civ: data?.civ,
         maxcardsperdeck: data?.maxcardsperdeck || 25,
         cards,
-        revolts: Array.isArray(revoltDecks) ? revoltDecks.filter(r => r?._civ) : []
+        revolts: Array.isArray(revoltDecks) ? revoltDecks.filter(r => r?.['@civ']) : []
     }
 }
 
 export async function getRevoltCards(homecity, revName, revoltCards) {
     const homecityName = homecity.replace('.xml', '')
-    const { cards, civ } = await import(`../data/homecities/${homecityName}.json`)
+    const { homecity: {civ, cards } } = await import(`../data/homecities/${homecityName}.xml.json`)
     const effectCards = getCardsFromTechEffects(revName, { revolt: true }).map((eC, idx) => getCardData(eC, { idx, civ, includeRevolt: true }))
 
     return revoltCards.reduce((revCards, cardName) => {

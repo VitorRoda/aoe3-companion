@@ -1,5 +1,5 @@
 import { translate } from "../utils/translator";
-import protoData from "../data/protoy.json";
+import protoData from "../data/protoy.xml.json";
 import exactMath from "exact-math";
 import { replace_n } from "../utils/replaceN";
 
@@ -11,29 +11,32 @@ const WHITE_LIST_EFFECTS = [
     'WorkRate',
     'WorkRateEspecific',
     'TrainPoints',
-    'MaximumVelocity'
+    'MaximumVelocity',
 ]
 
 const NO_ABSTRACT = [
     'Infantry',
-    'Cavalry'
+    'Cavalry',
+    'AbstractWarship',
+    'FishingBoat'
 ]
 
 const TARGETS_MAP = {
-    'AbstractCoyoteMan': 'AbstractNameCoyote'
+    'AbstractCoyoteMan': 'AbstractNameCoyote',
+    'LogicalTypeAffectedByVillagerUpgrades': 'AbstractVillager'
 }
 
 export function getEffectsTranslations(effects = []) {
-    return effects.filter(effect => WHITE_LIST_EFFECTS.includes(effect?._subtype)).map(effect => {
+    return effects.filter(effect => WHITE_LIST_EFFECTS.includes(effect?.['@subtype'])).map(effect => {
         const mainText = translate(buildSymbolId(effect), true) || ''
-        const percentage = exactMath.formula(`((${+effect?._amount}) - 1) * 100`)
+        const percentage = exactMath.formula(`((${+effect?.['@amount']}) - 1) * 100`)
         let targetText = ''
         let unitText = ''
         let resourceText = ''
         let params = []
 
         if (effect?.target) {
-            let targetLabel = effect?.target?.__text || ''
+            let targetLabel = effect?.target?.['#text'] || ''
 
             if (targetLabel !== 'AbstractInfantry' && NO_ABSTRACT.some(word => targetLabel.includes(word))) {
                 targetLabel = targetLabel.replace('Abstract', '')
@@ -43,38 +46,40 @@ export function getEffectsTranslations(effects = []) {
                 targetLabel = TARGETS_MAP[targetLabel]
             }
 
-            targetText = translate(targetLabel, true) || getUnitTranslation(targetLabel)
+            targetText = translate(targetLabel, true) || getUnitTypeTranslation(targetLabel)
         }
 
-        if (effect?._unittype) {
-            unitText = getUnitTranslation(effect?._unittype)
-        }
-        
-        if (effect?._resource) {
-            resourceText = translate(`ResourceName${effect?._resource}`, true)
+        if (effect?.['@unittype']) {
+            unitText = getUnitTypeTranslation(effect?.['@unittype'])
         }
 
-        if (effect?._subtype === 'Hitpoints') {
+        if (effect?.['@resource']) {
+            resourceText = translate(`ResourceName${effect?.['@resource']}`, true)
+        }
+
+        if (effect?.['@subtype'] === 'Hitpoints') {
             params = [targetText, percentage]
-        } else if (effect?._subtype === 'Damage') {
-            const actionDamage = +effect?._allactions ? translate('AllActionsEffect', true) : ''
+        } else if (effect?.['@subtype'] === 'Damage') {
+            const actionDamage = +effect?.['@allactions'] ? translate('AllActionsEffect', true) : ''
             params = [targetText, actionDamage, percentage]
-        } else if (effect?._subtype === 'FreeHomeCityUnit') {
-            params = [parseInt(effect?._amount), unitText]
-        } else if (effect?._subtype === 'TrainPoints') {
+        } else if (effect?.['@subtype'] === 'FreeHomeCityUnit') {
+            params = [parseInt(effect?.['@amount']), unitText]
+        } else if (effect?.['@subtype'] === 'TrainPoints') {
             params = [targetText, percentage]
-        } else if (effect?._subtype === 'MaximumVelocity') {
+        } else if (effect?.['@subtype'] === 'MaximumVelocity') {
             params = [targetText, percentage]
         } else {
-            params = [targetText, effect?._action, unitText, percentage, resourceText]
+            params = [targetText, effect?.['@action'], unitText, percentage, resourceText]
         }
 
-        return replace_n(mainText, ...params)
+        const finalText = replace_n(mainText, ...params)
+
+        return finalText
     })
 }
 
 function buildSymbolId(effect) {
-    let subType = effect?._subtype || ''
+    let subType = effect?.['@subtype'] || ''
     let operationText = ''
 
     if (subType.includes('Specific')) {
@@ -84,18 +89,18 @@ function buildSymbolId(effect) {
     }
 
     if (!subType.includes('FreeHomeCity')) {
-        operationText = (+effect?._amount - 1) > 0 ? 'Increase' : 'Decrease'
+        operationText = (+effect?.['@amount'] - 1) > 0 ? 'Increase' : 'Decrease'
     }
-    if (effect?._subtype === 'MaximumVelocity') {
-        operationText = (+effect?._amount - 1) > 0 ? 'Increase' : 'Decrease'
+    if (effect?.['@subtype'] === 'MaximumVelocity') {
+        operationText = (+effect?.['@amount'] - 1) > 0 ? 'Increase' : 'Decrease'
         subType = 'SpeedEffect'
     }
 
     return [operationText, subType].join('')
 }
 
-function getUnitTranslation(unitType) {
-    const unit = protoData.unit.find(unit => unit?._name === unitType)
+function getUnitTypeTranslation(unitType) {
+    const unit = protoData.proto.unit.find(unit => unit?.['@name'] === unitType)
     if (unit) {
         return translate(unit?.displaynameid)
     }

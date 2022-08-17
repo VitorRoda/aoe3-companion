@@ -47,7 +47,7 @@ export const CardGroup = ({ group, onClick }) => {
     return (
         <Box
             sx={groupStyles}
-            key={group?._name}
+            key={group?.['@name']}
             onClick={handleOnClick(group)}
         >
             <Box sx={ageGroupStyles}>

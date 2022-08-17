@@ -18,11 +18,11 @@ const stylesCostNumber = {
 export const CostsUnit = ({ costs, unitName, sx }) => {
     return (
         <Stack alignItems="flex-end" spacing={0.5} sx={sx}>
-            {costs?.map(({ _resourcetype, __text }, idx) => {
-                const type = _resourcetype === 'Trade' ? 'export' : _resourcetype
+            {costs?.map((cost, idx) => {
+                const type = cost?.['@resourcetype'] === 'Trade' ? 'export' : cost?.['@resourcetype']
                 return (
-                <Box sx={{ position: 'relative', height: 22 }} key={`unit-cost-${unitName}-${_resourcetype}`}>
-                    <Box sx={stylesCostNumber}>{parseInt(__text)}</Box>
+                <Box sx={{ position: 'relative', height: 22 }} key={`unit-cost-${unitName}-${cost?.['@resourcetype']}`}>
+                    <Box sx={stylesCostNumber}>{parseInt(cost?.['#text'])}</Box>
                     <img
                         height={22}
                         loading='lazy'

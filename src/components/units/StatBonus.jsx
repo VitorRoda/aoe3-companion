@@ -7,7 +7,7 @@ export const StatBonus = ({ bonus }) => {
     const [data, setData] = useState(null)
 
     useEffect(() => {
-        getBonusByType(bonus?._type).then(data => {
+        getBonusByType(bonus?.['@type']).then(data => {
             setData(data)
         })
     }, [bonus])
@@ -15,8 +15,8 @@ export const StatBonus = ({ bonus }) => {
     return (
         <StatIcon
             src={data?.icon}
-            type={bonus?._type}
-            value={bonus?.__text}
+            type={bonus?.['@type']}
+            value={bonus?.['#text']}
             bonus={true}
             title={translate(data?.displaynameid)}
         />

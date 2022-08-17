@@ -23,7 +23,7 @@ export const UnitList = React.memo(function UnitList({ units, onLastEl, onClickA
         <Grid container spacing={4}>
             {units.map((unit, idx) =>
                 <GridPanelUnit 
-                    key={unit?._id} 
+                    key={unit?.['@id']} 
                     unit={unit} 
                     ref={units.length === idx + 1 ? lastElRef : undefined}
                     onClickAdvInfo={handleOnClickAdvInfo} />

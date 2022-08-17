@@ -1,9 +1,9 @@
-import dataCiv from "../data/civs.json";
+import dataCiv from "../data/civs.xml.json";
 
 export function getCivs() {
-    return dataCiv.civ.filter((item) => +item?.visible !== 0)
+    return dataCiv.civs.civ.filter((item) => +item?.visible !== 0)
 }
 
 export function getCivByName(civName) {
-    return dataCiv.civ.find((item) => item?.name === civName)
+    return dataCiv.civs.civ.find((item) => item?.name === civName)
 }

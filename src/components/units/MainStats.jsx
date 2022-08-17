@@ -20,6 +20,7 @@ export const MainStats = ({
     initialhitpoints, maxvelocity, populationcount,
     armor, buildbounty, bounty, trainpoints, los
 }) => {
+    const armorNormalized = !Array.isArray(armor) ? [armor] : armor
     return (
         <Stack direction={'row'} alignItems='center' spacing={0.5} flexWrap="wrap">
             <StatIcon
@@ -38,13 +39,13 @@ export const MainStats = ({
                 size={'md'}
             />
 
-            {armor?.length && armor.map(({ _type, _value }, idx) =>
+            {armorNormalized?.length && armorNormalized.map(({ '@type': type, '@value': value }, idx) =>
                 <StatIcon
-                    key={`armor-${_type}-${idx}`}
-                    type={`armor-${_type}`}
-                    icon={`stat_large_armor_${mapArmorIcon[_type]}`}
-                    value={_value}
-                    title={`${translate('35758')} ${translate(mapArmorTextId[_type])}`}
+                    key={`armor-${type}-${idx}`}
+                    type={`armor-${type}`}
+                    icon={`stat_large_armor_${mapArmorIcon[type]}`}
+                    value={value}
+                    title={`${translate('35758')} ${translate(mapArmorTextId[type])}`}
                     size={'md'}
                 />
             )}

@@ -25,7 +25,7 @@ const descUnitStyle = {
 
 export const PanelUnit = ({ unit, onClickAdvInfo }) => {
     const [openSnack, setOpenSnack] = useState(false)
-    const unitURL = `${window.location.origin}/units/${unit?._id}`
+    const unitURL = `${window.location.origin}/units/${unit?.['@id']}`
 
     const handleClickOpen = () => {
         onClickAdvInfo(unit)
@@ -66,7 +66,7 @@ export const PanelUnit = ({ unit, onClickAdvInfo }) => {
             <Box sx={descUnitStyle}>
                 <CardContent sx={{ position: 'relative' }}>
                     {unit?.rollovertextid?.map((idtext, idx) =>
-                        <Typography variant="body2" color="primary.contrastText" key={`description-${unit?._name}-${idx}`}>
+                        <Typography variant="body2" color="primary.contrastText" key={`description-${unit?.['@name']}-${idx}`}>
                             {translate(idtext)}
                         </Typography>
                     )}

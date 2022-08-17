@@ -6,14 +6,14 @@ import { getEffectsTranslations } from '../../utils/getEffectsTranslation';
 
 export function CardInfo({ card }) {
     const costText = (card) => card?.info?.cost
-        .filter(cost => cost?._resourcetype !== 'Ships')
+        .filter(cost => cost?.['@resourcetype'] !== 'Ships')
         .map((cost, idx) => (
-            <span key={`cost-info-${cost?._resourcetype}-${idx}`}>
-                {Math.round(cost?.__text)}
+            <span key={`cost-info-${cost?.['@resourcetype']}-${idx}`}>
+                {Math.round(cost?.['#text'])}
                 <img loading='lazy'
                     className='card_resource-cost-icon'
-                    src={`/assets/resource_${cost?._resourcetype?.toLowerCase()}.png`}
-                    alt={cost?._resourcetype} />
+                    src={`/assets/resource_${cost?.['@resourcetype']?.toLowerCase()}.png`}
+                    alt={cost?.['@resourcetype']} />
             </span>
         )).reduce((accu, elem) => {
             return accu === null ? [elem] : [...accu, ', ', elem]
@@ -28,7 +28,7 @@ export function CardInfo({ card }) {
 
     const displayName = translate(card?.info?.displaynameid)
     const rollOverText = translate(card?.info?.rollovertextid)
-    const hasCosts = card?.info?.cost?.some(cost => cost?._resourcetype !== 'Ships')
+    const hasCosts = card?.info?.cost?.some(cost => cost?.['@resourcetype'] !== 'Ships')
 
     return (
         <Box className='card-info'>
