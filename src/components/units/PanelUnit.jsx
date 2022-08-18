@@ -65,11 +65,9 @@ export const PanelUnit = ({ unit, onClickAdvInfo }) => {
 
             <Box sx={descUnitStyle}>
                 <CardContent sx={{ position: 'relative' }}>
-                    {unit?.rollovertextid?.map((idtext, idx) =>
-                        <Typography variant="body2" color="primary.contrastText" key={`description-${unit?.['@name']}-${idx}`}>
-                            {translate(idtext)}
-                        </Typography>
-                    )}
+                    <Typography variant="body2" color="primary.contrastText">
+                        {translate(unit?.rollovertextid)}
+                    </Typography>
 
                     <Box sx={{ height: 32, position: 'absolute', top: -13, right: -5, boxShadow: '0 0 6px 2px #111' }}>
                         <img loading='lazy' width={32} src={`/assets/icon_age_${+unit?.allowedage?.[0] + 1}.png`} alt="" />
@@ -87,9 +85,11 @@ export const PanelUnit = ({ unit, onClickAdvInfo }) => {
                     autoHideDuration={3000}
                     onClose={handleCloseSnack}
                     message={`Copied to clipboard: ${unitURL}`}
-                    sx={{ "& .MuiSnackbarContent-root": {
-                        backgroundColor: alpha('#FFEB8B', 0.75),
-                    }}}
+                    sx={{
+                        "& .MuiSnackbarContent-root": {
+                            backgroundColor: alpha('#FFEB8B', 0.75),
+                        }
+                    }}
                 />
                 <IconButton color='primary' onClick={handleClickOpen}>
                     <FeedIcon />

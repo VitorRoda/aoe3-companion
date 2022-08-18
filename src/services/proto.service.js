@@ -27,7 +27,7 @@ const baseFilters = (unit) => {
 
 export function getUnitsByFilters(types = [], searchTerm = '') {
     if (!types.length && !searchTerm) return []
-    
+
     return protoData.proto.unit.filter(unit => {
         const unitTypes = unit?.unittype || []
         if (!unitTypes) return false
@@ -44,9 +44,8 @@ export function getUnitsByFilters(types = [], searchTerm = '') {
         }
     })
         .sort((a, b) => getSortValue(a) - getSortValue(b))
-        .map(({rollovertextid, cost, ...unit}) => ({ 
-            ...unit, 
-            rollovertextid: !Array.isArray(rollovertextid) ? [rollovertextid] : rollovertextid,
+        .map(({ cost, ...unit }) => ({
+            ...unit,
             cost: !Array.isArray(cost) ? [cost] : cost
         }))
 }

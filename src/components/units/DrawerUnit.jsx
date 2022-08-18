@@ -19,16 +19,16 @@ const unitMainInfoStyles = (theme) => ({
     mb: 2,
     flexBasis: '170px',
     position: 'relative',
-    [theme.breakpoints.down('sm')]: { 
+    [theme.breakpoints.down('sm')]: {
         flexBasis: 'auto',
-    } 
+    }
 })
 
 const unitInfoContainerStyles = (theme) => ({
     display: 'flex',
-    [theme.breakpoints.down('sm')]: { 
+    [theme.breakpoints.down('sm')]: {
         flexDirection: 'column',
-    } 
+    }
 })
 
 export const DrawerUnit = React.memo(function DrawerUnit({ unit, open, onClose }) {
@@ -55,15 +55,13 @@ export const DrawerUnit = React.memo(function DrawerUnit({ unit, open, onClose }
             <Container maxWidth='sm' sx={{ py: 3 }}>
                 <Typography variant='h6' mb={1}>{translate(unit?.displaynameid)}</Typography>
 
-                {unit?.rollovertextid?.map((idtext, idx) =>
-                    <Typography component={'p'} variant="body" key={`description-${unit?.['@name']}-${idx}`} mb={2}>
-                        {translate(idtext)}
-                    </Typography>
-                )}
+                <Typography component={'p'} variant="body" mb={2}>
+                    {translate(unit?.rollovertextid)}
+                </Typography>
 
                 <Box sx={(unitInfoContainerStyles(theme))}>
                     <Box sx={unitMainInfoStyles(theme)}>
-                        <Box sx={{ position: 'relative', width: 170, ml: 'auto', mr: 'auto'}}>
+                        <Box sx={{ position: 'relative', width: 170, ml: 'auto', mr: 'auto' }}>
                             <Avatar
                                 src={getStorageURL(unit?.portraiticon, true)}
                                 alt={translate(unit?.displaynameid)}

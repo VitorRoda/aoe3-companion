@@ -92,6 +92,7 @@ export const MainStats = ({
             {trainpoints &&
                 <StatIcon
                     type="trainpoints"
+                    icon={'stat_icon_time'}
                     value={trainpoints}
                     title={translate('112775').replace('%1', exactMath.round(trainpoints, -2))}
                     isTime

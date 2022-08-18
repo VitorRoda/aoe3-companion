@@ -68,6 +68,10 @@ export const blacklistCards = [
     {
         id: 'HCXPShipCoupRiders2',
         civs: ['homecityxpsioux']
+    },
+    {
+        id: 'DEHCShipSteamersRepeat1',
+        civs: ['homecityamericans']
     }
 ]
 
