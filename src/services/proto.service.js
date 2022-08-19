@@ -54,6 +54,10 @@ export function getUnitById(unitId) {
     return protoData.proto.unit.find(unit => baseFilters(unit) && (unit?.['@id'] === unitId))
 }
 
+export function getProtoUnitByName(name) {
+    return protoData.proto.unit.find(unit => unit?.['@name'] === name)
+}
+
 function getSortValue(unit) {
     const unitTypes = unit?.unittype || []
     const keys = Object.keys(sortValue)
