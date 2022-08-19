@@ -51,7 +51,7 @@ export const AdvancedStats = ({ tactics, protoaction }) => {
             })
             .map((action) => {
                 const damageType = action?.damagetype
-                let rof = action?.rof
+                let rof = Array.isArray(action?.rof) ? action?.rof[0] : action?.rof
                 const damagearea = action?.damagearea
                 const damagebonus = !Array.isArray(action.damagebonus) ? [action.damagebonus] : action.damagebonus
 

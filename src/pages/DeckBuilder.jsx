@@ -14,6 +14,7 @@ import { randomSumGenerator } from '../utils/randomSum';
 import { CivSelector } from '../components/CivSelector';
 import { getStorageURL } from '../utils/getStorageURL';
 import { RevoltSelector } from '../components/RevoltSelector';
+import { TechtreeDialog } from '../components/techtree/TechtreeDialog';
 
 export const DeckBuilder = ({ civs }) => {
     const [civ, setCiv] = useState('')
@@ -143,6 +144,7 @@ export const DeckBuilder = ({ civs }) => {
     return (
         <Box>
             <Container disableGutters sx={{ display: 'flex', justifyContent: 'center' }}>
+                <TechtreeDialog civ={civ?.name} />
                 <Stack direction={{ xs: 'column', md: 'row' }} spacing={1} sx={{ mb: 1 }}>
                     <CivSelector selectedCiv={civ} civs={civs} onSelectCiv={handleSelectCiv} />
                     {!!revolts.length && <RevoltSelector revolts={revolts} selectedRevolt={revolt} onSelectRevolt={handleSelectRevolt} />}
