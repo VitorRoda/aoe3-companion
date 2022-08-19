@@ -46,7 +46,7 @@ export function getUnitsByFilters(types = [], searchTerm = '') {
         .sort((a, b) => getSortValue(a) - getSortValue(b))
         .map(({ cost, ...unit }) => ({
             ...unit,
-            cost: !Array.isArray(cost) ? [cost] : cost
+            cost: cost && !Array.isArray(cost) ? [cost] : cost
         }))
 }
 
