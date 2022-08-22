@@ -5,7 +5,9 @@ import { translate } from '../../utils/translator';
 import { getEffectsTranslations } from '../../utils/getEffectsTranslation';
 
 export function CardInfo({ card }) {
-    const costText = (card) => card?.info?.cost
+    let costs = card?.info?.cost || []
+    costs = costs && Array.isArray(costs) ? costs : [costs]
+    const costText = (card) => costs
         .filter(cost => cost?.['@resourcetype'] !== 'Ships')
         .map((cost, idx) => (
             <span key={`cost-info-${cost?.['@resourcetype']}-${idx}`}>
@@ -28,14 +30,14 @@ export function CardInfo({ card }) {
 
     const displayName = translate(card?.info?.displaynameid)
     const rollOverText = translate(card?.info?.rollovertextid)
-    const hasCosts = card?.info?.cost?.some(cost => cost?.['@resourcetype'] !== 'Ships')
+    const hasCosts = costs?.some(cost => cost?.['@resourcetype'] !== 'Ships') || false
 
     return (
         <Box className='card-info'>
             {!!displayName &&
                 <Typography variant='subtitle1'>{displayName}</Typography>}
             {hasCosts &&
-                <Typography variant='body2' component="div">• {costText(card)}</Typography>}
+                <Typography variant='body2' component="div">• {costText()}</Typography>}
             {!!rollOverText &&
                 rollOverTextParsed(rollOverText)}
             {card?.info?.effects?.effect?.length &&

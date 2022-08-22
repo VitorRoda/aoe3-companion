@@ -7,7 +7,7 @@ import Box from '@mui/material/Box';
 import { CardInfo } from "./CardInfo";
 import { Card } from "./Card";
 
-export const CardItem = React.memo(function CardItem({ card, onClickCard }) {
+export const CardItem = React.memo(function CardItem({ card, sm, onClickCard }) {
     const popupState = usePopupState({ variant: 'popover', popupId: `tooltip-${card.id}`, disableAutoFocus: true })
 
     const handleOnClick = () => {
@@ -15,7 +15,7 @@ export const CardItem = React.memo(function CardItem({ card, onClickCard }) {
     }
 
     return (
-        <Box sx={{ margin: '4px' }} onClick={handleOnClick} {...bindHover(popupState)}>
+        <Box sx={{ margin: sm ? 0 : '4px' }} onClick={handleOnClick} {...bindHover(popupState)}>
             <Card
                 name={card?.name}
                 icon={card?.info?.icon}
@@ -23,6 +23,7 @@ export const CardItem = React.memo(function CardItem({ card, onClickCard }) {
                 displayunitcount={card?.displayunitcount}
                 isSelected={card?.isSelected}
                 costs={card?.info?.cost || []}
+                sm={sm}
             ></Card>
 
             <Popper {...bindPopper(popupState)}
@@ -44,7 +45,7 @@ export const CardItem = React.memo(function CardItem({ card, onClickCard }) {
                         rootBoundary: 'document',
                     },
                 }]}
-                sx={{ pointerEvents: 'none', zIndex: 999 }}
+                sx={{ pointerEvents: 'none', zIndex: 100000000 }}
             >
                 <CardInfo card={card}></CardInfo>
             </Popper>

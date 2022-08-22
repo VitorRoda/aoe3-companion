@@ -6,9 +6,19 @@
     background: linear-gradient(135deg,#181c29,#394766 40%,#181c29);
 }
 
+.card.sm {
+    width: 50px;
+    height: 50px;
+}
+
 .card__img {
     width: 64px;
     cursor: pointer;
+}
+
+.card.sm .card__img {
+    width: 50px;
+    height: 50px;
 }
 
 .card__unit-count,
