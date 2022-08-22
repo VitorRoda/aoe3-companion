@@ -49,7 +49,7 @@ const bannerStyles = (banner) => ({
     borderTopRightRadius: 15,
     backgroundImage: setBannerColor(banner),
     borderBottom: '2px solid #EBC837',
-    boxShadow: '0 0 5px rgba(0,0,0,0.7)',
+    boxShadow: '0 0 8px #000',
     boxSizing: 'border-box',
 })
 
@@ -82,7 +82,7 @@ const TechItem = ({ type, name, icon, banner, string, string2 }) => {
         <Box display={'flex'} width={250}>
             {data && <CardItem card={data} sm={true}></CardItem>}
             <Box sx={bannerStyles(banner)}>
-                <Typography variant='subtitle2' fontSize={11} lineHeight={'normal'} sx={{ textShadow: '0 0 3px #000' }}>{
+                <Typography variant='subtitle2' fontSize={11} lineHeight={'normal'} sx={{ textShadow: '0 0 4px #000' }}>{
                     type === 'label' ? translate(string) : translate(data?.info?.displaynameid)
                 }</Typography>
             </Box>

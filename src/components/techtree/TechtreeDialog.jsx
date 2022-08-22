@@ -31,7 +31,6 @@ const gridContainerStyles = {
     ml: `${iconAgeWidth}px`
 }
 
-
 const ageSeparatorStyles = {
     position: 'absolute',
     width: '100%',
@@ -63,7 +62,7 @@ export const TechtreeDialog = ({ civ }) => {
     };
 
     return (
-        <div>
+        <div id="techtree-dialog">
             <Button onClick={handleClickOpen}><img width="40" src="/assets/icon_techtree.png" alt="" /></Button>
             <Dialog open={open} fullWidth={true} maxWidth={'lg'}>
                 <DialogContent sx={{ overflow: 'hidden' }}>
