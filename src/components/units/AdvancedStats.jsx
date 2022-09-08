@@ -50,7 +50,7 @@ export const AdvancedStats = ({ tactics, protoaction }) => {
                 return getValueByDamageMode(a?.name) - getValueByDamageMode(b?.name)
             })
             .map((action) => {
-                const damageType = action?.damagetype
+                const damageType = Array.isArray(action.damagetype) ? action?.damagetype[0] : action.damagetype
                 let rof = Array.isArray(action?.rof) ? action?.rof[0] : action?.rof
                 const damagearea = action?.damagearea
                 const damagebonus = !Array.isArray(action.damagebonus) ? [action.damagebonus] : action.damagebonus
