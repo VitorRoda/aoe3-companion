@@ -53,7 +53,24 @@ const bannerStyles = (banner) => ({
     boxSizing: 'border-box',
 })
 
-const TechItem = ({ type, name, icon, banner, string, string2 }) => {
+const overrides = (data, override, type) => {
+    if (override?.techforcost && type === 'tech') {
+        const overrideinfo =  getTechInfo(override?.techforcost)
+        
+        return {
+            ...data,
+            cost: overrideinfo.cost
+        }
+    }
+
+    if (override?.nameoverride) {
+        return {...data, displaynameid: override?.nameoverride}
+    }
+
+    return data
+}
+
+const TechItem = ({ type, name, icon, banner, string, string2, override }) => {
     const [data, setData] = useState(null)
 
     useEffect(() => {
@@ -67,20 +84,23 @@ const TechItem = ({ type, name, icon, banner, string, string2 }) => {
                 displaynameid: string,
                 rollovertextid: string2
             }
-        } else if (type === 'tech')
+        } else if (type === 'tech') {
             data = getTechInfo(name)
-        else
+            
+        } else
             data = getProtoUnitByName(name)
+
+        data = overrides(data, override, type)
 
         setData({
             name,
             info: { ...data, icon },
         })
-    }, [name, type, icon, banner, string, string2])
+    }, [name, type, icon, banner, string, string2, override])
 
     return (
         <Box display={'flex'} width={250}>
-            {data && <CardItem card={data} sm={true}></CardItem>}
+            {data && <CardItem card={data} additionaldesc={override?.additionaldesc} sm={true}></CardItem>}
             <Box sx={bannerStyles(banner)}>
                 <Typography variant='subtitle2' fontSize={11} lineHeight={'normal'} sx={{ textShadow: '0 0 4px #000' }}>{
                     type === 'label' ? translate(string) : translate(data?.info?.displaynameid)

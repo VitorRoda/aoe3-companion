@@ -108,6 +108,7 @@ export const TechtreeDialog = ({ civ }) => {
                                                 banner={item?.['@banner']}
                                                 string={item?.['@string']}
                                                 string2={item?.['@string2']}
+                                                override={item?.['override']}
                                             />
                                         </div>
                                     )}

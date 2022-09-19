@@ -4,7 +4,7 @@ import Box from '@mui/material/Box';
 import { translate } from '../../utils/translator';
 import { getEffectsTranslations } from '../../utils/getEffectsTranslation';
 
-export function CardInfo({ card }) {
+export function CardInfo({ card, additionaldesc }) {
     let costs = card?.info?.cost || []
     costs = costs && Array.isArray(costs) ? costs : [costs]
     const costText = (card) => costs
@@ -38,6 +38,9 @@ export function CardInfo({ card }) {
                 <Typography variant='subtitle1'>{displayName}</Typography>}
             {hasCosts &&
                 <Typography variant='body2' component="div">• {costText()}</Typography>}
+            {!!additionaldesc && <Typography variant='body2' component="div" key={`${card.name}-additional-desc`}>
+                {translate(additionaldesc)}
+            </Typography>}
             {!!rollOverText &&
                 rollOverTextParsed(rollOverText)}
             {card?.info?.effects?.effect?.length &&

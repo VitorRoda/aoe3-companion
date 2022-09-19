@@ -7,7 +7,7 @@ import Box from '@mui/material/Box';
 import { CardInfo } from "./CardInfo";
 import { Card } from "./Card";
 
-export const CardItem = React.memo(function CardItem({ card, sm, onClickCard }) {
+export const CardItem = React.memo(function CardItem({ card, additionaldesc, sm, onClickCard }) {
     const popupState = usePopupState({ variant: 'popover', popupId: `tooltip-${card.id}`, disableAutoFocus: true })
 
     const handleOnClick = () => {
@@ -47,7 +47,7 @@ export const CardItem = React.memo(function CardItem({ card, sm, onClickCard }) 
                 }]}
                 sx={{ pointerEvents: 'none', zIndex: 100000000 }}
             >
-                <CardInfo card={card}></CardInfo>
+                <CardInfo card={card} additionaldesc={additionaldesc}></CardInfo>
             </Popper>
         </Box>
     )
