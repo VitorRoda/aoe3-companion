@@ -17,7 +17,7 @@ export const DrawerUnit = React.memo(function DrawerUnit({ unit, open, onClose }
             onClose={handleClose}
             PaperProps={{
                 sx: {
-                    backgroundImage: 'linear-gradient(45deg, #181c29, #394766 50%, #181c29)',
+                    backgroundImage: 'linear-gradient(45deg, #170803, #532412 50%, #170803)',
                 }
             }}>
             <IconButton size="large" sx={{ position: 'absolute', top: 0, right: 0 }} onClick={handleClose}>

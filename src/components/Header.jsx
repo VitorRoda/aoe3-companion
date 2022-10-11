@@ -31,7 +31,7 @@ export const Header = React.memo(function Header() {
     }
 
     const AppBar = styled(AppBarMui)({
-        backgroundImage: 'linear-gradient(90deg,#181c29,#394766 40%,#181c29)',
+        backgroundImage: 'linear-gradient(90deg,#170803,#532412 40%,#170803)',
         borderWidth: '2px 0',
         borderImageSlice: 1,
         borderImageSource: 'linear-gradient(90deg,#b8862d00,#b8862d,#ffdf91,#b8862d,#b8862d00)',

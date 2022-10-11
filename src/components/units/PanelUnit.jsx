@@ -44,6 +44,7 @@ export const PanelUnit = ({ unit, onClickAdvInfo }) => {
         <Card sx={{
             backgroundImage: 'url(/assets/wood.png)',
             backgroundSize: 'cover',
+            boxShadow: '0 0 4px #fff'
         }}>
             <CardHeader
                 title={translate(unit?.displaynameid)}

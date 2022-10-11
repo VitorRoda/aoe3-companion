@@ -85,7 +85,7 @@ export const DeckBoard = ({ civName, maxCards, selectedCards, hideRandomAction, 
         />
       </Box>
 
-      <Box className='deckboard-wrapper' sx={{ position: 'relative' }}>
+      <Box className='deckboard-wrapper' sx={{ position: 'relative', boxShadow: '0 0 4px rgba(255,255,255, 0.7)' }}>
         <Box className='global-counter-cards'>{`${selectedCards.total}/${maxCards}`}</Box>
         <Stack className='deckboard-actions' spacing={1}>
           <Box className='download-button' position="relative">

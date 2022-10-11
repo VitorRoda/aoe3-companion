@@ -10,7 +10,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(90deg,#181c29,#394766 40%,#181c29);
+  background: linear-gradient(90deg,#170803,#532412 40%,#170803);
+  background-image: url('../public/assets/end_bg.png');
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 code {

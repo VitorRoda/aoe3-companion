@@ -3,6 +3,7 @@
     background-size: 900px;
     background-position: left center;
     padding: 16px;
+    box-shadow: 0 0 4px rgba(255,255,255, 0.7);
 }
 
 .cards-list {
