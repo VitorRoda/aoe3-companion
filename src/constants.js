@@ -96,7 +96,6 @@ export const injectedCards = [
 ]
 
 export const blackListUnitTypes = [
-    'Hero',
     'AbstractPet',
     'AbstractBannerArmy',
     'Guardian',
