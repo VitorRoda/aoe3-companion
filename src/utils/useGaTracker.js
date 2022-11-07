@@ -8,7 +8,7 @@ export const useGaTracker = () => {
 
     useEffect(() => {
         if (!window.location.href.includes('localhost')) {
-            ReactGA.initialize(process.env.REACT_APP_GA_ID)
+            ReactGA.initialize(process.env.REACT_APP_GA_MEASUREMENT_ID)
             setInitialized(true)
         }
     }, [])
