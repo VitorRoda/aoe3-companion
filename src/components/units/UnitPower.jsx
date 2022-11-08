@@ -5,7 +5,6 @@ import { tooltipClasses } from '@mui/material/Tooltip';
 
 import React, { Fragment, useEffect, useState } from 'react'
 import { getUnitPower } from '../../services/powers.service'
-import { fixPath } from '../../utils/fixPath'
 import { translate } from '../../utils/translator';
 
 const TooltipPower = styled(({ className, ...props }) => (
@@ -26,7 +25,7 @@ const UnitPower = ({ powerName }) => {
 
     return (
         <Fragment>
-            <img loading='lazy' width={'100%'} src={fixPath(power?.icon)} alt="" />
+            <img loading='lazy' width={'100%'} src={power?.icon} alt="" />
             <ImageListItemBar
                 sx={{ background: 'transparent' }}
                 actionIcon={

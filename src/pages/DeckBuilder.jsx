@@ -12,7 +12,6 @@ import { getHomeCityData, getRevoltCards } from "../services/homecity.service";
 import { translate } from '../utils/translator';
 import { randomSumGenerator } from '../utils/randomSum';
 import { CivSelector } from '../components/CivSelector';
-import { fixPath } from '../utils/fixPath';
 import { RevoltSelector } from '../components/RevoltSelector';
 import { TechtreeDialog } from '../components/techtree/TechtreeDialog';
 import { ImgFS } from '../components/ImgFS';

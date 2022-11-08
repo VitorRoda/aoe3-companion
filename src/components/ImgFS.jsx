@@ -1,18 +1,17 @@
 import React from 'react'
 import { useEffect } from 'react'
-import { ref, getDownloadURL } from "firebase/storage";
-import { storage } from '../config/firebaseConfig';
 import { useState } from 'react';
+import { fixPath } from '../utils/fixPath'
 
-export const ImgFS = ({ path, alt, ...props }) => {
+export const ImgFS = ({ path, alt, lowerCase, ...props }) => {
     const [urlFS, setUrlFS] = useState('')
+    
     useEffect(() => {
-        const refImg = ref(storage, path)
-
-        getDownloadURL(refImg).then((url) => {
-            setUrlFS(url)
-        })
-    }, [path])
+        const { REACT_APP_DOMAIN_STORAGE: domain, REACT_APP_STORAGE_BUCKET: bucket } = process.env
+        const uri = encodeURIComponent(fixPath(path, lowerCase))
+        const url = `${domain}${bucket}/o/${uri}?alt=media`
+        setUrlFS(url)
+    }, [path, lowerCase])
 
     return (
         <img

@@ -9,5 +9,5 @@ export const fixPath = (value, toLowerCase = false) => {
     if (_value[0] === '/')
         _value = _value.slice(1)
     
-    return `/${_value}`
+    return _value
 }

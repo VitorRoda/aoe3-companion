@@ -3,7 +3,7 @@ import { constantCase } from "change-case";
 import exactMath from "exact-math";
 import { Stack, Typography } from '@mui/material'
 import Avatar from '@mui/material/Avatar';
-import { fixPath } from '../../utils/fixPath';
+import { generateStorageUrl } from '../../utils/generateStorageUrl';
 
 const iconSizes = {
   sm: 16,
@@ -16,7 +16,7 @@ export const StatIcon = ({ value = 0, type, icon, src, title, bonus, size = 'sm'
   let _src = src || `resources/images/hud/${icon}.png`
 
   if (_src.includes('resources/'))
-    _src = fixPath(_src)
+    _src = generateStorageUrl(_src)
 
   const fallbackImg = () => {
     setErrorImg(true)

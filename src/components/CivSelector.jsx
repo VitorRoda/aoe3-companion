@@ -7,7 +7,6 @@ import InputLabel from '@mui/material/InputLabel';
 import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 import { ImgFS } from './ImgFS';
-import { fixPath } from '../utils/fixPath';
 
 export const CivSelector = React.memo(function CivSelector ({ selectedCiv, civs, onSelectCiv }) {
   const [civ, setCiv] = useState(() => selectedCiv)
@@ -25,7 +24,7 @@ export const CivSelector = React.memo(function CivSelector ({ selectedCiv, civs,
   const civItems = civs
     .map((civ, idx) =>
       <MenuItem value={civ} key={`civ-${civ.name}-${idx}`} sx={{ fontFamily: 'TrajanPro' }}>
-        <ImgFS className='civ-selector__item-flag' path={fixPath(civ?.homecityflagiconwpf)} alt={civ.name} />
+        <ImgFS className='civ-selector__item-flag' path={civ?.homecityflagiconwpf} alt={civ.name} />
         {translate(civ?.displaynameid)}
       </MenuItem>
     )

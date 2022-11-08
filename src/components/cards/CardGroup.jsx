@@ -3,7 +3,6 @@ import Box from '@mui/material/Box';
 import { CardItem } from "./CardItem";
 import { alpha, Typography } from '@mui/material';
 import { translate } from '../../utils/translator';
-import { fixPath } from '../../utils/fixPath';
 import { ImgFS } from '../ImgFS';
 
 const groupStyles = {
@@ -52,7 +51,7 @@ export const CardGroup = ({ group, onClick }) => {
             onClick={handleOnClick(group)}
         >
             <Box sx={ageGroupStyles}>
-                <ImgFS path={fixPath(group.icon, true)} alt="" />
+                <ImgFS path={group.icon} alt="" />
             </Box>
             <Typography variant='subtitle2' color="text.primary" pl={2.5} pr={0.5}>
                 {translate(group.displaynameid)}
