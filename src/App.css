@@ -2,7 +2,7 @@
     width: 60px;
 }
 
-.flag-random {
+.flag-random > img {
     width: 100%;
     max-width: 270px;
     box-shadow: 0 0 10px #000;
@@ -10,6 +10,6 @@
     transition: all 0.3s ease;
 }
 
-.flag-random:hover {
+.flag-random > img:hover {
     transform: scale(1.2);
 }

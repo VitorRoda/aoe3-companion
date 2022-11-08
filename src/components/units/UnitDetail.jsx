@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { translate } from "../../utils/translator";
 import Box from '@mui/material/Box';
 import Avatar from '@mui/material/Avatar';
@@ -8,8 +8,10 @@ import { AdvancedStats } from "./AdvancedStats";
 import { CostsUnit } from "./CostsUnit";
 import { blackListUnitTypesPanelUnit } from '../../constants';
 import { useTheme } from '@mui/system';
-import { getStorageURL } from '../../utils/getStorageURL';
+import { fixPath } from '../../utils/fixPath';
 import AbilitiesUnit from './AbilitiesUnit';
+import { getDownloadURL, ref } from 'firebase/storage';
+import { storage } from '../../config/firebaseConfig';
 
 const unitMainInfoStyles = (theme) => ({
     pr: 2,
@@ -30,6 +32,15 @@ const unitInfoContainerStyles = (theme) => ({
 
 const UnitDetail = ({ unit }) => {
     const theme = useTheme()
+    const [urlFS, setUrlFS] = useState('')
+
+    useEffect(() => {
+        const refImg = ref(storage, fixPath(unit?.portraiticon, true))
+
+        getDownloadURL(refImg).then((url) => {
+            setUrlFS(url)
+        })
+    }, [unit])
 
     return (
         <Box>
@@ -43,7 +54,7 @@ const UnitDetail = ({ unit }) => {
                 <Box sx={unitMainInfoStyles(theme)}>
                     <Box sx={{ position: 'relative', width: 170, ml: 'auto', mr: 'auto' }}>
                         <Avatar
-                            src={getStorageURL(unit?.portraiticon, true)}
+                            src={urlFS}
                             alt={translate(unit?.displaynameid)}
                             sx={{ width: 170, height: 170, boxShadow: '0 0 8px #333333', mb: 1 }}
                             variant="rounded"

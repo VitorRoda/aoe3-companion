@@ -26,4 +26,4 @@ yarn-error.log*
 
 *.cache
 
-.env.prod
+.env

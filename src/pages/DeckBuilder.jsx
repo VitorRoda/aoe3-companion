@@ -12,9 +12,10 @@ import { getHomeCityData, getRevoltCards } from "../services/homecity.service";
 import { translate } from '../utils/translator';
 import { randomSumGenerator } from '../utils/randomSum';
 import { CivSelector } from '../components/CivSelector';
-import { getStorageURL } from '../utils/getStorageURL';
+import { fixPath } from '../utils/fixPath';
 import { RevoltSelector } from '../components/RevoltSelector';
 import { TechtreeDialog } from '../components/techtree/TechtreeDialog';
+import { ImgFS } from '../components/ImgFS';
 
 export const DeckBuilder = ({ civs }) => {
     const [civ, setCiv] = useState('')
@@ -171,14 +172,8 @@ export const DeckBuilder = ({ civs }) => {
                         />}
                 </Fragment>
                 :
-                <Box sx={{ py: 4, textAlign: 'center' }}>
-                    <img
-                        loading='lazy'
-                        className='flag-random'
-                        src={getStorageURL('resources/images/icons/flags/Flag_Random.png', false)}
-                        alt="flag random"
-                        onClick={handleRandomCiv}
-                    />
+                <Box className='flag-random' sx={{ py: 4, textAlign: 'center' }} onClick={handleRandomCiv}>
+                    <ImgFS path='resources/images/icons/flags/Flag_Random.png' />
                 </Box>
             }
         </Box>

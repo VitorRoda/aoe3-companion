@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
 import { translate } from "../../utils/translator";
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
@@ -11,9 +11,10 @@ import IconButton from '@mui/material/IconButton';
 import FeedIcon from '@mui/icons-material/Feed';
 import ShareIcon from '@mui/icons-material/Share';
 import { CostsUnit } from "./CostsUnit";
-import { getStorageURL } from '../../utils/getStorageURL';
+import { fixPath } from '../../utils/fixPath';
 import { alpha, Snackbar } from '@mui/material';
-import { useState } from 'react';
+import { getDownloadURL, ref } from 'firebase/storage';
+import { storage } from '../../config/firebaseConfig';
 
 const descUnitStyle = {
     backgroundImage: 'linear-gradient(to right, #EBC837, #FFEB8B)',
@@ -26,6 +27,15 @@ const descUnitStyle = {
 export const PanelUnit = ({ unit, onClickAdvInfo }) => {
     const [openSnack, setOpenSnack] = useState(false)
     const unitURL = `${window.location.origin}/units/${unit?.['@id']}`
+    const [urlFS, setUrlFS] = useState('')
+
+    useEffect(() => {
+        const refImg = ref(storage, fixPath(unit?.portraiticon, true))
+
+        getDownloadURL(refImg).then((url) => {
+            setUrlFS(url)
+        })
+    }, [unit])
 
     const handleClickOpen = () => {
         onClickAdvInfo(unit)
@@ -55,7 +65,7 @@ export const PanelUnit = ({ unit, onClickAdvInfo }) => {
                 }}
                 avatar={
                     <Avatar
-                        src={getStorageURL(unit?.portraiticon, true)}
+                        src={urlFS}
                         alt={translate(unit?.displaynameid)}
                         sx={{ width: 55, height: 55, boxShadow: '0 0 8px #f2f2f2' }}
                         variant="rounded"

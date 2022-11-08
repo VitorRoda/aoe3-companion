@@ -3,7 +3,8 @@ import Box from '@mui/material/Box';
 import { CardItem } from "./CardItem";
 import { alpha, Typography } from '@mui/material';
 import { translate } from '../../utils/translator';
-import { getStorageURL } from '../../utils/getStorageURL';
+import { fixPath } from '../../utils/fixPath';
+import { ImgFS } from '../ImgFS';
 
 const groupStyles = {
     display: 'inline-block',
@@ -51,7 +52,7 @@ export const CardGroup = ({ group, onClick }) => {
             onClick={handleOnClick(group)}
         >
             <Box sx={ageGroupStyles}>
-                <img src={getStorageURL(group.icon, true)} alt="" />
+                <ImgFS path={fixPath(group.icon, true)} alt="" />
             </Box>
             <Typography variant='subtitle2' color="text.primary" pl={2.5} pr={0.5}>
                 {translate(group.displaynameid)}

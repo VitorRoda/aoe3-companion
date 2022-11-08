@@ -1,16 +1,17 @@
 import './Card.css'
 import React from 'react'
 import { CardCosts } from "./CardCosts";
-import { getStorageURL } from '../../utils/getStorageURL';
+import { fixPath } from '../../utils/fixPath';
+import { ImgFS } from '../ImgFS';
 
 export const Card = React.memo(function Card({
     name, icon, maxcount, displayunitcount, isSelected, costs, sm
 }) {
-    const src = getStorageURL(icon, true)
+    const path = fixPath(icon, true)
 
     return (
         <div className={`card ${sm && 'sm'}`}>
-            <img loading='lazy' className='card__img' src={src} alt={name} />
+            <ImgFS className='card__img' path={path} alt={name} />
             {maxcount === -1 &&
                 <div className='card__maxcount'>∞</div>}
             {maxcount > 1 &&

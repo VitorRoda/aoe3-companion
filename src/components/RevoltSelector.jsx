@@ -5,9 +5,10 @@ import InputLabel from '@mui/material/InputLabel';
 import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 import { translate } from '../utils/translator';
-import { getStorageURL } from '../utils/getStorageURL';
+import { fixPath } from '../utils/fixPath';
 import { getCivByName } from '../services/civs.service';
 import { Box } from '@mui/material';
+import { ImgFS } from './ImgFS';
 
 const flagStyles = { 
     mr: 1, 
@@ -44,7 +45,7 @@ export const RevoltSelector = ({ revolts, selectedRevolt, onSelectRevolt }) => {
     const revoltItems = _revolts.map((rev, idx) =>
         <MenuItem value={rev} key={`revolt-${rev.name}-${idx}`} sx={{ fontFamily: 'TrajanPro' }}>
             <Box sx={flagStyles}>
-                <img height={26} loading='lazy' src={fixFlagName(getStorageURL(rev?.homecityflagiconwpf))} alt={rev.name} />
+                <ImgFS height={26} path={fixFlagName(fixPath(rev?.homecityflagiconwpf))} alt={rev.name} />
             </Box>
             {translate(rev?.displaynameid)}
         </MenuItem>
