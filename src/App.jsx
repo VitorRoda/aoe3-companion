@@ -10,6 +10,7 @@ import { Footer } from "./components/Footer";
 import { DeckBuilder } from "./pages/DeckBuilder";
 import { UnitsInfo } from "./pages/UnitsInfo";
 import { getCivs } from './services/civs.service';
+import { LeaderBoard } from './pages/LeaderBoard';
 
 
 const theme = createTheme({
@@ -53,7 +54,8 @@ function App() {
 
         <Container sx={{ py: 4, minHeight: 'calc(100vh - 68px - 78px)' }}>
           <Routes>
-            <Route path='/' element={<DeckBuilder civs={civs} />} />
+            <Route path='/' element={<LeaderBoard />} />
+            <Route path='/deck-builder' element={<DeckBuilder civs={civs} />} />
             <Route path='/units' element={<UnitsInfo />}>
               <Route path=':unitId' />
             </Route>

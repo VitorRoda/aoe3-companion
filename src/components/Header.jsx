@@ -54,7 +54,7 @@ export const Header = React.memo(function Header() {
                     </Box>
 
                     <Box variation="row" sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-                        <Link variant='subtitle1' underline='none' component={RouterLink} to='/' px={1}>{translate('49151')}</Link>
+                        <Link variant='subtitle1' underline='none' component={RouterLink} to='/deck-builder' px={1}>{translate('49151')}</Link>
                         <Link variant='subtitle1' underline='none' component={RouterLink} to='/units' px={1}>{translate('70749')}</Link>
                     </Box>
 
