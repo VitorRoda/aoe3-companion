@@ -25,6 +25,7 @@ jobs:
           REACT_APP_APP_ID: '${{ secrets.REACT_APP_APP_ID }}'
           REACT_APP_MEASUREMENT_ID: '${{ secrets.REACT_APP_MEASUREMENT_ID }}'
           REACT_APP_DOMAIN_STORAGE: '${{ secrets.REACT_APP_DOMAIN_STORAGE }}'
+          REACT_APP_LEADER_API_KEY: '${{ secrets.REACT_APP_LEADER_API_KEY }}'
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
