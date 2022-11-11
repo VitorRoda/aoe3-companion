@@ -6,7 +6,8 @@ export const DEFAULT_LANG = {
 export const DISPLAY_TEXT_LIST = [
   {code: 'es', text: 'ESP'},
   {code: 'en', text: 'ENG'},
-  {code: 'zh', text: '繁體中文'}
+  {code: 'zh', text: '繁體中文'},
+  {code: 'pt_br', text: 'Português Brasileiro'}
 ]
 
 export const langToText = (lang) => {
