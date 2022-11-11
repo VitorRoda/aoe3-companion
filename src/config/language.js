@@ -7,7 +7,7 @@ export const DISPLAY_TEXT_LIST = [
   {code: 'es', text: 'ESP'},
   {code: 'en', text: 'ENG'},
   {code: 'zh', text: '繁體中文'},
-  {code: 'pt_br', text: 'Português Brasileiro'}
+  {code: 'pt_br', text: 'PT BR'}
 ]
 
 export const langToText = (lang) => {
