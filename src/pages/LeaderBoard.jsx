@@ -7,17 +7,23 @@ import { DataGrid, GridToolbar, gridClasses } from "@mui/x-data-grid";
 import TrendingUp from "@mui/icons-material/TrendingUp";
 import TrendingDown from "@mui/icons-material/TrendingDown";
 import { Fragment } from 'react';
-import { Typography } from '@mui/material';
+import { FormControl, InputLabel, MenuItem, Select, Typography } from '@mui/material';
+import TimeAgo from 'javascript-time-ago'
+import en from 'javascript-time-ago/locale/en'
+
+TimeAgo.addDefaultLocale(en)
+const timeAgo = new TimeAgo('en-US')
 
 const dataGridStyles = {
-    backgroundImage: 'url(/assets/wood.png)',
-    backgroundImageSize: 1150,
     [`& .${gridClasses.columnHeaders}`]: {
         backgroundImage: 'linear-gradient(90deg,#170803,#532412 40%,#170803)',
         borderWidth: '2px 0',
         borderImageSlice: 1,
         borderImageSource: 'linear-gradient(90deg,#b8862d00,#b8862d,#ffdf91,#b8862d,#b8862d00)',
         borderStyle: 'solid',
+    },
+    [`& .${gridClasses.cell}`]: {
+        borderBottom: 0
     },
     [`& .${gridClasses.columnHeaderTitle}`]: {
         fontFamily: 'TrajanPro',
@@ -30,15 +36,11 @@ const dataGridStyles = {
         outline: "none"
     },
     [`& .${gridClasses.row}.odd`]: {
-        backgroundImage: 'linear-gradient(to right, #EBC837e6, #FFEB8Be6)',
-        color: '#000',
-    },
-    [`& .${gridClasses.row}.even`]: {
-        backgroundColor: 'transparent'
-    },
-    [`& .${gridClasses.row}.Mui-selected:hover`]: {
-        backgroundColor: 'transparent'
-    },
+        borderWidth: '1px 0',
+        borderImageSlice: 1,
+        borderImageSource: 'linear-gradient(90deg,#b8862d00,#b8862d,#ffdf91,#b8862d,#b8862d00)',
+        borderStyle: 'solid',
+    }
 }
 
 const columns = [{
@@ -96,25 +98,58 @@ const columns = [{
             {value > 0 ? <TrendingUp color='success' /> : <TrendingDown color='error' />}
         </Fragment>
     ),
+}, {
+    field: 'lastOnline',
+    headerName: 'Online',
+    type: 'date',
+    valueGetter: ({ row }) => new Date(+row.lastOnline * 1000),
+    renderCell: ({ value }) => (<Fragment>{timeAgo.format(value)}</Fragment>),
 }]
 
 export const LeaderBoard = () => {
     const [players, setPlayers] = useState([])
     const [pageSize, setPageSize] = useState(10)
+    const [modo, setModo] = useState('1vs1')
+    const [isLoading, setIsLoading] = useState('1vs1')
 
     useEffect(() => {
-        leaderboarSvc().then(data => {
+        setPlayers([])
+        setIsLoading(true)
+        leaderboarSvc(modo).then(data => {
             setPlayers(data)
+            setIsLoading(false)
         })
-    }, [])
+    }, [modo])
 
     const handlePageSize = (val) => {
         setPageSize(val)
     }
 
+    const handleChangeModo = (event) => {
+        setModo(event.target.value)
+    }
+
     return (
-        <Box sx={{ width: '100%' }}>
+        <Box sx={{
+            width: '100%',
+            backgroundImage: 'url(/assets/wood.png)',
+            backgroundImageSize: 1150,
+        }}>
+            <FormControl variant='filled' sx={{ m:1, width: 280 }}>
+                <InputLabel id="demo-simple-select-label">Modo</InputLabel>
+                <Select
+                    value={modo}
+                    label="modo"
+                    onChange={handleChangeModo}
+                >
+                    <MenuItem value={'1vs1'}>1 vs 1 Supremacy</MenuItem>
+                    <MenuItem value={'teamSupremacy'}>Team Supremacy</MenuItem>
+                    <MenuItem value={'treaty'}>Treaty</MenuItem>
+                </Select>
+            </FormControl>
+
             <DataGrid
+                loading={isLoading}
                 sx={dataGridStyles}
                 columns={columns}
                 rows={players}
